@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion AI in Korea — From Personal Tool to Institutional Training — Sail Research SR-2026-0003</title>
+<meta name="description" content="A Seoul public institution now runs Notion-specific AI training. Adoption signals are up — but so is the counter-signal that training alone changes nothing. A three-step adoption sequence. Evidence Grade B.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.85;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  nav{padding:20px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1040px}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .back{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold-bright)}
+  header{padding:72px 0 52px;
+    background:radial-gradient(900px 400px at 80% -20%, rgba(201,165,74,.12), transparent 60%),
+    linear-gradient(175deg,#0a1730 0%,#081226 70%);
+    border-bottom:1px solid rgba(201,165,74,.22)}
+  .r-id{font-size:11px;letter-spacing:.24em;color:var(--muted2);margin-bottom:18px}
+  .chips{display:flex;gap:8px;margin-bottom:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(27px,3.8vw,38px);font-weight:700;line-height:1.32}
+  .meta{margin-top:22px;font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .meta b{color:var(--gold-bright);font-weight:500}
+  article{padding:56px 0 10px}
+  article p{margin:0 0 22px;font-size:15.5px;color:#dde3ee}
+  h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:44px 0 16px;color:var(--white)}
+  h2:before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:12px;vertical-align:middle}
+  ol,ul{margin:0 0 22px 24px}
+  li{margin:10px 0;font-size:15px;color:#dde3ee}
+  li b{font-weight:600;color:var(--white)}
+  .box{border:1px solid var(--navy-line);background:var(--navy);padding:26px 28px;margin:34px 0}
+  .box h2{font-size:14px;margin:0 0 14px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+  .box h2:before{display:none}
+  .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
+  .box li b{color:var(--gold-bright);font-weight:500}
+  .box ul{margin:0 0 0 20px}
+  .caveat{border-left:3px solid var(--gold)}
+  .caveat .no{color:#e08484;font-weight:500}
+  .cta{margin:64px 0;text-align:center;padding:54px 28px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .kicker{font-size:10.5px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .cta h2{font-family:var(--serif);font-size:26px;margin:0 0 10px}
+  .cta h2:before{display:none}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;padding:14px 42px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+  footer{padding:38px 0 52px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer a{color:var(--gold-bright)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">SAIL <em>RESEARCH</em></div>
+    <a class="back" href="../index.html">← Report Board</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="r-id">SR-2026-0003</div>
+    <div class="chips"><span class="chip">AI · Productivity</span><span class="chip grade">Evidence B — Headline-Corroborated</span><span class="chip free">Free Sample</span></div>
+    <h1>Notion AI in Korea: From Personal Tool to Institutional Training Category</h1>
+    <div class="meta">
+      <span><b>Jul 06, 2026</b></span><span>Sail Research</span><span>5 Korean sources · headline-level verification</span><span>Fact / hypothesis separated</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+
+  <p>Public institutions have started to move. According to a K-Spirit headline, a Seoul city women's development center is running a 2026 "AI literacy" practical training program with Notion named in the course title. A tool-specific AI course offered by a Seoul municipal institution is a categorization signal: Notion AI appearing not as a personal productivity toy, but as a line item in public workforce training.</p>
+
+  <h2>Two Signals, Pointing in Opposite Directions</h2>
+
+  <p>Around the same time, two headlines formed an instructive pair. SR Times ran a piece framed around how high performers use Notion's AI features at work — the aspiration narrative. Mediapia ran the counter-signal: a piece arguing that even 100 hours of AI lectures won't change how you actually work. Both appearing in the same window is the story: interest has clearly surged, while evidence of changed work remains the open question.</p>
+
+  <p>A Newneek headline about "work journal 2.0 — working with your own AI teammate" hints at where adoption tends to start: repetitive routines like work logs. That reading is an inference from headlines, not a verified adoption statistic — but it is consistent with how tool adoption typically begins.</p>
+
+  <h2>A Three-Step Adoption Sequence</h2>
+
+  <p>What the moment calls for is not another feature list, but a sequence to run before adopting. We propose three steps:</p>
+
+  <ol>
+    <li><b>Pick exactly one repetitive task.</b> Meeting notes, weekly reports, recurring email drafts — anything that repeats in a stable format. One is enough. A narrow target creates a baseline: "this used to take 30 minutes; what does it take now?" Without that question, a month of usage produces no verdict.</li>
+    <li><b>Verify official terms yourself.</b> Three items, checked on Notion's official pages, not from reviews: whether your plan includes the AI features; the language support scope (including Korean); and whether your input data is used for model training. Third-party reviews capture the terms at their writing date — terms change.</li>
+    <li><b>Log one month, before and after.</b> Two lines before starting: how long the task takes, which step is tedious. The same two lines a month later. Those two notes will beat any review video as a decision basis — and if nothing changed, that is a valid result too.</li>
+  </ol>
+
+  <p>The honest framing: whether Notion AI genuinely changes an individual's work remains unverified at the market level, and the training-boom signal cuts both ways. The sequence above is how a single user gets their own answer without waiting for the market to settle the question.</p>
+
+  <div class="box caveat">
+    <h2>Evidence Caveat — Fact vs. Hypothesis</h2>
+    <ul>
+      <li><b>Fact (headline-existence level)</b> — The five article headlines below were collected under the named outlets via news aggregation. Nothing beyond headline existence is warranted; article bodies were not independently verified for this report.</li>
+      <li><b>Hypothesis (not stated as fact)</b> — "Notion AI is expanding into institutional training" as a trend reading · "work journals are a common starting point" · the effectiveness of the three-step sequence (a proposal, not a validated methodology) · search demand and revenue potential (unverified).</li>
+      <li class="no">What this report does not do — state specific pricing or plan terms, promise outcomes, or quote article bodies (headline-level verification only). This is why this report carries Evidence Grade B, not A.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Sources (headline-level verification)</h2>
+    <ul>
+      <li>K-Spirit — Seoul Northern Women's Development Center runs 2026 AI-literacy Notion practical training</li>
+      <li>SR Times — How high performers work: Notion's AI workflow methods</li>
+      <li>Newneek — Work journal 2.0: working with your own AI teammate</li>
+      <li>Mediapia — Why 100 hours of AI lectures still won't change your work</li>
+      <li>Brunch — Notion homepage: what to think through before starting</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="kicker">Commissioned Research</div>
+    <h2>Need depth on this topic?</h2>
+    <p>Commissioned deep-dives — primary data collection, quantitative analysis, custom scope — are available on inquiry.</p>
+    <span class="btn" style="opacity:.55;cursor:default">Contact Opening Shortly</span>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  SAIL RESEARCH · Seoul, Korea · <a href="../index.html">All reports</a>
+</footer>
+
+</body>
+</html>

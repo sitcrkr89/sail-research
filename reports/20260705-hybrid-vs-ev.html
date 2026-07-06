@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea's EV Crossover — The Month Electric Overtook Hybrid — Sail Research SR-2026-0002</title>
+<meta name="description" content="February 2026: EVs overtook hybrids in monthly Korean registrations for the first time. H1 data, what flipped, and the four conditions that still decide the choice. Evidence Grade A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.85;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  nav{padding:20px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1040px}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .back{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold-bright)}
+  header{padding:72px 0 52px;
+    background:radial-gradient(900px 400px at 80% -20%, rgba(201,165,74,.12), transparent 60%),
+    linear-gradient(175deg,#0a1730 0%,#081226 70%);
+    border-bottom:1px solid rgba(201,165,74,.22)}
+  .r-id{font-size:11px;letter-spacing:.24em;color:var(--muted2);margin-bottom:18px}
+  .chips{display:flex;gap:8px;margin-bottom:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(27px,3.8vw,38px);font-weight:700;line-height:1.32}
+  .meta{margin-top:22px;font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .meta b{color:var(--gold-bright);font-weight:500}
+  article{padding:56px 0 10px}
+  article p{margin:0 0 22px;font-size:15.5px;color:#dde3ee}
+  h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:44px 0 16px;color:var(--white)}
+  h2:before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:12px;vertical-align:middle}
+  ol,ul{margin:0 0 22px 24px}
+  li{margin:10px 0;font-size:15px;color:#dde3ee}
+  li b{font-weight:600;color:var(--white)}
+  /* data table */
+  .dtable{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+  .dtable th{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright);
+    border-bottom:1px solid var(--gold-dim);padding:10px 12px;text-align:right;font-weight:600}
+  .dtable th:first-child{text-align:left}
+  .dtable td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:right;color:#dde3ee}
+  .dtable td:first-child{text-align:left;color:var(--white);font-weight:500}
+  .dtable .up{color:#7fd6a4}.dtable .down{color:#e08484}
+  .box{border:1px solid var(--navy-line);background:var(--navy);padding:26px 28px;margin:34px 0}
+  .box h2{font-size:14px;margin:0 0 14px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+  .box h2:before{display:none}
+  .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
+  .box li b{color:var(--gold-bright);font-weight:500}
+  .box ul{margin:0 0 0 20px}
+  .caveat{border-left:3px solid var(--gold)}
+  .caveat .no{color:#e08484;font-weight:500}
+  .cta{margin:64px 0;text-align:center;padding:54px 28px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .kicker{font-size:10.5px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .cta h2{font-family:var(--serif);font-size:26px;margin:0 0 10px}
+  .cta h2:before{display:none}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;padding:14px 42px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+  footer{padding:38px 0 52px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer a{color:var(--gold-bright)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">SAIL <em>RESEARCH</em></div>
+    <a class="back" href="../index.html">← Report Board</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="r-id">SR-2026-0002</div>
+    <div class="chips"><span class="chip">Mobility</span><span class="chip grade">Evidence A — Primary-Verified</span><span class="chip free">Free Sample</span></div>
+    <h1>Korea's EV Crossover: The Month Electric Overtook Hybrid — and What Still Decides the Choice</h1>
+    <div class="meta">
+      <span><b>Jul 06, 2026</b></span><span>Sail Research</span><span>Registration statistics · multi-outlet corroborated</span><span>Fact / hypothesis separated</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+
+  <p>For years, the standing question in the Korean auto market was "is a hybrid still the safer choice over an EV?" In the first half of 2026, the data started answering — and the answer inverted the question.</p>
+
+  <h2>The Crossover, in Numbers</h2>
+
+  <p>In February 2026, battery-electric vehicles overtook hybrids in monthly new registrations in Korea for the first time: roughly 35,766 EVs against 29,112 hybrids, per Korean press reports of registration statistics. That month, EV registrations were up sharply year-over-year while hybrids declined — a clean reversal of the pattern that had defined the market since the hybrid boom began.</p>
+
+  <table class="dtable">
+    <tr><th>H1 2026 (cumulative)</th><th>Units</th><th>YoY</th><th>Share</th></tr>
+    <tr><td>Hybrid (HEV)</td><td>227,019</td><td class="down">−0.6%</td><td>—</td></tr>
+    <tr><td>Battery Electric (BEV)</td><td>198,969</td><td class="up">+112.6%</td><td>23.3%</td></tr>
+  </table>
+
+  <p>Two things are true at once, and both matter. Hybrids still lead on cumulative half-year volume — 227 thousand units against 199 thousand. But the growth vectors point in opposite directions: EV sales more than doubled year-over-year, while hybrids went flat-to-negative. By H1, roughly one in four new cars sold in Korea was electric.</p>
+
+  <h2>What Flipped</h2>
+
+  <p>The press coverage attributes the surge to aggressive entries by Tesla and BYD in the import segment — with roughly one in three imported cars being a Tesla in recent reporting — alongside continued domestic lineup expansion. Whether this specific attribution fully explains the shift is an interpretation; the registration numbers themselves are not.</p>
+
+  <h2>The Four Conditions Still Decide Individual Choices</h2>
+
+  <p>A market-level crossover does not settle the individual buyer's question. The four conditions that governed the hybrid-vs-EV decision before the crossover still govern it after:</p>
+
+  <ol>
+    <li><b>Charging access.</b> Home or workplace charging remains the single biggest determinant of EV practicality. Without it, a hybrid's five-minute refuel retains real value regardless of market trends.</li>
+    <li><b>Resale value.</b> Historical residual-value advantages for hybrids may not survive a market where EV demand is doubling. This is now genuinely uncertain in both directions — check current used-market pricing at purchase time.</li>
+    <li><b>Subsidy conditions.</b> Korean EV subsidies vary by year, region, and vehicle; they materially change the upfront comparison. Verify current terms through the Ministry of Environment and local government channels.</li>
+    <li><b>Route infrastructure.</b> Public charging density still varies by region. For high-mileage or rural-route drivers, this remains a live constraint despite headline expansion.</li>
+  </ol>
+
+  <p>The honest summary: the market has voted, and it voted electric — but a market trend is not a personal answer. The four-condition check matters more now, not less, because the resale and subsidy variables are moving faster than they were a year ago.</p>
+
+  <div class="box caveat">
+    <h2>Evidence Caveat — Fact vs. Hypothesis</h2>
+    <ul>
+      <li><b>Fact (multi-outlet corroborated)</b> — The February 2026 monthly crossover (≈35,766 EV vs ≈29,112 hybrid registrations) and the H1 2026 cumulative figures (EV 198,969 units, +112.6% YoY, 23.3% share; hybrid 227,019 units, −0.6%) as reported by multiple Korean outlets citing registration statistics.</li>
+      <li><b>Hypothesis (not stated as fact)</b> — The Tesla/BYD attribution as the primary cause · the durability of the trend through H2 · the direction of future hybrid residual values · the four-condition framework itself (a decision aid, not a validated methodology).</li>
+      <li class="no">What this report does not do — recommend specific models, assert future prices or resale percentages, or guarantee subsidy amounts.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Sources (body-level press verification · statistics as reported)</h2>
+    <ul>
+      <li>Sisadays — Korea EV market turning point: February 2026, EVs overtake hybrids in monthly registrations</li>
+      <li>Financial News (fnnews) — Tesla &amp; BYD advance; one in four new cars in H1 was electric</li>
+      <li>Greened (Green Economy) — EVs pass hybrids: first-ever #2 ranking by fuel type</li>
+      <li>Korea Business Review — One in three imports a Tesla: the 2026 EV surge</li>
+      <li>Reference portals — MOLIT vehicle registration statistics (stat.molit.go.kr); KSGA EV registration status</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="kicker">Commissioned Research</div>
+    <h2>Need depth on this topic?</h2>
+    <p>Commissioned deep-dives — primary data collection, quantitative analysis, custom scope — are available on inquiry.</p>
+    <span class="btn" style="opacity:.55;cursor:default">Contact Opening Shortly</span>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  SAIL RESEARCH · Seoul, Korea · <a href="../index.html">All reports</a>
+</footer>
+
+</body>
+</html>
