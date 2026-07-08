@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracking the HBM Transition: Who Leads HBM4E — Sail Research SR-2026-0005</title>
+<meta name="description" content="A transparent company × generation capability model for HBM3E → HBM4E: Samsung leads on a rule-based readiness score, but the underlying evidence is uneven — and the model says so. Evidence Grade B.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.85;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  nav{padding:20px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1040px}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .back{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold-bright)}
+  header{padding:72px 0 52px;
+    background:radial-gradient(900px 400px at 80% -20%, rgba(201,165,74,.12), transparent 60%),
+    linear-gradient(175deg,#0a1730 0%,#081226 70%);
+    border-bottom:1px solid rgba(201,165,74,.22)}
+  .r-id{font-size:11px;letter-spacing:.24em;color:var(--muted2);margin-bottom:18px}
+  .chips{display:flex;gap:8px;margin-bottom:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(27px,3.8vw,38px);font-weight:700;line-height:1.32}
+  .meta{margin-top:22px;font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .meta b{color:var(--gold-bright);font-weight:500}
+  article{padding:56px 0 10px}
+  article p{margin:0 0 22px;font-size:15.5px;color:#dde3ee}
+  h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:44px 0 16px;color:var(--white)}
+  h2:before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:12px;vertical-align:middle}
+  ol,ul{margin:0 0 22px 24px}
+  li{margin:10px 0;font-size:15px;color:#dde3ee}
+  li b{font-weight:600;color:var(--white)}
+  /* data table */
+  .dtable{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+  .dtable th{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright);
+    border-bottom:1px solid var(--gold-dim);padding:10px 12px;text-align:right;font-weight:600}
+  .dtable th:first-child{text-align:left}
+  .dtable td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:right;color:#dde3ee}
+  .dtable td:first-child{text-align:left;color:var(--white);font-weight:500}
+  .dtable .up{color:#7fd6a4}.dtable .down{color:#e08484}
+  .box{border:1px solid var(--navy-line);background:var(--navy);padding:26px 28px;margin:34px 0}
+  .box h2{font-size:14px;margin:0 0 14px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+  .box h2:before{display:none}
+  .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
+  .box li b{color:var(--gold-bright);font-weight:500}
+  .box ul{margin:0 0 0 20px}
+  .caveat{border-left:3px solid var(--gold)}
+  .caveat .no{color:#e08484;font-weight:500}
+  .cta{margin:64px 0;text-align:center;padding:54px 28px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .kicker{font-size:10.5px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .cta h2{font-family:var(--serif);font-size:26px;margin:0 0 10px}
+  .cta h2:before{display:none}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;padding:14px 42px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+  footer{padding:38px 0 52px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer a{color:var(--gold-bright)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">SAIL <em>RESEARCH</em></div>
+    <a class="back" href="../index.html">← Report Board</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="r-id">SR-2026-0005</div>
+    <div class="chips"><span class="chip">Semiconductors · Deep-Tech</span><span class="chip grade">Evidence B — Transparent Model, Partially Verified</span><span class="chip free">Free Sample</span></div>
+    <h1>Tracking the HBM Transition: Who Actually Leads the Race to HBM4E?</h1>
+    <div class="meta">
+      <span><b>Jul 08, 2026</b></span><span>Sail Research</span><span>SK hynix · Samsung · Micron, 11-record dataset</span><span>Fact / hypothesis / model-prior separated</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+
+  <p>Ask "who's winning the HBM4E race" and most answers you'll get are a single confident sentence pointing at one company. That's the wrong shape for the question. The honest answer is a matrix — company × generation × evidence quality — and this report is Sail Research's first published run of that matrix, built to show the method as much as the result.</p>
+
+  <h2>The Model, Not Just the Verdict</h2>
+
+  <p>We built a company-level scenario score from an 11-record, 30-field dataset tracking SK hynix, Samsung Electronics/Samsung Memory, and Micron across HBM3, HBM3E, HBM4, and HBM4E. Every field in every record carries its own evidence label — Direct Evidence, Requires Verification, or Reasoned Inference — rather than one blanket grade for the whole claim. The scenario score is a <b>transparent rule-based prior, not a trained model and not a probability</b>: high stack height raises transition risk unless offset by thermal, bonding, or customer evidence; Direct Evidence raises confidence, Requires Verification and hypothesis-status records pull it back down.</p>
+
+  <h2>Current Standing (Rule-Based Prior)</h2>
+
+  <table class="dtable">
+    <tr><th>Company</th><th>Overall Score</th><th>Readiness</th><th>Risk</th><th>HBM4E Signal</th></tr>
+    <tr><td>Samsung Electronics / Samsung Memory</td><td>0.753</td><td>0.617</td><td>0.485</td><td>1.256</td></tr>
+    <tr><td>SK hynix</td><td>0.594</td><td>0.497</td><td>0.584</td><td>0.875</td></tr>
+    <tr><td>Micron</td><td>0.569</td><td>0.541</td><td>0.526</td><td class="down">0.000</td></tr>
+  </table>
+
+  <p>Samsung's lead comes from explicit HBM4/HBM4E and base-die/DTCO disclosures scoring high on evidence strength (0.774) and bonding readiness (0.797). SK hynix carries the strongest high-stack packaging track record (bonding readiness 0.82) but its HBM4E/16H specifics are less directly disclosed. Micron's HBM4E score reads zero in this run — not because Micron is absent from HBM4E, but because the dataset has not yet captured a Micron record naming HBM4E directly; its strongest signals are 12H/16H HBM4 product-page claims.</p>
+
+  <h2>Where Each Company's Own Data Disagrees With the Verdict</h2>
+
+  <p>The scenario tags (P10/aggressive, P50/base, P90/delayed-or-watchlist) are more informative than the ranking table alone. Samsung's own top forward record — HBM4E 12H/48GB — sits at P10/aggressive with readiness 0.749, but its <i>other</i> HBM4E record, the 16H/64GB planned lineup, sits at P90/delayed-or-watchlist with readiness dropping to 0.437. Same company, same generation, opposite scenario tag — because one record has product/sample evidence and the other is still a planned-lineup disclosure with production and performance data marked Requires Verification.</p>
+
+  <p>SK hynix shows the same internal split: its HBM4 12-layer sample record scores P50/base (readiness 0.626), while its 16-layer HBM4E-class derivative is explicitly labeled Reasoned Inference / Requires Verification and scores P90/delayed-or-watchlist (readiness 0.313, risk 0.79) — the largest single risk score in the dataset. That record exists in the model because of packaging-history extrapolation, not because a company disclosure named it.</p>
+
+  <h2>What the Model Cannot Yet Tell You</h2>
+
+  <p>This is an NN-ready schema, not an NN-trained one: the dataset's own documentation flags that future-outcome target labels (next-gen-within-24-months, customer-ramp-success, HBM4E-16H-transition) are currently <code>UNLABELED</code>. The scenario scores are a seed for that future model, not a finished forecast. Treat every number above as an analytic prior built from currently captured public disclosures — not a complete picture of any company's internal roadmap, and not a market-share or revenue prediction.</p>
+
+  <div class="box caveat">
+    <h2>Evidence Caveat — Fact vs. Model Prior</h2>
+    <ul>
+      <li><b>Fact (Direct Evidence, sourced)</b> — Each company's own published product/sample/roadmap claims cited in the dataset (e.g. Samsung's HBM4E 12H/48GB sample claim, SK hynix's MR-MUF/HBM3E leadership statements, Micron's HBM4 product-page specifications) as of the dataset's June 2026 capture date.</li>
+      <li><b>Model Prior (transparent rule-based scoring, not a fact)</b> — The overall/readiness/risk scores, the P10/P50/P90 scenario tags, and the executive ranking. These are derived weightings over the captured evidence, explicitly documented by the source methodology as "analytic priors, not factual probabilities."</li>
+      <li><b>Requires Verification (flagged in the source data itself)</b> — Qualification timing, customer ramp/yield figures, and exact HBM4E SKU specifications across all three companies — these are the fields the dataset's own evidence labels mark as unconfirmed.</li>
+      <li class="no">What this report does not do — declare a market-share winner, predict specific launch dates, or treat Micron's zero HBM4E score as evidence of absence rather than evidence of a data gap.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Sources (dataset provenance)</h2>
+    <ul>
+      <li>SK hynix Newsroom — official HBM3E/MR-MUF and packaging disclosures (news.skhynix.com)</li>
+      <li>Samsung Electronics/Samsung Memory — official HBM3/HBM4/HBM4E product and roadmap disclosures</li>
+      <li>Micron — official HBM4 product-page specifications and sample/roadmap claims</li>
+      <li>Sail Company internal dataset — HBM Company Historical Transition Dataset (11 records, 30-field schema, evidence-labeled, June 2026 capture), rule-based scenario scoring methodology</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="kicker">Commissioned Research</div>
+    <h2>Need the full 22-record model or a custom scope?</h2>
+    <p>This is a sample pull from a larger, continuously-updated company × technology capability tracker. Commissioned deep-dives — expanded company coverage, quantitative sensitivity analysis, custom scope — are available on inquiry.</p>
+    <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  SAIL RESEARCH · Seoul, Korea · <a href="../index.html">All reports</a>
+</footer>
+
+</body>
+</html>
