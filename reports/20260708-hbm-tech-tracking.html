@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tracking the HBM Transition: Who Leads HBM4E — Sail Research SR-2026-0005</title>
-<meta name="description" content="A transparent company × generation capability model for HBM3E → HBM4E: Samsung leads on a rule-based readiness score, but the underlying evidence is uneven — and the model says so. Evidence Grade B.">
+<meta name="description" content="A transparent company × generation capability model for HBM3E → HBM4E, with each factual anchor verified against the companies' own official disclosures. Samsung leads on a rule-based readiness score; the model layer stays labeled apart. Evidence Grade A.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -85,7 +85,7 @@
 <header>
   <div class="wrap">
     <div class="r-id">SR-2026-0005</div>
-    <div class="chips"><span class="chip">Semiconductors · Deep-Tech</span><span class="chip grade">Evidence B — Transparent Model, Partially Verified</span><span class="chip free">Free Sample</span></div>
+    <div class="chips"><span class="chip">Semiconductors · Deep-Tech</span><span class="chip grade">Evidence A — Primary-Sourced, Transparent Model</span><span class="chip free">Free Sample</span></div>
     <h1>Tracking the HBM Transition: Who Actually Leads the Race to HBM4E?</h1>
     <div class="meta">
       <span><b>Jul 08, 2026</b></span><span>Sail Research</span><span>SK hynix · Samsung · Micron, 11-record dataset</span><span>Fact / hypothesis / model-prior separated</span>
@@ -123,10 +123,16 @@
 
   <p>This is an NN-ready schema, not an NN-trained one: the dataset's own documentation flags that future-outcome target labels (next-gen-within-24-months, customer-ramp-success, HBM4E-16H-transition) are currently <code>UNLABELED</code>. The scenario scores are a seed for that future model, not a finished forecast. Treat every number above as an analytic prior built from currently captured public disclosures — not a complete picture of any company's internal roadmap, and not a market-share or revenue prediction.</p>
 
+  <h2>Primary-Source Verification (July 2026)</h2>
+
+  <p>The factual anchors under the model are not left at headline level. On 8 July 2026 we captured each company's own official disclosures directly from source and stored them with retrieval date, byte size, and SHA-256 hash. Samsung's own newsroom states it <b>ships industry-first commercial HBM4</b> and has <b>begun shipment of industry-first HBM4E samples</b>; Micron's investor release documents <b>high-volume HBM4 production designed for NVIDIA's Vera Rubin</b> platform; SK hynix's newsroom shows its <b>HBM4 at the TSMC 2025 Technology Symposium</b> and its MR-MUF / hybrid-bonding packaging position. These are Direct Evidence for the presence and stage of each company's HBM4/HBM4E program — the specific URLs are listed in Sources below.</p>
+
+  <p>What primary capture does <i>not</i> promote: named-customer yield percentages, qualification timing, and volume-ramp figures remain <b>Requires Verification</b> — the official pages assert shipment and production but do not disclose the granular yield/qualification numbers, so the model does not treat them as fact. The scenario scores themselves stay exactly what they were: transparent priors, not probabilities.</p>
+
   <div class="box caveat">
     <h2>Evidence Caveat — Fact vs. Model Prior</h2>
     <ul>
-      <li><b>Fact (Direct Evidence, sourced)</b> — Each company's own published product/sample/roadmap claims cited in the dataset (e.g. Samsung's HBM4E 12H/48GB sample claim, SK hynix's MR-MUF/HBM3E leadership statements, Micron's HBM4 product-page specifications) as of the dataset's June 2026 capture date.</li>
+      <li><b>Fact (Direct Evidence, primary-sourced)</b> — Each company's HBM4/HBM4E program presence and stage, verified 8 July 2026 against the companies' own official pages and stored with retrieval date + SHA-256: Samsung shipping commercial HBM4 and HBM4E samples; Micron high-volume HBM4 for NVIDIA Vera Rubin; SK hynix HBM4 (TSMC 2025) and MR-MUF/hybrid-bonding packaging. URLs in Sources.</li>
       <li><b>Model Prior (transparent rule-based scoring, not a fact)</b> — The overall/readiness/risk scores, the P10/P50/P90 scenario tags, and the executive ranking. These are derived weightings over the captured evidence, explicitly documented by the source methodology as "analytic priors, not factual probabilities."</li>
       <li><b>Requires Verification (flagged in the source data itself)</b> — Qualification timing, customer ramp/yield figures, and exact HBM4E SKU specifications across all three companies — these are the fields the dataset's own evidence labels mark as unconfirmed.</li>
       <li class="no">What this report does not do — declare a market-share winner, predict specific launch dates, or treat Micron's zero HBM4E score as evidence of absence rather than evidence of a data gap.</li>
@@ -134,12 +140,14 @@
   </div>
 
   <div class="box">
-    <h2>Sources (dataset provenance)</h2>
+    <h2>Sources (primary — captured &amp; hashed 8 Jul 2026)</h2>
     <ul>
-      <li>SK hynix Newsroom — official HBM3E/MR-MUF and packaging disclosures (news.skhynix.com)</li>
-      <li>Samsung Electronics/Samsung Memory — official HBM3/HBM4/HBM4E product and roadmap disclosures</li>
-      <li>Micron — official HBM4 product-page specifications and sample/roadmap claims</li>
-      <li>Sail Company internal dataset — HBM Company Historical Transition Dataset (11 records, 30-field schema, evidence-labeled, June 2026 capture), rule-based scenario scoring methodology</li>
+      <li>Samsung Semiconductor — "Samsung ships industry-first commercial HBM4" (semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/)</li>
+      <li>Samsung Semiconductor — "Samsung begins shipment of industry-first HBM4E samples" (semiconductor.samsung.com/news-events/news/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples/)</li>
+      <li>Micron Investor Relations — "Micron high-volume production HBM4 designed for NVIDIA Vera Rubin" (investors.micron.com/news-releases/news-release-details/micron-high-volume-production-hbm4-designed-nvidia-vera-rubin)</li>
+      <li>Micron — HBM4 product page (micron.com/products/memory/hbm/hbm4)</li>
+      <li>SK hynix Newsroom — "SK hynix Showcases HBM4 at TSMC 2025 Technology Symposium" (news.skhynix.com/tsmc-2025-technology-symposium-sk-hynix-showcases-hbm4/) and MR-MUF / next-gen packaging disclosures (news.skhynix.com)</li>
+      <li>Sail Company internal dataset — HBM Company Historical Transition Dataset (11 records, 30-field schema, evidence-labeled), rule-based scenario scoring methodology</li>
     </ul>
   </div>
 
