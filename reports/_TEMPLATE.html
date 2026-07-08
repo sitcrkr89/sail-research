@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+  Sail Research report template of record. Copy this file to
+  reports/YYYYMMDD-<slug>.html and fill every FILL marker.
+  Read ops/RESEARCH_METHODOLOGY.md first. Then run the gate:
+  python3 ops/auto/report_quality_check.py reports/YYYYMMDD-<slug>.html
+  Use the inline <span class="ev ...">…</span> chips to label claims by
+  evidence strength right where they appear — don't let inference read as fact.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><!-- FILL: Title --> — Sail Research SR-2026-NNNN</title>
+<meta name="description" content="<!-- FILL: 1-2 sentence summary + Evidence Grade. -->">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.85;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  nav{padding:20px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1040px}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .back{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold-bright)}
+  header{padding:72px 0 52px;
+    background:radial-gradient(900px 400px at 80% -20%, rgba(201,165,74,.12), transparent 60%),
+    linear-gradient(175deg,#0a1730 0%,#081226 70%);
+    border-bottom:1px solid rgba(201,165,74,.22)}
+  .r-id{font-size:11px;letter-spacing:.24em;color:var(--muted2);margin-bottom:18px}
+  .chips{display:flex;gap:8px;margin-bottom:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(27px,3.8vw,38px);font-weight:700;line-height:1.32}
+  .meta{margin-top:22px;font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .meta b{color:var(--gold-bright);font-weight:500}
+  article{padding:56px 0 10px}
+  article p{margin:0 0 22px;font-size:15.5px;color:#dde3ee}
+  h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:44px 0 16px;color:var(--white)}
+  h2:before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:12px;vertical-align:middle}
+  ol,ul{margin:0 0 22px 24px}
+  li{margin:10px 0;font-size:15px;color:#dde3ee}
+  li b{font-weight:600;color:var(--white)}
+  .dtable{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+  .dtable th{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright);
+    border-bottom:1px solid var(--gold-dim);padding:10px 12px;text-align:right;font-weight:600}
+  .dtable th:first-child{text-align:left}
+  .dtable td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:right;color:#dde3ee}
+  .dtable td:first-child{text-align:left;color:var(--white);font-weight:500}
+  .dtable .up{color:#7fd6a4}.dtable .down{color:#e08484}
+  /* inline per-claim evidence labels — use these right after a claim */
+  .ev{display:inline-block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    font-weight:600;padding:1px 6px;border-radius:2px;vertical-align:middle;margin-left:4px}
+  .ev.direct{background:rgba(127,214,164,.16);color:#7fd6a4}
+  .ev.verify{background:rgba(224,192,132,.16);color:#e3c06a}
+  .ev.infer{background:rgba(154,165,189,.16);color:#9aa5bd}
+  .box{border:1px solid var(--navy-line);background:var(--navy);padding:26px 28px;margin:34px 0}
+  .box h2{font-size:14px;margin:0 0 14px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+  .box h2:before{display:none}
+  .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
+  .box li b{color:var(--gold-bright);font-weight:500}
+  .box ul{margin:0 0 0 20px}
+  .caveat{border-left:3px solid var(--gold)}
+  .caveat .no{color:#e08484;font-weight:500}
+  .cta{margin:64px 0;text-align:center;padding:54px 28px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .kicker{font-size:10.5px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .cta h2{font-family:var(--serif);font-size:26px;margin:0 0 10px}
+  .cta h2:before{display:none}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;padding:14px 42px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+  footer{padding:38px 0 52px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer a{color:var(--gold-bright)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">SAIL <em>RESEARCH</em></div>
+    <a class="back" href="../index.html">← Report Board</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="r-id">SR-2026-NNNN</div><!-- FILL: next ID in sequence -->
+    <div class="chips">
+      <span class="chip"><!-- FILL: Category --></span>
+      <span class="chip grade"><!-- FILL: Evidence A/B/C — one-line honest label --></span>
+      <span class="chip free">Free Sample</span>
+    </div>
+    <h1><!-- FILL: Headline (the real hook, not a topic label) --></h1>
+    <div class="meta">
+      <span><b><!-- FILL: date --></b></span><span>Sail Research</span>
+      <span><!-- FILL: source basis --></span><span>Fact / hypothesis separated</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+
+  <!--
+    BODY. Lead with the hook/finding. Label non-trivial claims inline, e.g.:
+      Samsung leads on the readiness score <span class="ev infer">Model prior</span>,
+      per its own HBM4E sample disclosure <span class="ev direct">Direct</span>,
+      though ramp/yield <span class="ev verify">Requires verification</span> is unconfirmed.
+    Every fact needs a primary source cited in the Sources box below.
+    Include at least one data table (.dtable) where the topic has numbers.
+  -->
+  <p><!-- FILL: opening / hook --></p>
+
+  <h2><!-- FILL: section --></h2>
+  <p><!-- FILL --></p>
+
+  <div class="box caveat">
+    <h2>Evidence Caveat — Fact vs. Hypothesis</h2>
+    <ul>
+      <li><b>Fact (Direct Evidence, sourced)</b> — <!-- FILL: what's actually verified + where --></li>
+      <li><b>Hypothesis / Model Prior (not a fact)</b> — <!-- FILL: what's inference/analysis --></li>
+      <li><b>Requires Verification</b> — <!-- FILL: what's plausible but unconfirmed --></li>
+      <li class="no">What this report does not do — <!-- FILL: explicit non-claims --></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Sources (primary — real URLs, not just outlet names)</h2>
+    <ul>
+      <li><!-- FILL: primary source 1 with URL --></li>
+      <li><!-- FILL: primary source 2 with URL --></li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="kicker">Commissioned Research</div>
+    <h2><!-- FILL: offer headline --></h2>
+    <p><!-- FILL: one line on commissioned scope --></p>
+    <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  SAIL RESEARCH · Seoul, Korea · <a href="../index.html">All reports</a>
+</footer>
+
+</body>
+</html>
