@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sail Research — Korea's Industry Signals, in English</title>
-<meta name="description" content="AI-collected, human-verified research on Korean industry signals. Daily pipeline over Korean-language sources, evidence-graded reports in English.">
+<title>Sail Company</title>
+<meta name="description" content="Sail Company — Sail Data, Sail Research, Sail Quant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,263 +16,184 @@
     --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.7;font-weight:300}
+  html,body{height:100%}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);font-weight:300;overflow:hidden}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 
-  /* ── Pipeline Pulse bar ── */
-  .pulse{background:#050b18;border-bottom:1px solid var(--navy-line);padding:11px 0;font-size:12px;letter-spacing:.03em}
-  .pulse .wrap{display:flex;flex-wrap:wrap;gap:6px 30px;align-items:center;color:var(--muted)}
-  .pulse b{color:var(--gold-bright);font-weight:500}
-  .pulse .lbl{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:10.5px}
-  .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold-bright);margin-right:7px;box-shadow:0 0 6px var(--gold-bright)}
+  .scene{position:fixed;inset:0}
 
-  /* ── Nav ── */
-  nav{padding:22px 0;border-bottom:1px solid rgba(201,165,74,.18)}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center}
-  .logo{font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:.05em}
-  .logo em{color:var(--gold);font-style:normal}
-  .nav-r{font-size:12px;color:var(--muted);letter-spacing:.12em}
-  .nav-r a:hover{color:var(--gold-bright)}
+  /* ══════════════ Scene 1 — Ship on the waves (white) ══════════════ */
+  .scene-ship{
+    z-index:10;background:#f7f5ef;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    cursor:pointer;transition:opacity .8s ease;overflow:hidden;border:none;
+  }
+  .scene-ship:focus-visible{outline:2px solid var(--gold-dim);outline-offset:-6px}
+  body.ship-clicked .scene-ship{opacity:0;pointer-events:none}
 
-  /* ── Hero ── */
-  .hero{position:relative;padding:112px 0 92px;overflow:hidden;
+  .ship-stage{position:relative;width:100%;max-width:640px;height:280px;display:flex;align-items:flex-end;justify-content:center}
+  .wave-track{position:absolute;left:0;right:0;bottom:0;height:150px;overflow:hidden}
+  .wave-track svg{position:absolute;bottom:0;left:0;height:100%;width:200%;animation:drift 14s linear infinite}
+  .wave-back svg{animation-duration:22s;opacity:.55}
+  .wave-front svg{animation-duration:13s;opacity:.9;animation-direction:reverse}
+  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .ship{position:relative;z-index:2;width:300px;height:auto;margin-bottom:66px;
+    animation:bob 4.2s ease-in-out infinite;filter:drop-shadow(0 10px 14px rgba(8,18,38,.18))}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-9px) rotate(1.2deg)}}
+
+  .ship-caption{margin-top:38px;text-align:center}
+  .ship-caption .kicker{font-size:11px;font-weight:600;letter-spacing:.34em;color:var(--gold-dim);text-transform:uppercase}
+  .ship-caption .hint{margin-top:10px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#8a8672}
+
+  /* ══════════════ Scene 2 — Brand + split reveal (navy) ══════════════ */
+  .scene-brand{z-index:5;opacity:0;pointer-events:none;transition:opacity .7s ease}
+  body.ship-clicked .scene-brand{opacity:1;pointer-events:auto}
+
+  .reveal{
+    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:56px;padding:24px;
     background:
       radial-gradient(1100px 500px at 78% -10%, rgba(201,165,74,.13), transparent 60%),
       radial-gradient(800px 420px at 12% 110%, rgba(30,64,140,.35), transparent 65%),
       linear-gradient(175deg, #0a1730 0%, #081226 55%, #060d1d 100%);
   }
-  .hero:before{content:"";position:absolute;inset:0;
-    background-image:repeating-linear-gradient(90deg, rgba(255,255,255,.022) 0 1px, transparent 1px 120px);
-    pointer-events:none}
-  .hero .kicker{font-size:11.5px;font-weight:600;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-bottom:28px}
-  .hero .kicker:after{content:"";display:inline-block;width:56px;height:1px;background:var(--gold-dim);margin-left:16px;vertical-align:middle}
-  h1{font-family:var(--serif);font-size:clamp(38px,5.6vw,60px);font-weight:700;line-height:1.18;letter-spacing:-.005em;max-width:860px}
-  h1 .g{color:var(--gold-bright);font-style:italic}
-  .hero .sub{margin-top:28px;font-size:16.5px;color:var(--muted);max-width:620px;font-weight:300}
+  .reveal .kicker{font-size:11.5px;font-weight:600;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;opacity:0;transition:opacity .6s ease .5s}
+  .cards{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;max-width:980px}
+  .card{
+    width:280px;padding:34px 28px;background:linear-gradient(160deg,var(--navy-panel) 0%,var(--navy) 90%);
+    border:1px solid var(--navy-line);border-top:2px solid var(--gold-dim);
+    opacity:0;margin-top:18px;transition:opacity .6s ease, margin-top .6s ease, border-color .2s, box-shadow .2s;
+  }
+  .card:nth-child(1){transition-delay:.55s}
+  .card:nth-child(2){transition-delay:.7s}
+  .card:nth-child(3){transition-delay:.85s}
+  a.card:hover{border-top-color:var(--gold-bright);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+  .card .tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted2);margin-bottom:16px}
+  .card .tag.live{color:var(--gold-bright)}
+  .card h2{font-family:var(--serif);font-size:25px;font-weight:700;margin-bottom:12px}
+  .card h2 em{color:var(--gold-bright);font-style:italic}
+  .card p{font-size:13px;color:var(--muted);line-height:1.6}
+  .card .go{margin-top:22px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+  .card.live .go{color:var(--gold-bright)}
+  .card.soon{cursor:default}
+  .card.soon .go{color:var(--muted2)}
+  body.split .reveal .kicker{opacity:1}
+  body.split .card{opacity:1;margin-top:0}
 
-  /* ── Collection stats ── */
-  .stats{margin-top:60px;display:flex;flex-wrap:wrap;border-top:1px solid rgba(201,165,74,.25);border-bottom:1px solid rgba(201,165,74,.25)}
-  .stat{flex:1;min-width:150px;padding:26px 8px;text-align:center;border-right:1px solid rgba(201,165,74,.12)}
-  .stat:last-child{border-right:none}
-  .stat .num{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--gold-bright);line-height:1.1}
-  .stat .lbl{font-size:10.5px;color:var(--muted);letter-spacing:.26em;text-transform:uppercase;margin-top:9px}
+  /* ── Curtains (the "Sail Company" split doors) ── */
+  .curtain{
+    position:absolute;left:0;right:0;height:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--navy-deep);z-index:2;
+    transition:top 1.6s cubic-bezier(.76,0,.24,1), bottom 1.6s cubic-bezier(.76,0,.24,1), opacity 1.3s ease;
+  }
+  .curtain.top{top:0;justify-content:flex-end;padding-bottom:8px}
+  .curtain.bottom{bottom:0;justify-content:flex-start;padding-top:8px}
+  .wordmark{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .brand-text{font-family:var(--serif);font-size:clamp(40px,7vw,78px);font-weight:700;letter-spacing:.02em;color:var(--white);text-align:center}
+  .brand-text em{color:var(--gold);font-style:italic}
+  .seam{position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,165,74,.45),transparent);z-index:3;transition:opacity .6s ease .5s}
 
-  /* ── Sections ── */
-  section{padding:78px 0 30px}
-  .sec-kicker{font-size:11px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
-  h2.sec{font-family:var(--serif);font-size:32px;font-weight:700;margin-bottom:10px}
-  .sec-desc{color:var(--muted);font-size:14.5px;max-width:580px}
+  body.split .curtain.top{top:-50%;opacity:0}
+  body.split .curtain.bottom{bottom:-50%;opacity:0}
+  body.split .seam{opacity:0}
 
-  /* ── Controls ── */
-  .controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:38px 0 26px}
-  .search input{width:360px;max-width:72vw;padding:12px 18px;background:var(--navy);border:1px solid var(--navy-line);border-radius:2px;color:var(--white);font-size:13.5px;font-family:var(--sans)}
-  .search input::placeholder{color:var(--muted2)}
-  .search input:focus{outline:none;border-color:var(--gold-dim)}
-  .sort-note{font-size:11px;color:var(--muted2);letter-spacing:.18em}
-
-  /* ── Report board ── */
-  .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px;padding-bottom:20px}
-  .r-card{background:linear-gradient(160deg,var(--navy-panel) 0%,var(--navy) 90%);border:1px solid var(--navy-line);
-    border-top:2px solid var(--gold-dim);padding:24px 26px 20px;display:flex;flex-direction:column;min-height:250px;
-    transition:border-color .2s, transform .2s}
-  a.r-card:hover{border-top-color:var(--gold-bright);transform:translateY(-3px)}
-  .r-id{font-size:10.5px;letter-spacing:.2em;color:var(--muted2);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
-  .r-id .date{letter-spacing:.08em}
-  .r-top{display:flex;gap:7px;align-items:center;margin-bottom:14px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
-  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);border-radius:1px;font-weight:500}
-  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
-  .chip.prep{border-color:var(--navy-line);color:var(--muted)}
-  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
-  .r-card h3{font-family:var(--serif);font-size:18px;font-weight:600;line-height:1.45;flex:1}
-  .r-meta{margin-top:18px;padding-top:13px;border-top:1px solid rgba(255,255,255,.07);font-size:11.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;letter-spacing:.03em}
-  .r-go{margin-top:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);font-weight:600}
-  .count-note{font-size:12px;color:var(--muted2);margin-top:4px;letter-spacing:.04em}
-
-  /* ── Evidence grades ── */
-  .grades{margin-top:64px;border:1px solid rgba(201,165,74,.25);padding:38px 40px;
-    background:linear-gradient(120deg, rgba(201,165,74,.05), transparent 55%)}
-  .grades h2{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:6px}
-  .grades h2 em{color:var(--gold-bright);font-style:italic}
-  .grades .gd{font-size:13px;color:var(--muted);margin-bottom:24px}
-  .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px 30px}
-  .g-item{display:flex;gap:14px;align-items:flex-start}
-  .g-badge{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy-deep);background:var(--gold);
-    min-width:40px;height:40px;display:flex;align-items:center;justify-content:center}
-  .g-badge.b{background:rgba(201,165,74,.35);color:var(--gold-bright)}
-  .g-badge.c{background:transparent;border:1px solid var(--gold-dim);color:var(--muted)}
-  .g-item .t{font-size:13px;font-weight:600;color:var(--white);letter-spacing:.02em}
-  .g-item .d{font-size:12.5px;color:var(--muted);margin-top:3px}
-
-  /* ── Policy ── */
-  .p-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px 34px;margin-top:30px}
-  .p-item .t{font-size:13.5px;font-weight:600;color:var(--gold-bright);margin-bottom:6px;letter-spacing:.02em}
-  .p-item .d{font-size:13px;color:var(--muted)}
-
-  /* ── CTA ── */
-  .cta{margin:84px 0;text-align:center;padding:72px 30px;
-    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
-  .cta .sec-kicker{margin-bottom:16px}
-  .cta h2{font-family:var(--serif);font-size:32px;font-weight:700;margin-bottom:14px}
-  .cta p{color:var(--muted);font-size:15px;margin-bottom:36px}
-  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12.5px;
-    letter-spacing:.18em;text-transform:uppercase;padding:16px 48px;border-radius:1px;transition:background .2s}
-  .btn:hover{background:var(--gold-bright)}
-
-  footer{padding:44px 0 58px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
-  footer .logo{font-size:16px;margin-bottom:10px}
-  .hidden{display:none}
+  footer{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:11px;color:var(--muted2);letter-spacing:.1em;
+    opacity:0;transition:opacity .6s ease 1.1s}
+  body.split footer{opacity:1}
 </style>
 </head>
 <body>
 
-<!-- Pipeline Pulse -->
-<div class="pulse">
-  <div class="wrap">
-    <span class="lbl"><span class="dot"></span>Pipeline Pulse</span>
-    <span>Collection cycle <b>daily 08:00 – 19:00 KST</b></span>
-    <span>Morning brief <b>08:00</b></span>
-    <span>Daily digest <b>19:00</b></span>
-    <span>Evening cycle <b>19:15</b></span>
-    <span>As of <b>Jul 06, 2026</b></span>
+<!-- Scene 1: Ship on the waves -->
+<div class="scene scene-ship" id="ship-scene" role="button" tabindex="0" aria-label="Enter Sail Company">
+  <div class="ship-stage">
+    <div class="wave-track wave-back">
+      <svg viewBox="0 0 400 60" preserveAspectRatio="none"><path d="M0,30 C 50,10 100,50 150,30 C 200,10 250,50 300,30 C 350,10 400,50 400,30 L400,60 L0,60 Z" fill="#12234a"></path><path d="M400,30 C 450,10 500,50 550,30 C 600,10 650,50 700,30 C 750,10 800,50 800,30 L800,60 L400,60 Z" fill="#12234a"></path></svg>
+    </div>
+    <div class="wave-track wave-front">
+      <svg viewBox="0 0 400 60" preserveAspectRatio="none"><path d="M0,36 C 40,20 80,52 120,36 C 160,20 200,52 240,36 C 280,20 320,52 360,36 C 380,28 390,32 400,36 L400,60 L0,60 Z" fill="#c9a54a" fill-opacity=".35"></path><path d="M400,36 C 440,20 480,52 520,36 C 560,20 600,52 640,36 C 680,20 720,52 760,36 C 780,28 790,32 800,36 L800,60 L400,60 Z" fill="#c9a54a" fill-opacity=".35"></path></svg>
+    </div>
+
+    <svg class="ship" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+      <!-- hull: bold flat silhouette -->
+      <path d="M20,140 Q120,178 220,140 L204,158 Q120,188 36,158 Z" fill="#8a6f2f"/>
+      <path d="M204,158 C 218,152 224,138 216,128 C 224,134 226,148 216,160 Z" fill="#8a6f2f"/>
+
+      <!-- mast -->
+      <rect x="117.5" y="18" width="5" height="123" fill="#6b551f"/>
+
+      <!-- foresail (smaller, toward stern) -->
+      <path d="M120,55 L120,133 L66,120 Z" fill="#f2ddaa"/>
+
+      <!-- main sail (bold, with racing stripes) -->
+      <path d="M120,22 L120,141 L196,132 Z" fill="#e3c06a"/>
+      <line x1="136" y1="54" x2="180" y2="110" stroke="#f7ecc9" stroke-width="4" opacity=".9"/>
+      <line x1="150" y1="43" x2="190" y2="94" stroke="#f7ecc9" stroke-width="4" opacity=".9"/>
+
+      <!-- pennant -->
+      <path d="M122,18 L140,23 L122,28 Z" fill="#c9a54a"/>
+    </svg>
+  </div>
+  <div class="ship-caption">
+    <div class="kicker">Sail Company</div>
+    <div class="hint">Click to set sail</div>
   </div>
 </div>
 
-<nav>
-  <div class="wrap">
-    <div class="logo">SAIL <em>RESEARCH</em></div>
-    <div class="nav-r"><a href="#reports">REPORTS</a> &nbsp;·&nbsp; <a href="#method">METHODOLOGY</a> &nbsp;·&nbsp; <a href="#contact">CONTACT</a></div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="kicker">AI-Augmented Industry Research · Seoul</div>
-    <h1>Industry signals,<br>read at the source —<br>reported <span class="g">in English.</span></h1>
-    <p class="sub">
-      We read primary industry sources in the original — including the Korean-language reporting
-      most desks overlook — and report them in English. Every claim is verified before it runs,
-      and fact is labeled apart from hypothesis. The standard is the product.
-    </p>
-
-    <div class="stats">
-      <div class="stat"><div class="num">5</div><div class="lbl">Reports</div></div>
-      <div class="stat"><div class="num">5+</div><div class="lbl">Primary Sources</div></div>
-      <div class="stat"><div class="num">1</div><div class="lbl">Daily Pipeline</div></div>
-      <div class="stat"><div class="num">7</div><div class="lbl">Day Tracking</div></div>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-<section id="reports">
-  <div class="sec-kicker">Report Board</div>
-  <h2 class="sec">Latest Coverage</h2>
-  <p class="sec-desc">Research collection sorted by publication date. The pipeline generates new candidates daily; only operator-verified reports are published.</p>
-
-  <div class="controls">
-    <div class="search"><input id="q" type="search" placeholder="Search reports — title, keyword, category" oninput="filter()"></div>
-    <div class="sort-note">SORTED BY · NEWEST FIRST</div>
-  </div>
-
-  <div class="board" id="list">
-
-    <a class="r-card" href="reports/20260708-hbm-tech-tracking.html" data-s="hbm hbm4e memory semiconductor sk hynix samsung micron technology capability tracking">
-      <div class="r-id"><span>SR-2026-0005</span><span class="date">JUL 08, 2026</span></div>
-      <div class="r-top"><span class="chip">Semiconductors · Deep-Tech</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
-      <h3>Tracking the HBM Transition: Who Actually Leads the Race to HBM4E?</h3>
-      <div class="r-meta"><span>Primary-sourced · hashed</span><span>Fact / prior separated</span></div>
-      <div class="r-go">Read Report →</div>
-    </a>
-
-    <a class="r-card" href="reports/20260706-shortform-automation.html" data-s="short-form content automation workflow broadcasters marketers ai media">
-      <div class="r-id"><span>SR-2026-0004</span><span class="date">JUL 06, 2026</span></div>
-      <div class="r-top"><span class="chip">AI · Media</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
-      <h3>Short-Form Content Automation: Broadcasters Explore Adoption — Where Solo Marketers Should Start</h3>
-      <div class="r-meta"><span>5 Korean sources</span><span>Fact / hypothesis separated</span></div>
-      <div class="r-go">Read Report →</div>
-    </a>
-
-    <a class="r-card" href="reports/20260705-notion-ai.html" data-s="notion ai adoption signals productivity collaboration institutional training korea">
-      <div class="r-id"><span>SR-2026-0003</span><span class="date">JUL 06, 2026</span></div>
-      <div class="r-top"><span class="chip">AI · Productivity</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
-      <h3>Notion AI in Korea: From Personal Tool to Institutional Training Category</h3>
-      <div class="r-meta"><span>5 Korean sources</span><span>Fact / hypothesis separated</span></div>
-      <div class="r-go">Read Report →</div>
-    </a>
-
-    <a class="r-card" href="reports/20260705-hybrid-vs-ev.html" data-s="hybrid ev electric vehicle crossover registrations korea mobility statistics tesla byd">
-      <div class="r-id"><span>SR-2026-0002</span><span class="date">JUL 06, 2026</span></div>
-      <div class="r-top"><span class="chip">Mobility</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
-      <h3>Korea's EV Crossover: The Month Electric Overtook Hybrid</h3>
-      <div class="r-meta"><span>Registration statistics</span><span>Multi-outlet corroborated</span></div>
-      <div class="r-go">Read Report →</div>
-    </a>
-
-    <a class="r-card" href="reports/20260705-macbook-local-ai.html" data-s="macbook local ai on-device apple silicon ollama mlx unified memory">
-      <div class="r-id"><span>SR-2026-0001</span><span class="date">JUL 06, 2026</span></div>
-      <div class="r-top"><span class="chip">AI · Hardware</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
-      <h3>Local AI on MacBooks: Ollama's MLX Backend Changes the Math</h3>
-      <div class="r-meta"><span>Primary source verified</span><span>Official figures</span></div>
-      <div class="r-go">Read Report →</div>
-    </a>
-
-  </div>
-  <p class="count-note" id="count">Showing 5 reports</p>
-
-  <div class="grades" id="method">
-    <h2>The <em>Evidence Grade</em> System</h2>
-    <p class="gd">Every report carries a grade declaring how far its claims were verified. We would rather publish a B than dress it up as an A.</p>
-    <div class="g-grid">
-      <div class="g-item">
-        <div class="g-badge">A</div>
-        <div><div class="t">Primary-Verified</div><div class="d">Full-text sources, primary data, or first-party datasets verified by the operator.</div></div>
+<!-- Scene 2: Brand reveal -->
+<div class="scene scene-brand">
+  <div class="reveal">
+    <div class="kicker">Sail Company</div>
+    <div class="cards">
+      <div class="card soon">
+        <div class="tag">Coming Soon</div>
+        <h2>Sail <em>Data</em></h2>
+        <p>Data infrastructure and structured signal capture across the company's research pipelines.</p>
+        <div class="go">Coming Soon</div>
       </div>
-      <div class="g-item">
-        <div class="g-badge b">B</div>
-        <div><div class="t">Headline-Corroborated</div><div class="d">Claims verified to headline level across multiple outlets. Article bodies not independently confirmed.</div></div>
-      </div>
-      <div class="g-item">
-        <div class="g-badge c">C</div>
-        <div><div class="t">Hypothesis</div><div class="d">Interpretive signals and projections. Explicitly labeled; never stated as fact.</div></div>
+
+      <a class="card live" href="research/index.html">
+        <div class="tag live">Live</div>
+        <h2>Sail <em>Research</em></h2>
+        <p>Evidence-graded industry research, reported in English from primary sources.</p>
+        <div class="go">Enter →</div>
+      </a>
+
+      <div class="card soon">
+        <div class="tag">Coming Soon</div>
+        <h2>Sail <em>Quant</em></h2>
+        <p>Quantitative and bottleneck-driven market analysis.</p>
+        <div class="go">Coming Soon</div>
       </div>
     </div>
-
-    <div class="p-grid">
-      <div class="p-item"><div class="t">Fact / Hypothesis Separation</div><div class="d">Statements are written only to their verified level; interpretation is always marked as hypothesis.</div></div>
-      <div class="p-item"><div class="t">No Unverified Claims</div><div class="d">No performance assertions, no revenue promises, no uncited figures.</div></div>
-      <div class="p-item"><div class="t">Full Source Disclosure</div><div class="d">Every report lists its sources and the verification level of each.</div></div>
-      <div class="p-item"><div class="t">7-Day Observation</div><div class="d">Published reports are tracked for seven days; results feed the next topic selection.</div></div>
-    </div>
   </div>
-</section>
 
-<div class="cta" id="contact">
-  <div class="sec-kicker">Commissioned Research</div>
-  <h2>Need depth on a specific topic?</h2>
-  <p>Commissioned deep-dives — primary data collection, quantitative analysis, custom scope.<br>Tell us the topic and intended use; we reply with scope and terms.</p>
-  <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+  <div class="seam"></div>
+  <div class="curtain top">
+    <div class="wordmark"><span class="brand-text">SAIL <em>COMPANY</em></span></div>
+  </div>
+  <div class="curtain bottom">
+    <div class="wordmark"></div>
+  </div>
+
+  <footer>Seoul, Korea · Sail Data · Sail Research · Sail Quant</footer>
 </div>
-
-</main>
-
-<footer>
-  <div class="logo">SAIL <em style="color:var(--gold);font-style:normal">RESEARCH</em></div>
-  Seoul, Korea · sail.research.info@gmail.com
-</footer>
 
 <script>
-function filter(){
-  const q=document.getElementById('q').value.trim().toLowerCase();
-  let n=0;
-  document.querySelectorAll('#list .r-card').forEach(c=>{
-    const hit=!q||(c.dataset.s+' '+c.textContent).toLowerCase().includes(q);
-    c.classList.toggle('hidden',!hit); if(hit)n++;
+(function(){
+  var entered = false;
+  function enter(){
+    if (entered) return;
+    entered = true;
+    document.body.classList.add('ship-clicked');
+    setTimeout(function(){ document.body.classList.add('split'); }, 1000);
+  }
+  var ship = document.getElementById('ship-scene');
+  ship.addEventListener('click', enter);
+  ship.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); enter(); }
   });
-  document.getElementById('count').textContent='Showing '+n+' report'+(n===1?'':'s');
-}
+})();
 </script>
 
 </body>

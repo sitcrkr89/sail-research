@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sail Research — Korea's Industry Signals, in English</title>
+<meta name="description" content="AI-collected, human-verified research on Korean industry signals. Daily pipeline over Korean-language sources, evidence-graded reports in English.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.7;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* ── Pipeline Pulse bar ── */
+  .pulse{background:#050b18;border-bottom:1px solid var(--navy-line);padding:11px 0;font-size:12px;letter-spacing:.03em}
+  .pulse .wrap{display:flex;flex-wrap:wrap;gap:6px 30px;align-items:center;color:var(--muted)}
+  .pulse b{color:var(--gold-bright);font-weight:500}
+  .pulse .lbl{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:10.5px}
+  .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold-bright);margin-right:7px;box-shadow:0 0 6px var(--gold-bright)}
+
+  /* ── Nav ── */
+  nav{padding:22px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center}
+  .logo{font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .nav-r{font-size:12px;color:var(--muted);letter-spacing:.12em}
+  .nav-r a:hover{color:var(--gold-bright)}
+
+  /* ── Hero ── */
+  .hero{position:relative;padding:112px 0 92px;overflow:hidden;
+    background:
+      radial-gradient(1100px 500px at 78% -10%, rgba(201,165,74,.13), transparent 60%),
+      radial-gradient(800px 420px at 12% 110%, rgba(30,64,140,.35), transparent 65%),
+      linear-gradient(175deg, #0a1730 0%, #081226 55%, #060d1d 100%);
+  }
+  .hero:before{content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(90deg, rgba(255,255,255,.022) 0 1px, transparent 1px 120px);
+    pointer-events:none}
+  .hero .kicker{font-size:11.5px;font-weight:600;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-bottom:28px}
+  .hero .kicker:after{content:"";display:inline-block;width:56px;height:1px;background:var(--gold-dim);margin-left:16px;vertical-align:middle}
+  h1{font-family:var(--serif);font-size:clamp(38px,5.6vw,60px);font-weight:700;line-height:1.18;letter-spacing:-.005em;max-width:860px}
+  h1 .g{color:var(--gold-bright);font-style:italic}
+  .hero .sub{margin-top:28px;font-size:16.5px;color:var(--muted);max-width:620px;font-weight:300}
+
+  /* ── Collection stats ── */
+  .stats{margin-top:60px;display:flex;flex-wrap:wrap;border-top:1px solid rgba(201,165,74,.25);border-bottom:1px solid rgba(201,165,74,.25)}
+  .stat{flex:1;min-width:150px;padding:26px 8px;text-align:center;border-right:1px solid rgba(201,165,74,.12)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--gold-bright);line-height:1.1}
+  .stat .num.text{font-size:21px;letter-spacing:.01em}
+  .stat .lbl{font-size:10.5px;color:var(--muted);letter-spacing:.26em;text-transform:uppercase;margin-top:9px}
+
+  /* ── Sections ── */
+  section{padding:78px 0 30px}
+  .sec-kicker{font-size:11px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+  h2.sec{font-family:var(--serif);font-size:32px;font-weight:700;margin-bottom:10px}
+  .sec-desc{color:var(--muted);font-size:14.5px;max-width:580px}
+
+  /* ── Controls ── */
+  .controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:38px 0 26px}
+  .search input{width:360px;max-width:72vw;padding:12px 18px;background:var(--navy);border:1px solid var(--navy-line);border-radius:2px;color:var(--white);font-size:13.5px;font-family:var(--sans)}
+  .search input::placeholder{color:var(--muted2)}
+  .search input:focus{outline:none;border-color:var(--gold-dim)}
+  .sort-note{font-size:11px;color:var(--muted2);letter-spacing:.18em}
+
+  /* ── Report board ── */
+  .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px;padding-bottom:20px}
+  .r-card{background:linear-gradient(160deg,var(--navy-panel) 0%,var(--navy) 90%);border:1px solid var(--navy-line);
+    border-top:2px solid var(--gold-dim);padding:24px 26px 20px;display:flex;flex-direction:column;min-height:250px;
+    transition:border-color .2s, transform .2s}
+  a.r-card:hover{border-top-color:var(--gold-bright);transform:translateY(-3px)}
+  .r-id{font-size:10.5px;letter-spacing:.2em;color:var(--muted2);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+  .r-id .date{letter-spacing:.08em}
+  .r-top{display:flex;gap:7px;align-items:center;margin-bottom:14px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);border-radius:1px;font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.prep{border-color:var(--navy-line);color:var(--muted)}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  .r-card h3{font-family:var(--serif);font-size:18px;font-weight:600;line-height:1.45;flex:1}
+  .r-meta{margin-top:18px;padding-top:13px;border-top:1px solid rgba(255,255,255,.07);font-size:11.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;letter-spacing:.03em}
+  .r-go{margin-top:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);font-weight:600}
+  .count-note{font-size:12px;color:var(--muted2);margin-top:4px;letter-spacing:.04em}
+
+  /* ── Evidence grades ── */
+  .grades{margin-top:64px;border:1px solid rgba(201,165,74,.25);padding:38px 40px;
+    background:linear-gradient(120deg, rgba(201,165,74,.05), transparent 55%)}
+  .grades h2{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:6px}
+  .grades h2 em{color:var(--gold-bright);font-style:italic}
+  .grades .gd{font-size:13px;color:var(--muted);margin-bottom:24px}
+  .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px 30px}
+  .g-item{display:flex;gap:14px;align-items:flex-start}
+  .g-badge{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--navy-deep);background:var(--gold);
+    min-width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+  .g-badge.b{background:rgba(201,165,74,.35);color:var(--gold-bright)}
+  .g-badge.c{background:transparent;border:1px solid var(--gold-dim);color:var(--muted)}
+  .g-item .t{font-size:13px;font-weight:600;color:var(--white);letter-spacing:.02em}
+  .g-item .d{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+  /* ── Policy ── */
+  .p-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px 34px;margin-top:30px}
+  .p-item .t{font-size:13.5px;font-weight:600;color:var(--gold-bright);margin-bottom:6px;letter-spacing:.02em}
+  .p-item .d{font-size:13px;color:var(--muted)}
+
+  /* ── CTA ── */
+  .cta{margin:84px 0;text-align:center;padding:72px 30px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .sec-kicker{margin-bottom:16px}
+  .cta h2{font-family:var(--serif);font-size:32px;font-weight:700;margin-bottom:14px}
+  .cta p{color:var(--muted);font-size:15px;margin-bottom:36px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12.5px;
+    letter-spacing:.18em;text-transform:uppercase;padding:16px 48px;border-radius:1px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+
+  footer{padding:44px 0 58px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer .logo{font-size:16px;margin-bottom:10px}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+
+<!-- Pipeline Pulse -->
+<div class="pulse">
+  <div class="wrap">
+    <span class="lbl"><span class="dot"></span>Pipeline Pulse</span>
+    <span>Collection cycle <b>daily 08:00 – 19:00 KST</b></span>
+    <span>Morning brief <b>08:00</b></span>
+    <span>Daily digest <b>19:00</b></span>
+    <span>Evening cycle <b>19:15</b></span>
+    <span>As of <b>Jul 06, 2026</b></span>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="../index.html" title="Back to Sail Company">SAIL <em>RESEARCH</em></a>
+    <div class="nav-r"><a href="#reports">REPORTS</a> &nbsp;·&nbsp; <a href="methodology.html">METHODOLOGY</a> &nbsp;·&nbsp; <a href="#contact">CONTACT</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Evidence-First Industry Research · Seoul</div>
+    <h1>Industry signals,<br>read at the source —<br>reported <span class="g">in English.</span></h1>
+    <p class="sub">
+      Evidence-first industry research from Korean primary sources — reported in English.
+      We read the original reporting most desks overlook, verify every claim before it runs,
+      and label fact apart from hypothesis. The standard is the product.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">5</div><div class="lbl">Reports</div></div>
+      <div class="stat"><div class="num text">Verified</div><div class="lbl">Source Trail</div></div>
+      <div class="stat"><div class="num">1</div><div class="lbl">Daily Pipeline</div></div>
+      <div class="stat"><div class="num">7</div><div class="lbl">Day Tracking</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="reports">
+  <div class="sec-kicker">Report Board</div>
+  <h2 class="sec">Latest Coverage</h2>
+  <p class="sec-desc">Research collection sorted by publication date. The pipeline generates new candidates daily; only operator-verified reports are published.</p>
+
+  <div class="controls">
+    <div class="search"><input id="q" type="search" placeholder="Search reports — title, keyword, category" oninput="filter()"></div>
+    <div class="sort-note">SORTED BY · NEWEST FIRST</div>
+  </div>
+
+  <div class="board" id="list">
+
+    <a class="r-card" href="../reports/20260708-hbm-tech-tracking.html" data-s="hbm hbm4e memory semiconductor sk hynix samsung micron technology capability tracking">
+      <div class="r-id"><span>SR-2026-0005</span><span class="date">JUL 08, 2026</span></div>
+      <div class="r-top"><span class="chip">Semiconductors · Deep-Tech</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
+      <h3>Tracking the HBM Transition: Who Actually Leads the Race to HBM4E?</h3>
+      <div class="r-meta"><span>Primary-sourced · hashed</span><span>Fact / prior separated</span></div>
+      <div class="r-go">Read Report →</div>
+    </a>
+
+    <a class="r-card" href="../reports/20260706-shortform-automation.html" data-s="short-form content automation workflow broadcasters marketers ai media">
+      <div class="r-id"><span>SR-2026-0004</span><span class="date">JUL 06, 2026</span></div>
+      <div class="r-top"><span class="chip">AI · Media</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
+      <h3>Short-Form Content Automation: Broadcasters Explore Adoption — Where Solo Marketers Should Start</h3>
+      <div class="r-meta"><span>5 Korean sources</span><span>Fact / hypothesis separated</span></div>
+      <div class="r-go">Read Report →</div>
+    </a>
+
+    <a class="r-card" href="../reports/20260705-notion-ai.html" data-s="notion ai adoption signals productivity collaboration institutional training korea">
+      <div class="r-id"><span>SR-2026-0003</span><span class="date">JUL 06, 2026</span></div>
+      <div class="r-top"><span class="chip">AI · Productivity</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
+      <h3>Notion AI in Korea: From Personal Tool to Institutional Training Category</h3>
+      <div class="r-meta"><span>5 Korean sources</span><span>Fact / hypothesis separated</span></div>
+      <div class="r-go">Read Report →</div>
+    </a>
+
+    <a class="r-card" href="../reports/20260705-hybrid-vs-ev.html" data-s="hybrid ev electric vehicle crossover registrations korea mobility statistics tesla byd">
+      <div class="r-id"><span>SR-2026-0002</span><span class="date">JUL 06, 2026</span></div>
+      <div class="r-top"><span class="chip">Mobility</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
+      <h3>Korea's EV Crossover: The Month Electric Overtook Hybrid</h3>
+      <div class="r-meta"><span>Registration statistics</span><span>Multi-outlet corroborated</span></div>
+      <div class="r-go">Read Report →</div>
+    </a>
+
+    <a class="r-card" href="../reports/20260705-macbook-local-ai.html" data-s="macbook local ai on-device apple silicon ollama mlx unified memory">
+      <div class="r-id"><span>SR-2026-0001</span><span class="date">JUL 06, 2026</span></div>
+      <div class="r-top"><span class="chip">AI · Hardware</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
+      <h3>Local AI on MacBooks: Ollama's MLX Backend Changes the Math</h3>
+      <div class="r-meta"><span>Primary source verified</span><span>Official figures</span></div>
+      <div class="r-go">Read Report →</div>
+    </a>
+
+  </div>
+  <p class="count-note" id="count">Showing 5 reports</p>
+
+  <div class="grades" id="method">
+    <h2>The <em>Evidence Grade</em> System</h2>
+    <p class="gd">Every report carries a grade declaring how far its claims were verified. We would rather publish a B than dress it up as an A.</p>
+    <div class="g-grid">
+      <div class="g-item">
+        <div class="g-badge">A</div>
+        <div><div class="t">Primary-Verified</div><div class="d">Full-text sources, primary data, or first-party datasets verified by the operator.</div></div>
+      </div>
+      <div class="g-item">
+        <div class="g-badge b">B</div>
+        <div><div class="t">Headline-Corroborated</div><div class="d">Claims verified to headline level across multiple outlets. Article bodies not independently confirmed.</div></div>
+      </div>
+      <div class="g-item">
+        <div class="g-badge c">C</div>
+        <div><div class="t">Hypothesis</div><div class="d">Interpretive signals and projections. Explicitly labeled; never stated as fact.</div></div>
+      </div>
+    </div>
+
+    <div class="p-grid">
+      <div class="p-item"><div class="t">Fact / Hypothesis Separation</div><div class="d">Statements are written only to their verified level; interpretation is always marked as hypothesis.</div></div>
+      <div class="p-item"><div class="t">No Unverified Claims</div><div class="d">No performance assertions, no revenue promises, no uncited figures.</div></div>
+      <div class="p-item"><div class="t">Full Source Disclosure</div><div class="d">Every report lists its sources and the verification level of each.</div></div>
+      <div class="p-item"><div class="t">7-Day Observation</div><div class="d">Published reports are tracked for seven days; results feed the next topic selection.</div></div>
+    </div>
+    <p style="margin-top:28px;font-size:12.5px;letter-spacing:.08em">
+      <a href="methodology.html" style="color:var(--gold-bright);font-weight:600">Full methodology — hashed capture, retrieval dates, operator review →</a>
+    </p>
+  </div>
+</section>
+
+<div class="cta" id="contact">
+  <div class="sec-kicker">Commissioned Research</div>
+  <h2>Need depth on a specific topic?</h2>
+  <p>Commissioned deep-dives — primary data collection, quantitative analysis, custom scope.<br>Request a custom Korea industry brief, source map, or competitor signal tracker.</p>
+  <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+</div>
+
+</main>
+
+<footer>
+  <div class="logo"><a href="../index.html">SAIL <em style="color:var(--gold);font-style:normal">COMPANY</em></a></div>
+  Seoul, Korea · sail.research.info@gmail.com
+</footer>
+
+<script>
+function filter(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  let n=0;
+  document.querySelectorAll('#list .r-card').forEach(c=>{
+    const hit=!q||(c.dataset.s+' '+c.textContent).toLowerCase().includes(q);
+    c.classList.toggle('hidden',!hit); if(hit)n++;
+  });
+  document.getElementById('count').textContent='Showing '+n+' report'+(n===1?'':'s');
+}
+</script>
+
+</body>
+</html>

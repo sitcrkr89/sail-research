@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — Sail Research</title>
+<meta name="description" content="How Sail Research verifies claims: hashed primary-source capture, evidence labels, the fact/hypothesis boundary, and operator review.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.7;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+  nav{padding:22px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{max-width:1040px;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .nav-r{font-size:12px;color:var(--muted);letter-spacing:.12em}
+  .nav-r a:hover{color:var(--gold-bright)}
+
+  header.hero{position:relative;padding:88px 0 56px;overflow:hidden;
+    background:
+      radial-gradient(1100px 500px at 78% -10%, rgba(201,165,74,.13), transparent 60%),
+      linear-gradient(175deg, #0a1730 0%, #081226 55%, #060d1d 100%);
+  }
+  .kicker{font-size:11.5px;font-weight:600;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
+  h1{font-family:var(--serif);font-size:clamp(34px,5vw,50px);font-weight:700;line-height:1.2;max-width:760px}
+  h1 .g{color:var(--gold-bright);font-style:italic}
+  .lede{margin-top:22px;font-size:16px;color:var(--muted);max-width:640px;font-weight:300}
+
+  main{padding:64px 0 100px}
+  .step{display:flex;gap:26px;padding:36px 0;border-top:1px solid rgba(201,165,74,.16)}
+  .step:last-child{border-bottom:1px solid rgba(201,165,74,.16)}
+  .step .n{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy-deep);
+    background:var(--gold);min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .step h2{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:10px}
+  .step h2 em{color:var(--gold-bright);font-style:italic}
+  .step p{font-size:14.5px;color:var(--muted);max-width:620px}
+  .step .ex{margin-top:14px;padding:14px 18px;background:var(--navy-panel);border:1px solid var(--navy-line);border-left:2px solid var(--gold-dim);font-size:13px;color:var(--white)}
+  .step .ex b{color:var(--gold-bright)}
+
+  .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px 30px;margin-top:18px}
+  .g-item{display:flex;gap:14px;align-items:flex-start}
+  .g-badge{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy-deep);background:var(--gold);
+    min-width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .g-badge.b{background:rgba(201,165,74,.35);color:var(--gold-bright)}
+  .g-badge.c{background:transparent;border:1px solid var(--gold-dim);color:var(--muted)}
+  .g-item .t{font-size:13px;font-weight:600;color:var(--white)}
+  .g-item .d{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+  .cta{margin-top:80px;text-align:center;padding:56px 30px;border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta h2{font-family:var(--serif);font-size:26px;font-weight:700;margin-bottom:12px}
+  .cta p{color:var(--muted);font-size:14.5px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12.5px;
+    letter-spacing:.18em;text-transform:uppercase;padding:15px 42px;border-radius:1px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+
+  footer{padding:44px 0 58px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="../index.html" title="Back to Sail Company">SAIL <em style="color:var(--gold)">RESEARCH</em></a>
+    <div class="nav-r"><a href="index.html#reports">REPORTS</a> &nbsp;·&nbsp; <a href="index.html#contact">CONTACT</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Methodology</div>
+    <h1>How a claim earns the right to be called <span class="g">fact.</span></h1>
+    <p class="lede">
+      Every Sail Research report runs on the same four-step discipline: capture the primary source with a
+      verifiable hash, label each claim by how far it was verified, keep fact separate from model reasoning,
+      and never publish without a human reviewing the trail. This page documents that discipline directly —
+      not a marketing description of it.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="step">
+    <div class="n">1</div>
+    <div>
+      <h2>Hashed <em>Capture</em></h2>
+      <p>When a primary source is pulled — a company newsroom page, an investor release, an official filing — we
+      record the retrieval date, the byte size, and a SHA-256 hash of the captured content alongside the source
+      URL. The hash makes the capture checkable: if the source page changes later, the hash proves what it said
+      the day we read it.</p>
+      <div class="ex">Example, from the HBM tracking report (SR-2026-0005): each company's HBM4/HBM4E disclosure
+      was <b>captured 8 Jul 2026</b> and <b>stored with retrieval date + SHA-256 hash</b> before any claim was
+      written into the report.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="n">2</div>
+    <div>
+      <h2>Evidence <em>Labels</em></h2>
+      <p>Inside a report, every claim carries one of three internal labels — <b>Direct Evidence</b> (verified
+      against the primary source itself), <b>Analytic Prior</b> (a transparent, rule-based scoring or inference
+      built on top of captured evidence, not a fact on its own), or <b>Requires Verification</b> (flagged as
+      unconfirmed in the source data itself, stated as a gap rather than guessed at). These roll up into the
+      public Evidence Grade shown on every report card:</p>
+      <div class="g-grid">
+        <div class="g-item">
+          <div class="g-badge">A</div>
+          <div><div class="t">Primary-Verified</div><div class="d">Full-text sources, primary data, or first-party datasets verified by the operator.</div></div>
+        </div>
+        <div class="g-item">
+          <div class="g-badge b">B</div>
+          <div><div class="t">Headline-Corroborated</div><div class="d">Claims verified to headline level across multiple outlets. Article bodies not independently confirmed.</div></div>
+        </div>
+        <div class="g-item">
+          <div class="g-badge c">C</div>
+          <div><div class="t">Hypothesis</div><div class="d">Interpretive signals and projections. Explicitly labeled; never stated as fact.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="n">3</div>
+    <div>
+      <h2>The Fact / <em>Hypothesis</em> Boundary</h2>
+      <p>A model's scoring, ranking, or scenario projection is never presented as a confirmed fact, and a
+      confirmed fact is never dressed up with a confidence number it didn't earn. Every report that mixes the
+      two — captured evidence plus a scoring layer — carries an explicit "Fact vs. Model Prior" box so a reader
+      can see exactly where verification ends and interpretation begins.</p>
+      <div class="ex">What this boundary rules out: treating a zero score or a data gap as evidence of absence,
+      stating a model's ranking as if it were a disclosed fact, or letting a hedge ("likely," "expected to")
+      stand in for an actual source.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="n">4</div>
+    <div>
+      <h2>Operator <em>Review</em></h2>
+      <p>No report publishes on a pipeline's say-so. A human operator reviews the evidence trail — sources,
+      hashes, labels, and the fact/hypothesis boundary — before a report goes live. If the trail doesn't support
+      the grade, the grade comes down; we would rather publish a B than dress it up as an A. Published reports
+      are then tracked for seven days, and what actually happened feeds the next topic selection.</p>
+    </div>
+  </div>
+
+</main>
+
+<div class="cta">
+  <div class="kicker">Commissioned Research</div>
+  <h2>Need this discipline applied to your own scope?</h2>
+  <p>Custom Korea industry briefs, source maps, and competitor signal trackers — built on the same capture-and-verify trail.</p>
+  <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+</div>
+
+<footer>
+  <div class="logo" style="font-family:var(--serif);font-size:16px;margin-bottom:10px">SAIL <em style="color:var(--gold);font-style:normal">RESEARCH</em></div>
+  Seoul, Korea · sail.research.info@gmail.com
+</footer>
+
+</body>
+</html>
