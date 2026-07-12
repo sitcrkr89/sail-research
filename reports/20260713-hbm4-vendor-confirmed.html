@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HBM4 Goes Commercial: All Three Vendors Confirm the Transition — Sail Research SR-2026-0006</title>
+<meta name="description" content="All three HBM vendors now hold live official disclosures of HBM4: Samsung asserts industry-first commercial shipment, SK hynix demonstrated HBM4 at the TSMC 2025 symposium, and Micron lists HBM4 as an official product. First report released through Sail's BottleneckOS evidence gate. Evidence Grade A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.85;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  nav{padding:20px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1040px}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .back{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold-bright)}
+  header{padding:72px 0 52px;
+    background:radial-gradient(900px 400px at 80% -20%, rgba(201,165,74,.12), transparent 60%),
+    linear-gradient(175deg,#0a1730 0%,#081226 70%);
+    border-bottom:1px solid rgba(201,165,74,.22)}
+  .r-id{font-size:11px;letter-spacing:.24em;color:var(--muted2);margin-bottom:18px}
+  .chips{display:flex;gap:8px;margin-bottom:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(27px,3.8vw,38px);font-weight:700;line-height:1.32}
+  .meta{margin-top:22px;font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .meta b{color:var(--gold-bright);font-weight:500}
+  article{padding:56px 0 10px}
+  article p{margin:0 0 22px;font-size:15.5px;color:#dde3ee}
+  h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:44px 0 16px;color:var(--white)}
+  h2:before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:12px;vertical-align:middle}
+  ol,ul{margin:0 0 22px 24px}
+  li{margin:10px 0;font-size:15px;color:#dde3ee}
+  li b{font-weight:600;color:var(--white)}
+  /* data table */
+  .dtable{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+  .dtable th{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright);
+    border-bottom:1px solid var(--gold-dim);padding:10px 12px;text-align:right;font-weight:600}
+  .dtable th:first-child{text-align:left}
+  .dtable td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:right;color:#dde3ee}
+  .dtable td:first-child{text-align:left;color:var(--white);font-weight:500}
+  .dtable .up{color:#7fd6a4}.dtable .down{color:#e08484}
+  .box{border:1px solid var(--navy-line);background:var(--navy);padding:26px 28px;margin:34px 0}
+  .box h2{font-size:14px;margin:0 0 14px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+  .box h2:before{display:none}
+  .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
+  .box li b{color:var(--gold-bright);font-weight:500}
+  .box ul{margin:0 0 0 20px}
+  .caveat{border-left:3px solid var(--gold)}
+  .caveat .no{color:#e08484;font-weight:500}
+  .cta{margin:64px 0;text-align:center;padding:54px 28px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .kicker{font-size:10.5px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .cta h2{font-family:var(--serif);font-size:26px;margin:0 0 10px}
+  .cta h2:before{display:none}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;padding:14px 42px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+  footer{padding:38px 0 52px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer a{color:var(--gold-bright)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">SAIL <em>RESEARCH</em></div>
+    <a class="back" href="../index.html">&larr; Report Board</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="r-id">SR-2026-0006</div>
+    <div class="chips"><span class="chip">Semiconductors &middot; Deep-Tech</span><span class="chip grade">Evidence A &mdash; Primary-Sourced</span><span class="chip free">Free Sample</span></div>
+    <h1>HBM4 Goes Commercial: All Three Vendors Now Confirm the Generation Transition</h1>
+    <div class="meta">
+      <span><b>Jul 13, 2026</b></span><span>Sail Research</span><span>Samsung &middot; SK hynix &middot; Micron, 3 captured primary disclosures</span><span>Released through BottleneckOS evidence gate</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+
+  <p>For most of 2026, &ldquo;HBM4&rdquo; lived in roadmap language &mdash; slides, timelines,
+  intent. As of the disclosures we captured on July 12, that is no longer the honest
+  description. All three memory vendors now maintain live, official, first-party pages
+  that treat HBM4 as a present-tense product, and one of them asserts commercial
+  shipment outright.</p>
+
+  <h2>The Thesis</h2>
+  <p><strong>The HBM4 generation transition is now vendor-confirmed across all three
+  manufacturers &mdash; it has left the roadmap and entered the market.</strong>
+  This is a deliberately narrow claim. It says nothing about who wins, what volumes
+  ship, or which customers have qualified parts. It says: the generational handoff
+  itself is no longer speculative, because each vendor is publicly staking its own
+  name on it.</p>
+
+  <h2>What Each Company Itself Discloses</h2>
+  <table class="dtable">
+    <tr><th>Company</th><th>Official disclosure (captured 12 Jul 2026)</th><th>What it establishes</th></tr>
+    <tr><td>Samsung</td><td>&ldquo;Samsung Ships Industry-First Commercial HBM4&rdquo; &mdash; semiconductor.samsung.com newsroom</td><td>An explicit first-party claim of commercial HBM4 shipment</td></tr>
+    <tr><td>SK hynix</td><td>&ldquo;SK hynix Showcases HBM4 at TSMC 2025 Technology Symposium&rdquo; &mdash; news.skhynix.com</td><td>A public working demonstration inside the TSMC ecosystem</td></tr>
+    <tr><td>Micron</td><td>HBM4 official product page &mdash; micron.com/products/memory/hbm/hbm4</td><td>HBM4 listed as a formal product line, not a research note</td></tr>
+  </table>
+  <p>Three sources, three independent first-party publishers, three different kinds of
+  commitment &mdash; a shipment claim, an ecosystem demonstration, a product listing.
+  Under our evidence rules these are independent supports for the same thesis, which is
+  what qualifies it as a release-grade card rather than a monitoring note.</p>
+
+  <h2>The Counter-Evidence We Are Carrying Forward</h2>
+  <p>Our own prior report (<a href="20260708-hbm-tech-tracking.html">SR-2026-0005</a>)
+  cuts against over-reading this thesis, and we attach that counter-evidence to the card
+  rather than quietly dropping it:</p>
+  <ul>
+    <li>Samsung&rsquo;s HBM4E 16-high / 64&nbsp;GB variant remains plan-only &mdash; the most
+    delayed scenario tag in our dataset sits inside the same company claiming the
+    commercial first.</li>
+    <li>SK hynix&rsquo;s 16-layer path carries the single largest risk score in our dataset.</li>
+    <li>Micron&rsquo;s HBM4E record is a data gap, not evidence of absence &mdash; its zero
+    score reflects what has not been disclosed yet.</li>
+  </ul>
+  <p>In short: the <em>generation</em> is confirmed; the <em>next generation&rsquo;s hardest
+  configurations</em> are not.</p>
+
+  <h2>What This Report Cannot Tell You</h2>
+  <p>Shipment volumes, yields, per-customer qualification status, and pricing are all
+  undisclosed by every vendor. Any analysis quoting numbers for those today is modeling,
+  not reporting. We flag them as open verification gaps on the card.</p>
+
+  <div class="box caveat">
+    <h2>Evidence Caveat <h2>Method Note &mdash; First Release Through the Evidence Gate</h2>mdash; First Release Through the Evidence Gate</h2>
+    <p>This is the first Sail Research report produced through our BottleneckOS release
+    pipeline: each supporting source was captured directly from the vendor&rsquo;s own site,
+    hashed (SHA-256), and the thesis card passed an automated ReviewOS check &mdash; source
+    provenance, freshness hashes, methodology contract, and policy screen &mdash; before a
+    human approved this page. A thesis needs at least two independent primary sources to
+    qualify; this one has three.</p>
+  </div>
+
+  <div class="box">
+    <h2>Sources (primary &mdash; captured &amp; hashed 12 Jul 2026)</h2>
+    <ul>
+      <li>Samsung Semiconductor Newsroom &mdash; &ldquo;Samsung Ships Industry-First Commercial HBM4 With Ultimate Performance for AI Computing&rdquo; &mdash; SHA-256 3b2e2a15&hellip;</li>
+      <li>SK hynix Newsroom &mdash; &ldquo;SK hynix Showcases HBM4 at TSMC 2025 Technology Symposium&rdquo; &mdash; SHA-256 c5917545&hellip;</li>
+      <li>Micron &mdash; HBM4 official product page &mdash; SHA-256 acb16886&hellip;</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="kicker">Commissioned Research</div>
+    <h2>Need the full transition model or a custom scope?</h2>
+    <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  SAIL RESEARCH &middot; Seoul, Korea &middot; <a href="../index.html">All reports</a>
+</footer>
+
+</body>
+</html>
