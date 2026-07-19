@@ -55,8 +55,8 @@
   @keyframes heave{from{transform:translateY(0)}to{transform:translateY(9px)}}
 
   /* ══════ The galleon — white, flat, forward ══════ */
-  .galleon-anchor{position:absolute;z-index:5;right:clamp(10px,7vw,140px);bottom:4vh;
-    width:clamp(280px,34vw,470px)}
+  .galleon-anchor{position:absolute;z-index:5;right:clamp(10px,7vw,140px);bottom:8vh;
+    width:clamp(300px,40vw,560px)}
   .galleon-approach{animation:approach 4.8s cubic-bezier(.23,.82,.28,1) .5s both}
   @keyframes approach{from{transform:translate(36vw,-32vh) scale(.12) rotate(2deg);}}
   .galleon{width:100%;height:auto;display:block;transform-origin:50% 88%;
@@ -179,54 +179,31 @@
   <!-- the galleon: white silhouette, sailing in from the horizon -->
   <div class="galleon-anchor" aria-hidden="true">
     <div class="galleon-approach">
-      <svg class="galleon" viewBox="0 0 680 760" xmlns="http://www.w3.org/2000/svg">
+      <svg class="galleon" viewBox="0 0 640 470" xmlns="http://www.w3.org/2000/svg">
         <g fill="#f7f8fa">
           <!-- bowsprit -->
-          <path d="M92,640 L12,544 L22,536 L104,632 Z"/>
+          <path d="M74,362 L8,298 L17,290 L84,352 Z"/>
           <!-- masts -->
-          <rect x="215" y="64" width="6" height="604"/>
-          <rect x="372" y="30" width="7" height="648"/>
-          <rect x="512" y="120" width="6" height="545"/>
-          <!-- pennants -->
-          <path d="M218,58 L254,66 L218,74 Z"/>
-          <path d="M375,22 L414,31 L375,40 Z"/>
-          <path d="M515,112 L548,120 L515,128 Z"/>
-          <!-- jib sails (split by navy stays below) -->
-          <path d="M16,546 L212,190 L212,586 Z"/>
-          <!-- fore mast square sails, 5 tiers -->
-          <path d="M181,148 L255,148 L263,210 Q218,226 173,210 Z"/>
-          <path d="M168,222 L268,222 L277,296 Q218,312 159,296 Z"/>
-          <path d="M158,308 L278,308 L288,388 Q218,404 148,388 Z"/>
-          <path d="M149,400 L287,400 L297,488 Q218,506 139,488 Z"/>
-          <path d="M143,500 L293,500 L308,596 Q218,616 128,596 Z"/>
-          <!-- main mast square sails, 5 tiers -->
-          <path d="M335,140 L415,140 L423,208 Q375,224 327,208 Z"/>
-          <path d="M322,220 L428,220 L437,300 Q375,316 313,300 Z"/>
-          <path d="M311,312 L439,312 L449,396 Q375,412 301,396 Z"/>
-          <path d="M302,408 L448,408 L459,500 Q375,518 291,500 Z"/>
-          <path d="M295,512 L455,512 L470,608 Q375,628 280,608 Z"/>
-          <!-- mizzen mast square sails, 4 tiers -->
-          <path d="M475,250 L555,250 L562,318 Q515,332 468,318 Z"/>
-          <path d="M466,330 L564,330 L572,408 Q515,422 458,408 Z"/>
-          <path d="M457,420 L573,420 L582,500 Q515,516 448,500 Z"/>
-          <path d="M450,512 L580,512 L592,600 Q515,618 438,600 Z"/>
-          <!-- spanker (gaff sail at the stern) -->
-          <path d="M522,540 L628,498 L618,636 Q566,648 522,634 Z"/>
-          <!-- hull: long clipper hull, bow left -->
-          <path d="M58,634 Q180,660 320,666 Q470,664 600,624 L650,608 L642,648 Q560,678 470,688 Q300,702 168,690 Q98,678 72,656 Z"/>
-          <!-- bow foam -->
-          <path d="M28,676 Q84,690 142,716 Q82,718 26,698 Z"/>
-          <path d="M148,712 Q210,724 268,730 Q206,736 146,726 Z" opacity=".7"/>
+          <rect x="230" y="150" width="6" height="226"/>
+          <rect x="420" y="96" width="6" height="280"/>
+          <!-- pennants (streaming forward) -->
+          <path d="M230,146 L192,157 L230,168 Z"/>
+          <path d="M420,92 L378,104 L420,116 Z"/>
+          <!-- fore mast sails, billowing forward -->
+          <path d="M233,170 C 184,180 148,210 134,252 C 180,246 216,252 233,256 Z"/>
+          <path d="M233,262 C 168,268 116,306 96,364 C 160,356 210,360 233,364 Z"/>
+          <!-- main mast sails, billowing forward -->
+          <path d="M424,102 C 380,108 350,124 338,152 C 376,148 406,152 424,155 Z"/>
+          <path d="M424,160 C 360,168 314,196 298,240 C 356,234 402,240 424,244 Z"/>
+          <path d="M424,250 C 340,258 276,300 252,368 C 330,358 396,362 424,366 Z"/>
+          <!-- aft sail -->
+          <path d="M428,214 C 484,226 526,262 542,326 C 494,346 454,352 428,354 Z"/>
+          <!-- hull: upswept bow, curved keel -->
+          <path d="M46,342 Q60,372 100,378 L520,378 Q570,372 596,352 Q590,398 540,428 Q470,448 380,450 L210,448 Q120,438 76,408 Q52,380 46,342 Z"/>
         </g>
-        <!-- navy details: stays splitting the jibs, sheer stripe, portholes -->
-        <g stroke="#0b1a36" stroke-width="8" fill="none">
-          <path d="M62,570 L213,290"/>
-          <path d="M108,596 L213,430"/>
-        </g>
+        <!-- navy detail: deck shadow line -->
         <g fill="#0b1a36">
-          <path d="M86,652 Q300,684 618,632 L616,641 Q300,693 88,661 Z" opacity=".55"/>
-          <circle cx="190" cy="672" r="7"/><circle cx="270" cy="678" r="7"/><circle cx="350" cy="680" r="7"/>
-          <circle cx="430" cy="676" r="7"/><circle cx="510" cy="668" r="7"/><circle cx="580" cy="654" r="7"/>
+          <path d="M92,388 Q320,400 560,384 L558,392 Q320,408 94,396 Z" opacity=".5"/>
         </g>
       </svg>
     </div>
