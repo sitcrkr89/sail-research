@@ -10,46 +10,60 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --abyss:#03060d; --navy-deep:#071022; --navy:#0b1730; --navy-line:#1a2a4d;
+    --void:#010104; --ink:#050510;
     --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
-    --foam:#ece7da; --muted:#8d99b3; --muted2:#5d6a86;
+    --foam:#edeae1; --muted:#8f93a5; --muted2:#5a5e70; --line:#1e1f2b;
     --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--navy-deep);color:var(--foam);font-family:var(--sans);font-weight:300;line-height:1.65}
+  body{background:var(--void);color:var(--foam);font-family:var(--sans);font-weight:300;line-height:1.65}
   a{color:inherit;text-decoration:none}
-  ::selection{background:var(--gold-dim);color:var(--abyss)}
+  ::selection{background:var(--gold-dim);color:var(--void)}
 
-  /* ══════ Fixed canvas: sea, stars, waves, ship, grain ══════ */
-  .sea,.sea-night,.stars,.waves,.ship-layer,.grain,.vignette{position:fixed;inset:0;pointer-events:none}
-  .sea{z-index:-4;background:
-    radial-gradient(1200px 560px at 80% -12%, rgba(201,165,74,.08), transparent 60%),
-    radial-gradient(900px 480px at 8% 110%, rgba(22,44,92,.4), transparent 65%),
-    linear-gradient(176deg,#0a1530 0%, #071022 52%, #04080f 100%)}
-  .sea-night{z-index:-3;opacity:0;background:
-    radial-gradient(1000px 520px at 50% -14%, rgba(22,44,92,.25), transparent 60%),
-    linear-gradient(178deg,#050a18 0%, #03060d 58%, #010308 100%)}
-  .stars{z-index:-2;opacity:0}
-  .stars svg{width:100%;height:100%}
+  /* ══════ Fixed canvas: the light dome ══════ */
+  .scene,.grain,.vignette,.ship-layer{position:fixed;inset:0;pointer-events:none}
+  .scene{z-index:-3;overflow:hidden;background:radial-gradient(120% 80% at 50% 110%, #06060f 0%, var(--void) 60%)}
 
-  .waves{z-index:-1;top:auto;height:150px;overflow:hidden}
-  .wave-track{position:absolute;left:0;right:0;bottom:0;height:100%}
-  .wave-track svg{position:absolute;bottom:0;left:0;height:100%;width:200%;animation:drift 34s linear infinite}
-  .wave-back svg{animation-duration:52s;opacity:.65}
-  .wave-front svg{animation-duration:30s;opacity:.9;animation-direction:reverse}
-  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  /* slow ambient spectrum cycle on the outer wrap, scroll-driven shift applied by JS on #hueShift */
+  .cycle{position:absolute;inset:0;animation:spectrum 52s linear infinite}
+  @keyframes spectrum{from{filter:hue-rotate(0)}to{filter:hue-rotate(360deg)}}
+  #hueShift{position:absolute;inset:0;will-change:filter}
 
-  .ship-layer{top:auto;bottom:78px;height:0;z-index:1}
-  .ship-pos{position:absolute;left:0;bottom:0;will-change:transform}
-  .ship{width:min(300px,44vw);height:auto;display:block;transform-origin:50% 92%;
-    animation:bob 7.5s ease-in-out infinite;filter:drop-shadow(0 18px 26px rgba(0,0,0,.55))}
-  .ship-flip .ship{scale:-1 1}
-  @keyframes bob{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-5px) rotate(.6deg)}}
+  .dome{position:absolute;left:50%;bottom:23vh;transform:translateX(-50%);
+    width:min(78vmin,86vw);height:min(82vmin,78vh);
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+    background:linear-gradient(180deg,#2450e8 0%,#5b3af0 42%,#b52bd4 72%,#ff2d78 100%);
+    filter:blur(26px) saturate(1.15);opacity:.92}
+  .dome-core{position:absolute;left:50%;bottom:23vh;transform:translateX(-50%);
+    width:min(58vmin,64vw);height:min(64vmin,60vh);
+    border-radius:50% 50% 0 0 / 100% 100% 0 0;
+    background:linear-gradient(180deg,rgba(120,160,255,.55) 0%,rgba(190,120,255,.4) 55%,rgba(255,120,190,.55) 100%);
+    filter:blur(52px);mix-blend-mode:screen}
+  .horizon-glow{position:absolute;left:-25vw;right:-25vw;bottom:20.5vh;height:7vh;
+    background:radial-gradient(52% 100% at 50% 50%, rgba(255,240,250,.85) 0%, rgba(255,90,170,.5) 34%, rgba(70,90,255,.28) 62%, transparent 82%);
+    filter:blur(10px);mix-blend-mode:screen}
+  .disc{position:absolute;left:50%;bottom:2vh;transform:translateX(-50%);
+    width:170vw;height:42vh;
+    background:
+      radial-gradient(50% 46% at 50% 12%, rgba(180,140,255,.34) 0%, rgba(90,80,255,.16) 42%, transparent 70%),
+      radial-gradient(50% 50% at 50% 0%, rgba(255,60,150,.22) 55%, rgba(60,120,255,.2) 68%, transparent 78%);
+    filter:blur(6px)}
+  .floor-sheen{position:absolute;left:0;right:0;bottom:0;height:22vh;
+    background:linear-gradient(180deg,rgba(120,110,255,.12) 0%,rgba(255,80,170,.05) 45%,transparent 100%);
+    filter:blur(14px);mix-blend-mode:screen}
 
-  .grain{z-index:50;opacity:.055;mix-blend-mode:overlay;
+  .grain{z-index:50;opacity:.06;mix-blend-mode:overlay;
     background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="260" height="260" filter="url(%23n)"/></svg>')}
-  .vignette{z-index:49;background:radial-gradient(120% 90% at 50% 42%, transparent 58%, rgba(0,0,0,.42) 100%)}
+  .vignette{z-index:49;background:radial-gradient(125% 95% at 50% 40%, transparent 55%, rgba(0,0,0,.55) 100%)}
+
+  /* the solitary vessel on the horizon */
+  .ship-layer{top:auto;bottom:calc(21.5vh - 6px);height:0;z-index:-1}
+  .ship-pos{position:absolute;left:0;bottom:0;will-change:transform}
+  .ship{width:clamp(64px,9vw,110px);height:auto;display:block;transform-origin:50% 92%;
+    animation:bob 9s ease-in-out infinite}
+  .ship-flip .ship{scale:-1 1}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-.5deg)}50%{transform:translateY(-3px) rotate(.5deg)}}
 
   /* ══════ Masthead ══════ */
   .masthead{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;
@@ -61,29 +75,39 @@
   /* ══════ Chapters ══════ */
   main{position:relative;z-index:2}
   .chapter{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
-    padding:120px clamp(22px,7vw,130px) 210px;max-width:1280px;margin:0 auto}
+    padding:120px clamp(22px,7vw,130px) 220px;max-width:1280px;margin:0 auto}
 
+  .chapter:not(.hero)::before{content:"";position:absolute;inset:-80px 0;z-index:-2;
+    background:linear-gradient(90deg,rgba(1,1,4,.88) 0%,rgba(1,1,4,.62) 34%,transparent 62%);
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%);
+    mask-image:linear-gradient(180deg,transparent 0,#000 140px,#000 calc(100% - 140px),transparent 100%)}
   .ghost{position:absolute;top:50%;right:clamp(0px,3vw,60px);transform:translateY(-58%);z-index:-1;
     font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(220px,34vw,480px);line-height:1;
-    color:transparent;-webkit-text-stroke:1px rgba(201,165,74,.16);user-select:none}
+    color:transparent;-webkit-text-stroke:1px rgba(237,234,225,.1);user-select:none}
 
   .kicker{display:flex;align-items:center;gap:18px;font-size:11px;font-weight:600;letter-spacing:.34em;color:var(--gold);text-transform:uppercase}
   .kicker::before{content:"";width:56px;height:1px;background:var(--gold-dim)}
   h1{font-family:var(--serif);font-weight:800;font-size:clamp(64px,15.5vw,196px);line-height:.92;letter-spacing:-.005em;
-    margin:34px 0 38px;text-wrap:balance}
+    margin:34px 0 38px;text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.6)}
   h1 .line{display:block}
   h1 em,h2 em{font-style:italic;font-weight:700;color:var(--gold-bright)}
-  h2{font-family:var(--serif);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.98;margin:26px 0 24px}
-  .lede{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:520px}
+  h2{font-family:var(--serif);font-weight:800;font-size:clamp(44px,7vw,92px);line-height:.98;margin:26px 0 24px;
+    text-shadow:0 2px 34px rgba(0,0,0,.6)}
+  .lede{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:520px;text-shadow:0 1px 18px rgba(0,0,0,.7)}
   .rule{width:100%;max-width:640px;height:1px;margin-top:44px;
     background:linear-gradient(90deg,rgba(201,165,74,.4),rgba(201,165,74,.05))}
 
   .tag{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
-    color:var(--muted2);border:1px solid var(--navy-line);padding:8px 18px;margin-top:30px}
+    color:var(--muted2);border:1px solid var(--line);padding:8px 18px;margin-top:30px;background:rgba(1,1,4,.4)}
   .tag.live{color:var(--gold-bright);border-color:var(--gold-dim);box-shadow:0 0 30px rgba(201,165,74,.14)}
 
-  /* hero */
-  .hero .lede{font-size:clamp(15px,1.6vw,19px)}
+  /* hero — centered monument composition */
+  .hero{align-items:center;text-align:center;justify-content:flex-start;padding-top:17vh}
+  .hero .kicker{justify-content:center}
+  .hero .kicker::after{content:"";width:56px;height:1px;background:var(--gold-dim)}
+  .hero h1{font-size:clamp(46px,8.5vw,118px);margin:26px 0 20px;line-height:.95;
+    text-shadow:0 2px 22px rgba(0,0,0,.5)}
+  .hero .lede{font-size:clamp(14px,1.4vw,17px);margin:0 auto;color:#a9adbe}
   .scroll-post{position:absolute;bottom:210px;right:clamp(22px,4.5vw,64px);display:flex;flex-direction:column;align-items:center;gap:16px}
   .scroll-post .word{font-size:10px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--muted2);
     writing-mode:vertical-rl}
@@ -92,12 +116,13 @@
   @keyframes sound{0%{transform:scaleY(0)}55%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
 
   /* research chapter */
-  .reports{margin-top:48px;max-width:680px;border-top:1px solid var(--navy-line);counter-reset:rep}
-  .report{display:flex;gap:26px;align-items:baseline;padding:24px 6px;border-bottom:1px solid var(--navy-line);
+  .reports{margin-top:48px;max-width:680px;border-top:1px solid var(--line);counter-reset:rep;
+    background:rgba(1,1,4,.55);backdrop-filter:blur(3px)}
+  .report{display:flex;gap:26px;align-items:baseline;padding:24px 6px;border-bottom:1px solid var(--line);
     counter-increment:rep;transition:background .3s,padding-left .3s}
   .report::before{content:counter(rep,decimal-leading-zero);font-family:var(--serif);font-style:italic;
     font-size:15px;color:var(--muted2);transition:color .3s}
-  .report:hover{background:rgba(201,165,74,.045);padding-left:16px}
+  .report:hover{background:rgba(201,165,74,.05);padding-left:16px}
   .report:hover::before{color:var(--gold-bright)}
   .report .meta{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2);white-space:nowrap;order:3;margin-left:auto}
   .report .title{font-size:16.5px;font-weight:400;color:var(--foam);
@@ -105,16 +130,17 @@
   .report:hover .title{background-size:100% 1px}
   .cta{display:inline-flex;align-items:center;gap:14px;margin-top:48px;font-size:11.5px;font-weight:600;
     letter-spacing:.3em;text-transform:uppercase;color:var(--foam);border:1px solid var(--gold-dim);
-    padding:20px 38px;position:relative;overflow:hidden;transition:color .35s}
+    padding:20px 38px;position:relative;overflow:hidden;transition:color .35s;background:rgba(1,1,4,.4)}
   .cta::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;
     transition:transform .45s cubic-bezier(.76,0,.24,1);z-index:-1}
-  .cta:hover{color:var(--abyss)}
+  .cta:hover{color:var(--void)}
   .cta:hover::before{transform:scaleX(1)}
   .cta:focus-visible,.report:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
 
-  footer{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:40px clamp(22px,7vw,130px) 170px;
-    font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted2);
-    display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--navy-line)}
+  footer{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:40px clamp(22px,7vw,130px) 150px;
+    font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);
+    display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);
+    text-shadow:0 1px 12px rgba(0,0,0,.8)}
 
   /* ══════ Reveals ══════ */
   .js .reveal{opacity:0;transform:translateY(44px);transition:opacity 1.1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16,1,.3,1)}
@@ -138,66 +164,33 @@
     *,*::before,*::after{animation:none!important;transition:none!important}
     .js .reveal{opacity:1;transform:none}
     .ship-layer{display:none}
-    .stars{opacity:.5}
   }
 </style>
 </head>
 <body>
 
-<div class="sea"></div>
-<div class="sea-night" id="night"></div>
-<div class="stars" id="stars" aria-hidden="true">
-  <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" fill="#ece7da">
-    <circle cx="42" cy="61" r="1"/><circle cx="118" cy="203" r=".7"/><circle cx="187" cy="88" r="1.2"/>
-    <circle cx="240" cy="310" r=".6"/><circle cx="296" cy="140" r=".9"/><circle cx="352" cy="47" r=".8"/>
-    <circle cx="401" cy="255" r="1.1"/><circle cx="466" cy="112" r=".6"/><circle cx="520" cy="333" r=".9"/>
-    <circle cx="578" cy="76" r="1.3"/><circle cx="633" cy="192" r=".7"/><circle cx="689" cy="291" r=".9"/>
-    <circle cx="742" cy="55" r="1"/><circle cx="798" cy="170" r=".6"/><circle cx="851" cy="248" r="1.1"/>
-    <circle cx="905" cy="98" r=".8"/><circle cx="957" cy="205" r=".9"/><circle cx="80" cy="356" r=".8"/>
-    <circle cx="154" cy="420" r=".6"/><circle cx="325" cy="392" r="1"/><circle cx="447" cy="441" r=".7"/>
-    <circle cx="602" cy="404" r=".9"/><circle cx="731" cy="376" r=".6"/><circle cx="874" cy="428" r="1"/>
-    <circle cx="63" cy="153" r=".6" opacity=".7"/><circle cx="509" cy="30" r=".7" opacity=".7"/>
-    <circle cx="948" cy="330" r=".7" opacity=".7"/><circle cx="271" cy="228" r=".5" opacity=".6"/>
-  </svg>
-</div>
-
-<div class="waves" aria-hidden="true">
-  <div class="wave-track wave-back">
-    <svg viewBox="0 0 400 60" preserveAspectRatio="none"><path d="M0,30 C 50,14 100,46 150,30 C 200,14 250,46 300,30 C 350,14 400,46 400,30 L400,60 L0,60 Z" fill="#0b1730"></path><path d="M400,30 C 450,14 500,46 550,30 C 600,14 650,46 700,30 C 750,14 800,46 800,30 L800,60 L400,60 Z" fill="#0b1730"></path></svg>
-  </div>
-  <div class="wave-track wave-front">
-    <svg viewBox="0 0 400 60" preserveAspectRatio="none"><path d="M0,38 C 40,24 80,50 120,38 C 160,24 200,50 240,38 C 280,24 320,50 360,38 C 380,31 390,34 400,38 L400,60 L0,60 Z" fill="#050b18"></path><path d="M400,38 C 440,24 480,50 520,38 C 560,24 600,50 640,38 C 680,24 720,50 760,38 C 780,31 790,34 800,38 L800,60 L400,60 Z" fill="#050b18"></path><path d="M0,38 C 40,24 80,50 120,38 C 160,24 200,50 240,38 C 280,24 320,50 360,38 C 380,31 390,34 400,38" fill="none" stroke="#c9a54a" stroke-opacity=".22" stroke-width="1.2"></path><path d="M400,38 C 440,24 480,50 520,38 C 560,24 600,50 640,38 C 680,24 720,50 760,38 C 780,31 790,34 800,38" fill="none" stroke="#c9a54a" stroke-opacity=".22" stroke-width="1.2"></path></svg>
+<div class="scene" aria-hidden="true">
+  <div class="cycle">
+    <div id="hueShift">
+      <div class="dome"></div>
+      <div class="dome-core"></div>
+      <div class="disc"></div>
+      <div class="horizon-glow"></div>
+      <div class="floor-sheen"></div>
+    </div>
   </div>
 </div>
 
 <div class="ship-layer" aria-hidden="true">
   <div class="ship-pos" id="shipPos">
     <svg class="ship" viewBox="0 0 300 230" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="sailA" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#182645"/><stop offset="1" stop-color="#0c1730"/>
-        </linearGradient>
-        <linearGradient id="sailB" x1="1" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#131f3b"/><stop offset="1" stop-color="#0a1428"/>
-        </linearGradient>
-        <linearGradient id="hullG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#0e1830"/><stop offset="1" stop-color="#060c1a"/>
-        </linearGradient>
-      </defs>
-      <!-- main sail — tall, gaff-rigged silhouette with gold rim light -->
-      <path d="M148,18 L148,168 L262,158 Q210,120 178,72 Q158,42 148,18 Z" fill="url(#sailA)" stroke="#c9a54a" stroke-opacity=".75" stroke-width="1.4"/>
-      <!-- foresail -->
-      <path d="M138,52 L138,166 L52,152 Q96,118 122,84 Q132,68 138,52 Z" fill="url(#sailB)" stroke="#c9a54a" stroke-opacity=".55" stroke-width="1.2"/>
-      <!-- mast -->
-      <rect x="141" y="10" width="4.5" height="168" fill="#1c2a4a" stroke="#c9a54a" stroke-opacity=".3" stroke-width=".6"/>
-      <!-- pennant -->
-      <path d="M145.5,10 L172,16 L145.5,22 Z" fill="#c9a54a"/>
-      <!-- hull — long, low, heavy -->
-      <path d="M22,176 L286,172 Q276,196 246,204 Q160,216 78,204 Q40,196 22,176 Z" fill="url(#hullG)" stroke="#c9a54a" stroke-opacity=".5" stroke-width="1.3"/>
-      <!-- gold waterline -->
-      <path d="M30,182 Q160,196 278,178" fill="none" stroke="#c9a54a" stroke-opacity=".8" stroke-width="1.6"/>
-      <!-- reflection -->
-      <path d="M70,222 Q160,230 236,222" fill="none" stroke="#c9a54a" stroke-opacity=".18" stroke-width="2"/>
+      <!-- solitary vessel: near-black silhouette against the light -->
+      <path d="M148,18 L148,168 L262,158 Q210,120 178,72 Q158,42 148,18 Z" fill="#04040a" stroke="rgba(237,234,225,.28)" stroke-width="1.2"/>
+      <path d="M138,52 L138,166 L52,152 Q96,118 122,84 Q132,68 138,52 Z" fill="#04040a" stroke="rgba(237,234,225,.2)" stroke-width="1"/>
+      <rect x="141" y="10" width="4.5" height="168" fill="#04040a"/>
+      <path d="M145.5,10 L172,16 L145.5,22 Z" fill="#0a0a14"/>
+      <path d="M22,176 L286,172 Q276,196 246,204 Q160,216 78,204 Q40,196 22,176 Z" fill="#04040a" stroke="rgba(237,234,225,.25)" stroke-width="1.1"/>
+      <path d="M70,222 Q160,230 236,222" fill="none" stroke="rgba(237,234,225,.12)" stroke-width="2"/>
     </svg>
   </div>
 </div>
@@ -212,7 +205,6 @@
     <p class="kicker reveal">Seoul · Research &amp; Analytics</p>
     <h1 class="reveal"><span class="line">SAIL</span><span class="line"><em>COMPANY</em></span></h1>
     <p class="lede reveal">Data, research, and quantitative analysis — reported in English from primary sources.</p>
-    <div class="rule reveal"></div>
     <div class="scroll-post" aria-hidden="true"><span class="word">Set Sail</span><span class="line"></span></div>
   </section>
 
@@ -270,10 +262,9 @@
 
   if (reduce) return;
 
-  var night = document.getElementById('night');
-  var stars = document.getElementById('stars');
+  var hue = document.getElementById('hueShift');
   var shipPos = document.getElementById('shipPos');
-  function shipW(){ return Math.min(300, innerWidth*.44); }
+  function shipW(){ return Math.max(64, Math.min(110, innerWidth*.09)); }
 
   // tack waypoints across the viewport, as fraction of usable width
   var pts = [.5, .82, .14, .68, .42];
@@ -289,12 +280,11 @@
     ticking = false;
     var max = document.documentElement.scrollHeight - innerHeight;
     var p = max > 0 ? clamp(scrollY/max) : 0;
-    night.style.opacity = p*p;
-    stars.style.opacity = clamp((p-.55)/.35);
+    hue.style.filter = 'hue-rotate(' + (p*200).toFixed(1) + 'deg) brightness(' + (1-.3*p).toFixed(3) + ')';
     var usable = innerWidth - shipW();
     var x = shipX(p)*usable;
     var heading = shipX(clamp(p+.01)) - shipX(p);
-    shipPos.style.transform = 'translateX(' + x.toFixed(1) + 'px) translateY(6px)';
+    shipPos.style.transform = 'translateX(' + x.toFixed(1) + 'px)';
     shipPos.classList.toggle('ship-flip', heading < -0.0001);
   }
   function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(paint); } }
