@@ -55,10 +55,10 @@
   @keyframes heave{from{transform:translateY(0)}to{transform:translateY(9px)}}
 
   /* ══════ The galleon — white, flat, forward ══════ */
-  .galleon-anchor{position:absolute;z-index:5;right:clamp(10px,6vw,120px);bottom:-3vh;
-    width:clamp(300px,44vw,640px)}
+  .galleon-anchor{position:absolute;z-index:5;right:clamp(10px,7vw,140px);bottom:4vh;
+    width:clamp(280px,34vw,470px)}
   .galleon-approach{animation:approach 4.8s cubic-bezier(.23,.82,.28,1) .5s both}
-  @keyframes approach{from{transform:translate(-52vw,-30vh) scale(.13) rotate(-2.5deg);}}
+  @keyframes approach{from{transform:translate(36vw,-32vh) scale(.12) rotate(2deg);}}
   .galleon{width:100%;height:auto;display:block;transform-origin:50% 88%;
     animation:sail-bob 8.5s ease-in-out 5.3s infinite;
     filter:drop-shadow(0 22px 34px rgba(2,5,12,.55))}
@@ -145,7 +145,7 @@
     .report{flex-wrap:wrap;gap:10px}
     .report .meta{order:0;margin-left:0;flex-basis:100%}
     .title-seq{top:auto;bottom:24vh;transform:none;right:22px}
-    .galleon-anchor{right:-6vw;bottom:20vh;width:min(78vw,420px)}
+    .galleon-anchor{right:-3vw;bottom:14vh;width:min(62vw,340px)}
   }
 
   /* skip & reduced motion: everything lands at its final state */
@@ -179,40 +179,54 @@
   <!-- the galleon: white silhouette, sailing in from the horizon -->
   <div class="galleon-anchor" aria-hidden="true">
     <div class="galleon-approach">
-      <svg class="galleon" viewBox="0 0 660 540" xmlns="http://www.w3.org/2000/svg">
+      <svg class="galleon" viewBox="0 0 680 760" xmlns="http://www.w3.org/2000/svg">
         <g fill="#f7f8fa">
           <!-- bowsprit -->
-          <path d="M560,306 L654,244 L659,254 L574,318 Z"/>
-          <path d="M574,296 L640,254 L600,308 Z" opacity=".94"/>
+          <path d="M92,640 L12,544 L22,536 L104,632 Z"/>
           <!-- masts -->
-          <rect x="166" y="118" width="7" height="196"/>
-          <rect x="308" y="34" width="8" height="284"/>
-          <rect x="452" y="92" width="7" height="222"/>
+          <rect x="215" y="64" width="6" height="604"/>
+          <rect x="372" y="30" width="7" height="648"/>
+          <rect x="512" y="120" width="6" height="545"/>
           <!-- pennants -->
-          <path d="M312,34 L364,47 L312,60 Z"/>
-          <path d="M455,92 L499,103 L455,114 Z"/>
-          <path d="M169,118 L207,127 L169,136 Z"/>
-          <!-- mizzen lateen sail -->
-          <path d="M163,142 L216,290 Q160,302 106,286 Z"/>
-          <!-- main sails -->
-          <path d="M240,182 L384,182 Q398,236 384,290 Q312,314 240,290 Q226,236 240,182 Z"/>
-          <path d="M262,92 L362,92 Q371,128 362,164 Q312,178 262,164 Q253,128 262,92 Z"/>
-          <!-- fore sails -->
-          <path d="M394,206 L510,206 Q520,248 510,290 Q452,308 394,290 Q384,248 394,206 Z"/>
-          <path d="M410,136 L494,136 Q501,162 494,190 Q452,201 410,190 Q403,162 410,136 Z"/>
-          <!-- stern castle -->
-          <path d="M78,224 L150,224 L150,258 L78,258 Z"/>
-          <path d="M64,258 L162,258 L162,312 L64,312 Z"/>
-          <!-- hull -->
-          <path d="M52,312 L560,312 Q590,300 612,282 Q600,346 556,390 Q500,436 400,444 L232,444 Q140,434 96,384 Q62,350 52,312 Z"/>
+          <path d="M218,58 L254,66 L218,74 Z"/>
+          <path d="M375,22 L414,31 L375,40 Z"/>
+          <path d="M515,112 L548,120 L515,128 Z"/>
+          <!-- jib sails (split by navy stays below) -->
+          <path d="M16,546 L212,190 L212,586 Z"/>
+          <!-- fore mast square sails, 5 tiers -->
+          <path d="M181,148 L255,148 L263,210 Q218,226 173,210 Z"/>
+          <path d="M168,222 L268,222 L277,296 Q218,312 159,296 Z"/>
+          <path d="M158,308 L278,308 L288,388 Q218,404 148,388 Z"/>
+          <path d="M149,400 L287,400 L297,488 Q218,506 139,488 Z"/>
+          <path d="M143,500 L293,500 L308,596 Q218,616 128,596 Z"/>
+          <!-- main mast square sails, 5 tiers -->
+          <path d="M335,140 L415,140 L423,208 Q375,224 327,208 Z"/>
+          <path d="M322,220 L428,220 L437,300 Q375,316 313,300 Z"/>
+          <path d="M311,312 L439,312 L449,396 Q375,412 301,396 Z"/>
+          <path d="M302,408 L448,408 L459,500 Q375,518 291,500 Z"/>
+          <path d="M295,512 L455,512 L470,608 Q375,628 280,608 Z"/>
+          <!-- mizzen mast square sails, 4 tiers -->
+          <path d="M475,250 L555,250 L562,318 Q515,332 468,318 Z"/>
+          <path d="M466,330 L564,330 L572,408 Q515,422 458,408 Z"/>
+          <path d="M457,420 L573,420 L582,500 Q515,516 448,500 Z"/>
+          <path d="M450,512 L580,512 L592,600 Q515,618 438,600 Z"/>
+          <!-- spanker (gaff sail at the stern) -->
+          <path d="M522,540 L628,498 L618,636 Q566,648 522,634 Z"/>
+          <!-- hull: long clipper hull, bow left -->
+          <path d="M58,634 Q180,660 320,666 Q470,664 600,624 L650,608 L642,648 Q560,678 470,688 Q300,702 168,690 Q98,678 72,656 Z"/>
+          <!-- bow foam -->
+          <path d="M28,676 Q84,690 142,716 Q82,718 26,698 Z"/>
+          <path d="M148,712 Q210,724 268,730 Q206,736 146,726 Z" opacity=".7"/>
         </g>
-        <!-- navy cutout details (DeepSeek-style negative space) -->
+        <!-- navy details: stays splitting the jibs, sheer stripe, portholes -->
+        <g stroke="#0b1a36" stroke-width="8" fill="none">
+          <path d="M62,570 L213,290"/>
+          <path d="M108,596 L213,430"/>
+        </g>
         <g fill="#0b1a36">
-          <circle cx="200" cy="348" r="9"/><circle cx="268" cy="356" r="9"/><circle cx="336" cy="360" r="9"/>
-          <circle cx="404" cy="356" r="9"/><circle cx="472" cy="344" r="9"/>
-          <rect x="90" y="270" width="18" height="14"/><rect x="124" y="270" width="18" height="14"/>
-          <rect x="92" y="234" width="14" height="12"/><rect x="122" y="234" width="14" height="12"/>
-          <path d="M52,318 L560,318 L556,326 L58,326 Z" opacity=".5"/>
+          <path d="M86,652 Q300,684 618,632 L616,641 Q300,693 88,661 Z" opacity=".55"/>
+          <circle cx="190" cy="672" r="7"/><circle cx="270" cy="678" r="7"/><circle cx="350" cy="680" r="7"/>
+          <circle cx="430" cy="676" r="7"/><circle cx="510" cy="668" r="7"/><circle cx="580" cy="654" r="7"/>
         </g>
       </svg>
     </div>
