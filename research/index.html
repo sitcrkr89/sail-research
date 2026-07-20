@@ -3,8 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sail Research — Korea's Industry Signals, in English</title>
-<meta name="description" content="AI-collected, human-verified research on Korean industry signals. Daily pipeline over Korean-language sources, evidence-graded reports in English.">
+<title>Research Library — Sail Research</title>
+<meta name="description" content="Evidence-graded Korean industry research on semiconductors, biopharma, and AI-native research systems, verified against primary sources.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/research/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sail Research">
+<meta property="og:title" content="Research Library — Sail Research">
+<meta property="og:description" content="Search evidence-graded Korean industry reports with transparent source trails and verification limits.">
+<meta property="og:url" content="https://sitcrkr89.github.io/sail-research/research/">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -72,6 +80,9 @@
   .search input::placeholder{color:var(--muted2)}
   .search input:focus{outline:none;border-color:var(--gold-dim)}
   .sort-note{font-size:11px;color:var(--muted2);letter-spacing:.18em}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin:-10px 0 26px}
+  .filter-btn{background:transparent;border:1px solid var(--navy-line);color:var(--muted);padding:8px 13px;font:500 10.5px var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+  .filter-btn:hover,.filter-btn:focus-visible,.filter-btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold-bright);outline:none}
 
   /* ── Report board ── */
   .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px;padding-bottom:20px}
@@ -124,6 +135,11 @@
   footer{padding:44px 0 58px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
   footer .logo{font-size:16px;margin-bottom:10px}
   .hidden{display:none}
+  .coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .coverage-card{background:var(--navy);border:1px solid var(--navy-line);border-top:2px solid var(--gold-dim);padding:24px;min-height:170px}
+  .coverage-card h3{font-family:var(--serif);font-size:20px;margin-bottom:9px}.coverage-card p{font-size:12.8px;color:var(--muted)}.coverage-card .state{margin-top:18px;color:var(--gold);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:600}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:800px;margin:0 auto 34px;text-align:left}.service{border:1px solid var(--navy-line);padding:16px}.service b{display:block;font-size:12px;color:var(--gold-bright)}.service span{display:block;font-size:11.5px;color:var(--muted);margin-top:4px}
+  @media(max-width:760px){nav .wrap{align-items:flex-start}.nav-r{line-height:2}.coverage-grid,.service-grid{grid-template-columns:1fr}.hero{padding:80px 0 66px}.grades{padding:30px 24px}}
 </style>
 </head>
 <body>
@@ -131,72 +147,86 @@
 <!-- Pipeline Pulse -->
 <div class="pulse">
   <div class="wrap">
-    <span class="lbl"><span class="dot"></span>Pipeline Pulse</span>
-    <span>Collection cycle <b>daily 08:00 – 19:00 KST</b></span>
-    <span>Morning brief <b>08:00</b></span>
-    <span>Daily digest <b>19:00</b></span>
-    <span>Evening cycle <b>19:15</b></span>
-    <span>As of <b>Jul 06, 2026</b></span>
+    <span class="lbl"><span class="dot"></span>Research Desk</span>
+    <span>Latest publication <b>Jul 13, 2026</b></span>
+    <span>Coverage <b>updated as evidence changes</b></span>
+    <span>Publication <b>human-reviewed</b></span>
   </div>
 </div>
 
 <nav>
   <div class="wrap">
-    <a class="logo" href="../index.html" title="Back to Sail Company">SAIL <em>RESEARCH</em></a>
-    <div class="nav-r"><a href="#reports">REPORTS</a> &nbsp;·&nbsp; <a href="methodology.html">METHODOLOGY</a> &nbsp;·&nbsp; <a href="#contact">CONTACT</a></div>
+    <a class="logo" href="../index.html" title="Sail Research home">SAIL <em>RESEARCH</em></a>
+    <div class="nav-r"><a href="#coverage">COVERAGE</a> &nbsp;·&nbsp; <a href="#reports">REPORTS</a> &nbsp;·&nbsp; <a href="methodology.html">METHODOLOGY</a> &nbsp;·&nbsp; <a href="#contact">COMMISSION</a></div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="kicker">Evidence-First Industry Research · Seoul</div>
-    <h1>Industry signals,<br>read at the source —<br>reported <span class="g">in English.</span></h1>
+    <div class="kicker">Research Library · Seoul</div>
+    <h1>Korean industry signals,<br>verified at the source —<br>built for <span class="g">decisions.</span></h1>
     <p class="sub">
-      Evidence-first industry research from Korean primary sources — reported in English.
-      We read the original reporting most desks overlook, verify every claim before it runs,
-      and label fact apart from hypothesis. The standard is the product.
+      Search the public Sail Research collection. Each report declares its evidence grade,
+      keeps interpretation separate from verified fact, and states what the available sources cannot prove.
     </p>
 
     <div class="stats">
       <div class="stat"><div class="num">6</div><div class="lbl">Reports</div></div>
       <div class="stat"><div class="num text">Verified</div><div class="lbl">Source Trail</div></div>
-      <div class="stat"><div class="num">1</div><div class="lbl">Daily Pipeline</div></div>
-      <div class="stat"><div class="num">7</div><div class="lbl">Day Tracking</div></div>
+      <div class="stat"><div class="num">2</div><div class="lbl">Core Sectors</div></div>
+      <div class="stat"><div class="num text">Human</div><div class="lbl">Reviewed</div></div>
     </div>
   </div>
 </header>
 
 <main class="wrap">
 
+<section id="coverage">
+  <div class="sec-kicker">Core Coverage</div>
+  <h2 class="sec">Focused where local evidence matters</h2>
+  <p class="sec-desc">Sail Research concentrates on technical and market domains where Korean primary sources materially change the decision context.</p>
+  <div class="coverage-grid">
+    <div class="coverage-card"><h3>Semiconductors</h3><p>HBM, advanced packaging, foundry transitions, qualification milestones, capacity signals, and technical bottlenecks.</p><div class="state">Active coverage</div></div>
+    <div class="coverage-card"><h3>Biopharma</h3><p>CDO, CRO, CDMO, ADC manufacturing, capacity expansion, customer demand, and technology capability signals.</p><div class="state">Coverage buildout</div></div>
+    <a class="coverage-card" href="methodology.html"><h3>Research Method</h3><p>Public-source verification, claim grading, interpretation boundaries, and correction principles.</p><div class="state">Read methodology →</div></a>
+  </div>
+</section>
+
 <section id="reports">
   <div class="sec-kicker">Report Board</div>
   <h2 class="sec">Latest Coverage</h2>
-  <p class="sec-desc">Research collection sorted by publication date. The pipeline generates new candidates daily; only operator-verified reports are published.</p>
+  <p class="sec-desc">Research collection sorted by publication date. Sources and claim boundaries are reviewed before publication.</p>
 
   <div class="controls">
-    <div class="search"><input id="q" type="search" placeholder="Search reports — title, keyword, category" oninput="filter()"></div>
+    <div class="search"><input id="q" type="search" aria-label="Search reports — title, keyword, category" placeholder="Search reports — title, keyword, category" oninput="filterReports()"></div>
     <div class="sort-note">SORTED BY · NEWEST FIRST</div>
+  </div>
+  <div class="filters" role="group" aria-label="Filter reports by sector">
+    <button class="filter-btn" type="button" aria-pressed="true" onclick="setSector('all',this)">All</button>
+    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('semiconductors',this)">Semiconductors</button>
+    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('ai',this)">AI &amp; Automation</button>
+    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('mobility',this)">Mobility</button>
   </div>
 
   <div class="board" id="list">
 
-    <a class="r-card" href="../reports/20260713-hbm4-vendor-confirmed.html" data-s="hbm hbm4 commercial shipment generation transition samsung sk hynix micron bottleneckos evidence gate semiconductor">
+    <a class="r-card" href="../reports/20260713-hbm4-vendor-confirmed.html" data-sector="semiconductors" data-s="hbm hbm4 commercial shipment generation transition samsung sk hynix micron primary sources semiconductor">
       <div class="r-id"><span>SR-2026-0006</span><span class="date">JUL 13, 2026</span></div>
       <div class="r-top"><span class="chip">Semiconductors · Deep-Tech</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
       <h3>HBM4 Goes Commercial: All Three Vendors Now Confirm the Generation Transition</h3>
-      <div class="r-meta"><span>3 captured primaries · hashed</span><span>First evidence-gate release</span></div>
+      <div class="r-meta"><span>3 primary sources</span><span>Public-evidence review</span></div>
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260708-hbm-tech-tracking.html" data-s="hbm hbm4e memory semiconductor sk hynix samsung micron technology capability tracking">
+    <a class="r-card" href="../reports/20260708-hbm-tech-tracking.html" data-sector="semiconductors" data-s="hbm hbm4e memory semiconductor sk hynix samsung micron technology capability tracking">
       <div class="r-id"><span>SR-2026-0005</span><span class="date">JUL 08, 2026</span></div>
       <div class="r-top"><span class="chip">Semiconductors · Deep-Tech</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
       <h3>Tracking the HBM Transition: Who Actually Leads the Race to HBM4E?</h3>
-      <div class="r-meta"><span>Primary-sourced · hashed</span><span>Fact / prior separated</span></div>
+      <div class="r-meta"><span>Primary-sourced</span><span>Fact / interpretation separated</span></div>
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260706-shortform-automation.html" data-s="short-form content automation workflow broadcasters marketers ai media">
+    <a class="r-card" href="../reports/20260706-shortform-automation.html" data-sector="ai" data-s="short-form content automation workflow broadcasters marketers ai media">
       <div class="r-id"><span>SR-2026-0004</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">AI · Media</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
       <h3>Short-Form Content Automation: Broadcasters Explore Adoption — Where Solo Marketers Should Start</h3>
@@ -204,7 +234,7 @@
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260705-notion-ai.html" data-s="notion ai adoption signals productivity collaboration institutional training korea">
+    <a class="r-card" href="../reports/20260705-notion-ai.html" data-sector="ai" data-s="notion ai adoption signals productivity collaboration institutional training korea">
       <div class="r-id"><span>SR-2026-0003</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">AI · Productivity</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
       <h3>Notion AI in Korea: From Personal Tool to Institutional Training Category</h3>
@@ -212,7 +242,7 @@
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260705-hybrid-vs-ev.html" data-s="hybrid ev electric vehicle crossover registrations korea mobility statistics tesla byd">
+    <a class="r-card" href="../reports/20260705-hybrid-vs-ev.html" data-sector="mobility" data-s="hybrid ev electric vehicle crossover registrations korea mobility statistics tesla byd">
       <div class="r-id"><span>SR-2026-0002</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">Mobility</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
       <h3>Korea's EV Crossover: The Month Electric Overtook Hybrid</h3>
@@ -220,7 +250,7 @@
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260705-macbook-local-ai.html" data-s="macbook local ai on-device apple silicon ollama mlx unified memory">
+    <a class="r-card" href="../reports/20260705-macbook-local-ai.html" data-sector="ai" data-s="macbook local ai on-device apple silicon ollama mlx unified memory">
       <div class="r-id"><span>SR-2026-0001</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">AI · Hardware</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
       <h3>Local AI on MacBooks: Ollama's MLX Backend Changes the Math</h3>
@@ -229,7 +259,7 @@
     </a>
 
   </div>
-  <p class="count-note" id="count">Showing 5 reports</p>
+  <p class="count-note" id="count" aria-live="polite">Showing 6 reports</p>
 
   <div class="grades" id="method">
     <h2>The <em>Evidence Grade</em> System</h2>
@@ -237,7 +267,7 @@
     <div class="g-grid">
       <div class="g-item">
         <div class="g-badge">A</div>
-        <div><div class="t">Primary-Verified</div><div class="d">Full-text sources, primary data, or first-party datasets verified by the operator.</div></div>
+        <div><div class="t">Primary-Verified</div><div class="d">Official disclosures, filings, or statistics checked against the original publisher.</div></div>
       </div>
       <div class="g-item">
         <div class="g-badge b">B</div>
@@ -256,7 +286,7 @@
       <div class="p-item"><div class="t">7-Day Observation</div><div class="d">Published reports are tracked for seven days; results feed the next topic selection.</div></div>
     </div>
     <p style="margin-top:28px;font-size:12.5px;letter-spacing:.08em">
-      <a href="methodology.html" style="color:var(--gold-bright);font-weight:600">Full methodology — hashed capture, retrieval dates, operator review →</a>
+      <a href="methodology.html" style="color:var(--gold-bright);font-weight:600">Full methodology — public sources, claim labels, human review →</a>
     </p>
   </div>
 </section>
@@ -264,23 +294,36 @@
 <div class="cta" id="contact">
   <div class="sec-kicker">Commissioned Research</div>
   <h2>Need depth on a specific topic?</h2>
-  <p>Commissioned deep-dives — primary data collection, quantitative analysis, custom scope.<br>Request a custom Korea industry brief, source map, or competitor signal tracker.</p>
-  <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+  <p>Request a scoped engagement built on the same capture, evidence, and human-review standard.</p>
+  <div class="service-grid">
+    <div class="service"><b>Industry Brief</b><span>Decision question, evidence map, implications, and gaps.</span></div>
+    <div class="service"><b>Source Map</b><span>Primary-source landscape with verification status.</span></div>
+    <div class="service"><b>Competitor Tracker</b><span>Repeatable monitoring of technology and market signals.</span></div>
+  </div>
+  <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Research%20Inquiry">Discuss a Scope</a>
 </div>
 
 </main>
 
 <footer>
-  <div class="logo"><a href="../index.html">SAIL <em style="color:var(--gold);font-style:normal">COMPANY</em></a></div>
+  <div class="logo"><a href="../index.html">SAIL <em style="color:var(--gold);font-style:normal">RESEARCH</em></a></div>
   Seoul, Korea · sail.research.info@gmail.com
 </footer>
 
 <script>
-function filter(){
+let activeSector='all';
+function setSector(sector,button){
+  activeSector=sector;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  filterReports();
+}
+function filterReports(){
   const q=document.getElementById('q').value.trim().toLowerCase();
   let n=0;
   document.querySelectorAll('#list .r-card').forEach(c=>{
-    const hit=!q||(c.dataset.s+' '+c.textContent).toLowerCase().includes(q);
+    const textHit=!q||(c.dataset.s+' '+c.textContent).toLowerCase().includes(q);
+    const sectorHit=activeSector==='all'||c.dataset.sector===activeSector;
+    const hit=textHit&&sectorHit;
     c.classList.toggle('hidden',!hit); if(hit)n++;
   });
   document.getElementById('count').textContent='Showing '+n+' report'+(n===1?'':'s');

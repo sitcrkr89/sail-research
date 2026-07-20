@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Sail Research</title>
+  <desc id="desc">Verified Korean industry intelligence for global strategy teams.</desc>
+  <defs><radialGradient id="glow" cx="80%" cy="0%" r="90%"><stop offset="0" stop-color="#c9a54a" stop-opacity=".24"/><stop offset=".62" stop-color="#081226" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="630" fill="#081226"/><rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="78" y="74" width="8" height="482" fill="#c9a54a"/>
+  <text x="130" y="170" fill="#c9a54a" font-family="Georgia,serif" font-size="30" font-weight="700" letter-spacing="5">SAIL RESEARCH</text>
+  <text x="130" y="300" fill="#f5f2ea" font-family="Georgia,serif" font-size="70" font-weight="700">Verified Korean</text>
+  <text x="130" y="390" fill="#f5f2ea" font-family="Georgia,serif" font-size="70" font-weight="700">industry intelligence.</text>
+  <text x="130" y="480" fill="#9aa5bd" font-family="Arial,sans-serif" font-size="27">Primary sources · Evidence grades · Decision implications</text>
+  <text x="130" y="535" fill="#c9a54a" font-family="Arial,sans-serif" font-size="20" letter-spacing="3">SEOUL, KOREA</text>
+</svg>

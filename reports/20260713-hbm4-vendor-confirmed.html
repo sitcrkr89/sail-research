@@ -4,7 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HBM4 Goes Commercial: All Three Vendors Confirm the Transition — Sail Research SR-2026-0006</title>
-<meta name="description" content="All three HBM vendors now hold live official disclosures of HBM4: Samsung asserts industry-first commercial shipment, SK hynix demonstrated HBM4 at the TSMC 2025 symposium, and Micron lists HBM4 as an official product. First report released through Sail's BottleneckOS evidence gate. Evidence Grade A.">
+<meta name="description" content="All three HBM vendors now hold live official disclosures of HBM4: Samsung asserts industry-first commercial shipment, SK hynix demonstrated HBM4 at the TSMC 2025 symposium, and Micron lists HBM4 as an official product. Evidence Grade A.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/reports/20260713-hbm4-vendor-confirmed.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sail Research">
+<meta property="og:title" content="HBM4 Goes Commercial: All Three Vendors Confirm the Transition — Sail Research SR-2026-0006">
+<meta property="og:description" content="All three HBM vendors now hold live official disclosures of HBM4: Samsung asserts industry-first commercial shipment, SK hynix demonstrated HBM4 at the TSMC 2025 symposium, and Micron lists HBM4 as an official product. Evidence Grade A.">
+<meta property="og:url" content="https://sitcrkr89.github.io/sail-research/reports/20260713-hbm4-vendor-confirmed.html">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -58,6 +66,8 @@
   .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
   .box li b{color:var(--gold-bright);font-weight:500}
   .box ul{margin:0 0 0 20px}
+  .box a{color:var(--gold-bright);text-decoration:underline;text-underline-offset:3px}
+  .source-meta{display:block;color:var(--muted2);font-size:11px;margin-top:3px;word-break:break-all}
   .caveat{border-left:3px solid var(--gold)}
   .caveat .no{color:#e08484;font-weight:500}
   .cta{margin:64px 0;text-align:center;padding:54px 28px;
@@ -77,8 +87,8 @@
 
 <nav>
   <div class="wrap">
-    <div class="logo">SAIL <em>RESEARCH</em></div>
-    <a class="back" href="../index.html">&larr; Report Board</a>
+    <div class="logo"><a href="../index.html">SAIL <em>RESEARCH</em></a></div>
+    <a class="back" href="../research/index.html">&larr; Report Board</a>
   </div>
 </nav>
 
@@ -88,7 +98,7 @@
     <div class="chips"><span class="chip">Semiconductors &middot; Deep-Tech</span><span class="chip grade">Evidence A &mdash; Primary-Sourced</span><span class="chip free">Free Sample</span></div>
     <h1>HBM4 Goes Commercial: All Three Vendors Now Confirm the Generation Transition</h1>
     <div class="meta">
-      <span><b>Jul 13, 2026</b></span><span>Sail Research</span><span>Samsung &middot; SK hynix &middot; Micron, 3 captured primary disclosures</span><span>Released through BottleneckOS evidence gate</span>
+      <span><b>Jul 13, 2026</b></span><span>Sail Research</span><span>Samsung &middot; SK hynix &middot; Micron, 3 primary disclosures</span><span>Public-source evidence review</span>
     </div>
   </div>
 </header>
@@ -110,6 +120,13 @@
   itself is no longer speculative, because each vendor is publicly staking its own
   name on it.</p>
 
+  <h2>Decision Relevance</h2>
+  <ul>
+    <li><b>Strategy teams</b> can now treat HBM4 as an active generation transition, while keeping vendor leadership and qualification outcomes open.</li>
+    <li><b>Supply-chain teams</b> should shift monitoring from roadmap announcements toward qualification, volume, yield, packaging, and customer-specific evidence.</li>
+    <li><b>Investors and market researchers</b> should not infer shipment share or pricing power from product-page presence alone.</li>
+  </ul>
+
   <h2>What Each Company Itself Discloses</h2>
   <table class="dtable">
     <tr><th>Company</th><th>Official disclosure (captured 12 Jul 2026)</th><th>What it establishes</th></tr>
@@ -127,12 +144,11 @@
   cuts against over-reading this thesis, and we attach that counter-evidence to the card
   rather than quietly dropping it:</p>
   <ul>
-    <li>Samsung&rsquo;s HBM4E 16-high / 64&nbsp;GB variant remains plan-only &mdash; the most
-    delayed scenario tag in our dataset sits inside the same company claiming the
-    commercial first.</li>
-    <li>SK hynix&rsquo;s 16-layer path carries the single largest risk score in our dataset.</li>
-    <li>Micron&rsquo;s HBM4E record is a data gap, not evidence of absence &mdash; its zero
-    score reflects what has not been disclosed yet.</li>
+    <li>Samsung&rsquo;s HBM4E 16-high / 64&nbsp;GB variant remains plan-only &mdash; a delayed
+    watch item in the earlier public scenario analysis, despite the company&rsquo;s commercial-first claim.</li>
+    <li>SK hynix&rsquo;s 16-layer path carries the highest relative risk in that public scenario analysis.</li>
+    <li>Micron&rsquo;s HBM4E coverage remains a public-evidence gap, not evidence of absence &mdash;
+    the cited sources do not yet establish the same level of detail.</li>
   </ul>
   <p>In short: the <em>generation</em> is confirmed; the <em>next generation&rsquo;s hardest
   configurations</em> are not.</p>
@@ -143,23 +159,34 @@
   not reporting. We flag them as open verification gaps on the card.</p>
 
   <div class="box caveat">
-    <h2>Evidence Caveat <h2>Method Note &mdash; First Release Through the Evidence Gate</h2>mdash; First Release Through the Evidence Gate</h2>
-    <p>This is the first Sail Research report produced through our BottleneckOS release
-    pipeline: each supporting source was captured directly from the vendor&rsquo;s own site,
-    hashed (SHA-256), and the thesis card passed an automated ReviewOS check &mdash; source
-    provenance, freshness hashes, methodology contract, and policy screen &mdash; before a
-    human approved this page. A thesis needs at least two independent primary sources to
-    qualify; this one has three.</p>
+    <h2>Evidence Caveat &mdash; Verification Boundary</h2>
+    <p>The verified thesis is limited to the cross-vendor generation transition. It does not verify shipment volume, yield, customer qualification, market share, or pricing. Those remain open evidence gaps.</p>
+  </div>
+
+  <div class="box">
+    <h2>Method Note &mdash; Public Release Standard</h2>
+    <p>Each supporting source was captured directly from the vendor&rsquo;s own site and checked
+    for provenance, freshness, claim boundaries, and publication policy before human approval.
+    Sail Research requires at least two independent primary sources for a cross-vendor thesis;
+    this report uses three.</p>
   </div>
 
   <div class="box">
     <h2>Sources (primary &mdash; captured &amp; hashed 12 Jul 2026)</h2>
     <ul>
-      <li>Samsung Semiconductor Newsroom &mdash; &ldquo;Samsung Ships Industry-First Commercial HBM4 With Ultimate Performance for AI Computing&rdquo; &mdash; SHA-256 3b2e2a15&hellip;</li>
-      <li>SK hynix Newsroom &mdash; &ldquo;SK hynix Showcases HBM4 at TSMC 2025 Technology Symposium&rdquo; &mdash; SHA-256 c5917545&hellip;</li>
-      <li>Micron &mdash; HBM4 official product page &mdash; SHA-256 acb16886&hellip;</li>
+      <li><a href="https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/">Samsung Semiconductor Newsroom &mdash; “Samsung Ships Industry-First Commercial HBM4 With Ultimate Performance for AI Computing”</a><span class="source-meta">Captured 12 Jul 2026 · SHA-256 prefix 3b2e2a15…</span></li>
+      <li><a href="https://news.skhynix.com/tsmc-2025-technology-symposium-sk-hynix-showcases-hbm4/">SK hynix Newsroom &mdash; “SK hynix Showcases HBM4 at TSMC 2025 Technology Symposium”</a><span class="source-meta">Captured 12 Jul 2026 · SHA-256 prefix c5917545…</span></li>
+      <li><a href="https://www.micron.com/products/memory/hbm/hbm4">Micron &mdash; HBM4 official product page</a><span class="source-meta">Captured 12 Jul 2026 · SHA-256 prefix acb16886…</span></li>
     </ul>
   </div>
+
+  <h2>Watch Conditions</h2>
+  <ul>
+    <li>Customer-specific qualification disclosures that move the evidence from product availability to deployment.</li>
+    <li>Vendor-reported volume, yield, or revenue contribution that can support a market-scale claim.</li>
+    <li>HBM4E 16-high and advanced-packaging disclosures that change the current risk picture.</li>
+  </ul>
+  <p class="source-meta">Revision status: editorial and source-link repair on 20 Jul 2026. The report thesis and evidence grade were not changed.</p>
 
   <div class="cta">
     <div class="kicker">Commissioned Research</div>
@@ -171,7 +198,7 @@
 </main>
 
 <footer>
-  SAIL RESEARCH &middot; Seoul, Korea &middot; <a href="../index.html">All reports</a>
+  SAIL RESEARCH &middot; Seoul, Korea &middot; <a href="../research/index.html">All reports</a>
 </footer>
 
 </body>
