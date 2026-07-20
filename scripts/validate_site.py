@@ -125,6 +125,18 @@ def main() -> int:
     if card_count != declared_count:
         errors.append(f"research/index.html: {card_count} cards but declared count is {declared_count}")
 
+    homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+    for lens in ("semiconductors", "biopharma", "power"):
+        if f'data-lens="{lens}"' not in homepage:
+            errors.append(f"index.html: missing {lens} decision lens")
+    for layer in ("fact", "interpretation", "gap"):
+        if f'data-evidence="{layer}"' not in homepage:
+            errors.append(f"index.html: missing {layer} evidence layer")
+    if "prefers-reduced-motion" not in homepage:
+        errors.append("index.html: missing reduced-motion support")
+    if "Research Systems" in homepage or "Research Systems" in library:
+        errors.append("public coverage: Research Systems must not replace an industry sector")
+
     if errors:
         print("SITE QA: FAIL")
         for error in errors:

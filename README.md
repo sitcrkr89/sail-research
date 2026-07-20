@@ -1,10 +1,10 @@
 # Sail Research
 
-Sail Research is an evidence-first public research desk focused on Korean industry signals that matter to global strategy teams. The site publishes primary-source-led work on semiconductors, biopharma, and AI-native research systems.
+Sail Research is an evidence-first public research desk focused on Korean industry signals that matter to global strategy teams. Its core coverage is semiconductors, biopharma, and power infrastructure.
 
 ## Public structure
 
-- `index.html` — research-led landing page
+- `index.html` — interactive decision-lens landing page
 - `research/index.html` — searchable report library and coverage map
 - `research/methodology.html` — evidence, review, and corrections contract
 - `reports/` — published reports and the publication template
@@ -20,6 +20,16 @@ Every public report must:
 4. provide the most direct public source links available;
 5. record material corrections and whether they changed the thesis or grade;
 6. pass a human release gate.
+
+## Interactive experience
+
+The public homepage provides three lightweight, dependency-free exploration layers:
+
+- **Decision Lens** — switches the decision question, current public position, and next action by core sector.
+- **Evidence Explorer** — separates verified fact, interpretation, and open verification gaps.
+- **Signal Matrix** — shows current coverage, watch conditions, and publication status without inventing signals for coverage areas still in buildout.
+
+All controls remain keyboard accessible, responsive, and usable with reduced-motion preferences.
 
 ## Local preview
 

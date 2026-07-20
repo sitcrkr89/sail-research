@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research Library — Sail Research</title>
-<meta name="description" content="Evidence-graded Korean industry research on semiconductors, biopharma, and AI-native research systems, verified against primary sources.">
+<meta name="description" content="Evidence-graded Korean industry research on semiconductors, biopharma, and power infrastructure, verified against primary sources.">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/research/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sail Research">
@@ -173,7 +173,7 @@
     <div class="stats">
       <div class="stat"><div class="num">6</div><div class="lbl">Reports</div></div>
       <div class="stat"><div class="num text">Verified</div><div class="lbl">Source Trail</div></div>
-      <div class="stat"><div class="num">2</div><div class="lbl">Core Sectors</div></div>
+      <div class="stat"><div class="num">3</div><div class="lbl">Core Sectors</div></div>
       <div class="stat"><div class="num text">Human</div><div class="lbl">Reviewed</div></div>
     </div>
   </div>
@@ -188,7 +188,7 @@
   <div class="coverage-grid">
     <div class="coverage-card"><h3>Semiconductors</h3><p>HBM, advanced packaging, foundry transitions, qualification milestones, capacity signals, and technical bottlenecks.</p><div class="state">Active coverage</div></div>
     <div class="coverage-card"><h3>Biopharma</h3><p>CDO, CRO, CDMO, ADC manufacturing, capacity expansion, customer demand, and technology capability signals.</p><div class="state">Coverage buildout</div></div>
-    <a class="coverage-card" href="methodology.html"><h3>Research Method</h3><p>Public-source verification, claim grading, interpretation boundaries, and correction principles.</p><div class="state">Read methodology →</div></a>
+    <div class="coverage-card"><h3>Power &amp; Infrastructure</h3><p>Grid constraints, data-center demand, generation capacity, equipment lead times, and energy resilience.</p><div class="state">Coverage buildout</div></div>
   </div>
 </section>
 
@@ -204,8 +204,9 @@
   <div class="filters" role="group" aria-label="Filter reports by sector">
     <button class="filter-btn" type="button" aria-pressed="true" onclick="setSector('all',this)">All</button>
     <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('semiconductors',this)">Semiconductors</button>
-    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('ai',this)">AI &amp; Automation</button>
-    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('mobility',this)">Mobility</button>
+    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('biopharma',this)">Biopharma</button>
+    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('power',this)">Power</button>
+    <button class="filter-btn" type="button" aria-pressed="false" onclick="setSector('archive',this)">Other Archive</button>
   </div>
 
   <div class="board" id="list">
@@ -226,7 +227,7 @@
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260706-shortform-automation.html" data-sector="ai" data-s="short-form content automation workflow broadcasters marketers ai media">
+    <a class="r-card" href="../reports/20260706-shortform-automation.html" data-sector="archive" data-s="short-form content automation workflow broadcasters marketers ai media archive">
       <div class="r-id"><span>SR-2026-0004</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">AI · Media</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
       <h3>Short-Form Content Automation: Broadcasters Explore Adoption — Where Solo Marketers Should Start</h3>
@@ -234,7 +235,7 @@
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260705-notion-ai.html" data-sector="ai" data-s="notion ai adoption signals productivity collaboration institutional training korea">
+    <a class="r-card" href="../reports/20260705-notion-ai.html" data-sector="archive" data-s="notion ai adoption signals productivity collaboration institutional training korea archive">
       <div class="r-id"><span>SR-2026-0003</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">AI · Productivity</span><span class="chip grade">Evidence B</span><span class="chip free">Free</span></div>
       <h3>Notion AI in Korea: From Personal Tool to Institutional Training Category</h3>
@@ -242,7 +243,7 @@
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260705-hybrid-vs-ev.html" data-sector="mobility" data-s="hybrid ev electric vehicle crossover registrations korea mobility statistics tesla byd">
+    <a class="r-card" href="../reports/20260705-hybrid-vs-ev.html" data-sector="archive" data-s="hybrid ev electric vehicle crossover registrations korea mobility statistics tesla byd archive">
       <div class="r-id"><span>SR-2026-0002</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">Mobility</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
       <h3>Korea's EV Crossover: The Month Electric Overtook Hybrid</h3>
@@ -250,7 +251,7 @@
       <div class="r-go">Read Report →</div>
     </a>
 
-    <a class="r-card" href="../reports/20260705-macbook-local-ai.html" data-sector="ai" data-s="macbook local ai on-device apple silicon ollama mlx unified memory">
+    <a class="r-card" href="../reports/20260705-macbook-local-ai.html" data-sector="archive" data-s="macbook local ai on-device apple silicon ollama mlx unified memory archive">
       <div class="r-id"><span>SR-2026-0001</span><span class="date">JUL 06, 2026</span></div>
       <div class="r-top"><span class="chip">AI · Hardware</span><span class="chip grade">Evidence A</span><span class="chip free">Free</span></div>
       <h3>Local AI on MacBooks: Ollama's MLX Backend Changes the Math</h3>
@@ -326,7 +327,8 @@ function filterReports(){
     const hit=textHit&&sectorHit;
     c.classList.toggle('hidden',!hit); if(hit)n++;
   });
-  document.getElementById('count').textContent='Showing '+n+' report'+(n===1?'':'s');
+  const count=document.getElementById('count');
+  count.textContent=n ? 'Showing '+n+' report'+(n===1?'':'s') : 'No public reports in this coverage yet — commissioned scopes are available below.';
 }
 </script>
 
