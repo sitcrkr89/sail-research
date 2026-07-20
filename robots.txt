@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sitcrkr89.github.io/sail-research/sitemap.xml
