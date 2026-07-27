@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No Bleed, Continuous Harvest: What the Patent Behind WuXiUI Actually Proves — Sail Research SR-2026-0008</title>
+<meta name="description" content="WuXi Biologics' WuXiUI upstream intensification platform is anchored by patent WO2020088180A1, which directly establishes no-bleed intensified perfusion, differential basal/feed perfusion, ATF/TFF cell retention, and example-level productivity above 20 g/L at 250 L. The 2,000 L GMP and timeline-compression claims remain unverified. Evidence Grade B.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/reports/20260727-wuxiui-patent-no-bleed-perfusion.html">
+<meta property="og:title" content="No Bleed, Continuous Harvest: What the Patent Behind WuXiUI Actually Proves — Sail Research SR-2026-0008">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.85;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  nav{padding:20px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1040px}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .back{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold-bright)}
+  header{padding:72px 0 52px;
+    background:radial-gradient(900px 400px at 80% -20%, rgba(201,165,74,.12), transparent 60%),
+    linear-gradient(175deg,#0a1730 0%,#081226 70%);
+    border-bottom:1px solid rgba(201,165,74,.22)}
+  .r-id{font-size:11px;letter-spacing:.24em;color:var(--muted2);margin-bottom:18px}
+  .chips{display:flex;gap:8px;margin-bottom:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(27px,3.8vw,38px);font-weight:700;line-height:1.32}
+  .meta{margin-top:22px;font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .meta b{color:var(--gold-bright);font-weight:500}
+  article{padding:56px 0 10px}
+  article p{margin:0 0 22px;font-size:15.5px;color:#dde3ee}
+  h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:44px 0 16px;color:var(--white)}
+  h2:before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:12px;vertical-align:middle}
+  ol,ul{margin:0 0 22px 24px}
+  li{margin:10px 0;font-size:15px;color:#dde3ee}
+  li b{font-weight:600;color:var(--white)}
+  .dtable{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+  .dtable th{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright);
+    border-bottom:1px solid var(--gold-dim);padding:10px 12px;text-align:left;font-weight:600}
+  .dtable td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;color:#dde3ee}
+  .dtable td:first-child{color:var(--white);font-weight:500}
+  .box{border:1px solid var(--navy-line);background:var(--navy);padding:26px 28px;margin:34px 0}
+  .box h2{font-size:14px;margin:0 0 14px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+  .box h2:before{display:none}
+  .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
+  .box li b{color:var(--gold-bright);font-weight:500}
+  .box ul{margin:0 0 0 20px}
+  .box a{color:var(--gold-bright);word-break:break-all}
+  .caveat{border-left:3px solid var(--gold)}
+  .cta{margin:64px 0;text-align:center;padding:54px 28px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .kicker{font-size:10.5px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .cta h2{font-family:var(--serif);font-size:26px;margin:0 0 10px}
+  .cta h2:before{display:none}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;padding:14px 42px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+  footer{padding:38px 0 52px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer a{color:var(--gold-bright)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><a href="../index.html">SAIL <em>RESEARCH</em></a></div>
+    <a class="back" href="../research/index.html">&larr; Report Board</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="r-id">SR-2026-0008</div>
+    <div class="chips"><span class="chip">Biotech &middot; CDMO</span><span class="chip grade">Evidence B &mdash; Patent-Anchored</span><span class="chip free">Free Sample</span></div>
+    <h1>No Bleed, Continuous Harvest: What the Patent Behind WuXiUI Actually Proves</h1>
+    <div class="meta">
+      <span><b>Jul 27, 2026</b></span><span>Sail Research</span><span>WuXi Biologics &middot; patent WO2020088180A1 read in full</span><span>Fact / hypothesis separated</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+
+  <p>CDMO platform marketing is a fog of productivity multiples. Patents are the
+  exception: they are the one public, primary document class in which a company must
+  describe a technical method precisely enough to be examined. For WuXi Biologics'
+  WuXiUI upstream intensification platform, that document is
+  <strong>WO2020088180A1</strong> &mdash; &ldquo;Cell culture process by intensified
+  perfusion with continuous harvest and without cell bleeding.&rdquo; We read it, and
+  this report separates what the patent text establishes from what it leaves
+  unproven.</p>
+
+  <h2>The Thesis</h2>
+  <p><strong>WuXiUI is not fed-batch optimization with a new name &mdash; the patent
+  establishes a genuinely different upstream architecture (no-bleed intensified
+  perfusion with continuous harvest), with example-level productivity above
+  20&nbsp;g/L at 250&nbsp;L. But the commercial-scale claims that circulate around the
+  platform &mdash; 2,000&nbsp;L GMP validation, 24.5&nbsp;g/L on a bispecific, and
+  end-to-end timeline compression &mdash; are not established by the public
+  record we hold.</strong></p>
+
+  <h2>Claim by Claim: Patent Text vs. Everything Else</h2>
+  <table class="dtable">
+    <tr><th>Claim</th><th>Where it comes from</th><th>Evidence level</th></tr>
+    <tr><td>No-bleed perfusion: cells retained in the bioreactor, product harvested continuously</td><td>Patent claims, WO2020088180A1</td><td>Direct</td></tr>
+    <tr><td>Basal and feed media perfused at different rates; basal range about 0.1&ndash;2.0 VVD</td><td>Patent claims</td><td>Direct</td></tr>
+    <tr><td>ATF/TFF cell-retention with hollow-fiber separation</td><td>Patent claims</td><td>Direct</td></tr>
+    <tr><td>Temperature-shift control (~36.5&deg;C &rarr; 31&ndash;33&deg;C around day 5&ndash;6)</td><td>Patent examples</td><td>Direct</td></tr>
+    <tr><td>Example processes ~6.6&ndash;9.4&times; accumulative productivity vs traditional fed-batch at 3&nbsp;L</td><td>Patent examples</td><td>Direct (example-level)</td></tr>
+    <tr><td>Scale-up 3&nbsp;L &rarr; 15&nbsp;L &rarr; 250&nbsp;L, &gt;20&nbsp;g/L accumulative Pv, comparable SEC main peaks</td><td>Patent examples</td><td>Direct (example-level)</td></tr>
+    <tr><td>2,000&nbsp;L GMP validation; commercial status</td><td>Local research notes; underlying presentation not retrieved</td><td>Requires verification</td></tr>
+    <tr><td>24.5&nbsp;g/L on the Mabcalin bispecific</td><td>Local research notes; source URL placeholder</td><td>Requires verification</td></tr>
+    <tr><td>End-to-end CMC timeline compression</td><td>Inference from architecture, no public quantification</td><td>Reasoned inference</td></tr>
+  </table>
+
+  <h2>Why the Architecture Matters</h2>
+  <p>Three design choices in the patent do the real work. Keeping cells in the reactor
+  with <b>no bleed</b> preserves productive biomass that conventional perfusion
+  discards. <b>Differential basal/feed perfusion</b> decouples nutrient supply from
+  osmolality and metabolic-stress limits. And <b>continuous harvest</b> shortens
+  product residence time in the bioreactor, which matters for less stable molecules and
+  creates a natural coupling point for continuous downstream capture &mdash; the patent
+  itself describes multi-column Protein&nbsp;A capture at the 15&nbsp;L and 250&nbsp;L
+  example scales.</p>
+  <p>The honest read on timelines: a platform like this can plausibly compress upstream
+  development by templating scale-up, but the patent does not prove it, and no public
+  source we hold quantifies it. We carry that as inference, clearly labeled.</p>
+
+  <h2>What This Report Cannot Tell You</h2>
+  <p>Whether WuXiUI's economics beat Samsung Biologics' or Lonza's intensified
+  offerings in commercial client programs; whether the 2,000&nbsp;L GMP claim survives
+  source retrieval; and any molecule-specific comparability outcome. Example-level
+  patent data is real evidence of capability, but it is the assignee's own chosen
+  examples &mdash; single-party by construction, which caps this report at Evidence B.</p>
+
+  <div class="box caveat">
+    <h2>Evidence Caveat &mdash; Fact vs. Hypothesis</h2>
+    <ul>
+      <li><b>Fact (Direct Evidence, sourced)</b> &mdash; the process architecture and example-level performance above, read directly from the published patent text.</li>
+      <li><b>Hypothesis / Reasoned Inference (not a fact)</b> &mdash; CMC timeline compression and DSP-integration net benefit; plausible, unquantified.</li>
+      <li><b>Requires Verification</b> &mdash; 2,000&nbsp;L GMP validation and the 24.5&nbsp;g/L Mabcalin bispecific figure, both carried in local research notes without retrievable primary sources.</li>
+      <li class="no">What this report does not do &mdash; it does not treat patent examples as commercial-performance guarantees, and it does not compare economics against competing CDMO platforms.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Sources (primary)</h2>
+    <ul>
+      <li>Wuxi Biologics Shanghai Co. Ltd. / Wuxi Biologics Ireland Ltd., WO2020088180A1, &ldquo;Cell culture process by intensified perfusion with continuous harvest and without cell bleeding&rdquo; (priority 2018-11-02, published 2020-05-07) &mdash; <a href="https://patents.google.com/patent/WO2020088180A1/en">patents.google.com/patent/WO2020088180A1</a></li>
+      <li>Supporting research file: internal technical memo &ldquo;WuXiUI Technical Research Memo v1.0&rdquo; (2026-06-03), 10-step evidence-graded review of the patent and local signals &mdash; available on request.</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="kicker">Commissioned Research</div>
+    <h2>Need a competing-platform read or source retrieval on the unverified claims?</h2>
+    <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+  </div>
+
+</article>
+</main>
+
+<footer>
+  SAIL RESEARCH &middot; Seoul, Korea &middot; <a href="../research/index.html">All reports</a>
+</footer>
+
+</body>
+</html>
