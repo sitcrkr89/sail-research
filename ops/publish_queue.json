@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Backlog queue for the delegated daily publish pipeline (Hermes jobs sail-research-publish-morning/evening). The agent picks pending items, drafts reports, and marks them published/rejected here. Owner authorization: Sail-Holdings docs/AUTHORIZATIONS.md AUTH-2026-07-27-03.",
+  "updated_at": "2026-07-27T21:50:00+09:00",
+  "items": [
+    {"id": "PQ-0001", "source_locator": "/home/cshin1822/wuxi-biologics-research/05-WuXiUI-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXiUI intensified upstream platform technical memo"},
+    {"id": "PQ-0002", "source_locator": "/home/cshin1822/wuxi-biologics-research/06-WuXia-TrueSite-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXia TrueSite cell-line platform memo"},
+    {"id": "PQ-0003", "source_locator": "/home/cshin1822/wuxi-biologics-research/07-OmniFlic-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "OmniFlic bispecific platform memo"},
+    {"id": "PQ-0004", "source_locator": "/home/cshin1822/wuxi-biologics-research/08-WuXiHybrid-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXiHybrid hybrid/intensified processing memo"},
+    {"id": "PQ-0005", "source_locator": "/home/cshin1822/wuxi-biologics-research/09-SkyBody-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "SkyBody platform memo"},
+    {"id": "PQ-0006", "source_locator": "/home/cshin1822/wuxi-biologics-research/10-WuXiLIAB-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXiLIAB continuous capture memo"},
+    {"id": "PQ-0007", "source_locator": "/home/cshin1822/wuxi-biologics-research/11-AbClick-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "AbClick conjugation platform memo"},
+    {"id": "PQ-0008", "source_locator": "/home/cshin1822/wuxi-biologics-research/12-WuXian-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXian platform memo"},
+    {"id": "PQ-0009", "source_locator": "/home/cshin1822/wuxi-biologics-research/13-SDARBody-Technical-Memo.md", "industry": "ADC", "status": "pending", "published_report_id": null, "notes": "SDARBody ADC platform memo"},
+    {"id": "PQ-0010", "source_locator": "/home/cshin1822/wuxi-biologics-research/14-WuXi-Tecan-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXi-Tecan automation memo"},
+    {"id": "PQ-0011", "source_locator": "/home/cshin1822/wuxi-biologics-research/15-WuXiHigh-2.0-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXiHigh 2.0 high-throughput platform memo"},
+    {"id": "PQ-0012", "source_locator": "/home/cshin1822/wuxi-biologics-research/16-PatroLab-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "PatroLab analytical platform memo"},
+    {"id": "PQ-0013", "source_locator": "/home/cshin1822/wuxi-biologics-research/17-EffiX-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "EffiX microbial platform memo"},
+    {"id": "PQ-0014", "source_locator": "/home/cshin1822/wuxi-biologics-research/18-Integrated-Discovery-Platform-Technical-Memo.md", "industry": "CDO", "status": "pending", "published_report_id": null, "notes": "Integrated discovery platform memo"},
+    {"id": "PQ-0015", "source_locator": "/home/cshin1822/wuxi-biologics-research/19-WuXiTimeline-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXi timeline claims memo"},
+    {"id": "PQ-0016", "source_locator": "/home/cshin1822/wuxi-biologics-research/19-WuXia-TrueSite-TI-Technical-Memo.md", "industry": "CDMO", "status": "pending", "published_report_id": null, "notes": "WuXia TrueSite TI variant memo"}
+  ]
+}

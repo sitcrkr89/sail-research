@@ -2,8 +2,8 @@
 <!--
   Sail Research report template of record. Copy this file to
   reports/YYYYMMDD-<slug>.html and fill every FILL marker.
-  Read ops/RESEARCH_METHODOLOGY.md first. Then run the gate:
-  python3 ops/auto/report_quality_check.py reports/YYYYMMDD-<slug>.html
+  Before publishing, run the gate:
+  python3 scripts/preflight_publish.py reports/YYYYMMDD-<slug>.html
   Use the inline <span class="ev ...">…</span> chips to label claims by
   evidence strength right where they appear — don't let inference read as fact.
 -->
@@ -13,7 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><!-- FILL: Title --> — Sail Research SR-2026-NNNN</title>
 <meta name="description" content="<!-- FILL: 1-2 sentence summary + Evidence Grade. -->">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/reports/YYYYMMDD-<slug>.html"><!-- FILL: real filename -->
+<meta property="og:title" content="<!-- FILL: Title --> — Sail Research SR-2026-NNNN"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -90,8 +91,8 @@
 
 <nav>
   <div class="wrap">
-    <div class="logo">SAIL <em>RESEARCH</em></div>
-    <a class="back" href="../index.html">← Report Board</a>
+    <div class="logo"><a href="../index.html">SAIL <em>RESEARCH</em></a></div>
+    <a class="back" href="../research/index.html">← Report Board</a>
   </div>
 </nav>
 
@@ -156,7 +157,7 @@
 </main>
 
 <footer>
-  SAIL RESEARCH · Seoul, Korea · <a href="../index.html">All reports</a>
+  SAIL RESEARCH · Seoul, Korea · <a href="../research/index.html">All reports</a>
 </footer>
 
 </body>
