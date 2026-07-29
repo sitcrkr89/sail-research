@@ -1,3 +1,5 @@
+> Copyright policy 2026-07-29: third-party publisher/editorial full texts were removed; see sources/MANIFEST.md — URL + retrieval date below is the citation of record.
+
 # Evidence Matrix — SR-2026-0008-F (WuXiUI / WO2020088180A1)
 
 **Task**: Task 3 — evidence collection (source universe)
