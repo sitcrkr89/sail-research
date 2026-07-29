@@ -5,81 +5,110 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Methodology — Sail Research</title>
 <meta name="description" content="How Sail Research verifies claims: hashed primary-source capture, evidence labels, the fact/hypothesis boundary, and operator review.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/research/methodology.html">
+<meta property="og:title" content="Methodology — Sail Research">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
-    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
-    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
-    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+    --paper:#faf8f3; --ink:#1b1a17; --muted:#6b675e; --line:#e3dfd4;
+    --accent:#1d3a6e; --accent-soft:rgba(29,58,110,.06);
+    --gold:#6f5722; --gold-line:#cbbb8f; --gold-bg:rgba(111,87,34,.08);
+    --serif:'Newsreader',Georgia,'Times New Roman',serif;
+    --sans:'Inter','Apple SD Gothic Neo',sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.7;font-weight:300}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:15px;line-height:1.7}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  .skip{position:fixed;top:-80px;left:20px;z-index:100;background:var(--ink);color:var(--paper);padding:10px 16px;font-size:12px}
+  .skip:focus{top:16px;color:var(--paper)}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-  nav{padding:22px 0;border-bottom:1px solid rgba(201,165,74,.18)}
-  nav .wrap{max-width:1040px;display:flex;justify-content:space-between;align-items:center}
-  .logo{font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:.05em}
-  .logo em{color:var(--gold);font-style:normal}
-  .nav-r{font-size:12px;color:var(--muted);letter-spacing:.12em}
-  .nav-r a:hover{color:var(--gold-bright)}
+  /* Institution bar */
+  .institution{border-bottom:1px solid var(--line);font-size:11.5px;color:var(--muted);letter-spacing:.03em}
+  .institution .wrap{max-width:1040px;min-height:42px;display:flex;align-items:center;gap:8px 28px;flex-wrap:wrap}
+  .inst-name{font:600 12.5px var(--serif);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+  .inst-sep{color:var(--line)}
 
-  header.hero{position:relative;padding:88px 0 56px;overflow:hidden;
-    background:
-      radial-gradient(1100px 500px at 78% -10%, rgba(201,165,74,.13), transparent 60%),
-      linear-gradient(175deg, #0a1730 0%, #081226 55%, #060d1d 100%);
-  }
-  .kicker{font-size:11.5px;font-weight:600;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
-  h1{font-family:var(--serif);font-size:clamp(34px,5vw,50px);font-weight:700;line-height:1.2;max-width:760px}
-  h1 .g{color:var(--gold-bright);font-style:italic}
-  .lede{margin-top:22px;font-size:16px;color:var(--muted);max-width:640px;font-weight:300}
+  /* Nav */
+  nav{border-bottom:1px solid var(--line)}
+  nav .wrap{max-width:1040px;min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+  .logo{font:500 21px var(--serif);letter-spacing:.05em;color:var(--ink)}
+  .logo em{color:var(--accent);font-style:normal}
+  .nav-r{font:500 10.5px var(--sans);letter-spacing:.15em;text-transform:uppercase}
+  .nav-r a{color:var(--muted)}
+  .nav-r a:hover,.nav-r a:focus-visible{color:var(--accent)}
+  .nav-r .sep{color:var(--line);margin:0 14px}
 
-  main{padding:64px 0 100px}
-  .step{display:flex;gap:26px;padding:36px 0;border-top:1px solid rgba(201,165,74,.16)}
-  .step:last-child{border-bottom:1px solid rgba(201,165,74,.16)}
-  .step .n{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy-deep);
-    background:var(--gold);min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .step h2{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:10px}
-  .step h2 em{color:var(--gold-bright);font-style:italic}
-  .step p{font-size:14.5px;color:var(--muted);max-width:620px}
-  .step .ex{margin-top:14px;padding:14px 18px;background:var(--navy-panel);border:1px solid var(--navy-line);border-left:2px solid var(--gold-dim);font-size:13px;color:var(--white)}
-  .step .ex b{color:var(--gold-bright)}
+  header.hero{padding:88px 0 64px;border-bottom:1px solid var(--line)}
+  .eyebrow{font:600 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+  h1{font:500 clamp(32px,4.6vw,48px)/1.18 var(--serif);letter-spacing:-.01em;max-width:720px;margin-top:22px}
+  h1 .g{color:var(--accent);font-style:italic}
+  .lede{margin-top:24px;font-size:15.5px;color:var(--muted);max-width:660px}
 
-  .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px 30px;margin-top:18px}
+  main{padding:24px 0 96px}
+  .step{display:flex;gap:30px;padding:40px 0;border-bottom:1px solid var(--line)}
+  .step .n{font:italic 500 17px var(--serif);color:var(--muted);min-width:36px;padding-top:4px;flex-shrink:0}
+  .step h2{font:500 23px var(--serif);margin-bottom:12px}
+  .step h2 em{color:var(--accent);font-style:italic}
+  .step p{font-size:14.5px;color:var(--muted);max-width:640px}
+  .step p b{color:var(--ink);font-weight:600}
+  .step .ex{margin-top:16px;padding:16px 20px;background:#fff;border:1px solid var(--line);border-left:2px solid var(--accent);font-size:13px;color:var(--ink)}
+  .step .ex b{color:var(--accent);font-weight:600}
+
+  .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px 30px;margin-top:22px}
   .g-item{display:flex;gap:14px;align-items:flex-start}
-  .g-badge{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--navy-deep);background:var(--gold);
-    min-width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .g-badge.b{background:rgba(201,165,74,.35);color:var(--gold-bright)}
-  .g-badge.c{background:transparent;border:1px solid var(--gold-dim);color:var(--muted)}
-  .g-item .t{font-size:13px;font-weight:600;color:var(--white)}
+  .g-badge{font:600 18px var(--serif);min-width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--gold);color:#fff}
+  .g-badge.b{background:var(--gold-bg);border:1px solid var(--gold-line);color:var(--gold)}
+  .g-badge.c{background:transparent;border:1px solid var(--line);color:var(--muted)}
+  .g-item .t{font-size:13px;font-weight:600}
   .g-item .d{font-size:12.5px;color:var(--muted);margin-top:3px}
 
-  .cta{margin-top:80px;text-align:center;padding:56px 30px;border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
-  .cta h2{font-family:var(--serif);font-size:26px;font-weight:700;margin-bottom:12px}
-  .cta p{color:var(--muted);font-size:14.5px;margin-bottom:28px}
-  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12.5px;
-    letter-spacing:.18em;text-transform:uppercase;padding:15px 42px;border-radius:1px;transition:background .2s}
-  .btn:hover{background:var(--gold-bright)}
+  .cta{text-align:center;padding:64px 30px 0;border-top:1px solid var(--ink);margin-top:8px}
+  .cta h2{font:500 27px var(--serif);margin:16px 0 12px}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:30px;max-width:520px;margin-left:auto;margin-right:auto}
+  .btn{display:inline-block;background:var(--accent);color:var(--paper);font:600 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:15px 44px;transition:background .2s}
+  .btn:hover,.btn:focus-visible{background:var(--ink);color:var(--paper)}
 
-  footer{padding:44px 0 58px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer{padding:44px 0 58px;font-size:11px;color:var(--muted);text-align:center;letter-spacing:.05em;border-top:1px solid var(--line)}
+  footer .f-name{font:600 12px var(--serif);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);display:block;margin-bottom:8px}
+
+  @media(max-width:620px){
+    .nav-r a:not(:last-child),.nav-r .sep{display:none}
+    header.hero{padding:60px 0 48px}
+    h1{font-size:32px}
+    .step{gap:18px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition-duration:.01ms!important}
+  }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 
-<nav>
+<div class="institution">
   <div class="wrap">
-    <a class="logo" href="../index.html" title="Back to Sail Company">SAIL <em style="color:var(--gold)">RESEARCH</em></a>
-    <div class="nav-r"><a href="index.html#reports">REPORTS</a> &nbsp;·&nbsp; <a href="index.html#contact">CONTACT</a></div>
+    <span class="inst-name">Sail Research</span>
+    <span class="inst-sep">·</span>
+    <span>Seoul · Evidence-gated research</span>
+  </div>
+</div>
+
+<nav aria-label="Primary navigation">
+  <div class="wrap">
+    <a class="logo" href="../index.html" title="Sail Research home">SAIL <em>RESEARCH</em></a>
+    <div class="nav-r"><a href="index.html#reports">Reports</a><span class="sep">·</span><a href="index.html#contact">Commission</a></div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="wrap">
-    <div class="kicker">Methodology</div>
+    <div class="eyebrow">Methodology</div>
     <h1>How a claim earns the right to be called <span class="g">fact.</span></h1>
     <p class="lede">
       Every Sail Research report runs on the same four-step discipline: capture the primary source with a
@@ -90,10 +119,10 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
 
   <div class="step">
-    <div class="n">1</div>
+    <div class="n">01</div>
     <div>
       <h2>Hashed <em>Capture</em></h2>
       <p>When a primary source is pulled — a company newsroom page, an investor release, an official filing — we
@@ -107,7 +136,7 @@
   </div>
 
   <div class="step">
-    <div class="n">2</div>
+    <div class="n">02</div>
     <div>
       <h2>Evidence <em>Labels</em></h2>
       <p>Inside a report, every claim carries one of three internal labels — <b>Direct Evidence</b> (verified
@@ -133,7 +162,7 @@
   </div>
 
   <div class="step">
-    <div class="n">3</div>
+    <div class="n">03</div>
     <div>
       <h2>The Fact / <em>Hypothesis</em> Boundary</h2>
       <p>A model's scoring, ranking, or scenario projection is never presented as a confirmed fact, and a
@@ -147,7 +176,7 @@
   </div>
 
   <div class="step">
-    <div class="n">4</div>
+    <div class="n">04</div>
     <div>
       <h2>Operator <em>Review</em></h2>
       <p>No report publishes on a pipeline's say-so. A human operator reviews the evidence trail — sources,
@@ -157,17 +186,17 @@
     </div>
   </div>
 
+  <div class="cta">
+    <div class="eyebrow">Commissioned Research</div>
+    <h2>Need this discipline applied to your own scope?</h2>
+    <p>Custom Korea industry briefs, source maps, and competitor signal trackers — built on the same capture-and-verify trail.</p>
+    <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
+  </div>
+
 </main>
 
-<div class="cta">
-  <div class="kicker">Commissioned Research</div>
-  <h2>Need this discipline applied to your own scope?</h2>
-  <p>Custom Korea industry briefs, source maps, and competitor signal trackers — built on the same capture-and-verify trail.</p>
-  <a class="btn" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Report%20Inquiry">Inquire</a>
-</div>
-
 <footer>
-  <div class="logo" style="font-family:var(--serif);font-size:16px;margin-bottom:10px">SAIL <em style="color:var(--gold);font-style:normal">RESEARCH</em></div>
+  <span class="f-name">Sail Research</span>
   Seoul, Korea · sail.research.info@gmail.com
 </footer>
 

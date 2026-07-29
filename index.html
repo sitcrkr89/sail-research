@@ -18,7 +18,7 @@
 <meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -30,48 +30,228 @@
   "email":"sail.research.info@gmail.com"
 }
 </script>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 <style>
-  :root{--ink:#06101f;--deep:#08162b;--navy:#0e203d;--panel:#12294d;--line:#263d61;--gold:#c8a252;--gold2:#edc976;--paper:#f5f2ea;--muted:#a7b1c3;--muted2:#748299;--cyan:#7fc7c4;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans','Apple SD Gothic Neo',sans-serif}
-  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--deep);color:var(--paper);font-family:var(--sans);font-weight:300;line-height:1.65}button,input{font:inherit}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}.skip{position:fixed;top:-80px;left:20px;z-index:100;background:var(--paper);color:var(--ink);padding:10px 16px}.skip:focus{top:16px}
-  .status{background:var(--ink);border-bottom:1px solid var(--line);font-size:11px;color:var(--muted)}.status .wrap{min-height:38px;display:flex;align-items:center;gap:14px 30px;flex-wrap:wrap}.status strong{color:var(--gold2);font-weight:500}.live{color:var(--gold2);font-weight:600;letter-spacing:.14em;text-transform:uppercase}.live:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold2);margin-right:8px;box-shadow:0 0 12px rgba(237,201,118,.5)}
-  nav{position:sticky;top:0;z-index:20;background:rgba(8,22,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,162,82,.2)}nav .wrap{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:30px}.logo{font:700 20px var(--serif);letter-spacing:.06em}.logo em{color:var(--gold2);font-style:normal}.navlinks{display:flex;align-items:center;gap:28px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.navlinks a{position:relative}.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--gold2);transition:right .25s}.navlinks a:hover,.navlinks a:focus-visible{color:var(--paper)}.navlinks a:hover:after,.navlinks a:focus-visible:after{right:0}
-  .hero{position:relative;overflow:hidden;padding:88px 0 82px;background:radial-gradient(900px 520px at 82% 18%,rgba(57,101,155,.24),transparent 62%),linear-gradient(145deg,var(--deep),#071324 68%,#050d18)}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to right,transparent,black 45%,black)}.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(390px,.95fr);gap:72px;align-items:center}.kicker{color:var(--gold2);font-size:10.5px;font-weight:600;letter-spacing:.25em;text-transform:uppercase}.hero h1{font:600 clamp(46px,6.1vw,76px)/1.04 var(--serif);letter-spacing:-.025em;margin-top:23px;max-width:750px}.hero h1 em{display:block;color:var(--gold2);font-style:italic}.lede{max-width:650px;color:var(--muted);font-size:16px;margin-top:25px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 23px;border:1px solid var(--gold);color:var(--paper);font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;transition:background .2s,color .2s,transform .2s}.btn.primary{background:var(--gold);color:var(--ink)}.btn:hover,.btn:focus-visible{background:var(--gold2);border-color:var(--gold2);color:var(--ink);transform:translateY(-2px)}
-  .lens{position:relative;background:linear-gradient(155deg,rgba(18,41,77,.96),rgba(8,22,43,.96));border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.28)}.lens:before{content:"";position:absolute;left:-1px;top:-1px;width:84px;height:2px;background:var(--gold2)}.lens-head{padding:25px 27px 18px;border-bottom:1px solid var(--line)}.lens-head span{display:block;color:var(--muted2);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase}.lens-head h2{font:600 23px var(--serif);margin-top:5px}.lens-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}.lens-tab{min-height:62px;padding:10px 8px;border:0;border-right:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.lens-tab:last-child{border-right:0}.lens-tab:hover,.lens-tab:focus-visible,.lens-tab[aria-selected="true"]{outline:0;background:rgba(200,162,82,.1);color:var(--gold2)}.lens-body{padding:29px 27px 27px;min-height:310px}.lens-index{color:var(--gold2);font-size:10px;letter-spacing:.18em;text-transform:uppercase}.lens-question{font:600 26px/1.25 var(--serif);margin-top:12px}.lens-copy{color:var(--muted);font-size:13px;margin-top:15px}.lens-signal{display:grid;grid-template-columns:1fr auto;gap:18px;margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}.lens-signal span{color:var(--muted2);font-size:9px;letter-spacing:.16em;text-transform:uppercase}.lens-signal strong{display:block;color:var(--paper);font-size:12px;font-weight:500;margin-top:4px}.lens-status{align-self:start;padding:5px 8px;border:1px solid var(--gold);color:var(--gold2);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase}.lens-link{display:inline-block;color:var(--gold2);font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;margin-top:23px}
-  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink);overflow:hidden}.marquee-track{display:flex;width:max-content;animation:ticker 32s linear infinite}.marquee span{padding:13px 34px;color:var(--muted);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase}.marquee b{color:var(--gold2);font-weight:500}@keyframes ticker{to{transform:translateX(-50%)}}
-  section{padding:92px 0}.section-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:end;margin-bottom:42px}.section-head h2{font:600 clamp(34px,4vw,51px)/1.08 var(--serif);margin-top:12px}.section-head p{color:var(--muted);font-size:14px;max-width:590px}.eyebrow{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);font-weight:600}
-  .coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.coverage-card{position:relative;background:var(--deep);padding:35px 31px 31px;min-height:360px;overflow:hidden;transition:background .25s}.coverage-card:hover,.coverage-card:focus-within{background:var(--navy)}.coverage-card:after{content:"";position:absolute;inset:auto -35px -55px auto;width:150px;height:150px;border:1px solid rgba(200,162,82,.16);border-radius:50%;transition:transform .35s}.coverage-card:hover:after{transform:scale(1.25)}.coverage-num{font:500 15px var(--serif);color:var(--gold2)}.coverage-card h3{font:600 29px var(--serif);margin-top:38px}.coverage-card p{color:var(--muted);font-size:13px;margin-top:13px;max-width:280px}.coverage-question{position:absolute;left:31px;right:31px;bottom:28px;padding-top:17px;border-top:1px solid rgba(255,255,255,.08);color:var(--paper);font-size:11.5px}.coverage-question span{display:block;color:var(--muted2);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px}
-  .evidence-section{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.evidence-shell{display:grid;grid-template-columns:310px minmax(0,1fr);border:1px solid var(--line);background:var(--deep)}.evidence-nav{border-right:1px solid var(--line);padding:24px}.evidence-nav h3{font:600 20px var(--serif);margin-bottom:22px}.evidence-tab{display:block;width:100%;text-align:left;border:0;border-top:1px solid rgba(255,255,255,.08);background:transparent;color:var(--muted);padding:18px 4px;cursor:pointer;font-size:11px;letter-spacing:.04em}.evidence-tab:last-child{border-bottom:1px solid rgba(255,255,255,.08)}.evidence-tab span{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border:1px solid var(--line);margin-right:11px;color:var(--gold2);font:600 12px var(--serif)}.evidence-tab:hover,.evidence-tab:focus-visible,.evidence-tab[aria-selected="true"]{outline:0;color:var(--paper)}.evidence-tab[aria-selected="true"] span{background:var(--gold);border-color:var(--gold);color:var(--ink)}.evidence-content{padding:42px 45px;min-height:370px}.evidence-label{color:var(--gold2);font-size:9px;letter-spacing:.19em;text-transform:uppercase}.evidence-content blockquote{font:500 clamp(24px,3vw,38px)/1.32 var(--serif);margin-top:18px;max-width:760px}.evidence-explain{color:var(--muted);font-size:13.5px;margin-top:24px;max-width:720px}.evidence-impact{display:grid;grid-template-columns:150px 1fr;gap:20px;border-top:1px solid rgba(255,255,255,.08);margin-top:29px;padding-top:19px}.evidence-impact span{color:var(--muted2);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase}.evidence-impact p{color:var(--paper);font-size:12px}
-  .matrix{display:grid;grid-template-columns:170px repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.matrix>div{min-height:82px;padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px}.matrix .head{min-height:auto;background:var(--ink);color:var(--muted2);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase}.matrix .row{color:var(--gold2);font-weight:500}.matrix strong{display:block;color:var(--paper);font-weight:500}.matrix span{color:var(--muted);font-size:10.5px}.matrix .active-cell{background:rgba(200,162,82,.07)}
-  .latest{background:linear-gradient(135deg,var(--panel),var(--navy));border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);transition:transform .25s,border-color .25s}.latest:hover,.latest:focus-visible{transform:translateY(-4px);border-color:var(--gold)}.latest-main{padding:44px}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{border:1px solid var(--gold);color:var(--gold2);padding:4px 9px;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase}.latest h3{font:600 clamp(29px,4vw,43px)/1.2 var(--serif);margin-top:20px}.latest p{color:var(--muted);font-size:13.5px;margin-top:17px;max-width:680px}.latest-side{border-left:1px solid var(--line);padding:39px 31px;display:flex;flex-direction:column;justify-content:space-between}.metric{padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08)}.metric strong{display:block;font:600 21px var(--serif);color:var(--gold2)}.metric span{font-size:8.5px;color:var(--muted2);letter-spacing:.14em;text-transform:uppercase}.text-link{color:var(--gold2);font-size:9.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
-  .commission{text-align:center;background:radial-gradient(600px 260px at 50% 100%,rgba(200,162,82,.12),transparent),var(--deep)}.commission h2{font:600 clamp(35px,4vw,50px) var(--serif);margin-top:11px}.commission p{color:var(--muted);font-size:14px;max-width:680px;margin:17px auto 30px}.products{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:31px}.product{border:1px solid var(--line);padding:7px 11px;color:var(--muted);font-size:9px;letter-spacing:.1em;text-transform:uppercase}
-  footer{background:var(--ink);border-top:1px solid var(--line);padding:38px 0;color:var(--muted2);font-size:10.5px}footer .wrap{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.is-visible{opacity:1;transform:none}
-  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:50px}.section-head{grid-template-columns:1fr;gap:18px}.coverage-grid{grid-template-columns:1fr}.coverage-card{min-height:260px}.evidence-shell{grid-template-columns:1fr}.evidence-nav{border-right:0;border-bottom:1px solid var(--line)}.evidence-tabs{display:grid;grid-template-columns:repeat(3,1fr)}.evidence-tab{padding:12px 5px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}.evidence-tab span{display:flex;margin:0 auto 7px}.matrix{grid-template-columns:130px repeat(3,minmax(170px,1fr));overflow:auto}.latest{grid-template-columns:1fr}.latest-side{border-left:0;border-top:1px solid var(--line)}}
-  @media(max-width:620px){.wrap{width:min(100% - 30px,1160px)}.navlinks a:not(:last-child){display:none}.hero{padding:65px 0}.hero h1{font-size:43px}.lens-tabs{grid-template-columns:1fr}.lens-tab{min-height:45px;border-right:0;border-bottom:1px solid var(--line)}section{padding:72px 0}.evidence-tabs{grid-template-columns:1fr}.evidence-tab{text-align:left}.evidence-tab span{display:inline-flex;margin:0 8px 0 0}.evidence-content{padding:31px 25px}.evidence-impact{grid-template-columns:1fr}.latest-main{padding:32px 25px}}
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee-track{animation:none}.reveal{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+  :root{
+    --paper:#faf8f3; --ink:#1b1a17; --muted:#6b675e; --line:#e3dfd4;
+    --accent:#1d3a6e; --accent-soft:rgba(29,58,110,.06);
+    --gold:#6f5722; --gold-line:#cbbb8f; --gold-bg:rgba(111,87,34,.08);
+    --serif:'Newsreader',Georgia,'Times New Roman',serif;
+    --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:15px;line-height:1.65}
+  button,input{font:inherit}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+  .skip{position:fixed;top:-80px;left:20px;z-index:100;background:var(--ink);color:var(--paper);padding:10px 16px;font-size:12px}
+  .skip:focus{top:16px;color:var(--paper)}
+  a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* Institution bar */
+  .institution{border-bottom:1px solid var(--line);font-size:11.5px;color:var(--muted);letter-spacing:.03em}
+  .institution .wrap{min-height:42px;display:flex;align-items:center;gap:8px 28px;flex-wrap:wrap}
+  .inst-name{font:600 12.5px var(--serif);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+  .inst-sep{color:var(--line)}
+  .inst-note{margin-left:auto}
+  .inst-note strong{font-weight:600;color:var(--ink)}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(250,248,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+  .logo{font:500 21px var(--serif);letter-spacing:.05em;color:var(--ink)}
+  .logo em{color:var(--accent);font-style:normal}
+  .navlinks{display:flex;align-items:center;gap:28px;font:500 10.5px var(--sans);letter-spacing:.15em;text-transform:uppercase}
+  .navlinks a{color:var(--muted);padding-bottom:2px;border-bottom:1px solid transparent}
+  .navlinks a:hover,.navlinks a:focus-visible{color:var(--accent);border-bottom-color:var(--accent)}
+
+  /* Hero */
+  .hero{padding:96px 0 90px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:72px;align-items:center}
+  .eyebrow{font:600 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+  .hero h1{font:500 clamp(42px,5.6vw,66px)/1.1 var(--serif);letter-spacing:-.015em;margin-top:26px;max-width:760px}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .lede{max-width:620px;color:var(--muted);font-size:16px;margin-top:26px}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border:1px solid var(--accent);color:var(--accent);font:600 10.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}
+  .btn.primary{background:var(--accent);color:var(--paper)}
+  .btn:hover,.btn:focus-visible{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+  /* Decision lens panel */
+  .lens{background:#fff;border:1px solid var(--line)}
+  .lens-head{padding:24px 28px 18px;border-bottom:1px solid var(--line)}
+  .lens-head span{display:block;font:600 9.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .lens-head h2{font:500 22px var(--serif);margin-top:6px}
+  .lens-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+  .lens-tab{min-height:54px;padding:10px 8px;border:0;border-right:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;font:600 10px var(--sans);letter-spacing:.1em;text-transform:uppercase}
+  .lens-tab:last-child{border-right:0}
+  .lens-tab:hover{color:var(--accent)}
+  .lens-tab[aria-selected="true"]{color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+  .lens-body{padding:28px;min-height:300px}
+  .lens-index{font:italic 500 13px var(--serif);color:var(--muted)}
+  .lens-question{font:500 25px/1.3 var(--serif);margin-top:12px}
+  .lens-copy{color:var(--muted);font-size:13px;margin-top:14px}
+  .lens-signal{display:grid;grid-template-columns:1fr auto;gap:18px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}
+  .lens-signal span{font:600 9px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .lens-signal strong{display:block;font-size:12.5px;font-weight:600;margin-top:4px}
+  .lens-status{align-self:start;padding:4px 9px;border:1px solid var(--line);font:600 8.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .lens-link{display:inline-block;font:600 10px var(--sans);letter-spacing:.15em;text-transform:uppercase;margin-top:22px;border-bottom:1px solid var(--accent);padding-bottom:2px}
+
+  /* Sections */
+  section{padding:88px 0}
+  .sec-head{display:grid;grid-template-columns:64px 1.1fr .9fr;gap:36px;align-items:end;margin-bottom:0;padding-bottom:28px;border-bottom:1px solid var(--ink)}
+  .sec-num{font:italic 500 16px var(--serif);color:var(--muted)}
+  .sec-head h2{font:500 clamp(28px,3.4vw,38px)/1.15 var(--serif);margin-top:10px}
+  .sec-head p{color:var(--muted);font-size:13.5px;max-width:460px}
+
+  /* 01 — Research areas, journal TOC */
+  .toc{border-bottom:1px solid var(--line)}
+  .toc-row{display:grid;grid-template-columns:56px minmax(0,.9fr) minmax(0,1.1fr);gap:32px;padding:30px 0;border-top:1px solid var(--line);align-items:baseline}
+  .toc-row .num{font:italic 400 15px var(--serif);color:var(--muted)}
+  .toc-row h3{font:500 26px var(--serif)}
+  .toc-row .scope{color:var(--muted);font-size:13px;margin-top:8px;max-width:300px}
+  .toc-row .question{font-size:13.5px}
+  .toc-row .question span{display:block;font:600 9px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+
+  /* 02 — Method */
+  .method-intro{padding:36px 0 8px;color:var(--muted);font-size:14px;max-width:720px}
+  .method-intro b{color:var(--ink);font-weight:600}
+  .evidence-shell{display:grid;grid-template-columns:280px minmax(0,1fr);border:1px solid var(--line);background:#fff;margin-top:36px}
+  .evidence-nav{border-right:1px solid var(--line);padding:24px}
+  .evidence-nav h3{font:500 19px var(--serif);margin-bottom:18px}
+  .evidence-tab{display:block;width:100%;text-align:left;border:0;border-top:1px solid var(--line);background:transparent;color:var(--muted);padding:15px 4px;cursor:pointer;font-size:12px;letter-spacing:.02em}
+  .evidence-tab:last-child{border-bottom:1px solid var(--line)}
+  .evidence-tab span{display:inline-flex;width:23px;height:23px;align-items:center;justify-content:center;border:1px solid var(--line);margin-right:11px;font:italic 500 12px var(--serif);color:var(--accent)}
+  .evidence-tab:hover{color:var(--ink)}
+  .evidence-tab[aria-selected="true"]{color:var(--ink)}
+  .evidence-tab[aria-selected="true"] span{background:var(--accent);border-color:var(--accent);color:var(--paper);font-style:normal}
+  .evidence-content{padding:38px 42px;min-height:340px}
+  .evidence-label{font:600 9.5px var(--sans);letter-spacing:.19em;text-transform:uppercase;color:var(--accent)}
+  .evidence-content blockquote{font:500 clamp(21px,2.6vw,30px)/1.4 var(--serif);margin-top:18px;max-width:720px}
+  .evidence-explain{color:var(--muted);font-size:13.5px;margin-top:22px;max-width:680px}
+  .evidence-impact{display:grid;grid-template-columns:150px 1fr;gap:20px;border-top:1px solid var(--line);margin-top:26px;padding-top:18px}
+  .evidence-impact span{font:600 8.5px var(--sans);letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .evidence-impact p{font-size:12.5px}
+
+  .grades{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;padding-top:36px;border-top:1px solid var(--line)}
+  .grade-item{display:flex;gap:16px;align-items:flex-start}
+  .g-badge{font:600 20px var(--serif);min-width:42px;height:42px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--gold);color:#fff}
+  .g-badge.b{background:var(--gold-bg);border:1px solid var(--gold-line);color:var(--gold)}
+  .g-badge.c{background:transparent;border:1px solid var(--line);color:var(--muted)}
+  .grade-item .t{font-size:13px;font-weight:600}
+  .grade-item .d{font-size:12.5px;color:var(--muted);margin-top:4px}
+  .method-link{display:inline-block;margin-top:34px;font:600 10.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--accent);padding-bottom:2px}
+
+  .matrix{display:grid;grid-template-columns:170px repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:48px}
+  .matrix>div{min-height:80px;padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px}
+  .matrix .head{min-height:auto;background:var(--accent-soft);color:var(--accent);font:600 8.5px var(--sans);letter-spacing:.14em;text-transform:uppercase}
+  .matrix .row{font:500 14px var(--serif)}
+  .matrix strong{display:block;font-weight:600;font-size:12.5px}
+  .matrix span{color:var(--muted);font-size:10.5px}
+  .matrix .active-cell{background:var(--accent-soft)}
+
+  /* 03 — Publications, proceedings style */
+  .proceedings{border-bottom:1px solid var(--line)}
+  .proceeding{display:grid;grid-template-columns:130px minmax(0,1fr) auto;gap:32px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline}
+  .proceeding .p-id{font-size:11px;color:var(--muted);letter-spacing:.06em}
+  .proceeding .p-id b{display:block;font-weight:600;color:var(--ink);margin-bottom:3px}
+  .proceeding h3{font:500 20px/1.4 var(--serif)}
+  .proceeding h3 a{color:var(--ink)}
+  .proceeding h3 a:hover,.proceeding h3 a:focus-visible{color:var(--accent)}
+  .proceeding .p-desc{color:var(--muted);font-size:12.5px;margin-top:7px;max-width:560px}
+  .chip{display:inline-block;padding:3px 9px;border:1px solid var(--line);font:600 9px var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .chip.grade{border-color:var(--gold-line);background:var(--gold-bg);color:var(--gold)}
+  .p-all{display:inline-block;margin-top:30px;font:600 10.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--accent);padding-bottom:2px}
+
+  /* 04 — Commission */
+  .commission{text-align:center;border-top:1px solid var(--line)}
+  .commission h2{font:500 clamp(30px,3.6vw,42px) var(--serif);margin-top:14px}
+  .commission p{color:var(--muted);font-size:14px;max-width:640px;margin:18px auto 30px}
+  .products{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+  .product{border:1px solid var(--line);padding:7px 12px;color:var(--muted);font:500 9.5px var(--sans);letter-spacing:.1em;text-transform:uppercase}
+
+  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:11px;letter-spacing:.04em}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer .f-name{font:600 12px var(--serif);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+
+  .reveal{opacity:0;transition:opacity .7s ease}
+  .reveal.is-visible{opacity:1}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:52px}
+    .sec-head{grid-template-columns:48px 1fr;gap:20px}
+    .sec-head p{grid-column:2}
+    .toc-row{grid-template-columns:44px 1fr;gap:18px}
+    .toc-row .question{grid-column:2}
+    .evidence-shell{grid-template-columns:1fr}
+    .evidence-nav{border-right:0;border-bottom:1px solid var(--line)}
+    .evidence-tabs{display:grid;grid-template-columns:repeat(3,1fr)}
+    .evidence-tab{padding:12px 6px;text-align:center;border-top:0;border-right:1px solid var(--line)}
+    .evidence-tab:last-child{border-bottom:0}
+    .evidence-tab span{display:flex;margin:0 auto 7px}
+    .grades{grid-template-columns:1fr}
+    .matrix{grid-template-columns:130px repeat(3,minmax(170px,1fr));overflow:auto}
+    .proceeding{grid-template-columns:1fr;gap:10px}
+  }
+  @media(max-width:620px){
+    .wrap{width:min(100% - 30px,1120px)}
+    .inst-note{margin-left:0}
+    .navlinks a:not(:last-child){display:none}
+    .hero{padding:68px 0}
+    .hero h1{font-size:40px}
+    .lens-tabs{grid-template-columns:1fr}
+    .lens-tab{min-height:44px;border-right:0;border-bottom:1px solid var(--line)}
+    section{padding:68px 0}
+    .evidence-tabs{grid-template-columns:1fr}
+    .evidence-tab{text-align:left;border-right:0;border-top:1px solid var(--line)}
+    .evidence-tab span{display:inline-flex;margin:0 8px 0 0}
+    .evidence-content{padding:28px 24px}
+    .evidence-impact{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transition:none}
+    *{transition-duration:.01ms!important}
+  }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="status"><div class="wrap"><span class="live">Research desk active</span><span>Latest publication <strong>Jul 13, 2026</strong></span><span>Public sources · Explicit verification boundaries · Human review</span></div></div>
-<nav aria-label="Primary navigation"><div class="wrap"><a class="logo" href="index.html">SAIL <em>RESEARCH</em></a><div class="navlinks"><a href="#coverage">Coverage</a><a href="#evidence">Evidence</a><a href="research/index.html">Insights</a><a href="#commission">Commission</a></div></div></nav>
+
+<div class="institution">
+  <div class="wrap">
+    <span class="inst-name">Sail Research</span>
+    <span class="inst-sep">·</span>
+    <span>Seoul · Evidence-gated research</span>
+    <span class="inst-note">Latest publication <strong>Jul 29, 2026</strong> · Public sources · Human review</span>
+  </div>
+</div>
+
+<nav aria-label="Primary navigation">
+  <div class="wrap">
+    <a class="logo" href="index.html">SAIL <em>RESEARCH</em></a>
+    <div class="navlinks"><a href="#areas">Research Areas</a><a href="#method">Method</a><a href="#publications">Publications</a><a href="research/index.html">Library</a><a href="#commission">Commission</a></div>
+  </div>
+</nav>
 
 <main id="main">
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="kicker">Korean industry intelligence · Global decision context</div>
-      <h1>Find the signal.<em>See the boundary.</em></h1>
-      <p class="lede">Sail Research turns Korean-language primary sources into decision-ready intelligence across semiconductors, biopharma, and power infrastructure.</p>
-      <div class="actions"><a class="btn primary" href="#decision-lens">Explore a decision lens</a><a class="btn" href="research/index.html">Browse all insights</a></div>
+      <div class="eyebrow">Korean industry intelligence · Global decision context</div>
+      <h1>Find the signal.<br><em>See the boundary of the evidence.</em></h1>
+      <p class="lede">Sail Research turns Korean-language primary sources into decision-ready intelligence across semiconductors, biopharma, and power infrastructure. Every report states what is verified, what is interpreted, and what the available sources cannot prove.</p>
+      <div class="actions"><a class="btn primary" href="#decision-lens">Explore a decision lens</a><a class="btn" href="research/index.html">Browse the library</a></div>
     </div>
     <section class="lens" id="decision-lens" aria-labelledby="lens-title">
       <div class="lens-head"><span>Interactive briefing</span><h2 id="lens-title">Choose your decision lens</h2></div>
       <div class="lens-tabs" role="tablist" aria-label="Industry decision lenses">
-        <button class="lens-tab" type="button" role="tab" aria-selected="true" data-lens="semiconductors">Semiconductors</button>
-        <button class="lens-tab" type="button" role="tab" aria-selected="false" data-lens="biopharma">Biopharma</button>
-        <button class="lens-tab" type="button" role="tab" aria-selected="false" data-lens="power">Power</button>
+        <button class="lens-tab" type="button" role="tab" id="lens-tab-semiconductors" aria-controls="lens-panel" aria-selected="true" data-lens="semiconductors">Semiconductors</button>
+        <button class="lens-tab" type="button" role="tab" id="lens-tab-biopharma" aria-controls="lens-panel" aria-selected="false" data-lens="biopharma">Biopharma</button>
+        <button class="lens-tab" type="button" role="tab" id="lens-tab-power" aria-controls="lens-panel" aria-selected="false" data-lens="power">Power</button>
       </div>
-      <div class="lens-body" aria-live="polite">
+      <div class="lens-body" id="lens-panel" role="tabpanel" aria-labelledby="lens-tab-semiconductors" aria-live="polite">
         <div class="lens-index" id="lens-index">Lens 01 · Semiconductors</div>
         <h3 class="lens-question" id="lens-question">Has HBM4 moved from roadmap signal to commercial transition?</h3>
         <p class="lens-copy" id="lens-copy">Compare what each vendor has publicly established, what remains qualification-dependent, and which evidence would change the conclusion.</p>
@@ -82,32 +262,33 @@
   </div>
 </header>
 
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span><b>Semiconductors</b> · HBM · Advanced Packaging · Foundry</span><span><b>Biopharma</b> · CDO · CRO · CDMO · ADC</span><span><b>Power</b> · Grid · Data Centers · Energy Infrastructure</span><span><b>Evidence</b> · Verified Fact · Interpretation · Open Gap</span><span><b>Semiconductors</b> · HBM · Advanced Packaging · Foundry</span><span><b>Biopharma</b> · CDO · CRO · CDMO · ADC</span><span><b>Power</b> · Grid · Data Centers · Energy Infrastructure</span><span><b>Evidence</b> · Verified Fact · Interpretation · Open Gap</span></div></div>
-
-<section id="coverage">
+<section id="areas">
   <div class="wrap reveal">
-    <div class="section-head"><div><div class="eyebrow">Three decision arenas</div><h2>Local evidence matters most at the bottleneck.</h2></div><p>Each coverage area begins with a decision question—not a news category. We follow technical constraints, commercial signals, and the evidence required to move from observation to action.</p></div>
-    <div class="coverage-grid">
-      <article class="coverage-card"><div class="coverage-num">01</div><h3>Semiconductors</h3><p>HBM, advanced packaging, foundry transitions, qualification, capacity, and supplier dependencies.</p><div class="coverage-question"><span>Decision question</span>Where is technical readiness actually becoming commercial leverage?</div></article>
-      <article class="coverage-card"><div class="coverage-num">02</div><h3>Biopharma</h3><p>CDO, CRO, CDMO, ADC manufacturing, capacity expansion, customer demand, and technology capability.</p><div class="coverage-question"><span>Decision question</span>Which capabilities shorten the path from molecule to scalable production?</div></article>
-      <article class="coverage-card"><div class="coverage-num">03</div><h3>Power &amp; Infrastructure</h3><p>Grid constraints, data-center demand, generation capacity, equipment lead times, and energy resilience.</p><div class="coverage-question"><span>Decision question</span>Which physical constraints will determine the pace of AI infrastructure growth?</div></article>
+    <div class="sec-head"><span class="sec-num">01</span><div><div class="eyebrow">Research areas</div><h2>Local evidence matters most at the bottleneck.</h2></div><p>Each coverage area begins with a decision question, not a news category. We follow technical constraints, commercial signals, and the evidence required to move from observation to action.</p></div>
+    <div class="toc">
+      <article class="toc-row"><span class="num">01</span><div><h3>Semiconductors</h3><p class="scope">HBM, advanced packaging, foundry transitions, qualification, capacity, and supplier dependencies.</p></div><div class="question"><span>Decision question</span>Where is technical readiness actually becoming commercial leverage?</div></article>
+      <article class="toc-row"><span class="num">02</span><div><h3>Biopharma</h3><p class="scope">CDO, CRO, CDMO, ADC manufacturing, capacity expansion, customer demand, and technology capability.</p></div><div class="question"><span>Decision question</span>Which capabilities shorten the path from molecule to scalable production?</div></article>
+      <article class="toc-row"><span class="num">03</span><div><h3>Power &amp; Infrastructure</h3><p class="scope">Grid constraints, data-center demand, generation capacity, equipment lead times, and energy resilience.</p></div><div class="question"><span>Decision question</span>Which physical constraints will determine the pace of AI infrastructure growth?</div></article>
     </div>
   </div>
 </section>
 
-<section class="evidence-section" id="evidence">
+<section id="method" style="padding-top:0">
   <div class="wrap reveal">
-    <div class="section-head"><div><div class="eyebrow">Evidence explorer</div><h2>One thesis. Three different levels of truth.</h2></div><p>Top-line conclusions are useful only when the reader can see which parts are verified, which are interpreted, and which remain open.</p></div>
+    <div class="sec-head"><span class="sec-num">02</span><div><div class="eyebrow">Method</div><h2>One thesis. Three different levels of truth.</h2></div><p>Top-line conclusions are useful only when the reader can see which parts are verified, which are interpreted, and which remain open.</p></div>
+    <p class="method-intro">Every claim in a Sail Research report is written only to its verified level. The explorer below takes one published thesis — the <b>HBM4 generation transition</b> — and separates it into the three layers a reader should never have to untangle alone.</p>
     <div class="evidence-shell">
-      <div class="evidence-nav"><h3>HBM4 transition thesis</h3><div class="evidence-tabs" role="tablist" aria-label="Evidence layers"><button class="evidence-tab" type="button" role="tab" aria-selected="true" data-evidence="fact"><span>A</span>Verified fact</button><button class="evidence-tab" type="button" role="tab" aria-selected="false" data-evidence="interpretation"><span>B</span>Interpretation</button><button class="evidence-tab" type="button" role="tab" aria-selected="false" data-evidence="gap"><span>C</span>Open gap</button></div></div>
-      <div class="evidence-content" aria-live="polite"><div class="evidence-label" id="evidence-label">Verified fact · Primary sources</div><blockquote id="evidence-quote">All three major HBM vendors have live first-party disclosures establishing an HBM4 product, demonstration, production, or shipment position.</blockquote><p class="evidence-explain" id="evidence-explain">This supports the narrow conclusion that the generation transition is active. It does not establish which vendor leads on customer qualification, volume, yield, or economics.</p><div class="evidence-impact"><span>Decision implication</span><p id="evidence-impact">Shift monitoring from roadmap existence toward qualification, volume, yield, packaging, and customer-specific deployment evidence.</p></div></div>
+      <div class="evidence-nav"><h3>HBM4 transition thesis</h3><div class="evidence-tabs" role="tablist" aria-label="Evidence layers"><button class="evidence-tab" type="button" role="tab" id="evidence-tab-fact" aria-controls="evidence-panel" aria-selected="true" data-evidence="fact"><span>A</span>Verified fact</button><button class="evidence-tab" type="button" role="tab" id="evidence-tab-interpretation" aria-controls="evidence-panel" aria-selected="false" data-evidence="interpretation"><span>B</span>Interpretation</button><button class="evidence-tab" type="button" role="tab" id="evidence-tab-gap" aria-controls="evidence-panel" aria-selected="false" data-evidence="gap"><span>C</span>Open gap</button></div></div>
+      <div class="evidence-content" id="evidence-panel" role="tabpanel" aria-labelledby="evidence-tab-fact" aria-live="polite"><div class="evidence-label" id="evidence-label">Verified fact · Primary sources</div><blockquote id="evidence-quote">All three major HBM vendors have live first-party disclosures establishing an HBM4 product, demonstration, production, or shipment position.</blockquote><p class="evidence-explain" id="evidence-explain">This supports the narrow conclusion that the generation transition is active. It does not establish which vendor leads on customer qualification, volume, yield, or economics.</p><div class="evidence-impact"><span>Decision implication</span><p id="evidence-impact">Shift monitoring from roadmap existence toward qualification, volume, yield, packaging, and customer-specific deployment evidence.</p></div></div>
     </div>
-  </div>
-</section>
 
-<section id="matrix">
-  <div class="wrap reveal">
-    <div class="section-head"><div><div class="eyebrow">Signal matrix</div><h2>What we watch before a thesis changes.</h2></div><p>The matrix separates current public position from the evidence needed to upgrade confidence. Coverage buildout is shown honestly rather than filled with synthetic signals.</p></div>
+    <div class="grades">
+      <div class="grade-item"><div class="g-badge">A</div><div><div class="t">Primary-Verified</div><div class="d">Official disclosures, filings, or statistics checked against the original publisher.</div></div></div>
+      <div class="grade-item"><div class="g-badge b">B</div><div><div class="t">Headline-Corroborated</div><div class="d">Claims verified to headline level across multiple outlets. Article bodies not independently confirmed.</div></div></div>
+      <div class="grade-item"><div class="g-badge c">C</div><div><div class="t">Hypothesis</div><div class="d">Interpretive signals and projections. Explicitly labeled; never stated as fact.</div></div></div>
+    </div>
+    <a class="method-link" href="research/methodology.html">Read the full methodology →</a>
+
     <div class="matrix" role="table" aria-label="Sail Research coverage signal matrix">
       <div class="head" role="columnheader">Coverage</div><div class="head" role="columnheader">Current position</div><div class="head" role="columnheader">Watch condition</div><div class="head" role="columnheader">Public status</div>
       <div class="row" role="rowheader">Semiconductors</div><div class="active-cell"><strong>HBM4 transition active</strong><span>Vendor-confirmed generation signals</span></div><div><strong>Qualification and volume</strong><span>Customer, yield, and ramp disclosure</span></div><div><strong>Published coverage</strong><span>Two HBM research briefs</span></div>
@@ -117,19 +298,26 @@
   </div>
 </section>
 
-<section>
+<section id="publications" style="padding-top:0">
   <div class="wrap reveal">
-    <div class="section-head"><div><div class="eyebrow">Featured insight</div><h2>The latest verified signal.</h2></div><p>A narrow thesis with counter-evidence and verification gaps kept visible.</p></div>
-    <a class="latest" href="reports/20260713-hbm4-vendor-confirmed.html"><div class="latest-main"><div class="tags"><span class="tag">Semiconductors</span><span class="tag">Evidence A</span><span class="tag">Primary sources</span></div><h3>HBM4 Goes Commercial: All Three Vendors Confirm the Generation Transition</h3><p>What the official disclosures establish, what they do not establish, and which signals strategy and supply-chain teams should monitor next.</p></div><div class="latest-side"><div><div class="metric"><strong>3</strong><span>Primary disclosures</span></div><div class="metric"><strong>Jul 13</strong><span>Publication date</span></div><div class="metric"><strong>SR-2026-0006</strong><span>Research ID</span></div></div><span class="text-link">Read the evidence brief →</span></div></a>
+    <div class="sec-head"><span class="sec-num">03</span><div><div class="eyebrow">Publications</div><h2>Recent proceedings.</h2></div><p>Narrow theses with counter-evidence and verification gaps kept visible. Each entry declares its evidence grade.</p></div>
+    <div class="proceedings">
+      <article class="proceeding"><div class="p-id"><b>SR-2026-0009</b>Jul 29, 2026</div><div><h3><a href="reports/20260729-agc-yokohama-gmp-readiness.html">AGC Biologics Yokohama Agreement: What the Official Scope Discloses About New Facility GMP Readiness</a></h3><p class="p-desc">What the official release establishes about the Yokohama facility, and what remains unconfirmed.</p></div><span class="chip grade">Evidence B</span></article>
+      <article class="proceeding"><div class="p-id"><b>SR-2026-0008</b>Jul 27, 2026</div><div><h3><a href="reports/20260727-wuxiui-patent-no-bleed-perfusion.html">No Bleed, Continuous Harvest: What the Patent Behind WuXiUI Actually Proves</a></h3><p class="p-desc">A full read of the patent, with claim scope separated from commercial implication.</p></div><span class="chip grade">Evidence B</span></article>
+      <article class="proceeding"><div class="p-id"><b>SR-2026-0007</b>Jul 27, 2026</div><div><h3><a href="reports/20260727-wuxiup-continuous-biomanufacturing.html">WuXiUP and the Continuous Biomanufacturing Claim: What WuXi Biologics' Own Disclosures Establish</a></h3><p class="p-desc">What company disclosures and registry records establish, and where verification stops.</p></div><span class="chip grade">Evidence B</span></article>
+      <article class="proceeding"><div class="p-id"><b>SR-2026-0006</b>Jul 13, 2026</div><div><h3><a href="reports/20260713-hbm4-vendor-confirmed.html">HBM4 Goes Commercial: All Three Vendors Confirm the Generation Transition</a></h3><p class="p-desc">What the official disclosures establish, what they do not, and which signals to monitor next.</p></div><span class="chip grade">Evidence A</span></article>
+    </div>
+    <a class="p-all" href="research/index.html">Full proceedings index →</a>
   </div>
 </section>
 
-<section class="commission" id="commission">
-  <div class="wrap reveal"><div class="eyebrow">Commissioned research</div><h2>Bring us the decision—not just the topic.</h2><p>Commission a scoped Korea industry brief with primary-source collection, an evidence map, decision implications, watch conditions, and explicit verification gaps.</p><div class="products"><span class="product">Industry brief</span><span class="product">Source map</span><span class="product">Competitor tracker</span><span class="product">Technology bottleneck review</span></div><a class="btn primary" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Research%20Inquiry">Discuss a research scope</a></div>
+<section class="commission" id="commission" style="padding-top:0">
+  <div class="wrap reveal"><div class="eyebrow">04 · Commissioned research</div><h2>Bring us the decision, not just the topic.</h2><p>Commission a scoped Korea industry brief with primary-source collection, an evidence map, decision implications, watch conditions, and explicit verification gaps.</p><div class="products"><span class="product">Industry brief</span><span class="product">Source map</span><span class="product">Competitor tracker</span><span class="product">Technology bottleneck review</span></div><a class="btn primary" href="mailto:sail.research.info@gmail.com?subject=%5BSail%20Research%5D%20Commissioned%20Research%20Inquiry">Discuss a research scope</a></div>
 </section>
 </main>
 
-<footer><div class="wrap"><span>SAIL RESEARCH · Seoul, Korea</span><span>Public-source intelligence · sail.research.info@gmail.com</span></div></footer>
+<footer><div class="wrap"><span class="f-name">Sail Research · Seoul, Korea</span><span>Public-source intelligence · sail.research.info@gmail.com</span></div></footer>
+
 <script>
 const lenses={
   semiconductors:{index:'Lens 01 · Semiconductors',question:'Has HBM4 moved from roadmap signal to commercial transition?',copy:'Compare what each vendor has publicly established, what remains qualification-dependent, and which evidence would change the conclusion.',signal:'Cross-vendor generation transition confirmed',status:'Published',link:'reports/20260713-hbm4-vendor-confirmed.html',linkText:'Open the evidence brief →'},
@@ -138,6 +326,7 @@ const lenses={
 };
 document.querySelectorAll('[data-lens]').forEach(button=>button.addEventListener('click',()=>{
   document.querySelectorAll('[data-lens]').forEach(item=>item.setAttribute('aria-selected',String(item===button)));
+  document.getElementById('lens-panel').setAttribute('aria-labelledby',button.id);
   const lens=lenses[button.dataset.lens];
   document.getElementById('lens-index').textContent=lens.index;
   document.getElementById('lens-question').textContent=lens.question;
@@ -153,6 +342,7 @@ const evidence={
 };
 document.querySelectorAll('[data-evidence]').forEach(button=>button.addEventListener('click',()=>{
   document.querySelectorAll('[data-evidence]').forEach(item=>item.setAttribute('aria-selected',String(item===button)));
+  document.getElementById('evidence-panel').setAttribute('aria-labelledby',button.id);
   const item=evidence[button.dataset.evidence];
   document.getElementById('evidence-label').textContent=item.label;
   document.getElementById('evidence-quote').textContent=item.quote;
