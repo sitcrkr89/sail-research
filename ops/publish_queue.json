@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "purpose": "Backlog queue for the delegated daily publish pipeline (Hermes jobs sail-research-publish-morning/evening). The agent picks pending items, drafts reports, and marks them published/rejected here. Owner authorization: Sail-Holdings docs/AUTHORIZATIONS.md AUTH-2026-07-27-03.",
-  "updated_at": "2026-07-27T22:15:00+09:00",
+  "updated_at": "2026-07-29T00:00:00+09:00",
   "items": [
     {
       "id": "PQ-0001",
@@ -9,6 +9,7 @@
       "industry": "CDMO",
       "status": "published",
       "published_report_id": "SR-2026-0008",
+      "full_report_id": "SR-2026-0008-F",
       "notes": "WuXiUI intensified upstream platform technical memo"
     },
     {

@@ -1,0 +1,35 @@
+Ultra-Intensified Fed-Batch Manufacturing Platform
+WuXiUI
+TM
+Achieves 3-6 folds Higher Productivity and 60 – 80% Reduction in Manufacturing Cost of Goods
+WuXi Biologics’ manufacturing platform WuXiUI™ introduces an ultra-intensified fed-batch strategy for highly improved upstream productivity and cost-effective commercial manufacturing. It leverages an innovative cell culture bioprocess with ultra-high seeding density and intermittent-perfusion fed-batch to achieve 3 to 6-fold higher productivity than traditional fed-batch processes while maintaining desirable product quality. The platform’s unique design allows for outstanding adaptability for all common cell lines and diverse modalities, and is readily scalable to 2000 L – 12,000 L (e.g., 6 x 2,000 L or 3 x 4,000 L) scales with high productivity and 60-80% reduced manufacturing cost of goods (COGs).
+The industries most common mammalian expression systems (e.g., CHO-K1, CHO-S, CHO-M, CHO-GS etc.) used in modern bioprocessing are compatible with the WuXiUI platform to produce a wide array of biotherapeutic modalities including monoclonal, bispecific and multispecific antibodies, Fc fusion proteins and enzymes. Similar to perfusion cell culture, WuXiUI is an ideal solution for difficult to express recombinant proteins.
+WuXiUI
+TM
+Processing Platform Details
+Performance
+Details
+MagniCHO™
+WuXiUI™: Ultra-Intensified Intermittent Perfusion Fed-Batch (UI-IPFB)
+N-1 seed expansion using perfusion cell culture and a cell concentration step to achieve super high inoculation density (20 – 80 x 10
+6
+cells/mL) to start production
+Achieves 2-4 fold cell concentration within only 1.5-3 hours
+Intermittent perfusion cycles to replenish key nutrients, remove toxic waste products, and sustain productivity during the extended culture duration
+Superior productivity potential (3-6 fold of traditional fed-batch) for high protein output per batch
+Attractive manufacturing COGs for enhanced competitiveness of commercial products
+Lower carbon footprint than traditional or other intensified fed-batch processes due to more efficient media consumption and reduced waste generation
+Shared ATF device can be used throughout N-1 to N all in one bioreactor if required
+The WuXiUI™ Ultra-Intensified Fed-Batch Manufacturing Platform is characterized by an intensified N-1 seed expansion using perfusion cell culture coupled with a cell concentration step which has been shown to boost cell density to up to 3.5 x10
+8
+cell/mL. With high-density inoculation to start production, coupled with an intermittent-perfusion fed-batch process (IPFB), a healthy cell status is sustained that improves productivity while achieving desirable product quality. WuXiUI™ in conjunction with our proprietary MagniCHO™ cell culture media and Raman-based advanced modeling algorithm process analytical technologies (PAT) generates a high-performance, cost-effective and robust solution for next-generation biomanufacturing.
+MagniCHO™: Premier Media for Diverse CHO Cell Types
+Specially formulated for use with the WuXiUI platform, the MagniCHO™ media further maximizes productivity to drive product titer higher. Using the WuXiUI platform in conjunction with MagniCHO demonstrated on average a 3.5-fold higher productivity and up to 35 g/L titer compared to a traditional fed-batch process using off-the-shelf media. In addition, we achieved a performance comparable to or greater when substituting MagniCHO for commercially-available media.
+3.5-fold average higher cell culture productivity compared to traditional fed-batch (TFB)+Commercial medium
+Up to 35 g/L in clone selection with WuXia cell line
+Suitable for a wide array of biotherapeutic modalities including monoclonal & bispecific antibodies and fusion proteins
+For more information on how the WuXiUI platform can dramatically improve cell culture productivity and drive down your biologics manufacturing cost of goods see this
+webinar
+or –
+contact us
+.

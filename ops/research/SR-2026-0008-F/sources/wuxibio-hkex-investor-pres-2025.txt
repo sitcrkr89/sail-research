@@ -1,0 +1,2905 @@
+– 1 –
+
+Hong Kong Exchanges and Clearing Limited and The Stock Exchange of Hong Kong Limited take 
+no responsibility for the contents of this announcement, make no representation as to its accuracy or 
+completeness and expressly disclaim any liability whatsoever for any loss howsoever arising from or in 
+reliance upon the whole or any part of the contents of this announcement.
+
+WUXI BIOLOGICS (CAYMAN) INC.
+
+(Incorporated in the Cayman Islands with limited liability)
+(Stock Code: 2269)
+
+藥明生物技術有限公司*
+
+INSIDE INFORMATION
+2025 INTERIM RESULTS PRESENTATION
+
+This announcement is made by WuXi Biologics (Cayman) Inc. (the “Company”) pursuant 
+to Rule 13.09 of the Rules Governing the Listing of Securities on The Stock Exchange of 
+Hong Kong Limited (the “Listing Rules”) and the Inside Information Provisions (as defined 
+in the Listing Rules) under Part XIVA of the Securities and Futures Ordinance (Chapter 571 
+of the Laws of Hong Kong).
+
+In order to enable shareholders and potential investors of the Company to have a deeper and 
+more comprehensive understanding of its 2025 interim results and business operations, the 
+Company will convene conference calls at 9:00 a.m. and 8:00 p.m. (Hong Kong time) on 
+August 20, 2025, at which it will conduct a presentation regarding the Company’s financial 
+results and business operations (the “Presentation”). Shareholders and potential investors 
+of the Company may attend the conference calls at the scheduled time at the following links:
+
+Conference call in Chinese at 9:00 a.m. (Hong Kong time):
+
+https://citi-call-wuxi-biologics-2269hk-post-1h25-aug-2025.open-exchange.net/registration
+
+Conference call in English at 8:00 p.m. (Hong Kong time):
+
+https://jefferies.zoom.us/webinar/register/WN_A74otDPyQciXKWgDXMAwCA
+
+Please use the links provided above to complete the online registration process in advance of 
+the conference calls.
+
+
+– 2 –
+
+Further, to ensure that all shareholders and potential investors of the Company have equal 
+and timely access to such information, the Company has included in this announcement 
+the full copy of the Presentation. Shareholders and potential investors of the Company are 
+reminded that the Presentation may contain forward-looking statements, which are, by 
+their nature, subject to risks and uncertainties, and any estimate and future proposals stated 
+in the Presentation are based on certain assumptions and estimates and on management’s 
+judgements in light of currently available information only.
+
+Shareholders and potential investors of the Company are advised not to place undue 
+reliance on the information contained in the Presentation and should exercise caution 
+when dealing in the securities of the Company.
+
+By order of the Board
+WuXi Biologics (Cayman) Inc.
+Dr. Ge Li
+Chairman
+
+Hong Kong, August 19, 2025
+
+As at the date of this announcement, the board of directors of the Company comprises Dr. Zhisheng Chen 
+and Dr. Sherry Xuejun Gu as executive directors; Dr. Ge Li, Mr. Yanling Cao and Ms. Jingwen Miao as 
+non-executive directors; and Mr. William Robert Keller, Mr. Kenneth Walton Hitchner III, Mr. Jackson Peter 
+Tai and Dr. Jue Chen as independent non-executive directors.
+
+* For identification purpose only
+
+
+CRDMO Business Model: 
+
+Accelerating Growth
+
+August 2025
+
+Stock Code: 2269.HK
+
+2025 Interim Results
+
+
+2
+©2025 WuXi Biologics. All rights reserved. 
+
+This presentation may contain certain “forward-looking statements” which are not historical facts, but instead are predictions about future
+events based on our beliefs as well as assumptions made by and information currently available to our management. Although we believe
+that our predictions are reasonable, future events are inherently uncertain and our forward-looking statements may turn out to be incorrect.
+Our forward-looking statements are subject to risks relating to, among other things, the ability of our service offerings to compete effectively,
+our ability to meet timelines for the expansion of our service offerings, and our ability to protect our clients’ intellectual property. Our
+forward-looking statements in this presentation speak only as of the date on which they are made, and we assume no obligation to update
+any forward-looking statements except as required by applicable law or listing rules. Accordingly, you are strongly cautioned that reliance on
+any forward-looking statements involves known and unknown risks and uncertainties. All forward-looking statements contained herein are
+qualified by reference to the cautionary statements set forth in this section.
+
+Use of Adjusted Financial Measures (Non-IFRS Measures)
+
+We have provided adjusted net profit, adjusted net profit margin, adjusted gross profit, adjusted gross profit margin, adjusted EBITDA,
+adjusted EBITDA margin and adjusted basic earnings per share for the corresponding periods, which excludes the share-based compensation
+expenses, listing expenses, gains or losses from equity investments and foreign exchange gains or losses, and are not required by, or
+presented in accordance with, IFRS. We believe that the adjusted financial measures used in this presentation are useful for understanding
+and assessing underlying business performance and operating trends, and we believe that management and investors may benefit from
+referring to these adjusted financial measures in assessing our financial performance by eliminating the impact of certain unusual and non-
+recurring items that we do not consider indicative of the performance of our business. However, the presentation of these non-IFRS financial
+measures is not intended to be considered in isolation or as a substitute for the financial information prepared and presented in accordance
+with IFRS. You should not view adjusted results on a stand-alone basis or as a substitute for results under IFRS, or as being comparable to
+results reported or forecasted by other companies.
+
+Forward-Looking Statements 
+
+
+Operation & Business Updates
+
+CONTENTS
+
+01
+
+03
+
+05
+
+02
+
+04
+
+06
+
+2025 Interim Results 
+
+WBS & ESG as Key Components of 
+Business Strategy
+
+1H 2025 Financials Review
+
+Advanced Technology Platforms –
+Cornerstone of Future Success
+
+Summary & Outlook
+
+
+01
+2025 Interim Results
+
+
+5
+
+39.1% → 42.7%
+
+Gross Profit Margin 
+
+0.37 → 0.58
+
+43.3% / 28.5%
+Adj EBITDA Margin / Adj Net Profit Margin
+
+Basic EPS (RMB)
+
+8.6 → 10.0
+Revenue (RMB Bn) YoY
+
+16.1%
+
+3.6 → 4.3
+Adj EBITDA (RMB Bn) YoY
+
+20.6%
+
+16 → 24
+
+12,552/4,362/
+
+Employees / Development Scientists
+
+742 → 864
+
+Integrated Projects YoY
+
+16.4%
+
+86
+
+New Projects Added 
+
+18.5 → 20.3
+
+Total Backlog (US$ Bn) (Dec 24 → Jun 25)
+
+50%
+
+Commercial Projects YoY
+
+Key Talent 
+
+Retention Rate 
+
+98.8%
+
+2.5 → 2.8
+
+Adj Net Profit (RMB Bn) YoY
+
+11.6%
+
+Number of Regulatory Inspections
+
+44 Regulatory Inspections
+
+with 100% Success
+
+56.8%
+
+360bps
+
+
+6
+
+Revenue by Phase
+
+By Project Phase
+
+3,068.0
+
+4,147.3
+
+1,893.0
+
+1,330.1
+
+3,434.4
+
+4,288.9
+
+178.8
+
+186.9
+
+1H 2024
+1H 2025
+
+Pre-IND
+Post-IND Early phase (I/II)
+Late+CMO
+Others
+
+8,574.2
+
+9,953.2
+RMB 
+(mm)
+• Pre-IND revenue rose 35.2% YoY in 1H 
+
+2025, driven by revenue conversion of 
+wins across R services and pre-IND 
+development.
+
+• Early-phase revenue declined 29.7% YoY 
+
+in 1H 2025, primarily reflecting multiple 
+large-scale projects progressing from 
+early-phase to late development or CMO, 
+and the impact of order timing. 
+
+• Late-stage + CMO revenue increased by 
+
+24.9% YoY, reflects both evolution of 
+projects from early-phases and the 
+continued ramp-up of existing CMO 
+programs. 
+
+
+7
+
+24
+
++86
+67
+
+864
+
+Multiple-Platform Discovery Engines
+
+Enabled 50+ programs with potential milestone & sales royalty
+
+429 Preclinical
+77
+19 Terminated
+
+7
+259 Phase I 
+
+85 Phase II 
+
+31
+
+67 Phase III
+2
+
+3
+
+Commercial
+
+24
+
+14
+
+3
+
+8
+
+11
+
+1
+
+WuXiBodyTM
+OMT Platform
+ADC Platform
+SDArBodYTM
+
+“R”
+
+“M”
+
+“D”
+
+A 1H Record of 86 New Projects Added in 1H 2025, 
+Highlight Continued Customer Demand & Execution Strength
+
+Notes: 
+1. As of June 30, 2025
+2. The commercial manufacturing projects refer to the projects approved by regulatory authorities and signed CMO contracts with theGroup
+
+•
+With leading technology, proven 
+execution, and a growing global 
+platform, the Company added 86 new 
+integrated projects in 1H 2025 -
+reinforcing its role as a partner of choice 
+for biopharma innovators globally
+
+o
+Over half of the 86 new projects from 
+the U.S. 
+
+o
+China also contributed to new 
+project additions, as a stabilizing 
+funding environment began to 
+translate into increased customer 
+activities  
+
+•
+Won 9 projects in 1H 2025, including 2
+late-stage projects – the majority from 
+U.S.-based clients  
+
+o
+Most of these projects involve 
+complex modalities, led by bi- & 
+multi-specific antibodies and ADC
+
+•
+67 late-stage & 24 CMO projects: forming 
+a strong foundation for sustained future 
+manufacturing revenue growth
+
+
+8
+
+0.27 
+
+1.48 
+
+3.64 
+
+5.10 
+
+11.32
+
+13.60
+
+20.57
+20.59
+
+18.49 
+
+20.11 
+20.34
+
+0.24 
+
+0.48 
+
+1.63 
+
+1.69 
+
+3.63
+
+4.95
+
+10.54
+10.40
+
+11.35
+
+10.00
+10.49
+
+1.00 
+2.01 
+
+3.42 
+
+4.70 
+5.65 
+
+7.03 
+7.19 
+8.00 
+7.11 
+
+9.00 
+
+0.23 
+0.56 
+0.81 
+0.79 
+
+1.46 
+
+2.89 
+
+3.62 
+3.85 
+3.65 
+3.64 
+4.21 
+
+Dec 2016
+Dec 2017
+Dec 2018
+Dec 2019
+Dec 2020
+Dec 2021
+Dec 2022
+Dec 2023
+Dec 2024
+Jun 2024
+Jun 2025
+
+Backlog Remains at High Level to Support Future Growth
+
+Note: 
+1.Upcoming milestone revenue may take longer to receive at the various development stages as it depends on the success rate and progress of the projects
+2.Results may not foot due to rounding
+
+•
+As of Jun 30, 2025, total backlog 
+reached US$20.3 bn, of which US$11.4 
+bn was service backlog.
+
+Late-stage project advancement, 
+
+commercial ramp-up and clinical 
+progress of early-stage programs 
+all contributed to the growth in 
+service backlog.
+
+•
+Upcoming potential milestone backlog 
+reached US$9.0 bn, reflecting 
+accelerating R momentum.
+
+•
+As of Jun 30, 2025, backlog within 3 
+years was US$4.2 bn, enhancing near-
+term revenue visibility.
+
+•
+Given the nature of our business, 
+backlog does not fully reflect the cycle 
+time of our businesses, hence R & D 
+backlog is dwarfed by the long-
+duration CMO projects. We do not 
+anticipate significant growth in backlog 
+absent multi-year contract signing.
+
+Service Backlog
+
+Upcoming Potential Milestone Fees (1)
+
+Backlog within 3 Years
+
+(US$ bn)
+
+Backlog of MSD vaccine project (20-yr)
+
+3.0
+
+3.0
+
+3.0
+3.0
+3.0
+
+Ex-MSD vax 
+
+BL: 17.59
+
+Ex-MSD vax 
+BL: 17.57
+
+Ex-MSD vax 
+
+BL: 10.60
+
+Ex-MSD vax 
+
+BL: 8.32
+
+Ex-MSD vax 
+
+BL: 17.11
+
+
+9
+
+23
+
+37
+
+76
+
+167
+
+123
+
+316
+
+742
+
+25
+
+40
+
+80
+
+225
+
+168
+
+326
+mAb
+
+Fusion 
+Protein
+
+ADC
+
+bi- & multi-
+
+specifics(2)
+
+Other 
+
+Protein
+
+Vaccine
+
+Notes: 
+1. As of June 30, 2025, compared with projects number as of June 30, 2024
+2. Bispecific Antibody (BsAb) Included both WuXiBodyTM projects and non-WuXiBodyTM projects
+
+16.4%
+
+1H 2025
+1H 2024
+
+864
+
+3.2%
+
+36.6%
+
+34.7%
+
+5.3%
+
+8.1%
+
+8.7%
+
+Total 
+
+Integrated (1)
+
+Rich Pipeline across All Biologics Modalities
+
+•
+338 First-in-class programs
+
+•
+168 bi- & multi-specifics covering different formats, 
+several in phase III and commercial stage. Leveraging 
+the Company’s deep expertise and end-to-end 
+capabilities, WuXi Biologics has captured expanding 
+market opportunities in this sector
+
+•
+225 Antibody Drug Conjugates (ADC) projects with 
+34.7% YoY growth driven by sustained industry growth
+
+•
+Ex-XDC, the remainder of WuXi Bio revenue grew by 
+9% YoY
+
+mAb
+BsAb
+ADC
+Fusion Protein
+
+mAb
+19%
+
+bi- & multi-
+
+specifics
+
+28%
+
+ADC
+43%
+
+Fusion Protein
+
+5%
+
+Other Protein
+
+2%
+
+Vaccines
+
+3%
+
+1H 2025 New Project Split by Modality
+
+•
+Recently bi- & multi-
+specifics, along with ADCs, 
+have emerged as the 
+industry’s most critical 
+segments. Our deep 
+technical expertise in 
+these complex modalities 
+underpins our leading 
+market position
+
+•
+bi- & multi-specifics + 
+ADCs > 70% of new signs 
+
+
+10
+
+China
+
+-8.5% YoY
+
+13.0% of Revenue
+
+North
+America
+
++20.1% YoY
+
+60.5% of Revenue
+
+EU
+
++5.7% YoY
+
+19.8% of Revenue
+6.7% of Revenue
+
+ROW(1)
+
++136.1% YoY
+
+Note: 
+1.  The ROW market primarily includes Singapore, Japan, South Korea, Australia and Brazil
+
+• North America: Revenue grew 20.1% YoY, driven by pre-IND momentum and expanded late-stage & CMO activities — highlighting 
+
+sustained demand and project ramp-up despite evolving trade dynamics.
+
+• Europe: Modest YoY growth of 5.7% driven by mix, with growth potential anticipated.
+
+• China: Revenue declined 8.5% YoY, reflecting timing of customer orders, project progress and China license-out activities amid a 
+
+gradually recovering market.
+
+• Rest of the World: Revenue more than doubled YoY, reflecting the impact of strengthened BD efforts, with Japan and Korea 
+
+sustaining strong growth momentum.
+
+Revenue by Geography
+
+
+02
+1H 2025 Financials Review
+
+
+12
+
+1,692.7 
+
+3,508.6
+4,549.9 
+3,570.6
+3,945.4
+
+1780.3
+
+2756.6
+
+23.1
+
+72.7
+
+504.0 
+
+1,379.8
+1,451.5
+
+764.5
+
+83.4
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+4,828.9
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+2,533.0
+
+2,464.0
+
+4,589.6
+
+6,857.4
+6,993.0
+
+7,999.3
+
+3,570.4
+4,305.2
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+1,715.8
+
+3,435.9
+
+5,612.4
+
+10,290.1
+
+15,268.7
+
+17,034.3
+
+18,675.4
+
+8,574.2
+9,953.2
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+Revenue
+
+Adjusted EBITDA (1)
+
+IFRS Gross Profit
+
+Notes: 
+1. Adjusted EBITDA represents net profit before (i) interest expenses, income tax expenses, listing expenses (ii) certain non-cash expenses, consisting of share-based compensation, amortization and 
+depreciation and (iii) foreign exchange gains/losses and (iv) fair value gains/losses on investment portfolios and assets divestiture
+2. Adjusted net profit excludes the share-based compensation expenses, fair value gains/losses on investment portfolios, foreign exchange and asset divestiture gains/losses
+
+RMB mm
+
+RMB mm
+
+RMB mm
+
+6,724.0
+6,827.9
+
+RMB mm
+
+Adjusted Margin %
+Non-ifrs adjustments (SBC, Investment, FX and Divestiture Gain & Losses)  
+Unadjusted Margin %
+
+Adjusted Net Profit (2)
+
+5,053.9
+4,950.4
+
+1H 2025 Financial Performance
+
+45.1%   
+
+48.8% 
+
+46.9%   
+
+50.6% 
+
+44.0%   
+
+50.0% 
+
+40.1%   
+
+45.3% 
+
+41.0%
+
+45.4% 
+
+7,650.8
+
+30.2%
+
+30.6%
+
+34.1%
+
+33.4%
+
+29.8%
+
+33.1%
+
+21.0%
+
+29.1%
+
+21.1%
+
+28.9%
+
+5,396.9
+
+43.9%
+44.6%
+44.9%
+41.1%
+42.8%
+
+3,350.0
+
+4,252.9
+
+39.1%
+
+44.4% 
+
+42.7%
+
+45.6% 
+
+41.6%
+43.3%
+
+2,544.8
+
+2,840.0
+
+20.8%
+
+29.7%
+
+27.7%
+
+28.5%
+
+
+13
+
+1,692.7 
+
+3,508.6 
+
+4,549.9 
+
+3,570.6 
+3,945.4 
+
+1,780.3 
+
+2,756.6 
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+IFRS Net Profit
+
+RMB mm
+
+Note:
+1. The authorized and issued shares of the Company were subdivided on the basis that every one (1) issued share is subdivided into three (3) subdivided shares (the “Share Subdivision”), which became effective on November 16, 2020. Basic 
+and diluted earnings per share were stated after taking into account the effect of the Share Subdivision. Comparative figures have also been restated on the assumption that the Share Subdivision had been effective in the prior year
+
+RMB (Cents)  
+
+44.0 
+
+79.0 
+
+118.0 
+113.0 
+117.0 
+
+55.0 
+59.0 
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+Adjusted Basic EPS (1)
+
+43.0
+
+81.0
+
+106.0
+
+82.0
+82.0
+
+37.0
+
+58.0
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+Basic EPS (1)
+
+RMB (Cents)  
+
+Key Profit Metrics
+
+1,688.9 
+
+3,388.5 
+
+4,420.3 
+
+3,399.7 
+3,356.1 
+
+1,499.1 
+
+2,339.3 
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+IFRS Net Profit Attributable to Owners of the Company 
+
+RMB mm
+
+
+14
+
+20.7%
+17.0%
+20.2%
+19.9%
+18.7%
+19.6%
+16.5%
+
+16.8%
+22.7%
+21.1%
+19.3%
+19.5%
+19.1%
+
+19.6%
+
+17.4%
+13.4%
+14.7%
+20.7%
+20.8%
+22.2%
+
+21.2%
+
+2020
+2021
+2022
+2023
+2024
+1H 2024
+1H 2025
+
+Direct labor costs
+Cost of raw materials
+Overhead
+
+54.9%
+53.1%
+56.0%
+
+59.0%
+59.9%
+
+Cost of Services as % of Revenue  
+
+Note: 
+1. Adjusted gross margin excludes the share-based compensation expenses
+
+Gross Margin
+Adjusted Gross Margin(1)
+
+Gross Profit and Breakdown of Cost of Sales
+
+45.1%   
+
+48.8%
+Adj. GM (%)
+
+IFRS GM (%)
+46.9%
+
+50.6%
+
+40.1%
+
+45.3%
+
+44.0%
+
+50.0%
+
+41.0%
+
+45.4%
+
+60.9%
+
+57.3%
+
+39.1%
+
+44.4%
+
+42.7%
+
+45.6%
+
+
+15
+
+•
+Approx. RMB2.7 bn borrowings as of June 30, 2025 
+
+•
+Available bank credit facilities of around RMB6 bn
+LOAN
+
+CASH FLOW
+
+•
+Free cash flow of RMB(0.09) bn in 1H 2025 due to timing 
+
+•
+Positive free cash flow to increase significantly in 2H 2025
+
+AVAILABLE FUNDS 
+
+•
+Available funds approx. RMB12.5 bn as of June 30, 2025
+
+•
+Gearing Ratio 5.6%, expect to have sufficient funds to sustain our growth
+
+CAPEX
+
+LOAN
+
+•
+1H 2025 CAPEX approx. RMB1.9 bn, primarily allocated to the expansion of Biologics 
+and XDC facilities in Singapore, Biologics facility in US, as well as XDC’s expansion in 
+China 
+
+•
+2025 CAPEX Plan: approx. RMB5.3 bn
+
+Liquidity
+
+
+03
+Operation & Business Updates
+
+
+17
+
+Most programs
+CD3 TCEs programs
+
+Revenue
+GPM%
+Revenue
+GPM%
+
+R
+80%+
+80%+
+
+Upfront payment(1x)
+up to $30+m
+up to $40+m
+
+Milestone (cumulative)
+up to $200m+
+up to $200m+
+
+Sales royalties (recurring)
+up to $100m/yr for every $1b 
+
+sales
+
+up to $100m/yr for every $1b 
+
+sales
+
+D
+fluctuates depending on 
+
+clinical trial needs 
+50%+
+fluctuates depending on 
+
+clinical trial needs 
+50%+
+
+Expect 600+ projects with cell line royalty1 by YE2025 
+
+M – Manufacturing Services
+$50m+/yr per $1b sales
+45%+
+A few batches/yr for CD3 TCEs
+45%+
+
+M – Cell line royalties1
+typically 0.5% of net drug sales at 80%+ GPM%
+
+R-D-M Revenue Potential for Projects Embedded with WXB Proprietary Tech
+
+•
+Upfront payment, milestone, sales and cell line royalties to become a significant portion of future revenue 
+
+o
+Will drive Group margin expansion 
+
+1. Cell line royalties are waived when sponsors manufacture 100% of commercial supply at WXB. Royalties apply to any portion of commercial production 
+
+conducted outside WXB, providing a meaningful profit stream.
+
+
+18
+
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+
+Pre-IND
+
+IND/Phase I
+
+Phase II
+
+Phase III
+
+CMO
+
+R Project Distribution by Phase
+
+Research Services Have Enabled 50+ Programs for Global Clients to Date
+
+Previous analyses provide an industry benchmark of 10% for the 
+
+success rate in clinical development... Based on 18 leading 
+
+pharmaceutical companies (2006-2022) and 274 new drug approvals, 
+
+reveals an average likelihood of first approval rate of 14%, broadly 
+
+ranging from 8% to 23%.
+
+Drug Discovery Today 2025
+
+~50% of programs are sponsored by 
+ex-China clients
+
+e.g. Gloria PD-1, CStone PD-L1; low-single digit royalty
+
+e.g. RCUS/GILD PD-1; royalty 7 - 10% of drug sales
+
+e.g. Duality DB-1311; low-single digit royalty
+
+e.g. Curon/MRK CN201; royalty 5 - 10% of drug sales
+
+e.g. 4 GSK programs
+royalty 4-8% of drug sales
+
+
+19
+
+Biopharma Licensing: 
+Win-Win as New Asset Owners Expand Service Utilization & Award More Contracts 
+
+Note:
+1.During the period from 2018 to 1H 2025
+2.Company’s internal analysis
+
+•
+WuXi Bio held a leading position among bio-
+
+partnering programs utilizing  CDMOs in 20242
+
+•
+Total contracts signed post-acquisition: US$2,757m 
+
+from 2018 to 1H 2025
+
+•
+~60% of contracts signed by MNCs
+
+•
+WuXi Bio achieved ~90% project retention post 
+
+biopharma licensing collaborations: 
+
+o
+Revenue  for acquired assets as new 
+
+owners initiate larger and/or additional trials
+
+1,088
+1,211
+
+130 
+
+328 
+
+2,757
+
+Follow China
+Follow
+
+International
+
+Win China
+Win
+
+International
+
+Total
+
+Total Contract Value ($M)
+
+The Contracts Signed Post Biopharma 
+
+Licensing Collaboration1
+
+
+20
+
+6
+12
+22
+
+42
+
+61
+
+77
+
+102
+
+129
+
+2019
+2020
+2021
+2022
+2023
+2024
+2025E
+2026E
+
+# PPQs1 (cumulative)
+
+32%
+•
+25 PPQs scheduled for 
+
+2025E.  
+
+•
+PPQs scheduled for 2025E 
+
+& 2026E are based on 
+
+current contracts, providing 
+
+visibility.
+
+•
+98%+ success rate for PPQ 
+
+batches: among the 
+
+industry’s top performers, 
+
+showcasing exceptional & 
+
+reliable quality.
+
+Scheduled PPQs Underpin Future CMO Growth
+
+6
+6
+
+10
+
+20
+19
+16
+
+25
+27
+
+2019
+2020
+2021
+2022
+2023
+2024
+2025E
+2026E
+
+# PPQs (by year)
+
+Note: 
+1. PPQ = Process Performance Qualification, lead for commercial manufacturing
+
+
+21
+
+Note: 
+1. Singapore capacity has further expansion potential.
+
+9
+
+DP
+Facilities 
+~500,000L
+
+Bioreactor Capacity
+16
+
+DS
+Facilities 
+
+150 INDs / Annual
+
+Project Capacity
+
+12,000+Employees
+
+3 RDM hubs 
+EU/US, Singapore, and China
+
+12 BLAs / Annual
+Project Capacity
+
+Ireland
+
+Germany
+
+Singapore(1)
+
+China
+
+USA
+
+42,000L E
+
+251,000L E
+
+120,000L E
+
+24,000L E
+
+54,000L
+
+5 Research Centers
+Shanghai WGQ, Shanghai FX, Chengdu in China,
+Boston in the U.S.; Singapore
+
+8 Development Centers  
+Shanghai WGQ, Wuxi, Shanghai FX, Hangzhou, Suzhou, 
+Chengdu in China; Cranbury NJ in the U.S.; Singapore
+
+8 Manufacturing Centers 
+
+Wuxi, Shijiazhuang, Chengdu, Hangzhou in CHINA, Wuppertal in 
+Germany; Dundalk in Ireland; Worcester MA in the U.S.; Singapore
+
+Global End-to-End Capabilities to Deliver Integrated R, D & M Services
+
+
+22
+
+MFG20 in Hangzhou, China
+
+Global Site Updates
+
+Massachusetts
+• MFG11 likely the largest facility with 
+
+single-use technology in the U.S. 
+
+o Upstream 6 x 6K L bioreactors 
+connected to 1 downstream line
+
+o High downstream throughput  
+
+o Advanced automation 
+
+• When completed, WuXi Bio will provide 
+
+end-to-end capabilities in the U.S.
+
+New Jersey
+• MFG18 in Cranbury will undergo 
+renovations to optimize capacities and 
+improve efficiency
+
+• DP12 in New Jersey GMP Readiness in 
+
+Q2 2025
+
+• MFG6.2 successfully completed its first 
+
+engineering and PPQ runs
+
+• MFG7 completed its second 12,000L 
+
+PPQ run
+
+• Received its first EMA approval as a 
+
+commercial manufacturing site for a 
+global client’s innovative biologic
+
+• 100% success rate for PPQs
+• During the Reporting Period, the 
+
+Ireland site was honored with the 
+prestigious 2025 Operational Excellence 
+in Life Sciences Award at the Ireland 
+Operational Excellence Awards
+
+• The first commercial PPQ campaign 
+
+was completed at the 15,000L line in 
+MFG20 - Asia’s first 5,000L drug 
+substance scale-out line using single-
+use bioreactors
+
+• This achievement highlights the 
+
+Group’s proven expertise in 
+implementing single-use 
+technologies for large-scale 
+commercial manufacturing
+
+MFG11 & 18 in the U.S.
+MFG6 & 7 in Dundalk, Ireland
+
+
+23
+
+• Construction for a new modular Drug Product (DP) facility 
+
+has begun. Design work is underway for a planned drug 
+substance (DS) modular facility. 
+
+• Mechanical completion at the WuXi XDC manufacturing site 
+
+was achieved in June 2025 - on schedule, under budget.
+
+• Making solid strides according to the planned schedule to 
+
+establish Singapore as another strategic hub for our global 
+biologics Research, Development and Manufacturing.
+
+Singapore Site Updates
+
+Jan 2024
+
+Jun 2025
+
+Mar 2024
+
+Aug 2024
+Nov 2024
+
+15 months from pilling start to WuXi XDC Mechanical Completion
+
+Jan 2025
+
+
+24
+
+QUALITY is One of Our Key Competitive Advantages
+
+Number of Regulatory Inspections Completed: 44
+Number of License Approvals: 81 (115 by Facility)
+
+Note: 
+1. As of June 30th , 2025
+
+NMPA, 5
+NMPA, 5
+
+NMPA, 7
+NMPA, 8
+
+NMPA, 10
+
+EMA, 3
+EMA, 3
+
+EMA, 7
+
+EMA, 10
+
+EMA, 11
+
+EMA, 14
+
+EMA, 14
+
+FDA, 1
+
+FDA, 2
+FDA, 2
+
+FDA, 5
+
+FDA, 6
+
+FDA, 7
+
+FDA, 8
+
+FDA, 8
+
+Others, 1
+
+Others, 5
+
+Others, 6
+
+Others, 9
+
+Others, 12
+
+Others, 12
+
+1
+
+5
+
+6
+
+22
+
+27
+
+34
+
+42
+
+44
+
+2017
+2019
+2020
+2021
+2022
+2023
+2024
+2025
+
+MFG1
+MFG2F
+MFG2P
+MFG4
+MFG5
+DP1
+DP2
+DP4
+DP5
+MFG3(CB)
+MFG3
+DP7
+
+WBPXXX
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+WBPXXX
+WBPXXX
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+WBPXXX
+WBPXXXX
+
+WBPXXX
+WBPXXX
+WBPXXX
+WBPXXX
+WBPXXX
+
+WBPXXX
+
+WBPXXX(2)
+
+WBPXXX
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+5
+WHO (1)
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+7
+Hong Kong (1)
+WBPXXX
+
+WBPXXX
+WBPXXX
+WBPXXX
+
+WBPXXX
+WBPXXX
+WBPXXX
+
+WBPXXX/
+WBPXXX
+WBPXXX
+
+10
+Switzerland (3)
+WBPXXX
+WBPXXX
+WBPXXX
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+13
+Saudi Arabia (1)
+
+14
+Costa Rica (1)
+
+15
+Panama (1)
+
+16
+Russian (1)
+
+17
+New Zealand (2)
+WBPXXX
+
+18
+Thailand (1)
+
+19
+Jordan (1)
+
+20
+Malaysia (1)
+
+21
+HSA (1)
+
+22
+Sweden(1)
+
+23
+Spain(1)
+
+24
+ Poland(1)
+
+25
+Norway(1)
+
+26
+ Northern 
+Ireland(1)
+
+27
+Netherlands(1)
+
+28
+Italy(1)
+
+29
+Greece(1)
+
+30
+Germany(1)
+
+31
+France(1)
+
+32
+Finland(1)
+
+33
+Denmark(1)
+
+34
+Czechia(1)
+
+35
+ Austria(1)
+
+36
+ Australia(1)
+WBPXXX
+WBPXXX
+WBPXXX
+
+17
+30
+12
+3
+22
+17
+3
+2
+1
+4
+2
+2
+
+WBPXXX 
+
+-14
+
+# Approvals 115
+
+WBPXXX/
+WBPXXX
+
+WBPXXXX
+
+WBPXXX
+
+WBPXXXX
+
+WBPXXX
+
+WBPXXXX
+
+WBPXXX
+
+12
+Canada (3)
+
+11
+United Arab 
+Emirates (2)
+WBPXXX
+
+WBPXXX/
+WBPXXX
+
+-12
+
+WBPXXX
+WBPXXX
+9
+PMDA (4)
+WBPXXX
+WBPXXX
+WBPXXX
+
+8
+MHRA (5)
+WBPXXX
+WBPXXX/
+WBPXXX
+
+6
+TGA (2)
+
+4
+ANVISA (3)
+WBPXXX
+
+WBPXXXX
+
+WBPXXX
+
+WBPXXX
+
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+WBPXXXX
+3
+NMPA (8)
+
+WBPXXX
+WBPXXX(2)
+
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+WBPXXX
+
+WBPXXX
+WBPXXX
+
+2
+EMA (12)
+
+WBPXXX
+
+WBPXXX
+
+WBPXXX
+
+WBPXXX/
+WBPXXX
+WBPXXX
+
+WBPXXX
+
+WBPXXX
+
+1
+FDA (12)
+
+WBPXXX
+
+WBPXXX
+
+WBPXXX
+
+Facility
+Agency
+* New
+
+* New
+
+100% successfully passed PLI
+
+
+25
+
+Key Quality and Regulatory Indicators: 
+Consistently Achieving Favorable Results in Client Audits
+
+Summary
+
+88 reports received as of 1H 2025 (total 139 client audits)
+0.67 (59/88) Major findings per Audit as of 1H 2025
+
+WuXi Biologics continues to safeguard our data integrity
+
+to maintain our strong track record with customers and
+regulators: no critical issues identified and zero data
+
+integrity findings.
+
+Note: 
+1. Figures excluded WuXi XDC
+
+1.45
+0.84
+0.65
+0.33
+0.55
+
+（2019）
+（2020） （2021） （2022）
+（2023）
+
+0.49
+
+（2024）
+（1H 2025）
+
+0.67
+
+65
+
+0
+0
+0
+0
+
+8
+
+50
+
+0
+
+29
+
+55
+
+0
+0
+0
+0
+
+14 17
+
+0
+
+7
+
+45
+
+10
+
+6
+
+0
+0
+
+12
+
+29
+
+8
+7
+
+16
+
+4
+1
+1
+0
+
+19
+
+26
+
+4
+7
+
+58
+
+11
+
+4
+
+0
+0
+0
+
+10
+
+30
+
+6
+
+13
+
+30
+
+9
+
+0
+2
+0
+2
+
+18
+
+25
+
+1
+
+11 13
+
+21
+
+7
+7
+
+0
+0
+0
+
+9
+7
+
+0
+1
+
+7
+
+38
+
+0
+0
+0
+0
+
+5
+
+27
+
+0
+
+35
+
+41
+
+0
+0
+0
+0
+
+10
+
+24
+
+0
+
+36
+
+65
+
+6
+
+1
+0
+2
+
+13
+
+56
+
+1
+
+37
+
+64
+
+9
+
+3
+1
+
+5
+
+36
+
+55
+
+13
+
+48
+
+61
+
+5
+4
+
+0
+0
+
+4
+
+29
+
+63
+
+10
+
+63
+
+46
+
+6
+
+0
+3
+2
+2
+
+32
+
+62
+
+11
+
+53
+
+10
+
+24
+
+2
+1
+0
+1
+0
+
+17
+
+26
+
+4
+
+10
+
+3
+
+Global MFG
+Biodev
+Global MFG
+Biodev
+Global MFG
+Biodev
+Global MFG
+Biodev
+Global MFG
+Biodev
+Global MFG
+Biodev
+Global MFG
+Biodev
+
+2019
+2020
+2021
+2022
+2023
+2024
+1H 2025
+
+Critical+ Major Findings
+
+Received audit reports
+
+1.45
+
+0.84
+0.65
+
+0.33
+
+0.55
+0.49
+
+0.67
+
+Major finding Rate
+Major Findings per Audit
+
+
+26
+
+Win and Serve Our Clients
+
+DaVinci Client Portal
+
+Best-in-class digital client experience with
+
+industry-leading, secure, cloud-based platform
+
+that enables clients to seamlessly generate
+
+proposals, access experimental data and reports,
+
+cost estimates, shipment tracking
+
+BioFoundry
+
+Digital twin representation of our physical lab
+
+processes, connected to lab devices and equipment
+
+with no-code configuration of workflows
+
+400+ Workflows
+
+InSilico
+
+In silico modeling and analytical methods used
+to minimize wet-lab experiments and improve 
+
+processes
+
+30+ Applications
+
+Lab Core Operating Systems and Analytics
+to Accelerate Discovery and Development
+
+EBR
+
+Electronic Batch Record (EBR) roll-out to improve
+
+quality, productivity, speed and flexibility
+
+Advanced Planning
+
+Data and advanced analytics enabled planning and
+scheduling to effectively optimize labor, material,
+and equipment allocation to maximize utilization
+
+under complex scenarios
+
+20% Efficiency Improvement
+
+40% Productivity Increase
+
+Manufacturing & Quality Control
+
+Digital Solutions to Accelerate Science
+
+
+27
+
+Revenue per FTE on the Upward Trajectory
+
+0
+
+50
+
+100
+
+150
+
+200
+
+250
+
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+2024
+2025E
+
+Revenue per FTE
+US$ 000’
+
+(1)
+
+1. 2025 figure is based on mid-point of the 2025 revenue target
+
+• Revenue per FTE set to grow sustainably, supported by efficiency gains from Digital and WBS, alongside higher-margin 
+
+revenues from upfront payments, milestones, and royalties.
+
+
+04
+Advanced Technology Platforms – Cornerstone of Future Success
+
+
+29
+
+Evolving WuXi XDC Proprietary Toolbox to Seize Industry Trend
+
+X-LinC
+WuXiTecan-1 and 
+
+WuXiTecan-2
+
+Ongoing Commitment to Cutting-Edge Technologies, Unlocking Vast 
+Clinical Validation Opportunities
+
+•
+The upgraded version 
+launched in 2024
+
+•
+Clinical validated conjugation 
+sites with DAR flexibility (1, 2, 
+4, 6) and great homogeneity
+
+•
+An increasing number of 
+customers are leveraging the 
+platform to develop innovative 
+modalities ( i.e. AOC, APC and 
+dual-payload ADC…)
+
+•
+Launched in 2024
+
+•
+Provide superior stability 
+than Maleimide (the most 
+popular connector currently 
+in use) in in vivo and in vitro 
+studies
+
+•
+Significant potential for 
+validation and adoption by 
+clients seeking enhanced 
+performance and stability
+
+•
+Newly launched in 1H 2025
+
+•
+Showed great efficacy (CDX) 
+and safety profile in mice and 
+monkeys 
+
+•
+Customers are actively 
+assessing the efficacy of 
+WuXiTecan-1 and WuXiTecan-
+2, with potential 
+collaboration under 
+discussion
+
+Conjugation Technologies…
+Novel Payload-Linkers…
+
+Abbreviations: AOC=Antibody Oligonucleotide Conjugate; APC=Antibody Peptide Conjugate; CDX = Cell line-derived xenograft model
+
+(1)
+
+Note:
+1.Technology in collaboration with MCLICK-DAR1-A1/MCLICK-DAR2-A1/MCLICK-DAR6-A1 from Bio-reinnovation Tech. Ltd.
+
+
+30
+
+Single-use Technology - The Growing Industry Norm Transforming 
+Bioprocessing
+
+Cost - Efficiency
+
+•
+Single-use tanks (SUTs) have a lower up-front capital investment, 
+faster construction timelines & reduced indirect costs.
+
+•
+Based on data from 300+ large-scale batches, WuXi Bio believes 
+that current manufacturing costs using SUTs remain favorable, 
+especially when savings realized combining SUTs with advanced 
+bioprocessing technology platforms
+
+Manufacturing Efficiency 
+
+& Flexibility
+
+•
+WuXi Bio has implemented scale-out strategies, achieving large-
+scale production through parallel multiple SUB, with production 
+scale up to 16,000L.
+
+•
+This scale-out approach eliminates the complexity and risk of 
+traditional non-linear scale-up, allowing capacity to flex quickly 
+with changes in demand.
+
+•
+Only 20% of commercial biologics require bioreactors > 10,000 L1.
+
+Sustainability
+
+•
+Multiple studies have shown that SUT can significantly reduce 
+the environmental footprint of biomanufacturing – using less 
+energy, water and cleaning agents2 
+
+•
+For equivalent output, SUT can reduce water usage by up to 
+70%, lower electricity consumption by ~30%, and cut CO2
+emissions2 by ~25%.
+
+•
+These sustainability gains also help clients meet increasingly 
+stringent ESG goals.
+
+1. BPI Editors. Biomanufacturing supply and demand: industry trends and projected impacts. BioProcessInt, July 31, 2024.
+2. Sinclair A et al. The environmental impact of disposable technologies. BioPharmInt2008; 201-9. 
+
+Human Toxicity, Non-caner…
+
+Human Toxicity, Caner Impact
+
+Particulate Matter Impact
+
+Water Use Impact
+
+Resource Use, Minerals and…
+
+Photochemical Ozone…
+
+Acidification Impact
+
+Ozone Depletion Impact
+
+Climate Change Impact
+
+Environmental Impact Comparison of Traditional Fed-batch and WuXiUITM
+
+Traditional Fed-batch
+WuXiUI
+
+
+31
+
+Single-Use Technology Scaled Out to Large Batch Sizes Comparable to 
+Stainless Steel Tanks
+
+ 339 batches, 5 manufacturing facilities, 2 countries
+ 97% successful rate overall, 98% since 2022
+
+Disposable manufacturing proven to be cost-competitive, 
+flexible & agile, effectively accommodating both small- and 
+large-volume products
+
+3
+7
+
+16
+17
+
+48
+
+76
+77
+
+66
+
+31
+
+0
+
+20
+
+40
+
+60
+
+80
+
+100
+
+120
+
+2017
+2018
+2019
+2020
+2021
+2022
+2023
+2024
+1H 2025
+
+Number of Successful Scale Out Batches (by year)
+
+Scale out batches
+
+7
+
+7
+
+8
+
+2
+
+2
+
+182
+
+53
+
+77
+
+10
+
+17
+
+MFG2F
+
+MFG5-2K
+
+MFG5-4K
+
+MFG7
+
+MFG8
+
+Successful Scale out info-by MFG#
+
+Batches
+Projects
+
+ 8 projects experienced 
+
+HA Inspection. 
+
+4,000L, 6, 2%
+
+6,000L, 98, 29%
+
+8,000L, 16, 5%
+
+10,000L, 15, 4%
+
+12,000L, 200, 59%
+
+16,000L, 4, 1%
+
+Number of Successful Scale Out Batches (by scale)
+
+
+32
+
+WuXiHigh™2.0 - Next-gen High-throughput DP Formulation Platform
+
+WuXiHigh™2.0 platform 
+
+leverages proprietary 
+
+excipient blends & 
+
+formulation expertise to 
+
+enable high-concentration 
+
+DPs- up to 230mg/mL
+
+Reduces viscosity by up to 
+
+90% without compromising 
+
+formulation stability or 
+
+injectability
+
+•
+WuXiHigh™2.0 enables formulation 
+concentrations beyond the current FDA-approved 
+high of 200mg/mL- delivering greater flexibility in 
+injection volume, reduced dosing frequency, and 
+simplified cold-chain logistics. 
+
+o Also enhances manufacturing efficiency 
+
+across both drug substance and drug 
+product.
+
+•
+This innovation reinforces our leadership in 
+technology, speeds client programs and improves 
+patient delivery.
+
+Concentration 
+to 230mg/ml
+Viscosity -90%
+
+
+05
+WBS and ESG as Key Components 
+of Business Strategy
+
+
+34
+
+Kaizen Projects
+128+
+
+1 point
+
+Improvement in 
+gross margin
+
+WBS 1H 2025 Highlights
+
+Labor 
+
+Efficiency
+
+Deploy digital initiatives
+Implement standard work
+
+Premier 
+Quality
+
+Enhance reporting standards
+
+Mitigate quality risk
+
+Cost Saving
+Expense
+Saving
+
+Optimize idle facilities
+
+Improve budget management
+
+Revenue 
+
+Enhance customer retention 
+
+Expand into new business
+
+Material Cost 
+
+Saving
+
+Optimize material usage
+
+Improve inventory management
+
+ESG 
+
+Optimization
+
+Reduce energy, water, 
+
+waste and CO2 emissions
+
+
+35
+
+Trustworthy Partner with a Strong Sustainability Commitment
+
+* Data As of July 31, 2025
+
+DJSI World Indices
+
+S&P Global ESG Indices
+
+(2023-2025)
+
+MSCI ESG Ratings AAA 
+MSCI Selection Indexes
+
+(2023-2025)
+
+EcoVadis Platinum Medal
+
+Global 1%
+(2023-2025)
+
+SustainalyticsNegligible-Risk
+Industry & Regional Top Rated
+
+(2021-2025)
+
+A List – Water Security
+
+A List - Supplier Engagement
+Leadership - Climate Change
+
+(2023-2025)
+
+FTSE4Good Emerging Index
+
+Industry Top 7%
+
+(2021-2025)
+
+Prime Award
+
+ISS ESG Corporate Rating
+
+(2023-2025)
+
+
+06
+Summary & Outlook
+
+
+37
+
+We Firmly Believe that the CRDMO Business Model is the Most Efficient in 
+Our Industry
+
+2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 2027 2028 2029 2030
+
+Our Three Long-Term Growth Curves
+
+R+D+M
+
+D+M
+
+D
+
+2019
+
+2013
+2017
+
+•
+Over the last decade, WuXi Bio has achieved substantial growth by implementing our “Follow the Molecule” strategy, which 
+led to significant revenue growth in Development (D).
+
+•
+Having established key technology platforms, we believe that Research Services (R) will be another significant growth driver 
+in the future.
+
+•
+As a technology leader in modern biomanufacturing with a proven track record of delivering large commercial projects, we 
+view Manufacturing (M) as another key pillar for future growth.
+
+M
+provides cost-competitive therapies to 
+patients worldwide 
+
+D
+accelerates project progress through our 
+execution excellence & swift delivery
+
+R
+transforms innovative biotech concepts 
+from across the globe into reality 
+
+
+38
+
+Strong 1H25 Results Reinforce Confidence; 
+Revenue Growth Target Raised to 14% - 16%
+
+ FY25 revenue growth target raised to 14% – 16% from 12% – 15% 
+
+ Improved profitability and significant free cash flow in FY25  
+
+1H 2025: Strong Results Underscore Growth Trajectory
+
+•
+Accelerated growth ahead
+
+o
+R-D-M all engines on fire; 
+
+o
+M momentum sustains, 27 PPQs scheduled for 
+2026 as of 1H25
+
+•
+Margin expansion 
+
+o
+Mix lift from R, WBS efficiency, higher utilization 
+rates (multiple large-scale CMO projects) 
+
+•
+Strong FCF conversion underscoring high earnings quality
+
+•
+Global expansion on track
+
+•
+Technology innovation
+
+o
+Highly automated DS manufacturing 
+
+o
+WuXiHighTM (DP)
+
+o
+EffixTM Microbial  
+
+•
+Group revenue grew 16.1% YoY (continuing ops +20.2% YoY) and GPM 
+expanded 360bps YoY
+
+o
+Pre-IND grew 35.2% YoY; recognized expertise in complex modalities 
+
+o
+M rose 24.9% YoY
+
+•
+D: record 1H with 86 new integrated projects signed
+
+•
+M: 25 scheduled PPQs in FY25E (+56% YoY); multiple large-scale programs 
+recently launched and/or expected to launch  
+
+•
+New order strength across late-stage advancement, commercial ramp, and 
+early-stage clinical progress 
+
+•
+Asset optimization for greater operational agility, improved asset efficiency
+
+
+WuXi Biologics Vision
+
+Every biologic can be made
+
+WuXi Biologics Mission
+
+Accelerate and transform the discovery, development and manufacturing of
+biologicsto enable our global partnersand benefit patientsworldwide
+
+

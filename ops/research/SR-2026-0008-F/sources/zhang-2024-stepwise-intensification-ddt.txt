@@ -1,0 +1,220 @@
+Source: Zhang J, Cao W, Yu L, Cui Y, Xu K, Tian J, Hogl S, Kaufmann H, Zhou W, Gu S (2024). 'Stepwise cell culture process intensification for high-productivity and cost-effective commercial manufacturing of a Mabcalin(TM) bispecifics.' Drug Discovery Today. WuXi Biologics + Pieris Pharmaceuticals co-authors.
+URL (publisher copy): https://www.sciencedirect.com/science/article/abs/pii/S1369703X24002638
+URL (PDF archived from wuxibiologics.com): https://www.wuxibiologics.com/wp-content/uploads/Stepwise-Cell-Culture-Process-Intensification.pdf
+Retrieved: 2026-07-29
+
+=== TITLE/AUTHORS/ABSTRACT (lines 1-60) ===
+Regular article
+
+Stepwise cell culture process intensification for high-productivity and 
+cost-effective commercial manufacturing of a Mabcalin™ bispecifics
+
+Jinliang Zhang a,1, Weijia Cao a,1, Le Yu a,*, Yanyan Cui a, Kecui Xu a, Jun Tian a,  
+Sebastian Hogl c, Hitto Kaufmann c, Weichang Zhou b, Sherry Gu b
+
+a Process Development, WuXi Biologics, 108 Meiliang Road, Wuxi 214092, China
+b WuXi Biologics, 299 Fute Zhong Road, Waigaoqiao Free Trade Zone, Shanghai 200131, China
+c Pieris Pharmaceuticals GmbH, Carl-Zeiss-Ring 15a, 85737 Ismaning, Germany
+
+A R T I C L E  I N F O
+
+Keywords:
+Chinese Hamster Ovary
+Mabcalin™ bispecifics
+Process intensification
+UI-IPFB
+WuXiUI™
+Cost of goods
+
+A B S T R A C T
+
+Process intensification and media optimization, as a crucial step for improving productivity and manufacturing 
+cost of goods (COG), set the stage for commercialization readiness and redefine the landscape for patient access. 
+This study described a stepwise approach to explore different intensified fed-batch processes along with opti-
+mized cell culture media for the production of a Mabcalin™ bispecifics. Initially, by leveraging perfusion 
+expansion, intensified fed-batch (IFB) with an inoculation density of 10.3 × 106 cells/mL was developed to 
+produce 6.1 g/L of products, compared to 3.9 g/L from the original traditional fed-batch (TFB). Following the IFB 
+conversion, a high-performing production medium, MagniCHO™, was chosen to substitute the original one, 
+which further boosted the titer to 9.1 g/L. The result underscored the significance of developing an optimized cell 
+culture media for intensified cultivation. Furthermore, the approach of ultra-intensified intermittent-perfusion 
+fed-batch was utilized, raising the seeding density to 73.6 × 106 cells/mL. A final harvest titer of 24.5 g/L was 
+recorded. Additionally, manufacturing COG was calculated to evaluate how process intensification could lead to 
+improved manufacturing cost-effectiveness, with up to 71 % COG reduction attainable with the UI-IPFB process. 
+This study demonstrated that even for difficult-to-express modalities, applying a strategic development approach 
+including process intensification and media optimization could effectively improve manufacturing efficiency and 
+COG competitiveness.
+
+1. Introduction
+
+Bispecific therapeutics, engineered to possess two specific antigen- 
+binding sites, are emerging as a highly promising therapeutic modality 
+due to their potential for more effective clinical therapeutic responses by 
+targeting oncogenic signaling pathways and cytokines [1,2]. Since the 
+FDA approval of blinatumomab (Blincyto; Amgen) as the first bispecific 
+antibody (BsAb) in 2014, a total of seven BsAb molecules have been 
+approved in the United States and Europe to date [3]. Despite high 
+market expectations, the complex bispecific structure often presents 
+many technical challenges in molecule design and manufacturing pro-
+cess development, making the high-productivity manufacturing of bis-
+pecific products difficult [4,5]. Unlike monoclonal antibodies (mAbs), 
+BsAbs often require the co-expression of three or more distinct genes 
+targeting different antigens, followed by their assembly into a specific 
+
+format, placing significant stresses in protein expression and folding 
+machinery [6]. As a result, the complex architecture of BsAbs often re-
+sults in lower expression levels owing to reduced folding and secretion 
+efficiency, compared to monoclonal antibodies. This is further exacer-
+
+=== EXCERPT around line 34 ===
+mized cell culture media for the production of a Mabcalin™ bispecifics. Initially, by leveraging perfusion 
+expansion, intensified fed-batch (IFB) with an inoculation density of 10.3 × 106 cells/mL was developed to 
+produce 6.1 g/L of products, compared to 3.9 g/L from the original traditional fed-batch (TFB). Following the IFB 
+conversion, a high-performing production medium, MagniCHO™, was chosen to substitute the original one, 
+which further boosted the titer to 9.1 g/L. The result underscored the significance of developing an optimized cell 
+culture media for intensified cultivation. Furthermore, the approach of ultra-intensified intermittent-perfusion 
+fed-batch was utilized, raising the seeding density to 73.6 × 106 cells/mL. A final harvest titer of 24.5 g/L was 
+recorded. Additionally, manufacturing COG was calculated to evaluate how process intensification could lead to 
+improved manufacturing cost-effectiveness, with up to 71 % COG reduction attainable with the UI-IPFB process. 
+This study demonstrated that even for difficult-to-express modalities, applying a strategic development approach 
+including process intensification and media optimization could effectively improve manufacturing efficiency and 
+COG competitiveness.
+
+=== EXCERPT around line 35 ===
+expansion, intensified fed-batch (IFB) with an inoculation density of 10.3 × 106 cells/mL was developed to 
+produce 6.1 g/L of products, compared to 3.9 g/L from the original traditional fed-batch (TFB). Following the IFB 
+conversion, a high-performing production medium, MagniCHO™, was chosen to substitute the original one, 
+which further boosted the titer to 9.1 g/L. The result underscored the significance of developing an optimized cell 
+culture media for intensified cultivation. Furthermore, the approach of ultra-intensified intermittent-perfusion 
+fed-batch was utilized, raising the seeding density to 73.6 × 106 cells/mL. A final harvest titer of 24.5 g/L was 
+recorded. Additionally, manufacturing COG was calculated to evaluate how process intensification could lead to 
+improved manufacturing cost-effectiveness, with up to 71 % COG reduction attainable with the UI-IPFB process. 
+This study demonstrated that even for difficult-to-express modalities, applying a strategic development approach 
+including process intensification and media optimization could effectively improve manufacturing efficiency and 
+COG competitiveness.
+
+
+=== EXCERPT around line 191 ===
+cultivation. The development was grounded in a comprehensive un-
+derstanding and simulation of key nutrient requirement of various CHO 
+cell types under different metabolic stages. Switching to MagniCHO™ 
+from the original commercial media showcased the combined effect of 
+process intensification and media optimization. Our strategy using the 
+UI-IPFB process, a hybrid of fed-batch and perfusion cultivation, 
+fundamentally transformed the process performance, achieving an un-
+precedented titer of 24.5 g/L from the original titer of 3.9 g/L. This titer 
+is over fivefold higher than that of the original TFB process, while 
+maintaining comparable product quality. Additionally, the study pro-
+vided a thorough COG breakdown analysis under different 
+manufacturing process conditions, elucidating the effect of process 
+
+=== EXCERPT around line 192 ===
+derstanding and simulation of key nutrient requirement of various CHO 
+cell types under different metabolic stages. Switching to MagniCHO™ 
+from the original commercial media showcased the combined effect of 
+process intensification and media optimization. Our strategy using the 
+UI-IPFB process, a hybrid of fed-batch and perfusion cultivation, 
+fundamentally transformed the process performance, achieving an un-
+precedented titer of 24.5 g/L from the original titer of 3.9 g/L. This titer 
+is over fivefold higher than that of the original TFB process, while 
+maintaining comparable product quality. Additionally, the study pro-
+vided a thorough COG breakdown analysis under different 
+manufacturing process conditions, elucidating the effect of process 
+intensification on cost distribution and COG reduction. As a result, up to 
+
+=== EXCERPT around line 559 ===
+J. Zhang et al.                                                                                                                                                                                                                                   
+Biochemical Engineering Journal 211 (2024) 109476 
+
+6 
+
+
+duration was extended to day 16. At the end of the production, the final 
+product titer of 24.5 g/L was obtained, which corresponded to 6.3 folds 
+of the TFB titer with Media A, and 2.7 folds of IFB-2 with MagniCHO™. 
+The dramatic increase in titer was partly because of the notable surge in 
+IVCD by 508 % and 157 % relative to the TFB and IFB-2 conditions, 
+respectively (Fig. 6d). Additionally, the Qp calculated from the UI-IPFB 
+
+=== EXCERPT around line 560 ===
+Biochemical Engineering Journal 211 (2024) 109476 
+
+6 
+
+
+duration was extended to day 16. At the end of the production, the final 
+product titer of 24.5 g/L was obtained, which corresponded to 6.3 folds 
+of the TFB titer with Media A, and 2.7 folds of IFB-2 with MagniCHO™. 
+The dramatic increase in titer was partly because of the notable surge in 
+IVCD by 508 % and 157 % relative to the TFB and IFB-2 conditions, 
+respectively (Fig. 6d). Additionally, the Qp calculated from the UI-IPFB 
+culture showed a modest improvement to 18.9 pg/cell/day from 
+
+=== EXCERPT around line 561 ===
+
+6 
+
+
+duration was extended to day 16. At the end of the production, the final 
+product titer of 24.5 g/L was obtained, which corresponded to 6.3 folds 
+of the TFB titer with Media A, and 2.7 folds of IFB-2 with MagniCHO™. 
+The dramatic increase in titer was partly because of the notable surge in 
+IVCD by 508 % and 157 % relative to the TFB and IFB-2 conditions, 
+respectively (Fig. 6d). Additionally, the Qp calculated from the UI-IPFB 
+culture showed a modest improvement to 18.9 pg/cell/day from 
+14.8 pg/cell/day in the TFB control. However, the difference was mar-
+
+=== EXCERPT around line 915 ===
+It is also worth noting that inappropriately applying a less optimal 
+medium in an intensified process may become counterproductive in an 
+attempt to achieve better process productivity and COG reduction, as 
+observed in the IFB-1 and the UI-IPFB processes using Media A in this 
+study. In the IFB-1 with the Media A condition, the titer was raised to 
+6.1 g/L, leading to a COG reduction by merely 16 %, which could not 
+even be compared to the 24 % COG reduction in the TFB process using 
+MagniCHO™. Similarly, a previous study found that the applying IFB 
+production while maintaining the same original fed-batch media resul-
+ted in only comparable titers and a limited COG reduction of 7–9 % 
+[57]. Furthermore, the use of Media A in the UI-IPFB process directly led 
+to severely suppressed lactate consumption throughout the production 
+
+=== EXCERPT around line 987 ===
+
+The adoption of cell culture intensification strategies has been 
+recognized as an effective approach to elevate productivities while 
+simultaneously lowering manufacturing COG. The study showcased a 
+classic and evolving practice of process intensification and media opti-
+mization, through the implementation of IFB and UI-IPFB process stra-
+tegies alongside an optimized proprietary cell culture medium. The 
+strategy notably improved the cell culture titer to 24.5 g/L in a 16-day 
+fed-batch production, marking a significant increase of more than 6 
+folds over the original TFB process. Moreover, employing the UI-IPFB 
+process promoted a substantial COG reduction of 71 % in a 2000 L 
+manufacturing scale. The application of the UI-IPFB strategy coupling 
+
+=== EXCERPT around line 988 ===
+The adoption of cell culture intensification strategies has been 
+recognized as an effective approach to elevate productivities while 
+simultaneously lowering manufacturing COG. The study showcased a 
+classic and evolving practice of process intensification and media opti-
+mization, through the implementation of IFB and UI-IPFB process stra-
+tegies alongside an optimized proprietary cell culture medium. The 
+strategy notably improved the cell culture titer to 24.5 g/L in a 16-day 
+fed-batch production, marking a significant increase of more than 6 
+folds over the original TFB process. Moreover, employing the UI-IPFB 
+process promoted a substantial COG reduction of 71 % in a 2000 L 
+manufacturing scale. The application of the UI-IPFB strategy coupling 
+with an optimized media formulation has the potential to advance the 
+
+=== EXCERPT around line 989 ===
+recognized as an effective approach to elevate productivities while 
+simultaneously lowering manufacturing COG. The study showcased a 
+classic and evolving practice of process intensification and media opti-
+mization, through the implementation of IFB and UI-IPFB process stra-
+tegies alongside an optimized proprietary cell culture medium. The 
+strategy notably improved the cell culture titer to 24.5 g/L in a 16-day 
+fed-batch production, marking a significant increase of more than 6 
+folds over the original TFB process. Moreover, employing the UI-IPFB 
+process promoted a substantial COG reduction of 71 % in a 2000 L 
+manufacturing scale. The application of the UI-IPFB strategy coupling 
+with an optimized media formulation has the potential to advance the 
+conventional fed-batch production of biologics, making it more cost- 

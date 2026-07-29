@@ -1,0 +1,20 @@
+Source: Practical Patient Care (trade press, GlobalData-owned)
+URL: https://www.practical-patient-care.com/news/wuxi-announces-first-high-scale-gmp-manufacturing-using-wuxiui-platform/
+Title: WuXi announces first high scale GMP manufacturing using WuXiUI platform
+Retrieved: 2026-07-29 via FetchURL (main-text extraction)
+
+WuXi Biologics has completed 2,000L of drug substance (DS) GMP manufacturing using its proprietary ultra-intensified fed-batch bioprocessing platform, WuXiUI.
+
+WuXiUI platform achieved a titre of 18 g/L, marking a fourfold increase over traditional fed-batch processes, CRDMO claimed.
+
+Additionally, the company's advanced downstream technology platform has doubled purification processing capacity while maintaining similar impurity removal rates.
+
+The advancement led to a 50% reduction in downstream processing time and a final drug substance (DS) yield of 70%, all while preserving product quality.
+
+Furthermore, the WuXiUI downstream platform has achieved a 30-50% reduction in the use of materials and consumables, significantly minimising waste generation.
+
+WuXi Biologics CEO Chris Chen said: "The successful application and achievement of WuXiUI is a result of our relentless pursuit of technology innovation to speed up biologics development while achieving cost efficiency for global clients. With this milestone, we have enhanced our capabilities to enable clients to bring more affordable, high-quality biologics to market, benefiting patients worldwide."
+
+Launched in 2023, the WuXiUI platform boosts productivity across various CHO and other mammalian cell lines that produce a range of product modalities. WuXiUI supports a lower carbon footprint through efficient media usage, reduced waste generation, and decreased space requirements in production facilities. WuXi Biologics said that the recent scale-up of the platform underscores the technology's readiness for large-scale production. WuXiUI's performance was further enhanced using MagniCHO, WuXi Biologics' proprietary cell culture media. Integration of the Raman Process Analytical Technology (PAT) tool into the scale-up manufacturing process improved operational efficiency and production robustness.
+
+[Note: PR-derived trade coverage ("CRDMO claimed"); independence is editorial-venue only.]

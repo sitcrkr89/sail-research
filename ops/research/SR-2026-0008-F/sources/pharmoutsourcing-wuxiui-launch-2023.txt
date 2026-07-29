@@ -1,0 +1,14 @@
+Source: Pharmaceutical Outsourcing (trade press)
+URL: https://www.pharmoutsourcing.com/1315-News/607935-WuXi-Biologics-Launches-Bioprocessing-Platform-for-Cost-Effective-Commercial-Manufacturing/
+Title: WuXi Biologics Launches Bioprocessing Platform for Cost-Effective Commercial Manufacturing
+Retrieved: 2026-07-29 via FetchURL (main-text extraction)
+
+WuXi Biologics has launched a new proprietary bioprocessing platform WuXiUI(TM), an ultra-intensified, fed-batch solution that enhances the productivity and quality of multiple different CHO or other mammalian cell lines and product modalities.
+
+To meet increasing demands for yield improvement, COGS reduction, and ESG consideration in the current bioprocess development, WuXi Biologics has developed WuXiUI(TM), offering flexible and cost-effective bioprocessing solutions for global clients. Compared with the conventional fed-batch bioprocesses, WuXiUI(TM) applies an innovative ultra-intensified intermittent-perfusion fed-batch (UI-IPFB) strategy in upstream production to realize a 3 to 6-fold increase in productivity in a typical culture duration of 14 days for a fed-batch process – for different molecule modalities such as mAbs, bispecifics and recombinant proteins – while ensuring desirable product quality. For example, by leveraging WuXiUI(TM), the titer of a bispecific antibody achieved 25 g/L in 14 days – 5 times higher than the same-scale traditional fed-batch process – with expected product quality.
+
+WuXiUI(TM) reduces drug substance manufacturing COGS by an estimated 60-80% compared to traditional fed-batch processes in single-use bioreactors, enhancing the competitiveness of commercial products. The platform is also easily adopted and can be scaled up/out in existing facilities without additional requirements for major equipment or complex operations, bringing minimum changes to the downstream process. Adhering to WuXi Biologics' ESG strategy, WuXiUI(TM) has a lower carbon footprint than traditional or other intensified fed-batch processes due to more efficient media consumption and reduced waste generation.
+
+Dr. Chris Chen, CEO of WuXi Biologics, commented, "We are pleased to launch the WuXiUI(TM) platform to provide diverse bioprocessing solutions for global clients that enhance productivity and product quality, and tremendously reduce product COGs. WuXi Biologics' continual launch of new technology platforms comes from our drive to push boundaries and foster innovation – all with the goal of enabling our global partners to bring more high-quality and affordable biologics to patients worldwide."
+
+[Note: trade-press article is PR-derived; independence is editorial-venue only, content traces to the 2023-10-17 company press release.]

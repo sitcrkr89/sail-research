@@ -1,0 +1,59 @@
+Claims (
+50
+)
+A method for producing a biological substance comprising:
+(a) culturing a cell culture comprising a cell culture medium and cells,
+(b) perfusing the cell culture in a bioreactor with a basal medium and a feed medium, and
+(c) harvesting the biological substance,
+wherein the basal medium and the feed medium are fed to the cell culture at different rates, the cell culture is continuously passed through a separation system, and the cells are retained in the bioreactor without bleeding.
+The method of claim 1, wherein the separation system is an alternating tangential flow (ATF) device or tangential flow filtration (TFF) device.
+The method of claim 1, wherein the separation system comprises a hollow fiber filter.
+The method of claim 3, wherein the molecular weight cut-off (MWCO) of the hollow fiber filter is larger than the molecular weight of the biological substance.
+The method of claim 4, wherein the pore size of the hollow fiber filter is about 0.08 μm to about 0.5 μm.
+The method of claim 4, wherein the pore size of the hollow fiber filter is about 0.1 μm to about 0.5 μm.
+The method of claim 4, wherein the pore size is about 0.2 μm or about 0.45 μm.
+The method of any one of claims 1-7, wherein the basal medium is fed at a perfusion rate of about 0.1 to not higher than about 2.0 working volumes per day (VVD) .
+The method of any one of claims 1-7, wherein the basal medium is fed at a perfusion rate of about 0.1 to about 1.5 (VVD) .
+The method of any one of claims 1-7, wherein the basal medium is fed at a perfusion rate of about 0.3 to about 1.2 (VVD) .
+The method of any one of claims 1-7, wherein the basal medium is fed at a perfusion rate of about 0.5 to about 1.0 (VVD) .
+The method of any one of claims 1-7, wherein the perfusion of the feed medium is at a rate ranging from about 0.1 to about 20%of the perfusion rate of the basal medium.
+The method of any one of claims 1-7, wherein the perfusion of the feed medium is at a rate ranging from about 1 to about 15%of the perfusion rate of the basal medium.
+The method of any one of claims 1-7, wherein the perfusion of the feed medium is at a rate ranging from about 1 to about 10%of the perfusion rate of the basal medium.
+The method of any one of claims 1-7, wherein the perfusion of the feed medium is at a rate ranging from about 1 to about 9%of the perfusion rate of the basal medium.
+The method of any one of claims 1-15, wherein the cells are cultured at a range of about 35℃ to about 37℃.
+The method of any one of claims 1-16, further comprises subjecting the cell culture to a temperature shift to a temperature in the range of about 28℃ to about 33℃.
+The method of any one of claims 1-17, wherein the temperature shift is in response to a predetermined peak viable cell density (VCD) .
+The method of any one of claims 1-18, wherein the temperature is lowered before peak VCD is achieved.
+The method of any one of claims 1-19, wherein an antifoam is added to the bioreactor.
+The method of claim 20, wherein the antifoam chosen from oil-based defoamers, powder defoamers, water-based defoamers, silicone-based defoamers, EO/PO based defoamers, alkyl polyacrylates, and any combination thereof.
+The method of any one of claims 1-21, wherein a microsparger is used.
+The method of claim 22, wherein the microsparger delivers oxygen at a flow rate in a range of about 0.2 to about 0.5 VVM.
+The method of any one of claims 1-23, wherein the cells comprise mammalian cells.
+The method of claim 24, wherein the mammalian cells comprise CHO (Chinese Hamster Ovary) cells, hybridomas, BHK (Baby Hamster Kidney) cells, or myeloma cells.
+The method of any one of claims 1-25, wherein the biological substance is chosen from receptors, enzymes, fusion proteins, blood proteins, multifunctional proteins, viral or bacterial proteins, and immunoglobulins.
+The method of claim 26, wherein the blood proteins are from the blood coagulation cascade.
+The method of claim 26, wherein the multifunctional proteins are erythropoietin.
+The method of claim 26, wherein the viral or bacterial proteins are used in vaccines.
+The method of claim 26, wherein the immunoglobulins are antibodies or multi-specific antibodies.
+The method of claim 30, wherein the antibodies are IgG or IgM.
+The method of claim 30, wherein the multi-specific antibodies are bi-specific antibodies.
+The method of any one of claims 1-32, wherein said method achieves an accumulative volumetric productivity (Pv) of about 10 g/L or more.
+The method of any one of claims 1-33, wherein said method achieves an accumulative volumetric productivity (Pv) of about 15 g/L or more.
+The method of any one of claims 1-34, wherein said method achieves an accumulative volumetric productivity (Pv) of about 20 g/L or more.
+The method of any one of claims 1-35, further comprising subjecting the harvested biological substance to a continuous product capture process by at least one chromatography step.
+The method of any one of claims 1-36, further comprising subjecting the harvested biological substance to a continuous product capture process using at least 2 chromatography columns.
+The method of any one of claims 1-37, further comprising subjecting the harvested biological substance to a continuous product capture process using between 2 and 16 chromatography columns.
+The method of any one of claims 1-38, further comprising subjecting the harvested biological substance to a continuous product capture process using between 3 and 8 chromatography columns.
+The method of any one of claims 1-39, further comprising subjecting the harvested biological substance to a continuous product capture process using at least 3 chromatography columns.
+A biological substance produced by any one of claims 1-40.
+A system for producing a biological substance comprising:
+(a) a module for perfusing a cell culture in a bioreactor with a basal medium and a feed medium; and
+(b) a module for continuously harvesting the biological substance, comprising a hollow fiber filter having a pore size or a molecular weight cut-off (MWCO) larger than the molecular weight of the biological substance.
+The system of claim 42, further comprising a module for continuous capture of the biological substance from the harvested materials.
+The system of claim 42, wherein the module for continuously harvesting the biological substance is an alternating tangential flow (ATF) device or tangential flow filtration (TFF) device.
+The system of claim 42 wherein the a basal medium and a feed medium are fed at different rates.
+The system of claim 42, wherein the pore size of the hollow fiber filter is about 0.08 μm to 0.5 μm.
+The system of claim 42, wherein the pore size of the hollow fiber filter is about 0.1 μm to 0.5 μm.
+The system of claim 42, wherein the pore size is about 0.2 μm.
+The system of claim 42, wherein the pore size is about 0.45 μm.
+The system of claim 42, further comprises a bioreactor for cell culture and/or a microsparger.

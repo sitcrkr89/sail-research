@@ -1,0 +1,50 @@
+Source: WuXi Biologics company article — 'Dr. Chris Chen: How to Achieve 15-Ton MAb Production with Single-Use Bioreactors in a More Cost-Effective Way' (keynote summary, 2025 BPD Singapore)
+URL: https://www.wuxibiologics.com/how-to-achieve-15-ton-mab-production-with-single-use-bioreactors-in-a-more-cost-effective-way/
+Retrieved: 2026-07-29
+
+Dr. Chris Chen: How to Achieve 15-Ton MAb Production with Single-Use Bioreactors in a More Cost-Effective Way
+Oct. 17, 2025
+Share
+Dr. Chris Chen: How to Achieve 15-Ton MAb Production with Single-Use Bioreactors in a More Cost-Effective Way
+Introduction
+Fourteen years ago, Dr. Chris Chen, CEO of WuXi Biologics, envisioned a revolutionary shift idea: achieving 15-ton monoclonal antibody (mAb) manufacturing by using single-use technology (SUT) with cost-effectiveness comparable to or even surpassing traditional stainless-steel systems. To many in the industry, this idea was considered a “Mission Impossible”.
+Now a reality, this game-changing concept has been implemented at WuXi Biologics’ China facilities and will soon to be realized at the Singapore facilities. “In China, our two facilities have collectively achieved commercial manufacturing of 5 to 7 tons of mAbs; at the Singapore site, we will break new ground with a single facility manufacturing 15 tons of mAbs by SUT.”
+At the 2025 Singapore Biopharmaceutical Bioprocess Development Summit (BPD), Dr. Chen outlined innovative strategies for leveraging single-use bioreactors (SUB) to achieve cost-effective commercial manufacturing at the 15-ton scale, capturing the attention of over 600 global attendees.
+Below are highlights of Dr. Chen’s keynote:
+Single-Use Technology: Now a Mainstream Trend
+Two decades ago, the industry predominantly used stainless-steel bioreactors (SSBs) for biologics manufacturing. SUT was then novel and less accepted by the risk-averse biopharma industry. Fourteen years ago, when I began my journey with WuXi Biologics, I posed a question: What technology could truly transform the industry? My answer was SUT—much like how mobile phones inevitably replaced landlines.
+Today, SUT is widely adopted, with over 70% of newly installed bioreactors being single-use. SUBs have also become a preferred choice for multinational pharmaceutical companies such as Eli Lilly, Merck, and Pfizer when building next-generation facilities.
+The most significant advantage of SUBs is flexibility. A manufacturing line can rapidly switch between different products without lengthy cleaning, sterilization, and validation. This allows companies to manufacture multiple products on the same line according to demand—for example, quickly switching from producing an HIV drug to a cancer drug—greatly enhancing capacity utilization and market responsiveness.
+How to achieve multi-ton scale production using SUBs? At WuXi Biologics, we have four strategies:
+Strategy 1: Applying Larger Volume SUBs
+(Scale-Up)
+Previously, SUBs volumes were limited to 2,000L. Now, this upper limit has increased to 5,000L or even 6,000L. At our Hangzhou site, by combining three 5,000L SUBs, we successfully completed a commercial PPQ campaign. We also plan to install 6,000L SUBs at our Massachusetts site in the U.S. A single SUB now offers triple the capacity of earlier models, with even larger sizes on the horizon.
+WuXi Biologics Hangzhou Facility
+Strategy 2: Combining Multiple SUBs for Large-Scale Manufacturing (
+S
+cale-
+O
+ut)
+Over the past decade, we have validated a scale-out strategy that combines multiple SUBs for large-scale manufacturing. Across our five facilities in China and Ireland, we have scaled out 300 manufacturing batches (from 4,000L to 16,000L) with a 98% success rate since 2022. More than ten products have received FDA approval.
+By combining six 2000L or three 4000L SUBs, we can achieve a 12,000L scale for a single batch, with cost efficiency equal to or better than SSBs. During the COVID-19 pandemic, this strategy enabled the production of tons of COVID-neutralizing antibodies for GSK and AstraZeneca, demonstrating SUBs’ reliability in commercial manufacturing.
+In the future, a 12,000L manufacturing scale can be achieved by combining two 6,000L SUBs. Even for processes with low titers such as 1g/L, we can reach 30,000L per batch by integrating five 6,000L SUBs. Theoretically, combining six 6000L SUBs would achieve a single batch of 36,000L, surpassing the single SSB capacity limit of 25,000L.
+Strategy 3: Implementing Innovative Bioprocessing to Greatly Increase Productivity
+WuXi Biologics employs intensified processes to greatly increase productivity, including the Ultra-High Productivity Continuous Bioprocessing Platform WuXiUP™ and Ultra-Intensified Fed-Batch Platform WuXiUI™.
+Biologics production depends on cells; as cell density increases over time, yields grow. With WuXiUP™, cell counts can reach 100 million or even over 150 million, with continuous production extended to 40 days. In the 1980s and 1990s, perfusion processes faced limited adoption due to contamination risks. Today, however, advancements in SUT have largely eliminated these concerns, enabling broader application.
+Dr. Chen’s keynote at 2025 BPD Singapore
+Our data show traditional 14-day fed-batch processes yield about 0.2 g/L/day, while WuXiUP™ achieves 2.5–3 g/L/day, and up to 7 g/L/day when combined with cell line and media optimization. Continuous runs of 20–25 days can reach 100–120 g/L, and annual productivity can exceed tons at a 1,000 L scale. We are currently tackling downstream continuous purification challenges and have achieved fully continuous upstream-downstream processes at 50 L pilot scale.
+Strategy 4: Developing a New Generation Cell Line Platform to Boost Titer
+In addition to bioprocess innovations, increasing titer can also greatly enhances productivity.
+Thanks to more than a decade of innovation in cell line development, our proprietary WuXia™ platform has been validated in over 1000 molecules. Recently, we launched WuXia™ TrueSite, an industry-leading targeted integration (TI)-based CHO cell line platform designed to reshape biologics development by accelerating timelines, enhancing product quality, and ensuring consistent scalability for antibody and complex protein therapies.
+Previously, screening thousands of clones was required to identify a 2 g/L candidate; now about 50 clones yield 8 g/L with excellent stability. This technology reduces cell line development from the industry average of 6 months to 2.5 months, enabling IND projects to be completed within 6 months.
+Dr. Chen’s keynote at 2025 BPD Singapore
+We also incorporate novel methods and metabolomic technologies to tailor media formula to precisely address cellular nutritional needs, coupled with PAT and automation technology to achieve automated process control.
+At the 50 L scale, we achieved fully continuous end-to-end drug substance manufacturing — from perfused cell culture, fully continuous downstream process to final UF/DF — achieving 105 g/L over 20 days. This means a 50L SUB can supply materials for a phase III clinical trial. During the downstream process, the continuous capture significantly reduced Protein A resin requirement by 92%, significantly lowering resin cost.
+WuXiUP™ has been applied to over 50 molecules, including mAbs, bispecifics, and fusion proteins, achieving an average 7-fold yield improvement; two molecules were approved in China, and 11 had IND approvals.
+Imagine if cell line expression doubles and intensified processes achieve over 7-fold yield increase, this could result in a total productivity improvement of approximately 15 times. Traditional stainless-steel plants manufacturing 1 ton of mAbs could be replaced by SUT combined with intensified processes manufacturing up to 15 tons. Achieving cost-effective ton-scale manufacturing with SUB is no longer a distant dream but a tangible reality.
+Optimized Cost Control
+Dr. Chen’s keynote at 2025 BPD Singapore
+Furthermore, we offer our global clients optimal cost strategies by comprehensively leveraging intensified processes, managing pass-through costs, and maximizing facility utilization. Regardless of product type or development stage, we consistently deliver cost-effective and efficient manufacturing solutions—from media optimization, chromatography resin cost management, to cell lines redevelopment and high-productivity process implementation.
+For IND projects enabled by WuXi Biologics, we forecast commercial manufacturing costs based on existing processes, helping clients plan and control costs early. For products unable to adopt new processes, such as approved blockbusters and biosimilars, we improve existing processes with WuXiUI™, increasing capacity 3- to 6-fold and significantly lowering costs.
+By implementing these strategies, we deliver higher yields, superior scalable manufacturing processes, and more competitive cost controls, enabling global partners to succeed while benefiting patients worldwide.
+List

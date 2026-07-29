@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrong Platform, Right Patent: WO2020088180A1 Maps to WuXiUP, Not WuXiUI — Sail Research SR-2026-0008-F</title>
+<meta name="description" content="Correction-style teardown: WuXi Biologics' patent WO2020088180A1 (continuous-harvest, no-bleed intensified perfusion) matches the company's WuXiUP continuous platform claim-element-by-element, not the WuXiUI ultra-intensified fed-batch platform our free sample attached it to. Company-stated figures are attributed as such; the platform mapping is our anchored analysis. Evidence Grade B+.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/reports/full/20260727-wuxiui-no-bleed-perfusion-full.html">
+<meta property="og:title" content="Wrong Platform, Right Patent: WO2020088180A1 Maps to WuXiUP, Not WuXiUI — Sail Research SR-2026-0008-F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#081226; --navy:#0d1b36; --navy-panel:#12234a; --navy-line:#1e335f;
+    --gold:#c9a54a; --gold-bright:#e3c06a; --gold-dim:#8a6f2f;
+    --white:#f5f2ea; --muted:#9aa5bd; --muted2:#6e7a94;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Inter','Apple SD Gothic Neo',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--white);font-family:var(--sans);line-height:1.85;font-weight:300}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  nav{padding:20px 0;border-bottom:1px solid rgba(201,165,74,.18)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;max-width:1040px}
+  .logo{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.05em}
+  .logo em{color:var(--gold);font-style:normal}
+  .back{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold-bright)}
+  header{padding:72px 0 52px;
+    background:radial-gradient(900px 400px at 80% -20%, rgba(201,165,74,.12), transparent 60%),
+    linear-gradient(175deg,#0a1730 0%,#081226 70%);
+    border-bottom:1px solid rgba(201,165,74,.22)}
+  .r-id{font-size:11px;letter-spacing:.24em;color:var(--muted2);margin-bottom:18px}
+  .chips{display:flex;gap:8px;margin-bottom:22px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap}
+  .chip{padding:3px 10px;border:1px solid var(--gold-dim);color:var(--gold-bright);font-weight:500}
+  .chip.free{border-color:transparent;background:var(--gold);color:var(--navy-deep);font-weight:700}
+  .chip.grade{border-color:transparent;background:rgba(201,165,74,.14);color:var(--gold-bright);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(27px,3.8vw,38px);font-weight:700;line-height:1.32}
+  .meta{margin-top:22px;font-size:12.5px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.04em}
+  .meta b{color:var(--gold-bright);font-weight:500}
+  article{padding:56px 0 10px}
+  article p{margin:0 0 22px;font-size:15.5px;color:#dde3ee}
+  h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:44px 0 16px;color:var(--white)}
+  h2:before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);margin-right:12px;vertical-align:middle}
+  h3{font-family:var(--sans);font-size:16px;font-weight:600;margin:30px 0 12px;color:var(--gold-bright)}
+  ol,ul{margin:0 0 22px 24px}
+  li{margin:10px 0;font-size:15px;color:#dde3ee}
+  li b{font-weight:600;color:var(--white)}
+  .dtable{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px}
+  .dtable th{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-bright);
+    border-bottom:1px solid var(--gold-dim);padding:10px 12px;text-align:left;font-weight:600}
+  .dtable td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;color:#dde3ee}
+  .dtable td:first-child{color:var(--white);font-weight:500}
+  .box{border:1px solid var(--navy-line);background:var(--navy);padding:26px 28px;margin:34px 0}
+  .box h2{font-size:14px;margin:0 0 14px;letter-spacing:.1em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+  .box h2:before{display:none}
+  .box li{font-size:13.5px;color:var(--muted);margin:8px 0}
+  .box li b{color:var(--gold-bright);font-weight:500}
+  .box ul{margin:0 0 0 20px}
+  .box a{color:var(--gold-bright);word-break:break-all}
+  .caveat{border-left:3px solid var(--gold)}
+  .cta{margin:64px 0;text-align:center;padding:54px 28px;
+    border-top:1px solid rgba(201,165,74,.3);border-bottom:1px solid rgba(201,165,74,.3)}
+  .cta .kicker{font-size:10.5px;font-weight:600;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+  .cta h2{font-family:var(--serif);font-size:26px;margin:0 0 10px}
+  .cta h2:before{display:none}
+  .cta p{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:700;font-size:12px;
+    letter-spacing:.18em;text-transform:uppercase;padding:14px 42px;transition:background .2s}
+  .btn:hover{background:var(--gold-bright)}
+  footer{padding:38px 0 52px;font-size:12px;color:var(--muted2);text-align:center;letter-spacing:.06em}
+  footer a{color:var(--gold-bright)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><a href="../../index.html">SAIL <em>RESEARCH</em></a></div>
+    <a class="back" href="../../research/index.html">&larr; Report Board</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="r-id">SR-2026-0008-F · FULL REPORT</div>
+    <div class="chips"><span class="chip">Biotech &middot; CDMO</span><span class="chip grade">Evidence B+ &mdash; correction-style; company-anchored + two peer-reviewed sources</span></div>
+    <h1>Wrong Platform, Right Patent: WO2020088180A1 Maps to WuXiUP, Not WuXiUI</h1>
+    <div class="meta">
+      <span><b>Jul 29, 2026</b></span><span>Sail Research</span><span>Patent WO2020088180A1 read in full; company platform pages and press releases retrieved 2026-07-29</span><span>Companion to free sample <a href="../20260727-wuxiui-patent-no-bleed-perfusion.html">SR-2026-0008</a> (Jul 27, 2026)</span>
+    </div>
+    <ul style="margin-top:18px;font-size:12px;letter-spacing:.06em;color:var(--muted);list-style:none;display:flex;gap:18px;flex-wrap:wrap;padding:0">
+      <li style="margin:0"><a href="#evidence-matrix" style="color:var(--gold-bright)">Evidence Matrix</a></li>
+      <li style="margin:0"><a href="#original-analysis" style="color:var(--gold-bright)">Original Analysis</a></li>
+      <li style="margin:0"><a href="#benchmark" style="color:var(--gold-bright)">Benchmark</a></li>
+      <li style="margin:0"><a href="#what-breaks" style="color:var(--gold-bright)">What Breaks This Thesis</a></li>
+      <li style="margin:0"><a href="#verification-status" style="color:var(--gold-bright)">Verification Status</a></li>
+      <li style="margin:0"><a href="#methodology" style="color:var(--gold-bright)">Methodology</a></li>
+      <li style="margin:0"><a href="#update-history" style="color:var(--gold-bright)">Update History</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+  <h2>Executive Summary</h2>
+  <p>Our free sample (SR-2026-0008) framed patent WO2020088180A1 as &ldquo;the patent behind WuXiUI.&rdquo; Reading the patent&rsquo;s verbatim claims against WuXi Biologics&rsquo; own platform descriptions shows that framing was wrong, and this report corrects it: the patent claims a <b>continuous-harvest, no-bleed intensified perfusion</b> architecture whose every independent-claim element matches the company&rsquo;s <b>WuXiUP&trade;</b> continuous bioprocessing platform &mdash; while <b>WuXiUI&trade;</b> is, by the company&rsquo;s own press releases, platform page, and a peer-reviewed methods paper, an <b>ultra-intensified intermittent-perfusion fed-batch (UI-IPFB)</b> that harvests in batch mode. The mapping presented here is <b>our analysis</b>, assembled from claim text and company self-descriptions; no company document states it, and we found no public source linking the patent to the WuXiUI brand. WuXiUI&rsquo;s commercial claims (2,000&nbsp;L GMP run at 18&nbsp;g/L; 60&ndash;80% COGS reduction estimate) are real but company-announced; the platform&rsquo;s strongest independently reviewed data point is a 24.5&nbsp;g/L Mabcalin bispecific result in a peer-reviewed paper co-authored with the molecule&rsquo;s owner, Pieris. Patent example performance figures (9.41&times;/6.56&times; productivity, &gt;20&nbsp;g/L accumulative Pv at 250&nbsp;L) are evidence of WuXiUP-class capability and must not be cited as WuXiUI substantiation.</p>
+
+  <h2>Claim Inventory &amp; Evidence Matrix</h2>
+  <table class="dtable" id="evidence-matrix">
+    <tr><th>Claim</th><th>Evidence Class</th><th>Primary Source(s)</th><th>Independent?</th><th>Status</th></tr>
+    <tr><td>WO2020088180A1 exists; assignees Wuxi Biologics Shanghai + Ireland; priority 2018-11-02; published 2020-05-07</td><td>Primary (patent registers)</td><td>Google Patents WO2020088180A1; Google Patents CN111406105B (granted family member)</td><td>Y &mdash; two registers (WIPO publication + CNIPA grant record)</td><td>Verified 2026-07-29</td></tr>
+    <tr><td>Patent claim 1 requires: differential basal/feed perfusion; culture continuously passed through a separation system; cells retained <b>without bleeding</b>; claims 36&ndash;40 add continuous multi-column product capture</td><td>Primary (verbatim claims)</td><td>WO2020088180A1 claims 1&ndash;50 (archived verbatim); CN111406105B</td><td>Partial &mdash; two registers, same inventor disclosure</td><td>Verified 2026-07-29</td></tr>
+    <tr><td>WuXiUI is an ultra-intensified intermittent-perfusion fed-batch (UI-IPFB): N-1 perfusion seed + cell concentration to 20&ndash;80&times;10&#8310; cells/mL inoculation; batch harvest; &ldquo;minimum changes to the downstream process&rdquo;</td><td>Primary (company) + peer-reviewed</td><td>WuXi launch PR (2023-10-17); WuXiUI platform page; Zhang et al. 2024 (Drug Discovery Today)</td><td>Y &mdash; company origin + independently edited peer review with Pieris co-authors</td><td>Verified 2026-07-29</td></tr>
+    <tr><td>WuXiUP is an intensified perfusion platform with continuous harvest and continuous direct product capture (multicolumn PCC); 5&ndash;15&times; productivity claim; &gt;20,000&nbsp;L commercial capacity at 200&ndash;2,000&nbsp;L</td><td>Primary (company)</td><td>WuXiUP platform page; CEO keynote summary (2025 BPD Singapore)</td><td>N &mdash; company sources only</td><td>Verified 2026-07-29 as company-stated</td></tr>
+    <tr><td><b>Thesis: WO2020088180A1 maps to WuXiUP, not WuXiUI</b> (claim-element teardown, &sect;Mechanism; architecture comparison, &sect;Original Analysis)</td><td>Original analysis (this report)</td><td>Anchored to the rows above + archived negative-result search (no public WuXiUI&ndash;patent link found)</td><td>N/A &mdash; our synthesis, not a sourced company statement</td><td>Asserted as analysis, 2026-07-29</td></tr>
+    <tr><td>WuXiUI completed a 2,000&nbsp;L GMP drug-substance run: 18&nbsp;g/L titer, 4&times; vs conventional fed-batch, 70% DS yield, 50% DSP time reduction</td><td>Primary (company announcement)</td><td>WuXi PR (2024-08-30); HKEX investor deck (2025-08-19)</td><td>N &mdash; same originator; trade coverage is PR-derived</td><td>Verified 2026-07-29 as company-announced; no third-party confirmation</td></tr>
+    <tr><td>UI-IPFB produced 24.5&nbsp;g/L final harvest titer on a Mabcalin&trade; bispecific (16-day culture; 6.3&times; over 3.9&nbsp;g/L baseline; up to 71% modeled COG reduction)</td><td>Primary (peer-reviewed)</td><td>Zhang et al. 2024, Drug Discovery Today (WuXi + Pieris authors)</td><td>Partial &mdash; peer review + molecule owner co-authorship; single publication</td><td>Verified 2026-07-29</td></tr>
+    <tr><td>Launch-PR example: bispecific titer 25&nbsp;g/L in 14 days, 5&times; vs same-scale traditional fed-batch</td><td>Primary (company)</td><td>WuXi launch PR (2023-10-17)</td><td>N &mdash; PR-only; molecule unnamed</td><td>Company-stated; unverified independently</td></tr>
+    <tr><td>WuXiUI reduces DS manufacturing COGS by an estimated 60&ndash;80% vs traditional fed-batch in single-use bioreactors</td><td>Primary (company estimate)</td><td>WuXi launch PR; platform page; Zhang et al. 2024 (71% modeled)</td><td>Partial &mdash; consistent sources share one originator; no public cost model</td><td>Company estimate; internally consistent (&sect;Original Analysis)</td></tr>
+    <tr><td>Canine-antibody case study: commercial cell line titer ~4.5 &rarr; 20.4&nbsp;g/L via WuXiUI</td><td>Primary (company case study)</td><td>WuXi case-study PDF (customer unnamed)</td><td>N &mdash; single marketing document</td><td>Company-stated; unverified independently</td></tr>
+  </table>
+
+  <h2>Mechanism &amp; Teardown Analysis</h2>
+  <p><b>What the patent legally covers.</b> WO2020088180A1 has 50 claims and three independent claims (full verbatim text archived; this is technical analysis, <b>not legal advice</b>). Claim 1 (method) requires, in combination: (b) perfusing with a basal medium and a feed medium <i>at different rates</i>; the cell culture <i>continuously passed through a separation system</i>; and cells <i>retained in the bioreactor without bleeding</i>. Claim 42 (system) requires a perfusion module plus a module for <i>continuously harvesting</i> through a hollow-fiber filter whose cutoff passes the product and retains cells. Claim 41 is product-by-process. Dependent claims add ATF/TFF hardware (claims 2&ndash;3), hollow-fiber pore sizes of 0.08&ndash;0.5&nbsp;&micro;m (5&ndash;7), basal perfusion of 0.1 to &le;2.0 vessel volumes/day (8&ndash;11), feed at 0.1&ndash;20% of basal (12&ndash;15), a 35&ndash;37&nbsp;&deg;C &rarr; 28&ndash;33&nbsp;&deg;C temperature shift before peak cell density (16&ndash;19), accumulative volumetric productivity of &ge;10/15/20&nbsp;g/L (33&ndash;35), and continuous product capture over 2&ndash;16 chromatography columns (36&ndash;40). The bright-line elements are continuous passage, no bleed, and continuous harvest: a fed-batch process &mdash; even an ultra-intensified one that uses perfusion hardware episodically &mdash; does not practice claim 1.</p>
+  <p><b>Why that maps to WuXiUP.</b> WuXi Biologics describes WuXiUP as &ldquo;an intensified perfusion culture process&rdquo; that &ldquo;adopts continuous harvest to greatly reduce the product residence time,&rdquo; and states it &ldquo;couples continuous upstream process with continuous direct product capture using multicolumn chromatography system operating in a periodic countercurrent (PCC) mode.&rdquo; That is claim 1&rsquo;s continuous-harvest element and claims 36&ndash;40&rsquo;s capture element in the company&rsquo;s own words; the patent&rsquo;s worked example even uses a three-column MabSelect PrismA capture setup. The company&rsquo;s 105&nbsp;g/L-over-20-days continuous run and 92% Protein&nbsp;A resin reduction (CEO keynote, company-stated) are reported in the accumulative, continuous-harvest framing the patent&rsquo;s productivity claims (33&ndash;35) use.</p>
+  <p><b>Why it does not map to WuXiUI.</b> Every company description of WuXiUI defines it as UI-IPFB: intermittent perfusion cycles around a fed-batch production culture, with the ATF device used for seed-train intensification and cell concentration, batch harvest (the 2,000&nbsp;L run reports a single final &ldquo;DS yield of 70%&rdquo;), and an explicit selling point of &ldquo;minimum changes to the downstream process&rdquo; &mdash; the opposite of the patent&rsquo;s continuous-capture coupling. The peer-reviewed WuXiUI methods paper (Zhang et al. 2024) describes UI-IPFB and never cites the patent. Notably, the company&rsquo;s own WuXiUP page describes N-1 seed intensification feeding &ldquo;regular fed-batch culture&rdquo; as a <i>separate, simpler</i> option &mdash; the WuXiUI concept, framed by the company itself as the alternative to full continuous operation. A third-party academic paper on continuous capture refers to &ldquo;intensified perfusion modes (WuXiUP process),&rdquo; independently associating the continuous architecture with the WuXiUP name.</p>
+  <p><b>Legal status, stated precisely.</b> The WO publication&rsquo;s &ldquo;Ceased&rdquo; register entry means the PCT international phase has ended &mdash; it is not a loss of rights. National-phase family members are in force: CN111406105B (granted, Active), plus grants in Korea (KR102597919B1) and Japan (JP7707062B2); US and EP applications remain pending. The patent records five forward citations, including a competitor continuous-culture patent from AGC Biologics (WO2022081805A1).</p>
+
+  <h2 id="original-analysis">Original Analysis</h2>
+  <p>Two artifacts below exist in no single source. Every number carries a matrix anchor [C#] (evidence matrix, archived under ops/research/SR-2026-0008-F/) or a labeled assumption [A#]; the derivation is shown so it can be reproduced.</p>
+
+  <h3>A1 &mdash; WuXiUI vs. WuXiUP architecture comparison (assembled from [C11][C12][C14][C15][C21][C22] + patent claims)</h3>
+  <table class="dtable">
+    <tr><th>Dimension</th><th>WuXiUI&trade; (ultra-intensified fed-batch)</th><th>WuXiUP&trade; (continuous)</th></tr>
+    <tr><td>Process class</td><td>Intermittent-perfusion fed-batch (UI-IPFB) [C11][C14]</td><td>Intensified perfusion, continuous harvest [C21]</td></tr>
+    <tr><td>Defining step</td><td>N-1 perfusion seed + cell concentration (2&ndash;4&times; in 1.5&ndash;3&nbsp;h) &rarr; inoculation 20&ndash;80&times;10&#8310; cells/mL [C12]</td><td>Cells retained without bleed; product harvested throughout culture [C21; patent E2&ndash;E4]</td></tr>
+    <tr><td>Harvest mode</td><td>Batch (final DS yield 70% per batch [C15])</td><td>Continuous; low product residence time [C21]</td></tr>
+    <tr><td>Downstream coupling</td><td>Deliberately minimal change [C11]; enhanced batch DSP (50% time, 30&ndash;50% materials reduction [C15])</td><td>Continuous multicolumn PCC capture [C21]; 92% Protein&nbsp;A resin reduction [C22]</td></tr>
+    <tr><td>Headline productivity</td><td>3&ndash;6&times; vs traditional fed-batch [C11]; avg 3.5&times;, up to 35&nbsp;g/L with MagniCHO [C12]</td><td>5&ndash;15&times; [C21]; avg 7-fold across &gt;50 molecules [C22]</td></tr>
+    <tr><td>Signature result</td><td>24.5&nbsp;g/L Mabcalin bispecific, 16-day, 6.3&times; (peer-reviewed) [C14]</td><td>105&nbsp;g/L accumulative over 20 days at 50&nbsp;L fully continuous [C22]</td></tr>
+    <tr><td>Scale evidence</td><td>2,000&nbsp;L GMP run, 18&nbsp;g/L, 4&times; [C15]; marketed scale-out to 12,000&nbsp;L [C12]</td><td>1,000&ndash;2,000&nbsp;L SUB &asymp; 10,000&ndash;20,000&nbsp;L stainless productivity [C21]</td></tr>
+    <tr><td>Patent alignment</td><td>None found (negative result, [C18])</td><td>WO2020088180A1 &mdash; every independent-claim element (&sect;Mechanism)</td></tr>
+  </table>
+
+  <h3>A2 &mdash; Batch-economics model (WuXiUI 2,000&nbsp;L GMP reference case)</h3>
+  <p><b>Inputs.</b> Working volume 2,000&nbsp;L, titer 18&nbsp;g/L, reported 4&times; multiple, DS yield 70% [C15]; typical culture 14 days [C11]. Assumptions: turnaround 5 days, range 3&ndash;7 [A1]; comparator fed-batch DS yield set equal at 70% [A2]; 365 operating days/year [A3]; implied comparator titer 18&nbsp;&divide;&nbsp;4 = 4.5&nbsp;g/L (derivation D1 from the 4&times; claim [C15]; coincidentally matches the ~4.5&nbsp;g/L pre-WuXiUI baseline in the canine case study [C16]).</p>
+  <p><b>Per batch.</b> WuXiUI: 18&nbsp;g/L &times; 2,000&nbsp;L = 36&nbsp;kg crude; &times;70% = <b>25.2&nbsp;kg DS/batch</b>. Comparator: 4.5&nbsp;g/L &times; 2,000&nbsp;L = 9&nbsp;kg; &times;70% = 6.3&nbsp;kg DS/batch. Ratio 25.2/6.3 = 4.0&times; &mdash; the model recovers the reported multiple (consistency check passed).</p>
+  <p><b>Per year (single train).</b> Cycle = 14&nbsp;d + turnaround. Base case [A1=5&nbsp;d]: 365/19 = 19.2 batches &times; 25.2&nbsp;kg &asymp; <b>484&nbsp;kg DS/year</b> (range 438&ndash;541&nbsp;kg for turnaround 7&ndash;3&nbsp;d). Under linear scale-out [A4] to the marketed 6&nbsp;&times;&nbsp;2,000&nbsp;L block [C12]: &asymp;2.9&nbsp;t/year.</p>
+  <p><b>COGS consistency check.</b> With per-batch facility/labor costs approximately equal [A5], a 4&times; mass gain cuts the per-kg facility term by ~75%; adding the disclosed DSP savings (50% time, 30&ndash;50% materials [C15]) makes the company&rsquo;s 60&ndash;80% COGS-reduction estimate [C17] <b>internally consistent</b>, and the peer-reviewed 71% figure [C14] sits inside the band. This validates arithmetic, not the claim: no public cost model exists, and all performance inputs are company-origin.</p>
+  <p><b>Anti-conflation register.</b> Four distinct figures that must never be merged: <b>18&nbsp;g/L</b> = WuXiUI 2,000&nbsp;L GMP run [C15]; <b>24.5&nbsp;g/L</b> = Mabcalin bispecific, 16-day development run, peer-reviewed [C14]; <b>25&nbsp;g/L</b> = launch-PR example, unnamed bispecific, 14 days, PR-only [C13]; <b>105&nbsp;g/L</b> = WuXiUP accumulative output over 20 days at 50&nbsp;L continuous &mdash; not a batch titer, not WuXiUI [C22]. Only the 18&nbsp;g/L figure feeds the model, because it alone is tied to a GMP manufacturing scale.</p>
+
+  <h2 id="benchmark">Benchmark Comparison</h2>
+  <table class="dtable">
+    <tr><th>Dimension</th><th>Subject</th><th>Benchmark</th><th>Source</th></tr>
+    <tr><td>Titer class</td><td>WuXiUI 18 g/L (2,000 L GMP) [C15]; up to 35 g/L claimed in clone selection [C12]</td><td>Industry mAb titers ~3 g/L in the 2010s; intensified fed-batch lifts output via high-density seeding</td><td>Yongky et al. 2019 (mAbs; peer-reviewed, independent of WuXi) [C20]</td></tr>
+    <tr><td>Production scale</td><td>WuXiUI 2,000 L batch, scale-out to 12,000 L [C12][C15]</td><td>Fed-batch established to 25,000 L; perfusion production historically &le;1,000 L</td><td>Yongky et al. 2019 [C20]</td></tr>
+    <tr><td>Productivity multiple</td><td>WuXiUI 3&ndash;6&times; [C11]; WuXiUP 5&ndash;15&times; [C21]; patent examples 6.56&ndash;9.41&times; accumulative Pv at 3 L [C6][C7]</td><td>Perfusion vs fed-batch volumetric-productivity gains of similar order reported in independent literature</td><td>Yongky et al. 2019 [C20]; Xu et al. 2017 cited therein</td></tr>
+    <tr><td>Continuous downstream</td><td>WuXiUP PCC capture, 92% resin reduction [C21][C22]</td><td>Multi-column continuous capture is the industry-standard route for perfusion coupling; competitor AGC Biologics cites the WuXi patent (WO2022081805A1)</td><td>Google Patents forward citations [C10]</td></tr>
+  </table>
+
+  <h2 id="what-breaks">What Would Break This Thesis</h2>
+  <ul>
+    <li><b>A company document explicitly linking WO2020088180A1 to WuXiUI</b> (e.g., an investor deck or technical note naming the patent as WuXiUI&rsquo;s basis). We searched and found none; if one surfaces, the correction thesis collapses to a branding-nuance story.</li>
+    <li><b>A WuXiUI methods disclosure showing continuous harvest or no-bleed operation</b> in the production phase. Zhang et al. 2024 describes batch harvest for UI-IPFB; a contradictory primary disclosure would weaken element E2&ndash;E4 of the teardown.</li>
+    <li><b>Discovery of a separate WuXi patent family covering UI-IPFB specifically.</b> That would not break the WO2020088180A1&harr;WuXiUP mapping, but it would break any implied claim that WuXiUI is unpatented.</li>
+    <li><b>Third-party contradiction of the WuXiUP self-description</b> (e.g., evidence that WuXiUP is not continuous-harvest in practice), which would sever the claim-element match.</li>
+    <li><b>Register changes</b> &mdash; lapse or invalidation of CN111406105B and the KR/JP grants would not break the architecture analysis but would void the enforcement-relevance framing.</li>
+  </ul>
+
+  <h2 id="verification-status">Verification Status</h2>
+  <p>
+  <b>Verified 2026-07-29 (primary documents archived):</b> patent bibliographic record and verbatim claims [C1][C2][C10]; WuXiUI = UI-IPFB per launch PR, platform page, and Zhang et al. 2024 [C11][C12][C14]; WuXiUP = continuous harvest + PCC capture per platform page [C21]; 24.5&nbsp;g/L Mabcalin result [C14].<br>
+  <b>Company-announced, no independent confirmation found 2026-07-29:</b> 2,000&nbsp;L GMP run metrics (18&nbsp;g/L, 4&times;, 70% DS yield) [C15]; 25&nbsp;g/L launch example [C13]; 60&ndash;80% COGS estimate [C17]; canine 20.4&nbsp;g/L case study [C16]; WuXiUP performance figures (105&nbsp;g/L/20&nbsp;d, 92% resin reduction, 7-fold average) [C22].<br>
+  <b>Original analysis (ours, anchored, not company-stated):</b> the WO2020088180A1&harr;WuXiUP mapping and the WuXiUI-vs-WuXiUP comparison; batch-economics model outputs under assumptions [A1]&ndash;[A5].<br>
+  <b>Negative results (searched 2026-07-29, not found):</b> any public link between the WuXiUI brand and the patent or &ldquo;no bleed&rdquo; language; WuXiUI-named conference posters (BPI/ESACT/CASSS); customer or regulatory disclosures naming WuXiUI; non-PR-derived trade analysis.</p>
+
+  <h3>Why not Evidence A</h3>
+  <p>Grade A would require every load-bearing claim to rest on at least two independent primary sources, with a truthful independence statement. That bar is not met: (1) the 2,000&nbsp;L GMP claim &mdash; the report&rsquo;s most commercially load-bearing fact &mdash; is company-announced only, with all trade coverage derived from the same press release; (2) patent example performance is single-party disclosure by construction; (3) the WuXiUP performance column rests on company sources alone; and (4) the central thesis is our own anchored synthesis, which by definition cannot cite two independent sources for itself. What is independently supported: the patent record (two registers), the UI-IPFB definition of WuXiUI (company PR + peer-reviewed paper with Pieris co-authorship), and the industry benchmark context (independent peer-reviewed literature). Downgrading to B+ keeps those independence limits explicit rather than papering over them.</p>
+
+  <h2 id="methodology">Methodology &amp; Reproducibility</h2>
+  <p>Source universe: WIPO/CNIPA patent registers via Google Patents (WO2020088180A1 and granted family member CN111406105B, full text archived including verbatim claims and description); WuXi Biologics official site (2023 launch PR, 2024 2,000&nbsp;L PR, WuXiUI and WuXiUP platform pages, canine-antibody case-study PDF, CEO keynote summary); HKEX-filed investor presentation (2025-08-19); peer-reviewed literature (Zhang et al. 2024, Drug Discovery Today &mdash; canonical DOI page at ScienceDirect, PDF archived from the company site; Yongky et al. 2019, mAbs, via PMC); trade press (Pharmaceutical Outsourcing, Practical Patient Care &mdash; both flagged PR-derived). Search axes: patent, company, independent/third-party, benchmark; negative results were recorded as data. Retrieval date for all sources: 2026-07-29; HTML/PDF snapshots and stripped text archived under ops/research/SR-2026-0008-F/sources/. Tool limitations: Espacenet returned HTTP 403; biopharminternational.com is Cloudflare-blocked (block page archived, article marked SNAPSHOT_UNAVAILABLE); two paywalled papers (Wachter et al. 2023, J.&nbsp;Biotechnol.; a 2024 J.&nbsp;Chromatogr.&nbsp;A paper referencing &ldquo;WuXiUP process&rdquo;) were identified but not retrievable and are cited from search-result snippets only. Web search functioned normally throughout. Company statements are attributed as such; this report&rsquo;s claim-scope reading is technical analysis and is not legal advice.</p>
+
+  <div class="box caveat">
+    <h2>Evidence Caveat &mdash; Fact vs. Hypothesis</h2>
+    <ul>
+      <li><b>Fact (sourced)</b> &mdash; the patent&rsquo;s claim text and legal-status record; the company&rsquo;s own platform definitions (WuXiUI = UI-IPFB fed-batch; WuXiUP = continuous harvest + PCC capture); the peer-reviewed 24.5&nbsp;g/L Mabcalin result; the company-announced 2,000&nbsp;L GMP run, attributed as company-announced.</li>
+      <li><b>Original analysis (ours, labeled)</b> &mdash; the patent&harr;WuXiUP mapping, the WuXiUI/WuXiUP architecture comparison, and the batch-economics model. Presented with anchors and assumptions so they can be checked; not company statements.</li>
+      <li><b>Company-stated, independently unverified</b> &mdash; 2,000&nbsp;L run metrics, 25&nbsp;g/L launch example, 60&ndash;80% COGS estimate, canine case study, all WuXiUP performance figures.</li>
+      <li><b>Requires verification</b> &mdash; any customer- or regulator-side confirmation of WuXiUI/WuXiUP commercial performance; existence or non-existence of a separate UI-IPFB patent family.</li>
+      <li class="no"><b>What this report does not do</b> &mdash; it does not give legal or freedom-to-operate advice; it does not treat patent examples as commercial-performance proof; it does not merge the 18/24.5/25/105&nbsp;g/L figures; it does not claim the company endorses our platform&ndash;patent mapping.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Sources (primary — real URLs, not just outlet names)</h2>
+    <ul>
+      <li>Wuxi Biologics Shanghai Co. Ltd. / Wuxi Biologics Ireland Ltd., WO2020088180A1, &ldquo;Cell culture process by intensified perfusion with continuous harvest and without cell bleeding&rdquo; (priority 2018-11-02, published 2020-05-07) &mdash; <a href="https://patents.google.com/patent/WO2020088180A1/en">patents.google.com/patent/WO2020088180A1/en</a>. Retrieved 2026-07-29.</li>
+      <li>CN111406105B (granted family member, Active) &mdash; <a href="https://patents.google.com/patent/CN111406105B/en">patents.google.com/patent/CN111406105B/en</a>. Retrieved 2026-07-29.</li>
+      <li>WuXi Biologics press release, &ldquo;WuXi Biologics Launches New High-Productivity Bioprocessing Platform WuXiUI&trade;&rdquo; (2023-10-17) &mdash; <a href="https://www.wuxibiologics.com/wuxi-biologics-launches-new-high-productivity-bioprocessing-platform-wuxiuitm-for-cost-effective-commercial-manufacturing-and-desirable-product-quality/">wuxibiologics.com</a>. Retrieved 2026-07-29.</li>
+      <li>WuXi Biologics press release, &ldquo;WuXi Biologics Successfully Completes First Scale-Up of High-Productivity Bioprocessing Platform WuXiUI&trade; in 2,000L GMP Manufacturing&rdquo; (2024-08-30) &mdash; <a href="https://www.wuxibiologics.com/wuxi-biologics-successfully-completes-first-scale-up-of-high-productivity-bioprocessing-platform-wuxiuitm-in-2000l-gmp-manufacturing/">wuxibiologics.com</a>. Retrieved 2026-07-29.</li>
+      <li>WuXi Biologics, WuXiUI&trade; Fed-Batch Manufacturing Platform page &mdash; <a href="https://www.wuxibiologics.com/featured-platforms/wuxiui/">wuxibiologics.com/featured-platforms/wuxiui/</a>. Retrieved 2026-07-29.</li>
+      <li>WuXi Biologics, WuXiUP&trade; Continuous Processing Platform page &mdash; <a href="https://www.wuxibiologics.com/featured-platforms/wuxiup/">wuxibiologics.com/featured-platforms/wuxiup/</a>. Retrieved 2026-07-29.</li>
+      <li>Zhang J., Cao W., Yu L., et al. (incl. Hogl S., Kaufmann H. — Pieris Pharmaceuticals), &ldquo;Stepwise cell culture process intensification for high-productivity and cost-effective commercial manufacturing of a Mabcalin&trade; bispecifics,&rdquo; Drug Discovery Today (2024) &mdash; <a href="https://www.sciencedirect.com/science/article/abs/pii/S1369703X24002638">sciencedirect.com/science/article/abs/pii/S1369703X24002638</a>. Retrieved 2026-07-29.</li>
+      <li>WuXi Biologics case study, &ldquo;Canine Antibody Production with PawBio&trade;&rdquo; (PDF) &mdash; <a href="https://www.wuxibiologics.com/wp-content/uploads/WuXi-Bio_Case-Study_Animal-Health-Canine-Antibody-Production.pdf">wuxibiologics.com (PDF)</a>. Retrieved 2026-07-29.</li>
+      <li>WuXi Biologics investor presentation, HKEX filing (2025-08-19) &mdash; <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0819/2025081901340.pdf">hkexnews.hk (PDF)</a>. Retrieved 2026-07-29.</li>
+      <li>WuXi Biologics, &ldquo;Dr. Chris Chen: How to Achieve 15-Ton MAb Production with Single-Use Bioreactors&rdquo; (2025-10-17; company keynote summary) &mdash; <a href="https://www.wuxibiologics.com/how-to-achieve-15-ton-mab-production-with-single-use-bioreactors-in-a-more-cost-effective-way/">wuxibiologics.com</a>. Retrieved 2026-07-29.</li>
+      <li>Yongky A., et al., &ldquo;Process intensification in fed-batch production bioreactors using non-perfusion seed cultures,&rdquo; mAbs 11(8), 2019 (peer-reviewed benchmark, independent of WuXi) &mdash; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6816350/">pmc.ncbi.nlm.nih.gov/articles/PMC6816350/</a>. Retrieved 2026-07-29.</li>
+      <li>Pharmaceutical Outsourcing, &ldquo;WuXi Biologics Launches Bioprocessing Platform for Cost-Effective Commercial Manufacturing&rdquo; (trade press, PR-derived) &mdash; <a href="https://www.pharmoutsourcing.com/1315-News/607935-WuXi-Biologics-Launches-Bioprocessing-Platform-for-Cost-Effective-Commercial-Manufacturing/">pharmoutsourcing.com</a>. Retrieved 2026-07-29.</li>
+      <li>Practical Patient Care, &ldquo;WuXi announces first high scale GMP manufacturing using WuXiUI platform&rdquo; (trade press, PR-derived) &mdash; <a href="https://www.practical-patient-care.com/news/wuxi-announces-first-high-scale-gmp-manufacturing-using-wuxiui-platform/">practical-patient-care.com</a>. Retrieved 2026-07-29.</li>
+    </ul>
+  </div>
+
+  <h2 id="update-history">Update History</h2>
+  <ul><li>v1.0 — 2026-07-29 — initial publication.</li></ul>
+</article>
+</main>
+
+<footer>
+  SAIL RESEARCH · Seoul, Korea · <a href="../../research/index.html">All reports</a>
+</footer>
+
+</body>
+</html>
