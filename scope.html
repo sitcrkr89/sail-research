@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scope a Decision — Sail Research</title>
+<meta name="description" content="Submit a decision question for Sail Research. Response within 2 business days: proceed, narrow, or not a fit.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/scope.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sail Research">
+<meta property="og:title" content="Scope a Decision — Sail Research">
+<meta property="og:description" content="Bring the decision—not just the topic. 2 business day response SLA.">
+<meta property="og:url" content="https://sitcrkr89.github.io/sail-research/scope.html">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+  .scope-layout { display: grid; grid-template-columns: 1fr 340px; gap: 48px; align-items: start; }
+  .side-card { padding: 28px; border: 1px solid var(--line); background: var(--white); position: sticky; top: 96px; }
+  .side-card h2 { font-family: var(--serif); font-size: 18px; margin-bottom: 12px; }
+  .side-card ol { margin: 0 0 0 18px; color: var(--muted); font-size: 13px; }
+  .side-card li { margin-bottom: 8px; }
+  .side-card .sla { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--accent); letter-spacing: 0.04em; }
+  .form-panel { padding: 36px; border: 1px solid var(--line); background: var(--white); }
+  .success { display: none; padding: 28px; border: 1px solid var(--live); background: var(--live-wash); margin-bottom: 24px; }
+  .success.is-on { display: block; }
+  .success h2 { font-family: var(--serif); font-size: 20px; margin-bottom: 8px; color: var(--ink); }
+  .success p { color: var(--muted); font-size: 14px; }
+  @media (max-width: 900px) {
+    .scope-layout { grid-template-columns: 1fr; }
+    .side-card { position: static; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="status"><div class="wrap"><span class="live">Research desk active</span><span>Scope SLA · <strong>2 business days</strong></span></div></div>
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="wrap">
+    <a class="logo" href="index.html">SAIL <span>RESEARCH</span><span class="logo-sub">Bottleneck Evidence Desk</span></a>
+    <div class="nav-links">
+      <a href="index.html#coverage">Coverage</a>
+      <a href="research/index.html">Library</a>
+      <a href="product.html">Product</a>
+      <a href="for.html">Who it's for</a>
+      <a href="research/methodology.html">Method</a>
+      <a class="nav-cta" href="scope.html" aria-current="page">Scope a decision</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Scope form</div>
+      <h1>Bring us the decision—not just the topic.</h1>
+      <p class="lede">We only accept scopes where primary sources can move the decision. Incomplete forms slow everyone down; complete ones get a clear proceed / narrow / not-a-fit reply.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap scope-layout">
+      <div>
+        <div class="success" id="success" role="status">
+          <h2>Draft email ready</h2>
+          <p>Your mail client should open with a structured scope message. If it did not, copy the summary below and send it to <strong style="color: var(--ink-2);">sail.research.info@gmail.com</strong>.</p>
+          <pre id="summary" style="margin-top: 14px; padding: 14px; background: var(--paper); border: 1px solid var(--line); font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: pre-wrap;"></pre>
+        </div>
+
+        <form class="form-panel" id="scope-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="question">Decision question *</label>
+              <textarea id="question" name="question" required placeholder="e.g. Has vendor X’s HBM4 claim moved from product listing to customer-qualified deployment for our use case?"></textarea>
+              <p class="hint">One sentence if possible. What must be true for your team to act?</p>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="deadline">Decision date *</label>
+                <input id="deadline" name="deadline" type="text" required placeholder="YYYY-MM-DD or e.g. IC on Aug 20">
+              </div>
+              <div class="field">
+                <label for="sku">Desired offer *</label>
+                <select id="sku" name="sku" required>
+                  <option value="">Select…</option>
+                  <option value="Decision Memo">Decision Memo</option>
+                  <option value="Source Map">Source Map</option>
+                  <option value="Signal Tracker">Signal Tracker</option>
+                  <option value="Scoped Engagement">Scoped Engagement</option>
+                  <option value="Unsure — recommend">Unsure — recommend</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="org">Organization type *</label>
+                <select id="org" name="org" required>
+                  <option value="">Select…</option>
+                  <option value="Corporate">Corporate</option>
+                  <option value="Fund / PE / VC">Fund / PE / VC</option>
+                  <option value="Consulting / advisory">Consulting / advisory</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="role">Your role *</label>
+                <input id="role" name="role" type="text" required placeholder="e.g. Director, Competitive Intelligence">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name *</label>
+                <input id="name" name="name" type="text" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="email">Work email *</label>
+                <input id="email" name="email" type="email" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="budget">Budget band</label>
+                <select id="budget" name="budget">
+                  <option value="">Prefer not to say</option>
+                  <option value="Exploring / TBD">Exploring / TBD</option>
+                  <option value="Under mid four figures USD">Under mid four figures USD</option>
+                  <option value="Mid four to low five figures USD">Mid four to low five figures USD</option>
+                  <option value="Five figures+ USD">Five figures+ USD</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="domain">Coverage domain</label>
+                <select id="domain" name="domain">
+                  <option value="">Select…</option>
+                  <option value="Semiconductors">Semiconductors</option>
+                  <option value="Biopharma">Biopharma</option>
+                  <option value="Power & Infrastructure">Power &amp; Infrastructure</option>
+                  <option value="Cross-domain / other">Cross-domain / other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="constraints">Must-not claims / already ruled out</label>
+              <textarea id="constraints" name="constraints" placeholder="e.g. We do not need a price target. We already treat shipment volume as unknown."></textarea>
+            </div>
+
+            <div>
+              <button class="btn btn-primary" type="submit">Submit scope (opens email)</button>
+              <p class="form-note">Submits via your email client to sail.research.info@gmail.com with subject <span style="font-family: var(--mono); font-size: 12px; color: var(--muted);">[Sail Research] Scope inquiry</span>. No account required.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <aside class="side-card">
+        <h2>What happens next</h2>
+        <ol>
+          <li>We review whether primary sources can move your decision.</li>
+          <li>You receive proceed, narrow, or not-a-fit within 2 business days.</li>
+          <li>If proceed: SOW outline, timing, and commercial terms.</li>
+          <li>Delivery uses the same evidence standard as public briefs.</li>
+        </ol>
+        <p class="sla">SLA · 2 business days on complete forms</p>
+        <p style="margin-top: 16px; font-size: 13px; color: var(--muted);">Prefer to browse first? <a href="research/index.html" style="color: var(--accent);">Open the library</a></p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="border: 0; padding: 0;">
+      <span><a href="index.html" class="logo">SAIL <span>RESEARCH</span></a></span>
+      <span>sail.research.info@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("scope-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const form = event.target;
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  const data = Object.fromEntries(new FormData(form).entries());
+  const body = [
+    "Sail Research — Scope inquiry",
+    "",
+    "Decision question:",
+    data.question,
+    "",
+    "Decision date: " + data.deadline,
+    "Desired offer: " + data.sku,
+    "Organization type: " + data.org,
+    "Role: " + data.role,
+    "Name: " + data.name,
+    "Email: " + data.email,
+    "Budget band: " + (data.budget || "—"),
+    "Domain: " + (data.domain || "—"),
+    "",
+    "Must-not / ruled out:",
+    data.constraints || "—",
+    "",
+    "—",
+    "Submitted via sitcrkr89.github.io/sail-research/scope.html"
+  ].join("\n");
+
+  document.getElementById("summary").textContent = body;
+  document.getElementById("success").classList.add("is-on");
+  document.getElementById("success").scrollIntoView({ behavior: "smooth", block: "start" });
+
+  const mailto =
+    "mailto:sail.research.info@gmail.com" +
+    "?subject=" + encodeURIComponent("[Sail Research] Scope inquiry — " + (data.sku || "General")) +
+    "&body=" + encodeURIComponent(body);
+  window.location.href = mailto;
+});
+</script>
+</body>
+</html>

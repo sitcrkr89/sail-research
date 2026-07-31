@@ -1,14 +1,21 @@
 # Sail Research
 
-Sail Research is an evidence-first public research desk focused on Korean industry signals that matter to global strategy teams. Its core coverage is semiconductors, biopharma, and power infrastructure.
+Sail Research is a decision-grade evidence desk for Korea bottleneck industries—semiconductors, biopharma, and power infrastructure—serving global strategy, competitive intelligence, and diligence teams.
+
+**Visual system:** Light Institutional (paper ground, ink type, navy accent)—designed to read as attachable intelligence, not a tech-startup landing page.
 
 ## Public structure
 
-- `index.html` — interactive decision-lens landing page
-- `research/index.html` — searchable report library and coverage map
+- `index.html` — GTM homepage (position, ICP, coverage, evidence explorer, offers, digest, scope CTA)
+- `product.html` — offer ladder (Public Brief → Decision Memo → Tracker → Engagement)
+- `for.html` — who it’s for / not for
+- `about.html` — desk, independence, policies
+- `scope.html` — structured scope form (mailto handoff)
+- `digest.html` — Evidence Digest request
+- `research/index.html` — searchable report library
 - `research/methodology.html` — evidence, review, and corrections contract
-- `reports/` — published reports and the publication template
-- `assets/` — shared public assets
+- `reports/` — published reports and templates
+- `assets/site.css` — global professional design system
 
 ## Editorial contract
 
@@ -23,13 +30,10 @@ Every public report must:
 
 ## Interactive experience
 
-The public homepage provides three lightweight, dependency-free exploration layers:
-
-- **Decision Lens** — switches the decision question, current public position, and next action by core sector.
-- **Evidence Explorer** — separates verified fact, interpretation, and open verification gaps.
-- **Signal Matrix** — shows current coverage, watch conditions, and publication status without inventing signals for coverage areas still in buildout.
-
-All controls remain keyboard accessible, responsive, and usable with reduced-motion preferences.
+- **Decision Lens** — switches decision question and next action by core sector
+- **Evidence Explorer** — verified fact / interpretation / open gap
+- **Signal Matrix** — coverage, watch conditions, honest buildout status
+- **Scope form** — qualified commercial intake with 2-business-day SLA messaging
 
 ## Local preview
 
@@ -45,8 +49,6 @@ Open `http://localhost:8000/`.
 python3 scripts/validate_site.py
 ```
 
-The validator checks metadata, heading structure, local links, report navigation, card counts, and known publication defects. The legacy methodology page is explicitly exempt from the new canonical/Open Graph checks until its public copy is migrated. GitHub Actions runs the same check for every pull request and push to `main`.
-
 ## Publishing a report
 
-Start from `reports/_TEMPLATE.html`, add the report card to `research/index.html`, update the latest-publication date, update `sitemap.xml`, and run the quality check before review. Publication is not authorized by automation alone.
+Start from `reports/_TEMPLATE.html`, add the report card to `research/index.html`, update the latest-publication date on the homepage and library, update `sitemap.xml`, and run the quality check before review.

@@ -10,7 +10,16 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_PAGES = [ROOT / "index.html", ROOT / "research/index.html", ROOT / "research/methodology.html"]
+PUBLIC_PAGES = [
+    ROOT / "index.html",
+    ROOT / "product.html",
+    ROOT / "for.html",
+    ROOT / "about.html",
+    ROOT / "scope.html",
+    ROOT / "digest.html",
+    ROOT / "research/index.html",
+    ROOT / "research/methodology.html",
+]
 PUBLIC_PAGES += sorted((ROOT / "reports").glob("2026*.html"))
 LEGACY_METADATA_EXEMPT = {Path("research/methodology.html")}
 
@@ -126,9 +135,11 @@ def main() -> int:
         errors.append(f"research/index.html: {card_count} cards but declared count is {declared_count}")
 
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
-    for lens in ("semiconductors", "biopharma", "power"):
-        if f'data-lens="{lens}"' not in homepage:
-            errors.append(f"index.html: missing {lens} decision lens")
+    for arena in ("Semiconductors", "Biopharma", "Power"):
+        if arena not in homepage:
+            errors.append(f"index.html: missing {arena} coverage arena")
+    if 'id="coverage"' not in homepage:
+        errors.append("index.html: missing coverage section")
     for layer in ("fact", "interpretation", "gap"):
         if f'data-evidence="{layer}"' not in homepage:
             errors.append(f"index.html: missing {layer} evidence layer")
