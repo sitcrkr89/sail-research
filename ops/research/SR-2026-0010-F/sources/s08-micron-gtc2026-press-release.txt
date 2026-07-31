@@ -1,0 +1,23 @@
+Source URL: https://investors.micron.com/news-releases/news-release-details/micron-high-volume-production-hbm4-designed-nvidia-vera-rubin
+Wire URL: https://www.globenewswire.com/news-release/2026/03/16/3256773/0/en/micron-in-high-volume-production-of-hbm4-designed-for-nvidia-vera-rubin-pcie-gen6-ssd-and-socamm2.html
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Micron Technology (investor relations / GlobeNewswire) — VENDOR PRIMARY
+Published: 2026-03-16 (SAN JOSE, Calif. — GTC 2026)
+
+--- EXTRACT ---
+
+News highlights:
+- "HBM4 36GB 12H in high-volume production, designed for NVIDIA Vera Rubin — greater than 2.8 TB/s and with 20% better power efficiency"
+- "Industry's first PCIe Gen6 SSD in high-volume production — the Micron 9650"
+- "192GB SOCAMM2 in high-volume production — expanding low-power, high-capacity memory for AI and HPC workloads on the NVIDIA Vera Rubin platform"
+
+"Micron Technology, Inc. (Nasdaq: MU), has begun volume shipment of its HBM4 36GB 12H in the first quarter of calendar year 2026 and is designed for NVIDIA Vera Rubin. With HBM4, Micron achieves over 11 Gb/s pin speeds, enabling a bandwidth greater than 2.8 TB/s, representing a 2.3 times bandwidth and greater than 20% power efficiency improvement over its HBM3E."
+
+"Looking towards further HBM cube capacity expansion, Micron has demonstrated advanced packaging capability of stacking 16 die of HBM by shipping samples of HBM4 48GB 16H to customers. This milestone delivers a 33% increase in capacity per HBM placement compared to the HBM4 36GB 12H offering."
+
+"Our close collaboration with NVIDIA ensures that compute and memory are designed to scale together from day one," said Sumit Sadana, EVP and chief business officer.
+
+Footnotes: bandwidth comparison is vs HBM3E at same capacity/stack height; pin speed "based on internal Micron testing and confidential customer test vehicle validation."
+
+--- NOTE ---
+"Designed for NVIDIA Vera Rubin" and 16H sample shipment are Micron single-party claims; NVIDIA-side confirmation comes only via press-reported CEO remarks (s10). No yield, no 16H qualification, no bonding-method disclosure.

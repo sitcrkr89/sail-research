@@ -1,0 +1,25 @@
+Source URL: https://www.techtimes.com/articles/317855/20260605/nvidia-vera-rubin-hbm4-jensen-huang-confirms-all-three-suppliers-production-q3-ship.htm
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Tech Times — INDEPENDENT SECONDARY (reports remarks carried by Reuters, confirmed by Bloomberg)
+Published: 2026-06-05
+
+--- EXTRACT ---
+
+"Jensen Huang stepped off his plane at Seoul's Gimpo business aviation center on Friday and delivered the most definitive supply-chain signal of the AI infrastructure cycle: all three of the world's major memory makers are simultaneously qualified, in active production, and competing to deliver HBM4 chips for Nvidia's Vera Rubin AI server platform, with the first systems scheduled to ship in Q3 2026."
+
+"'All three vendors have been qualified,' Huang told reporters at the airport after flying in from Computex 2026 in Taipei. 'All three vendors are in production, and they're all racing to support Vera Rubin.' ... The remarks were reported by Reuters and confirmed by Bloomberg."
+
+"Vera Rubin entered full production following Huang's GTC Taipei keynote on June 1 [2026]."
+
+"Industry analysts have estimated that SK hynix holds roughly 60 to 70 percent of the HBM4 volume allocated to Vera Rubin, with Samsung at approximately 25 to 30 percent and Micron supplying the remainder — though Nvidia has not disclosed official allocation figures."
+
+"Each Vera Rubin NVL72 rack carries 20.7 terabytes of HBM4 memory delivering 1.6 petabytes per second of aggregate bandwidth."
+
+"The 12-high stack that Samsung and SK hynix are currently shipping requires each individual silicon die to be thinned to approximately 50 micrometers. The 16-high stacks that both companies are racing to qualify for Vera Rubin Ultra, the follow-on platform expected in late 2027, require thinning to approximately 30 micrometers — while keeping the entire package within a JEDEC-mandated height limit of approximately 720 micrometers [sic; JEDEC HBM4 limit is 775um per s18]."
+
+"Samsung ... announcing commercial shipments on February 12, 2026 ... Samsung is also the first to have shipped HBM4E samples, the enhanced next-generation standard targeting 3.6 terabytes per second at 16 gigabits per second, positioning it for Vera Rubin Ultra in 2027."
+
+"SK hynix uses ... MR-MUF ... easier to scale than Samsung's hybrid bonding approach ... Hybrid bonding offers structural advantages for denser stacks but has faced early yield challenges."
+
+--- NOTE ---
+Customer qualification here is a CEO verbal statement reported by two newswires (Reuters, Bloomberg) — not an NVIDIA written release. Applies to HBM4 12-high. 16-high qualification explicitly framed as ongoing ("racing to qualify for Vera Rubin Ultra, late 2027").

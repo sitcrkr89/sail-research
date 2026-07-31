@@ -1,0 +1,19 @@
+Source URL: https://semiconductor.samsung.com/news-events/news/samsung-unveils-hbm4e-showcasing-comprehensive-ai-solutions-nvidia-partnership-and-vision-at-nvidia-gtc-2026/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Samsung Electronics (Samsung Semiconductor newsroom) — VENDOR PRIMARY
+Published: 2026-03-16 (SAN JOSE, Calif.)
+
+--- EXTRACT ---
+
+Headlines: "Samsung supercharges the development of AI Infrastructure and AI Factories through wide-ranging compute solutions for datacenter, physical and on-device AI"
+"Industry-first commercial HBM4 and its successor HBM4E to be displayed, highlighting maximized performance, reliability and energy efficiency for next-generation datacenters"
+"Samsung to present on strategic AI collaboration with NVIDIA in semiconductor engineering innovation spanning from R&D and design to manufacturing"
+
+Samsung Electronics announced the comprehensive AI computing technologies it will showcase at NVIDIA GTC 2026 in San Jose, California, March 16-19 (booth #1207).
+
+The centerpiece of Samsung's showcase at NVIDIA GTC 2026 is the new sixth-generation HBM4, which is now in mass production and is designed for the NVIDIA Vera Rubin platform. Samsung's HBM4 delivers consistent processing speeds of 11.7 gigabits-per-second (Gbps), exceeding the industry standard of 8Gbps, and can be enhanced to 13Gbps.
+
+Samsung HBM4E was displayed alongside HBM4 at the event.
+
+--- NOTE ---
+"Designed for the NVIDIA Vera Rubin platform" is a vendor-side design-in claim; it is not an NVIDIA qualification confirmation.

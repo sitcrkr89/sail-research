@@ -1,0 +1,15 @@
+Source URL: https://www.koreajoongangdaily.com/business/sk-hynix-showcases-advanced-memory-products-including-hbm4-at-nvidia-gtc-2026/12556385
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Korea JoongAng Daily — INDEPENDENT SECONDARY
+Published: 2026-03-17
+
+--- EXTRACT ---
+
+"SK hynix showcased a broad range of its advanced memory products — including its sixth-generation high bandwidth memory (HBM4) — at the Nvidia GTC 2026 technology conference, which opened Monday in San Jose."
+
+"SK hynix's HBM4 is expected to be supplied to Nvidia's Vera Rubin platform. However, the product has not yet completed the U.S. company's final qualification process — a rigorous testing stage required before chips are approved for large-scale deployment. According to multiple reports, SK hynix recently delivered final HBM4 samples to Nvidia for verification."
+
+"At the exhibition, the company also displayed HBM3E and Socamm2 ... SK Group Chairman Chey Tae-won and SK hynix CEO Kwak Noh-jung are also expected to attend GTC 2026."
+
+--- NOTE ---
+Time-stamps the qualification gap: as of mid-March 2026 SK hynix HBM4 had NOT completed NVIDIA final qualification (12-high). Superseded by Huang's June 5, 2026 statement that all three vendors are qualified (s10). Useful as evidence of the qualification sequence/timeline.

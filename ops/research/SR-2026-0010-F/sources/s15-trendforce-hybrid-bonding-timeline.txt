@@ -1,0 +1,21 @@
+Source URL: https://www.trendforce.com/news/2026/07/07/news-samsung-sk-hynix-reportedly-reconsider-hybrid-bonding-timeline-16-high-hbm4e-may-be-earliest-adoption/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: TrendForce — INDEPENDENT SECONDARY (cites ZDNet, Newsis)
+Published: 2026-07-07
+
+--- EXTRACT ---
+
+"Samsung Electronics and SK hynix are reportedly reconsidering when to adopt hybrid bonding for HBM. According to ZDNet, growing industry speculation suggests widespread deployment of the technology for next-generation HBM may be delayed beyond earlier expectations. Although hybrid bonding had once been expected to debut with HBM4, both companies ultimately continued using conventional thermo-compression (TC) bonding. Industry forecasts now point to 16-high HBM4E (the seventh-generation HBM) as the earliest likely adoption point."
+
+"Unlike conventional bonding, hybrid bonding directly joins the copper interconnects of adjacent DRAM dies without using bumps. This enables thinner HBM packages while improving thermal performance and power efficiency, while also supporting higher-density interconnections."
+
+"Up to HBM3E, the standard package thickness was 720 micrometers. With HBM4, however, the limit increased to 775 micrometers, largely reflecting the shift from 8- and 12-high DRAM stacks to 12- and 16-high configurations. JEDEC is also discussing ... raising the thickness limit for next-generation HBM, including 20-high HBM5, from around 900 micrometers to as much as 1,000 micrometers."
+
+"Another factor is the delayed demand from key customers, including NVIDIA, for higher-stack-count HBM. A memory industry executive cited in the report said discussions between customers and memory manufacturers on 16-high HBM remain limited, adding that 12-high HBM4E products are still expected to remain the mainstream offering."
+
+"Samsung's Heat Path Block (HPB) and SK hynix's iHBM (ICE HBM) are currently being tested for HBM5."
+
+"According to Newsis ... demand for Hanmi Semiconductor's Wide TC Bonder ... is increasing" as makers opt for larger die area over hybrid bonding.
+
+--- NOTE ---
+Key timing evidence: hybrid bonding earliest adoption point now forecast at 16-high HBM4E; 12-high remains mainstream; 16-high customer discussions "remain limited" as of July 2026 — cuts against any near-term 16-high qualification claim.

@@ -1,0 +1,23 @@
+Source URL: https://www.trendforce.com/news/2026/01/13/news-sk-hynix-may-stick-with-mr-muf-for-hbm4-16-high-despite-asmpt-tc-bonder-orders/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: TrendForce — INDEPENDENT SECONDARY (cites DealSite, EE Times)
+Published: 2026-01-13
+
+--- EXTRACT ---
+
+"SK hynix is expected to continue using its MR-MUF process for HBM4 16-high products. According to DealSite, the company evaluated adopting fluxless bonding for HBM4 16-high but ultimately opted to retain its existing advanced MR-MUF process, concluding that the technology remains premature given performance and cost considerations."
+
+"Sources cited by the report say SK hynix launched full-scale evaluations in the fourth quarter of last year [2025] to introduce fluxless bonding for HBM4 16-high ... However, the evaluation results failed to meet expectations."
+
+"SK hynix has also confirmed in overseas investor briefings, the report adds, that it will maintain its current process through HBM4 and HBM4E 16-high products."
+
+"According to EE Times, the company unveiled a 16-high HBM4 at CES 2026, using its proprietary MR-MUF technology to thin individual DRAM wafers to just 30 um, enabling the stack to meet JEDEC's strict 775 um height limit."
+
+"Once stack heights exceed 20 layers, SK hynix believes adopting next-generation technologies will become unavoidable ... fluxless bonding ... viewed as a transitional step toward hybrid bonding."
+
+"In November last year, the company ordered seven tools from ASMPT instead of sourcing from its long-time top TC bonder supplier, Hanmi Semiconductor." (A source familiar with SK hynix said the order appears unrelated to fluxless bonding.)
+
+"The approaching expiration of SK hynix's exclusive MR-MUF materials agreement with Namics is influencing its strategy. The company plans to retain its existing process for HBM4 and HBM4E 12- and 16-high products, while a transition to hybrid bonding is seen as the preferred next step, albeit with potentially delayed timing."
+
+--- NOTE ---
+Directly resolves the bonding-method gap for SK hynix 16-high: MR-MUF retained for HBM4/HBM4E 12- and 16-high per DealSite reporting of investor briefings; hybrid bonding deferred. Secondary with named-report basis (DealSite/EE Times), not vendor-published — class C+/B-.

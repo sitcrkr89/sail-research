@@ -1,0 +1,23 @@
+Source URL: https://www.trendforce.com/news/2026/05/29/news-samsung-starts-shipping-industry-first-hbm4e-samples-three-months-after-hbm4-mass-production-performance-up-over-20/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: TrendForce — INDEPENDENT SECONDARY (cites News1, Yonhap, STOCK Analysis, Samsung)
+Published: 2026-05-29
+
+--- EXTRACT ---
+
+"Just months after rolling out HBM4 shipments in early 2026, Samsung has begun providing samples of the industry's first 12-layer HBM4E to major global partners, according to the company's latest press release."
+
+"Given that HBM4 shares the same 1c DRAM process and 4nm base die architecture as HBM4E, and is already in mass production, industry observers suggest the newly shipped HBM4E samples are also well positioned to transition into mass production. Samsung adds that it plans to proceed with HBM4E mass production in line with client-specific timelines."
+
+"Samsung's HBM4 ... became the world's first HBM4 to enter mass production and shipment in February. In December last year, Samsung's HBM4 received top-tier evaluation after demonstrating an industry-leading 11.7Gbps speed in System-in-Package (SiP) testing, the final certification stage."
+
+"According to News1, the latest development makes Samsung the first to supply HBM4E."
+
+HBM4E specs restated: stable 14Gbps, scalable to 16Gbps; >20% performance over HBM4; up to 3.6TB/s per stack; 12-layer 48GB; lineup to expand to 32GB (8-layer) and 64GB (16-layer); energy efficiency +16%, thermal resistance -14%+ vs previous gen.
+
+"According to Yonhap News Agency, SK hynix had initially planned to begin HBM4E sample shipments in the second half of this year, but recent reports indicate smoother-than-expected development progress, bringing forward its timeline."
+
+"Micron said its first HBM4E product will follow JEDEC standards, with mass production ramp-up targeted for 2027, according to STOCK Analysis."
+
+--- NOTE ---
+Independent corroboration of Samsung HBM4E 12H sample shipment and of the 64GB 16-layer being a *planned* configuration only. Also establishes SK hynix HBM4E had NOT shipped samples as of 2026-05-29 (2H26 plan) and Micron HBM4E ramp targeted 2027.

@@ -1,0 +1,25 @@
+Source URL: https://news.skhynix.com/en/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: SK hynix Newsroom (official) — VENDOR PRIMARY
+Published: 2025-09-12 (Seoul)
+
+--- EXTRACT ---
+
+News Highlights:
+- "The company is ready to supply the best-in-class HBM4 to customers according to their plans and to maintain competitive position"
+- "The product's bandwidth has doubled and power efficiency has improved 40% compared to the previous generation"
+
+SK hynix Inc. announced today that it has completed development and finished preparation of HBM4, a next generation memory product for ultra-high performance AI, mass production for the world's first time.
+
+"Completion of HBM4 development will be a new milestone for the industry," said Joohwan Cho, Head of HBM Development.
+
+HBM4 has the industry's best data processing speed and power efficiency with the bandwidth doubled through adoption of 2,048 I/O terminals, double from the previous generation, and power efficiency improved by more than 40%. The company expects to improve AI service performance by up to 69%.
+
+The company has far exceeded the JEDEC standard operating speed (8Gbps) by implementing over 10Gbps operating speed in HBM4.
+
+The company adopted the Advanced MR-MUF process in HBM4, proven to be reliable in the market, and the 1bnm process, the fifth-generation of the 10-nanometer technology, to minimize risk in mass production.
+
+"We are unveiling the establishment of the world's first mass production system of HBM4," said Justin Kim, President & Head of AI Infra.
+
+--- NOTE ---
+No HBM4E, no 16-layer HBM4 product claims in this release. MR-MUF (not hybrid bonding) is the stated HBM4 bonding process.

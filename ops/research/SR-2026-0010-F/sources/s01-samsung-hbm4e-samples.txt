@@ -1,0 +1,26 @@
+Source URL: https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples
+Mirror URL (same release on Samsung Semiconductor newsroom): https://semiconductor.samsung.com/news-events/news/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Samsung Electronics (official newsroom) — VENDOR PRIMARY
+Published: 2026-05-29
+
+--- EXTRACT ---
+
+Samsung Electronics announced that it has begun shipping the industry's first 12-layer HBM4E samples to major global customers.
+
+"Following the successful mass production of HBM4, Samsung has once again demonstrated its distinct technological edge with HBM4E," said Sang Joon Hwang, Executive Vice President and Head of Memory Development at Samsung Electronics.
+
+Samsung's HBM4E delivers a stable pin speed of 14 gigabits-per-second (Gbps), with performance scalable up to 16Gbps. This represents more than a 20% increase over its HBM4, while delivering memory bandwidth of up to 3.6 terabytes-per-second (TB/s) per stack.
+
+Samsung's 12-layer HBM4E is offered in a 48-gigabyte (GB) capacity, representing more than a 30% increase over the previous generation, with plans to expand the lineup to include 32GB (8-layer) and 64GB (16-layer) configurations in accordance with customer requirements.
+
+The HBM4E uses the industry's most advanced 6th-generation 10-nanometer (nm)-class DRAM process (1c) and Samsung Foundry's 4nm logic base die.
+
+Advanced low-power design technologies and optimized packaging structures improved energy efficiency by 16% and thermal resistance characteristics by more than 14% compared to the previous generation.
+
+Samsung plans to begin mass production for HBM4E aligned with customer schedules, following initial sample shipments and optimization.
+
+Feedback from global customers on Samsung's HBM4, introduced in February, have been highly positive. The HBM4 was the first in the industry to enter mass production and set the bar with speeds of 11.7Gbps in its system in package (SiP) tests.
+
+--- NOTE ---
+No 16-layer HBM4E sample, qualification, yield, or ramp-date claims appear in this release. 64GB (16-layer) is stated only as a planned lineup expansion.

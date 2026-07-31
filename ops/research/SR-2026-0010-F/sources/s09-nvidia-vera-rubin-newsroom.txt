@@ -1,0 +1,19 @@
+Source URL: http://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: NVIDIA Newsroom (official) — CUSTOMER PRIMARY (platform announcement)
+Published: 2026-03-16 (GTC 2026)
+
+--- EXTRACT ---
+
+"NVIDIA today announced the NVIDIA Vera Rubin platform is opening the next frontier of agentic AI, with seven new chips now in full production to scale the world's largest AI factories."
+
+Components: Vera CPU, Rubin GPU, NVLink 6 Switch, ConnectX-9 SuperNIC, BlueField-4 DPU, Spectrum-6 Ethernet switch, Groq 3 LPU.
+
+Vera Rubin NVL72: 72 Rubin GPUs + 36 Vera CPUs via NVLink 6; training large MoE models with one-fourth the GPUs vs Blackwell; up to 10x higher inference throughput per watt at one-tenth the cost per token.
+
+"Vera Rubin-based products will be available from partners starting the second half of this year. This includes leading cloud providers Amazon Web Services, Google Cloud, Microsoft Azure and Oracle Cloud Infrastructure, along with NVIDIA Cloud Partners CoreWeave, Crusoe, Lambda, Nebius, Nscale and Together AI."
+
+System manufacturers: Cisco, Dell, HPE, Lenovo, Supermicro, Aivres, ASUS, Foxconn, GIGABYTE, Inventec, Pegatron, QCT, Wistron, Wiwynn. AI labs: Anthropic, Meta, Mistral AI, OpenAI.
+
+--- NEGATIVE RESULT ---
+The official NVIDIA Vera Rubin platform announcement does NOT name any HBM4 memory supplier (no Samsung / SK hynix / Micron mention) and does NOT state memory qualification status, allocation, stack height, or HBM4E anything. Customer-side official qualification statements for HBM4/HBM4E do not exist on NVIDIA's newsroom as of retrieval date.

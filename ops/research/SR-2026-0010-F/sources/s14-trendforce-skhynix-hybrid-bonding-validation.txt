@@ -1,0 +1,21 @@
+Source URL: https://www.trendforce.com/news/2026/04/29/news-sk-hynix-reportedly-completes-12-high-hybrid-bonding-hbm-validation-works-to-raise-yields-for-mass-production/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: TrendForce — INDEPENDENT SECONDARY (cites The Elec)
+Published: 2026-04-29
+
+--- EXTRACT ---
+
+"According to The Elec, Kim Jong-hoon, Technical Leader at SK hynix, said validation of its 12-high HBM using hybrid bonding has been completed, adding that the company is now working to raise yields for mass production. While exact numbers were not provided, he indicated the company is significantly better prepared than it was two years ago."
+
+"The industry expects hybrid bonding to be adopted starting with HBM4, with gradual introduction likely from the second half of 2026 or into 2027 as 16-high products are commercialized."
+
+"SK hynix plans to further advance its MR-MUF technology to meet customer demand ahead of fully adopting hybrid bonding, and has secured capabilities to meet height standards for up to 16-high stacks based on HBM3E."
+
+"Packaging technologies have advanced in step, progressing from TC-NCF to MR-MUF and now to hybrid bonding. ... Both TC-NCF and MR-MUF use small metal bumps between DRAM dies, combined with heat and pressure through thermal compression. MR-MUF differs by addressing the warpage and damage issues seen in TC-NCF, using a protective material such as flux."
+
+"A separate report from The Elec in early April ... SK hynix ordered a hybrid bonding inline system ... jointly developed by Applied Materials and Besi ... around KRW 20 billion (approx. USD 15 million) ... SK hynix's first acquisition of hybrid bonding equipment intended for mass production." Hanwha Semitech equipment for quality testing planned.
+
+"Samsung Electronics has also introduced Besi equipment for development purposes and is reportedly conducting quality tests using additional hybrid bonders from SEMES. ... SEMES tools are considered less mature."
+
+--- NOTE ---
+Named SK hynix technical leader on record (via The Elec) for 12-high hybrid-bonding validation complete; no yield numbers. Equipment-axis corroboration of hybrid bonding development at both SK hynix (AMAT/Besi inline) and Samsung (Besi dev tools, SEMES).

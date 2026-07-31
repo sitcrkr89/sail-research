@@ -1,0 +1,25 @@
+Source URL: https://www.tweaktown.com/news/109495/sk-hynix-samsung-and-micron-fighting-for-nvidia-supply-contracts-for-new-16-hi-hbm4-orders/index.html
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: TweakTown — INDEPENDENT SECONDARY (reports Electronic Times/ETNews)
+Published: 2025-12-28
+
+--- EXTRACT ---
+
+"In a new report from the Electronic Times, NVIDIA reportedly requested that domestic and foreign memory manufacturers deliver 16-Hi HBM memory chips by Q4 2026."
+
+"SK hynix and Samsung Electronics in South Korea, as well as US-based Micron, have all begun full-scale development work for the mass production supply of 16-Hi HBM memory chips to NVIDIA. ... concrete contracts haven't been signed yet."
+
+"An industry official said: 'Following the supply of 12-Hi HBM4, a request for 16-Hi supply has also been made, so we are establishing a very fast development schedule. Performance evaluation could begin as early as before the third quarter of next year [2026].'"
+
+"Another high-ranking industry official suggested that we might see 16-Hi HBM called HBM4E, adding: 'It is likely that the product will be 16-Hi HBM4, but the generation or name could change depending on performance and mass production timing.'"
+
+"Existing 12-Hi HBM has a wafer thickness of about 50 micrometers, with the report suggesting this must be reduced to around 30 um to stack 16 layers."
+
+"The HBM4 thickness standard defined by JEDEC is 775 um. It is about 50 um thicker than the existing HBM3E (725 um) ... the prevailing opinion is that JEDEC will not further increase the thickness for this 16-Hi HBM."
+
+"Currently, Samsung Electronics and Micron are proceeding with the bonding process using Thermal Compression Non-Conductive Film (TC-NCF), while SK Hynix uses Mass Reflow Molded Underfill (MR-MUF)."
+
+"An industry official said: 'The current bonding material thickness is around 10 um, and to stack more DRAMs, this must be reduced to secure competitiveness. Dissipating the heat generated after bonding is also a challenge.'"
+
+--- NOTE ---
+Basis for the "16-high qualification race" framing: NVIDIA 16-Hi request for Q4 2026 delivery (ETNews, Dec 2025), performance evaluation possibly starting before Q3 2026, no contracts signed. Also resolves the HBM4E naming gap and the TC-NCF vs MR-MUF vendor split.

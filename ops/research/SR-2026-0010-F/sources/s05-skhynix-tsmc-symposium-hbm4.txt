@@ -1,0 +1,19 @@
+Source URL: https://news.skhynix.com/tsmc-2025-technology-symposium-sk-hynix-showcases-hbm4/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: SK hynix Newsroom (official) — VENDOR PRIMARY
+Published: May 2025 context (TSMC 2025 North America Technology Symposium, Santa Clara, April 23, 2025)
+
+--- EXTRACT ---
+
+SK hynix showcased memory solutions including HBM4 at the TSMC 2025 North America Technology Symposium (April 23, Santa Clara).
+
+In the HBM Solution section, SK hynix presented samples of its 12-layer HBM4 and 16-layer HBM3E products, displayed alongside NVIDIA's B100 GPU.
+
+"The 12-layer HBM4 is a next-generation HBM capable of processing over 2 terabytes (TB) of data per second. In March [2025], the company announced it has become the first in the world to supply HBM4 samples to major customers and plans to complete preparations for mass production within the second half of 2025."
+
+Also exhibited: 3D models of TSV and Advanced MR-MUF technologies.
+
+Advanced MR-MUF: "a next-generation MR-MUF technology that incorporates warpage control, allowing chips which are 40% thinner than conventional chips to be stacked without warping. Additionally, the use of a new protective material improves heat dissipation."
+
+--- NOTE ---
+16-layer display here is HBM3E, not HBM4/HBM4E. Supports the dataset record HBM-SKH-2025-HBM4-12H-002 (showcase + sample supply claims).

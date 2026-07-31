@@ -1,0 +1,30 @@
+Source URL: https://semiconductor.samsung.com/news-events/news/samsung-ships-industry-first-commercial-hbm4-with-ultimate-performance-for-ai-computing/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Samsung Electronics (Samsung Semiconductor newsroom) — VENDOR PRIMARY
+Published: February 2026 context (commercial shipment announced; HBM4 "introduced in February" per s01; TechTimes secondary gives 2026-02-12)
+
+--- EXTRACT ---
+
+Headlines: "Mass production commences for HBM4 with consistent transfer speed of 11.7Gbps, capable of up to 13Gbps"
+"Leading-edge DRAM with 4nm logic base die maximizes performance, reliability and energy efficiency for next-generation datacenters"
+
+Samsung Electronics announced that it has begun mass production of its industry-leading HBM4 and has shipped commercial products to customers. "This achievement marks a first in the industry."
+
+By leveraging its most advanced 6th-generation 10nm-class DRAM process (1c), the company achieved stable yields and industry-leading performance from the outset of mass production, without any additional redesigns.
+
+"Instead of taking the conventional path of utilizing existing proven designs, Samsung took the leap and adopted the most advanced nodes like the 1c DRAM and 4nm logic process for HBM4," said Sang Joon Hwang, EVP and Head of Memory Development.
+
+Samsung's HBM4 delivers a consistent processing speed of 11.7Gbps, exceeding the industry standard of 8Gbps by approximately 46%; a 1.22x increase over the maximum 9.6Gbps pin speed of HBM3E. Performance can be further enhanced up to 13Gbps.
+
+Total memory bandwidth per single stack is increased by 2.7x compared to HBM3E, to a maximum of 3.3 terabytes-per-second (TB/s).
+
+Through 12-layer stacking technology, Samsung offers HBM4 in capacities ranging from 24GB to 36GB. The company will keep capacity options aligned with future customer timelines by utilizing 16-layer stacking, which will expand offerings to up to 48GB.
+
+To address power/thermal challenges driven by the doubling of data I/Os from 1,024 to 2,048 pins, Samsung integrated advanced low-power design solutions into the core die. HBM4 achieves a 40% improvement in power efficiency via low-voltage TSV technology and PDN optimization, while enhancing thermal resistance by 10% and heat dissipation by 30%, compared to HBM3E.
+
+DTCO between Foundry and Memory businesses; in-house advanced packaging expertise.
+
+Samsung anticipates its HBM sales will more than triple in 2026 vs 2025 and is expanding HBM4 production capacity. Sampling for HBM4E is expected to begin in the second half of 2026 [note: superseded by actual May 2026 HBM4E sample shipment, s01], while custom HBM samples will start reaching customers in 2027.
+
+--- NOTE ---
+Yield claimed qualitatively ("stable yields") only; no numeric yield disclosed.

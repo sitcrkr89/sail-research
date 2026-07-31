@@ -1,0 +1,12 @@
+Source URL: https://www.micron.com/products/memory/hbm/hbm4
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Micron Technology (official product page) — VENDOR PRIMARY
+
+--- EXTRACT (retrieved portion) ---
+
+"Manufacturing HBM starts by fabricating three types of silicon wafers. One creates dies with through-silicon vias (TSVs) for electrical connections. Another produces thicker top dies without TSVs. The third fabricates logic dies with TSVs to interface with the system.
+
+Only dies that pass testing continue further to assembly. Specialized equipment then stacks multiple DRAM dies on the logic die. The thicker top DRAM die completes the stack and provides memory as well as structural integrity. Once assembled, the complete HBM cube undergoes final testing to verify all connections work properly."
+
+--- NOTE ---
+The dynamic product page returned only a partial extract on retrieval. SKU-level specs (HBM4 36GB 12H >2.8TB/s, >11Gbps, 2048 I/O; HBM4 48GB 16H) are corroborated by Micron's own GTC 2026 press release (s08) and independent secondary coverage (s16, Evertiq). No hybrid bonding is disclosed; stacking is TSV + logic die based.

@@ -1,0 +1,21 @@
+Source URL: https://www.koreajoongangdaily.com/business/sk-hynix-has-won-two-thirds-of-nvidias-next-gen-high-bandwidth-memory-orders-industry-sources/12030483
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: Korea JoongAng Daily — INDEPENDENT SECONDARY (industry sources; Counterpoint Research cited)
+Published: 2026-01-28
+
+--- EXTRACT ---
+
+"SK hynix has reportedly secured more than two-thirds of Nvidia's HBM4 orders."
+
+"Nvidia has allocated about two-thirds of its HBM4 volume for next-generation AI platforms such as Vera Rubin this year to SK hynix, industry sources said Wednesday. Some in the industry said SK hynix's share could approach or even exceed 70 percent."
+
+"In late 2025, market tracker Counterpoint Research projected this year's global HBM4 market share at 54 percent for SK hynix, 28 percent for Samsung Electronics and 18 percent for Micron."
+
+"SK hynix established its HBM4 mass-production system in September 2025 and has since supplied Nvidia with large volumes of paid samples, industry sources said, adding that no major issues surfaced during the final validation stage. The company is now preparing for full-scale production in line with customer schedules."
+
+"Samsung Electronics ... recently passed final quality tests conducted by Nvidia and AMD and is expected to begin official shipments from February [2026], according to industry sources."
+
+"Samsung applied ... 1c DRAM process ... with a 4-nanometer foundry process. Industry sources said Samsung is the only supplier using that combination, with data speeds reported to reach up to 11 gigabits per second, above the Jedec standard of 8 gigabits per second."
+
+--- NOTE ---
+Allocation figures are unattributed industry-source estimates, not NVIDIA-published. Samsung "passed final quality tests" (Jan 2026) is industry-sourced secondary; consistent with Samsung's own Feb 2026 commercial-shipment claim (s03) and Huang's June statement (s10).

@@ -1,0 +1,23 @@
+Source URL: https://eps.ieee.org/wp-content/uploads/2026/03/EM_Hybrid-Bonding_Apr26.pdf
+Retrieved: 2026-07-31 (via FetchURL, PDF text extract)
+Publisher: IEEE Electronics Packaging Society (EPS) — BENCHMARK / TECHNICAL REFERENCE (professional society publication)
+Title: "Summary of ECTC 2025 Special Session on Hybrid Bonding" — M. Gorchichko, D.P. Parekh, B. Chan, S. Ramamoorthy
+
+--- EXTRACT ---
+
+"Hybrid bonding ... is a key enabler for 3D chip integration ... allows for finer, shorter connections between chips, resulting in higher performance, increased bandwidth, improved energy efficiency, and smaller chip packages for demanding applications like AI and high-performance [computing]."
+
+"Within 3D HI, Hybrid Bonding (HB) has been a key enabling approach to realize fine pitch (<10um) high density interconnections to reduce the well-known bottlenecks of accelerator-to-memory and memory-to-memory bandwidth."
+
+"HB is a method of directly joining two surfaces ... typically copper vias and dielectric layers ... Unlike with thermo-compression bonding (TCB), no bumps, no underfill, or compression is needed, the initial bonding is happening at room temperature utilizing Van-der-Waals forces between very smoothly polished dielectrics ... and then the bonded pair is annealed to form copper interconnects. There are 3 types of HB: wafer-to-wafer, die-to-wafer, and die-to-die, with wafer-to-wafer being the most mature."
+
+Index terms explicitly include "HCB, HBM".
+
+Panel findings (ECTC 2025, "Hybrid Bonding (HB): to B or not to B?"):
+- Laura Mirkarimi (Adeia): metrology is required pre- and post-bond; need to identify bond energy, bond voids, electrical connectivity; rework of hybrid bonded devices is a stretch goal; DBI Ultra die-to-wafer HB suitable for larger dies such as DRAM.
+- Chet Lenox (KLA): HB is "highly sensitive to defects, overlay/alignment error and requires metrology accuracy" far beyond microbump/Cu-pillar/solder joints; single-micron pitches make defects harder to see.
+- Anne Jourdain (imec): W2W in production for memory stacking; D2W progressing for logic-memory; D2W surfaces are inherently rougher than W2W due to die thinning and singulation; tight pitch needs <50nm alignment accuracy and process stability across large areas.
+- (Tomikawa): polymer-based (polyimide) HB materials offer CTE tunability, particle tolerance, reduced mechanical stress vs SiO2-based HB materials; alignment accuracy below 2um demonstrated.
+
+--- NOTE ---
+Vendor-neutral technical grounding for: (a) hybrid bonding mechanism vs TCB (no bumps/underfill); (b) why 16+ layer HBM pushes toward hybrid bonding; (c) yield/metrology/warpage challenges that explain low early yields and deferred adoption. Independent of all three memory vendors.

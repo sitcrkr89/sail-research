@@ -1,0 +1,25 @@
+Source URL: https://www.trendforce.com/news/2026/01/09/news-nvidia-demand-fuels-hbm4-race-12-layer-ramps-16-layer-push-by-sk-hynix-samsung-and-micron/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: TrendForce — INDEPENDENT SECONDARY (cites Etnews, The Korea Herald, TechNews, Chosun Biz, Sisa Journal, New Daily)
+Published: 2026-01-09
+
+--- EXTRACT ---
+
+"At CES 2026, NVIDIA takes the lead with its next-generation Rubin, positioning itself as the initial, exclusive HBM4 client currently. ... it has pushed per-pin speeds above 11 Gbps, forcing SK hynix, Samsung, and Micron to revise HBM4 designs. With all three resubmitting samples ... HBM4 mass production is now expected no earlier than the end of 1Q 2026, as noted by TrendForce."
+
+SK hynix: "showcasing its 16-layer HBM4 at CES, making it the first company to do so. According to Etnews, the new 16-layer, 48 GB HBM4 builds on the 12-layer, 36 GB model, which already set a speed record of 11.7 Gbps ... achieving bandwidth exceeding 2 TB per second."
+
+"The Korea Herald highlights that scaling from 12 to 16 layers is far tougher than the jump from 8 to 12. Analysts cited by the report estimate that 16-layer HBM requires wafers to be thinned to around 30 um, compared with roughly 50 um for current 12-layer designs. With JEDEC limiting HBM4 package height to 775 um, conventional methods leave little room for further scaling."
+
+"While the industry increasingly sees hybrid bonding as the long-term answer ..., SK hynix is taking the lead today by stabilizing yields with its MR-MUF process. Samsung and Micron, meanwhile, continue to rely on the TC-NCF approach."
+
+Samsung: "most likely supplier to qualify first ... 1c DRAM ... 4nm logic process ... speeds exceeding 11Gbps" (Chosun Biz). "started production of its 1c DRAM, with yields reportedly nearing its 80% mass-production target" (Etnews). "Sisa Journal suggests ... Samsung is reportedly racing ahead with hybrid bonding, aiming for 16-layer HBM4E products by 2028 ... Samsung is already supplying hybrid-bonded HBM4 prototypes to key customers, including NVIDIA, yields remain low at around 10%."
+
+"Etnews reports that [Samsung] plans to boost HBM production by 50% in 2026, reaching around 250,000 wafers per month by year-end."
+
+Micron: "fabricates its HBM4 on the 1-beta node ... achieves industry-leading speeds above 11 Gbps and is on track for high-yield ramp-up in the second quarter of 2026" (December earnings call). "rapidly advancing from 12-layer HBM4 toward 16-layer products" (Etnews).
+
+"While 12-layer HBM4 has yet to fully ramp, NVIDIA's request for 16-layer supply in the second half of 2026 has put memory giants on high alert, Etnews reports."
+
+--- NOTE ---
+The ~10% hybrid-bonding prototype yield (Samsung) and ~80% 1c DRAM yield target are single-outlet, unattributed-source secondary claims — Evidence C at best, not usable as verified yield.

@@ -1,0 +1,17 @@
+Source URL: https://news.skhynix.com/gyujei-lee-next-gen-packaging-tech-key-to-hbm-success/
+Retrieved: 2026-07-31 (via FetchURL, main-text extract)
+Publisher: SK hynix Newsroom (official) — VENDOR PRIMARY
+Published: 2024 context (interview with Gyujei Lee, head of Package Product Development; references June 2024 SUPEX Award)
+
+--- EXTRACT (key passages) ---
+
+"Next-generation packaging technologies such as hybrid bonding have recently gained attention as a way to stack chips higher for increased performance and capacity while maintaining product thickness according to standard specifications," [Lee] stated. "Although heat control is still a challenge due to the narrower gap between the chips, these new packaging technologies are expected to solve the issue and meet the increasingly diverse performance needs of customers."
+
+Newsroom footnote: "Hybrid Bonding: A technology that connects chips together directly without bumps between them. This reduces the overall thickness of the chip, enabling high-layer stacking, and is therefore being considered for HBM products with 16 layers or more. SK hynix is currently reviewing both Advanced MR-MUF and hybrid bonding technologies."
+
+"SK hynix will continue to enhance its existing Advanced MR-MUF with excellent heat dissipation performance, while also securing new technologies."
+
+On MR-MUF history: MR-MUF applied to HBM2E; Advanced MR-MUF developed for 12-layer HBM3 (warpage of thinner chips) and applied to 12-layer HBM3E; "mass production of the world's highest-performing HBM3E in March 2024."
+
+--- NOTE ---
+This is the primary basis for the dataset's claim that "hybrid bonding is considered for 16+ layer HBM" at SK hynix. It is a 2024 statement of technology review, not a product commitment.
