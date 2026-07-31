@@ -32,33 +32,27 @@
 }
 </script>
 <style>
+  /* ── Insights-hub home (WB-inspired structure, Sail product) ── */
+
   .hero {
-    padding: 72px 0 56px;
+    padding: 48px 0 40px;
     border-bottom: 1px solid var(--line);
   }
 
-  .hero-kicker-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
+  .hero-inner {
+    max-width: 720px;
   }
 
-  .hero-kicker-row::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--line);
-    max-width: 120px;
+  .hero .eyebrow {
+    margin-bottom: 14px;
   }
 
   .hero h1 {
     font-family: var(--serif);
-    font-size: clamp(34px, 4.8vw, 52px);
+    font-size: clamp(30px, 4.2vw, 44px);
     font-weight: 600;
-    line-height: 1.12;
+    line-height: 1.15;
     letter-spacing: -0.025em;
-    max-width: 820px;
     color: var(--ink);
   }
 
@@ -68,328 +62,241 @@
     color: var(--navy);
   }
 
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.35fr 0.9fr;
-    gap: 48px;
-    align-items: start;
-    margin-top: 28px;
-  }
-
   .hero .lede {
+    margin-top: 16px;
     color: var(--muted);
-    font-size: 16.5px;
-    line-height: 1.7;
-    max-width: 520px;
+    font-size: 16px;
+    line-height: 1.65;
+    max-width: 560px;
   }
 
-  .anti-box {
-    margin-top: 24px;
-    padding: 16px 18px;
-    border-left: 3px solid var(--navy);
-    background: var(--paper-2);
+  .anti-inline {
+    margin-top: 14px;
     font-size: 13.5px;
     color: var(--ink-2);
-    max-width: 480px;
+    border-left: 3px solid var(--navy);
+    padding-left: 14px;
   }
 
-  .anti-box strong {
-    display: block;
-    font-family: var(--serif);
-    font-size: 14px;
+  .anti-inline strong {
     font-weight: 600;
-    margin-bottom: 4px;
     color: var(--ink);
   }
 
-  .hero-aside {
-    border: 1px solid var(--line);
-    background: var(--white);
-    padding: 0;
+  .hero .actions {
+    margin-top: 24px;
   }
 
-  .hero-aside-head {
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--line);
+  /* Section chrome */
+  .hub-section {
+    padding: 56px 0;
+  }
+
+  .hub-section-alt {
     background: var(--paper-2);
-    font-size: 10.5px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .hero-aside dl {
-    margin: 0;
-  }
-
-  .hero-aside .row {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 12px;
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--line);
-    font-size: 13px;
-  }
-
-  .hero-aside .row:last-child {
-    border-bottom: 0;
-  }
-
-  .hero-aside dt {
-    color: var(--muted-2);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-
-  .hero-aside dd {
-    color: var(--ink);
-    font-weight: 500;
-  }
-
-  /* Proof */
-  .proof-strip {
-    background: var(--white);
+    border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
 
-  .proof-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .proof-item {
-    padding: 24px 20px;
-    border-right: 1px solid var(--line);
-  }
-
-  .proof-item:last-child {
-    border-right: 0;
-  }
-
-  .proof-item .num {
-    font-family: var(--serif);
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--navy);
-    line-height: 1.15;
-  }
-
-  .proof-item .lbl {
-    margin-top: 6px;
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  /* Audience */
-  .audience-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  .audience-card h3 {
-    font-family: var(--serif);
-    font-size: 19px;
-    font-weight: 600;
-    margin: 12px 0 8px;
-  }
-
-  .audience-card p {
-    color: var(--muted);
-    font-size: 14px;
-  }
-
-  .not-for {
-    margin-top: 16px;
-    padding: 18px 22px;
-    border: 1px dashed var(--line-strong);
-    background: transparent;
-  }
-
-  .not-for h3 {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted-2);
-    margin-bottom: 10px;
-  }
-
-  .not-for ul {
-    list-style: none;
+  .hub-head {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px 20px;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
-  .not-for li::before {
-    content: "— ";
-    color: var(--muted-2);
-  }
-
-  /* Featured memo */
-  .feature-memo {
-    display: block;
-    border: 1px solid var(--line);
-    background: var(--white);
-    box-shadow: var(--shadow);
-    transition: border-color 0.15s ease;
-  }
-
-  .feature-memo:hover {
-    border-color: var(--line-strong);
-  }
-
-  .feature-memo-inner {
-    display: grid;
-    grid-template-columns: 1fr 200px;
-  }
-
-  .feature-body {
-    padding: 36px 40px;
-    border-right: 1px solid var(--line);
-  }
-
-  .feature-body h3 {
-    font-family: var(--serif);
-    font-size: clamp(24px, 3vw, 34px);
-    font-weight: 600;
-    line-height: 1.22;
-    margin-top: 16px;
-    color: var(--ink);
-  }
-
-  .feature-body p {
-    margin-top: 14px;
-    color: var(--muted);
-    font-size: 15px;
-    max-width: 560px;
-    line-height: 1.7;
-  }
-
-  .feature-meta {
-    padding: 28px 24px;
-    background: var(--paper-2);
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
   }
 
-  .feature-meta .m {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .feature-meta .m strong {
-    display: block;
+  .hub-head h2 {
     font-family: var(--serif);
-    font-size: 18px;
-    color: var(--navy);
+    font-size: clamp(24px, 2.8vw, 32px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 8px;
   }
 
-  .feature-meta .m span {
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted-2);
+  .hub-head p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 360px;
   }
 
-  .feature-go {
-    margin-top: 16px;
+  .see-all {
     font-size: 13px;
     font-weight: 600;
     color: var(--navy);
+    white-space: nowrap;
   }
 
-  .report-list {
-    margin-top: 14px;
-    border: 1px solid var(--line);
-    background: var(--white);
+  .see-all:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
-  .report-row {
-    display: grid;
-    grid-template-columns: 88px 1fr auto;
-    gap: 16px;
-    align-items: baseline;
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--line);
-    transition: background 0.12s ease;
-  }
-
-  .report-row:last-child {
-    border-bottom: 0;
-  }
-
-  .report-row:hover {
-    background: var(--paper-2);
-  }
-
-  .report-row .date {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted-2);
-  }
-
-  .report-row h4 {
-    font-size: 14.5px;
-    font-weight: 500;
-    color: var(--ink);
-    line-height: 1.4;
-  }
-
-  .report-row .meta {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 3px;
-  }
-
-  /* Coverage */
-  .coverage-grid {
+  /* Insight cards — primary home surface */
+  .insight-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    gap: 20px;
+  }
+
+  .insight-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--line);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    min-height: 100%;
+  }
+
+  .insight-card:hover {
+    border-color: var(--line-strong);
+    box-shadow: var(--shadow);
+  }
+
+  .insight-cover {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .insight-cover-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .insight-cover-bg.bio {
+    background:
+      linear-gradient(145deg, #1a2744 0%, #2c4a6e 45%, #3d6b5c 100%);
+  }
+
+  .insight-cover-bg.semi {
+    background:
+      linear-gradient(145deg, #12151a 0%, #1a2744 50%, #3a4558 100%);
+  }
+
+  .insight-cover-bg.bio2 {
+    background:
+      linear-gradient(160deg, #1e3a4c 0%, #2f5c4a 55%, #8a7340 120%);
+  }
+
+  .insight-cover-label {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(247, 245, 240, 0.9);
+  }
+
+  .insight-cover-grade {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    background: rgba(247, 245, 240, 0.95);
+    color: var(--navy);
+  }
+
+  .insight-body {
+    padding: 20px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .insight-date {
+    font-size: 12px;
+    color: var(--muted-2);
+    letter-spacing: 0.02em;
+  }
+
+  .insight-body h3 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 8px;
+    color: var(--ink);
+  }
+
+  .insight-body p {
+    margin-top: 10px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.55;
+    flex: 1;
+  }
+
+  .insight-more {
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .insight-card:hover .insight-more {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Coverage strip */
+  .coverage-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--line);
     background: var(--white);
   }
 
-  .coverage-card {
-    padding: 28px 24px 88px;
-    min-height: 280px;
-    position: relative;
+  .coverage-cell {
+    padding: 28px 24px;
     border-right: 1px solid var(--line);
+    transition: background 0.15s ease;
   }
 
-  .coverage-card:last-child {
+  .coverage-cell:last-child {
     border-right: 0;
   }
 
-  .coverage-num {
+  a.coverage-cell:hover {
+    background: var(--paper-2);
+  }
+
+  .coverage-cell .num {
     font-family: var(--mono);
     font-size: 11px;
     color: var(--accent);
     letter-spacing: 0.06em;
   }
 
-  .coverage-card h3 {
+  .coverage-cell h3 {
     font-family: var(--serif);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    margin-top: 20px;
+    margin: 12px 0 8px;
   }
 
-  .coverage-card > p {
+  .coverage-cell p {
+    font-size: 13px;
     color: var(--muted);
-    font-size: 13.5px;
-    margin-top: 10px;
+    line-height: 1.5;
   }
 
-  .coverage-badge {
+  .coverage-cell .q {
+    margin-top: 14px;
+    font-size: 12.5px;
+    color: var(--ink-2);
+    font-style: italic;
+  }
+
+  .cov-status {
     display: inline-block;
     margin-top: 12px;
     font-size: 10px;
@@ -399,45 +306,57 @@
     color: var(--live);
   }
 
-  .coverage-badge.build {
+  .cov-status.build {
     color: var(--muted-2);
   }
 
-  .coverage-q {
-    position: absolute;
-    left: 24px;
-    right: 24px;
-    bottom: 22px;
-    padding-top: 14px;
-    border-top: 1px solid var(--line);
-    font-size: 13px;
-    color: var(--ink-2);
-  }
-
-  .coverage-q span {
-    display: block;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted-2);
-    margin-bottom: 5px;
-  }
-
-  /* Evidence levels — memo style */
-  .evidence-shell {
+  /* Proof band thin */
+  .proof-band {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     border: 1px solid var(--line);
     background: var(--white);
   }
 
-  .evidence-tabs {
+  .proof-band > div {
+    padding: 18px 20px;
+    border-right: 1px solid var(--line);
+  }
+
+  .proof-band > div:last-child {
+    border-right: 0;
+  }
+
+  .proof-band strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .proof-band span {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Grade mini */
+  .grade-shell {
+    border: 1px solid var(--line);
+    background: var(--white);
+  }
+
+  .grade-tabs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-bottom: 1px solid var(--line);
     background: var(--paper-2);
   }
 
-  .evidence-tab {
-    min-height: 56px;
+  .grade-tab {
+    min-height: 52px;
     border: 0;
     border-right: 1px solid var(--line);
     background: transparent;
@@ -450,19 +369,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
   }
 
-  .evidence-tab:last-child {
+  .grade-tab:last-child {
     border-right: 0;
   }
 
-  .evidence-tab i {
+  .grade-tab i {
     font-style: normal;
     font-family: var(--serif);
     font-weight: 700;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -471,26 +390,25 @@
     color: var(--navy);
   }
 
-  .evidence-tab:hover,
-  .evidence-tab:focus-visible,
-  .evidence-tab[aria-selected="true"] {
+  .grade-tab:hover,
+  .grade-tab:focus-visible,
+  .grade-tab[aria-selected="true"] {
     color: var(--ink);
     outline: none;
     background: var(--white);
   }
 
-  .evidence-tab[aria-selected="true"] i {
+  .grade-tab[aria-selected="true"] i {
     background: var(--navy);
     border-color: var(--navy);
     color: var(--paper);
   }
 
-  .evidence-content {
-    padding: 36px 40px 40px;
-    min-height: 280px;
+  .grade-panel {
+    padding: 28px 32px 32px;
   }
 
-  .evidence-label {
+  .grade-panel .label {
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -498,179 +416,137 @@
     color: var(--accent);
   }
 
-  .evidence-content blockquote {
+  .grade-panel blockquote {
     font-family: var(--serif);
-    font-size: clamp(20px, 2.4vw, 28px);
+    font-size: clamp(18px, 2.2vw, 24px);
     font-weight: 500;
     line-height: 1.35;
+    margin-top: 12px;
+    max-width: 680px;
+    color: var(--ink);
+  }
+
+  .grade-panel .explain {
     margin-top: 14px;
-    max-width: 720px;
-    color: var(--ink);
-  }
-
-  .evidence-explain {
+    font-size: 14px;
     color: var(--muted);
-    font-size: 14.5px;
-    margin-top: 18px;
-    max-width: 640px;
+    max-width: 620px;
   }
 
-  .evidence-impact {
-    display: grid;
-    grid-template-columns: 130px 1fr;
-    gap: 16px;
+  .grade-panel .impact {
+    margin-top: 20px;
+    padding-top: 16px;
     border-top: 1px solid var(--line);
-    margin-top: 28px;
-    padding-top: 18px;
-  }
-
-  .evidence-impact span {
-    color: var(--muted-2);
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .evidence-impact p {
+    font-size: 13.5px;
     color: var(--ink-2);
-    font-size: 13.5px;
   }
 
-  /* Matrix */
-  .matrix {
-    display: grid;
-    grid-template-columns: 140px repeat(3, 1fr);
-    border: 1px solid var(--line);
-    background: var(--white);
-  }
-
-  .matrix > div {
-    min-height: 84px;
-    padding: 16px;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    font-size: 13px;
-  }
-
-  .matrix > div:nth-child(4n) {
-    border-right: 0;
-  }
-
-  .matrix .head {
-    min-height: auto;
-    background: var(--paper-2);
-    color: var(--muted-2);
+  .grade-panel .impact span {
+    display: block;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 6px;
   }
 
-  .matrix .row {
-    color: var(--navy);
-    font-weight: 600;
-    background: var(--paper-2);
-  }
-
-  .matrix strong {
-    display: block;
-    color: var(--ink);
-    font-weight: 500;
-    margin-bottom: 3px;
-  }
-
-  .matrix span {
-    color: var(--muted);
-    font-size: 12px;
-  }
-
-  .matrix .active-cell {
-    background: var(--accent-wash);
-  }
-
-  /* Method */
-  .method-grid {
+  /* Commission dual */
+  .commission-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .commission-main {
+    padding: 36px 36px 32px;
     border: 1px solid var(--line);
     background: var(--white);
   }
 
-  .method-card {
-    padding: 24px;
-    border-right: 1px solid var(--line);
-    min-height: 180px;
-  }
-
-  .method-card:last-child {
-    border-right: 0;
-  }
-
-  .method-card .n {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-  }
-
-  .method-card h3 {
+  .commission-main h2 {
     font-family: var(--serif);
-    font-size: 17px;
+    font-size: 28px;
     font-weight: 600;
-    margin: 12px 0 8px;
+    margin-top: 10px;
   }
 
-  .method-card p {
+  .commission-main p {
+    margin-top: 12px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 15px;
+    max-width: 480px;
   }
 
-  /* Principles */
-  .principles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-
-  .principle {
-    padding: 26px;
+  .commission-side {
+    padding: 28px 24px;
     border: 1px solid var(--line);
-    background: var(--white);
+    background: var(--navy);
+    color: rgba(247, 245, 240, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .principle h3 {
+  .commission-side h3 {
     font-family: var(--serif);
-    font-size: 17px;
-    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--paper);
   }
 
-  .principle p {
-    color: var(--muted);
+  .commission-side ul {
+    margin: 16px 0 0 18px;
     font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .commission-side li {
+    margin-bottom: 6px;
+  }
+
+  .commission-side .btn {
+    margin-top: 24px;
+    background: var(--paper);
+    border-color: var(--paper);
+    color: var(--navy);
+    align-self: flex-start;
+  }
+
+  .commission-side .btn:hover {
+    background: #e8e4db;
+    border-color: #e8e4db;
+    color: var(--navy);
+  }
+
+  .sla {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--muted-2);
   }
 
   /* Digest */
-  .digest-band {
+  .digest-row {
     display: grid;
-    grid-template-columns: 1.2fr 0.85fr;
-    gap: 40px;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
     align-items: center;
-    padding: 36px 40px;
+    padding: 32px 36px;
     border: 1px solid var(--line);
     background: var(--white);
   }
 
-  .digest-band h2 {
+  .digest-row h2 {
     font-family: var(--serif);
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
     margin-top: 8px;
   }
 
-  .digest-band p {
+  .digest-row p {
+    margin-top: 8px;
     color: var(--muted);
-    margin-top: 10px;
     font-size: 14px;
   }
 
@@ -693,126 +569,62 @@
     border-color: var(--navy);
   }
 
-  /* Scope CTA */
-  .scope-cta {
-    text-align: center;
-    padding: 56px 32px;
-    border: 1px solid var(--line);
-    background: var(--white);
-  }
-
-  .scope-cta h2 {
-    font-family: var(--serif);
-    font-size: clamp(26px, 3.2vw, 36px);
-    font-weight: 600;
-    margin-top: 10px;
-  }
-
-  .scope-cta p {
-    color: var(--muted);
-    max-width: 520px;
-    margin: 14px auto 24px;
-    font-size: 15px;
-  }
-
-  .sla {
-    margin-top: 16px;
-    font-size: 12px;
-    color: var(--muted-2);
-    letter-spacing: 0.04em;
-  }
-
-  .offer-note {
-    margin-top: 18px;
-    color: var(--muted);
-    font-size: 13px;
-  }
-
   @media (max-width: 900px) {
-    .hero-grid,
-    .feature-memo-inner,
-    .digest-band {
+    .insight-grid {
       grid-template-columns: 1fr;
     }
 
-    .feature-body {
+    .coverage-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .coverage-cell {
       border-right: 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .proof-grid {
+    .coverage-cell:last-child {
+      border-bottom: 0;
+    }
+
+    .proof-band {
       grid-template-columns: 1fr 1fr;
     }
 
-    .proof-item:nth-child(2n) {
+    .proof-band > div:nth-child(2n) {
       border-right: 0;
     }
 
-    .proof-item:nth-child(1),
-    .proof-item:nth-child(2) {
+    .proof-band > div:nth-child(1),
+    .proof-band > div:nth-child(2) {
       border-bottom: 1px solid var(--line);
     }
 
-    .coverage-grid,
-    .method-grid,
-    .principles,
-    .audience-grid {
+    .commission-grid,
+    .digest-row {
       grid-template-columns: 1fr;
-    }
-
-    .coverage-card {
-      border-right: 0;
-      border-bottom: 1px solid var(--line);
-      min-height: 220px;
-    }
-
-    .coverage-card:last-child {
-      border-bottom: 0;
-    }
-
-    .method-card {
-      border-right: 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .method-card:last-child {
-      border-bottom: 0;
-    }
-
-    .matrix {
-      grid-template-columns: 120px repeat(3, minmax(150px, 1fr));
-      overflow-x: auto;
-    }
-
-    .evidence-content {
-      padding: 28px 22px;
-    }
-
-    .evidence-impact {
-      grid-template-columns: 1fr;
-    }
-
-    .report-row {
-      grid-template-columns: 1fr;
-      gap: 4px;
     }
   }
 
   @media (max-width: 560px) {
-    .proof-grid {
+    .proof-band {
       grid-template-columns: 1fr;
     }
 
-    .proof-item {
+    .proof-band > div {
       border-right: 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .evidence-tabs {
+    .proof-band > div:last-child {
+      border-bottom: 0;
+    }
+
+    .grade-tabs {
       grid-template-columns: 1fr;
     }
 
-    .evidence-tab {
+    .grade-tab {
       border-right: 0;
       border-bottom: 1px solid var(--line);
       justify-content: flex-start;
@@ -822,7 +634,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .reveal { opacity: 1; transform: none; transition: none; }
+    .insight-card { transition: none; }
   }
 </style>
 </head>
@@ -854,445 +666,213 @@
 </nav>
 
 <main id="main">
-  <!-- HERO -->
+
+  <!-- HERO: compact institutional -->
   <header class="hero">
     <div class="wrap">
-      <div class="hero-kicker-row">
+      <div class="hero-inner">
         <div class="eyebrow">Decision-grade Korea industry evidence</div>
-      </div>
-      <h1>Verified to the claim boundary.<em> Nothing dressed up as more.</em></h1>
-      <div class="hero-grid">
-        <div>
-          <p class="lede">
-            Sail Research is an independent evidence desk for global strategy, competitive intelligence, and diligence teams.
-            We turn Korean and first-party primary sources into decision-ready briefs—on semiconductors, biopharma, and power infrastructure.
-          </p>
-          <div class="anti-box">
-            <strong>Not a news feed. Not a price target.</strong>
-            We would rather publish a B than sell you an A.
-          </div>
-          <div class="actions">
-            <a class="btn btn-primary" href="research/index.html">Browse the library</a>
-            <a class="btn" href="scope.html">Scope a decision</a>
-          </div>
+        <h1>Verified to the claim boundary.<em> Nothing dressed up as more.</em></h1>
+        <p class="lede">
+          An independent evidence desk for global strategy, competitive intelligence, and diligence teams—
+          semiconductors, biopharma, and power infrastructure.
+        </p>
+        <p class="anti-inline"><strong>Not a news feed. Not a price target.</strong> We would rather publish a B than sell you an A.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#insights">Latest evidence</a>
+          <a class="btn" href="scope.html">Scope a decision</a>
         </div>
-        <aside class="hero-aside" aria-label="Desk at a glance">
-          <div class="hero-aside-head">Desk at a glance</div>
-          <dl>
-            <div class="row"><dt>Focus</dt><dd>Korea bottlenecks</dd></div>
-            <div class="row"><dt>Core</dt><dd>Semi · Bio · Power</dd></div>
-            <div class="row"><dt>Standard</dt><dd>Evidence Grade A–C</dd></div>
-            <div class="row"><dt>Sources</dt><dd>Primary, captured &amp; hashed</dd></div>
-            <div class="row"><dt>Release</dt><dd>Human operator review</dd></div>
-            <div class="row"><dt>Latest</dt><dd>29 Jul 2026 · SR-2026-0009</dd></div>
-          </dl>
-        </aside>
       </div>
     </div>
   </header>
 
-  <!-- PROOF -->
-  <div class="proof-strip" aria-label="Desk metrics">
-    <div class="wrap proof-grid">
-      <div class="proof-item">
-        <div class="num">29 Jul 2026</div>
-        <div class="lbl">Latest Core publication</div>
-      </div>
-      <div class="proof-item">
-        <div class="num">Grade A–C</div>
-        <div class="lbl">Every report carries a verification grade</div>
-      </div>
-      <div class="proof-item">
-        <div class="num">Primary sources</div>
-        <div class="lbl">First-party captures with hash trail</div>
-      </div>
-      <div class="proof-item">
-        <div class="num">Human review</div>
-        <div class="lbl">No pipeline publishes alone</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WHO FOR -->
-  <section class="section" id="for">
-    <div class="wrap reveal">
-      <div class="section-head">
+  <!-- INSIGHTS HUB: primary surface -->
+  <section class="hub-section" id="insights">
+    <div class="wrap">
+      <div class="hub-head">
         <div>
-          <div class="eyebrow">Who this is for</div>
-          <h2 class="section-title">Built for decisions that must survive challenge.</h2>
+          <div class="eyebrow">Insights</div>
+          <h2>Latest evidence</h2>
         </div>
-        <p class="section-lede">If your team must put a Korea deep-tech conclusion in front of a board, investment committee, or global HQ—this desk is designed for that moment.</p>
+        <div style="text-align: right;">
+          <p>Core coverage only—graded, primary-sourced, human-reviewed.</p>
+          <a class="see-all" href="research/index.html">See all insights →</a>
+        </div>
       </div>
-      <div class="audience-grid">
-        <article class="card card-hover audience-card">
-          <span class="tag tag-accent">Strategy</span>
-          <h3>Corporate strategy &amp; BD</h3>
-          <p>Separate generation transitions and capability signals from vendor narrative—so roadmap language does not become a capital allocation assumption.</p>
-        </article>
-        <article class="card card-hover audience-card">
-          <span class="tag tag-accent">Intelligence</span>
-          <h3>Competitive intelligence</h3>
-          <p>Track what primary disclosures actually establish, with watch conditions that tell you when a thesis should move.</p>
-        </article>
-        <article class="card card-hover audience-card">
-          <span class="tag tag-accent">Diligence</span>
-          <h3>Funds &amp; diligence desks</h3>
-          <p>Evidence maps and claim boundaries you can attach to a memo—not a headline chain that collapses under scrutiny.</p>
-        </article>
-        <article class="card card-hover audience-card">
-          <span class="tag tag-accent">Supply chain</span>
-          <h3>Supply-chain &amp; ops</h3>
-          <p>Shift monitoring from announcement theater toward qualification, volume, lead time, and deployment evidence.</p>
-        </article>
-      </div>
-      <div class="not-for">
-        <h3>Not for</h3>
-        <ul>
-          <li>Traders seeking price targets without disclosure</li>
-          <li>Teams that need unverified media summaries</li>
-          <li>Clients who require grade inflation or hidden gaps</li>
-        </ul>
-      </div>
-      <div class="actions">
-        <a class="btn" href="for.html">Full audience guide</a>
+
+      <div class="insight-grid">
+        <a class="insight-card" href="reports/20260729-agc-yokohama-gmp-readiness.html">
+          <div class="insight-cover">
+            <div class="insight-cover-bg bio" aria-hidden="true"></div>
+            <span class="insight-cover-grade">Evidence B</span>
+            <span class="insight-cover-label">Biopharma · CDMO</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-date">Friday, July 29, 2026</div>
+            <h3>AGC Biologics Yokohama: What the Official Scope Discloses About GMP Readiness</h3>
+            <p>What the official release establishes about facility scope and readiness—and where GMP claims still stop.</p>
+            <span class="insight-more">Read more</span>
+          </div>
+        </a>
+
+        <a class="insight-card" href="reports/20260727-wuxiui-patent-no-bleed-perfusion.html">
+          <div class="insight-cover">
+            <div class="insight-cover-bg bio2" aria-hidden="true"></div>
+            <span class="insight-cover-grade">Evidence B</span>
+            <span class="insight-cover-label">Biopharma · Patent</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-date">Sunday, July 27, 2026</div>
+            <h3>No Bleed, Continuous Harvest: What the Patent Behind WuXiUI Actually Proves</h3>
+            <p>A full patent read—separated from marketing language around continuous biomanufacturing claims.</p>
+            <span class="insight-more">Read more</span>
+          </div>
+        </a>
+
+        <a class="insight-card" href="reports/20260713-hbm4-vendor-confirmed.html">
+          <div class="insight-cover">
+            <div class="insight-cover-bg semi" aria-hidden="true"></div>
+            <span class="insight-cover-grade">Evidence A</span>
+            <span class="insight-cover-label">Semiconductors · HBM</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-date">Monday, July 13, 2026</div>
+            <h3>HBM4 Goes Commercial: All Three Vendors Confirm the Generation Transition</h3>
+            <p>What first-party disclosures establish about the generation handoff—and what they still do not.</p>
+            <span class="insight-more">Read more</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED -->
-  <section class="section section-alt" id="latest">
-    <div class="wrap reveal">
-      <div class="section-head">
+  <!-- COVERAGE STRIP -->
+  <section class="hub-section hub-section-alt" id="coverage">
+    <div class="wrap">
+      <div class="hub-head">
         <div>
-          <div class="eyebrow">Featured brief</div>
-          <h2 class="section-title">The latest verified signal.</h2>
+          <div class="eyebrow">What we cover</div>
+          <h2>Three decision arenas</h2>
         </div>
-        <p class="section-lede">Core coverage only. A narrow thesis with counter-evidence and verification gaps kept visible.</p>
+        <p>Each area begins with a decision question—not a news category.</p>
       </div>
-
-      <a class="feature-memo" href="reports/20260729-agc-yokohama-gmp-readiness.html">
-        <div class="feature-memo-inner">
-          <div class="feature-body">
-            <div class="tags">
-              <span class="tag tag-accent">Biopharma</span>
-              <span class="tag">Evidence B</span>
-              <span class="tag">CDMO</span>
-            </div>
-            <h3>AGC Biologics Yokohama Agreement: What the Official Scope Discloses About New Facility GMP Readiness</h3>
-            <p>What the official release establishes about scope and readiness—and where facility GMP claims still stop. Fact and hypothesis remain separated.</p>
-            <div class="feature-go">Read the evidence brief →</div>
-          </div>
-          <div class="feature-meta">
-            <div>
-              <div class="m"><strong>29 Jul</strong><span>Publication</span></div>
-              <div class="m"><strong>0009</strong><span>Research ID</span></div>
-              <div class="m"><strong>Free</strong><span>Public brief</span></div>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <div class="report-list">
-        <a class="report-row" href="reports/20260727-wuxiui-patent-no-bleed-perfusion.html">
-          <div class="date">27 Jul</div>
-          <div>
-            <h4>No Bleed, Continuous Harvest: What the Patent Behind WuXiUI Actually Proves</h4>
-            <div class="meta">Biotech · CDMO · Evidence B · SR-2026-0008</div>
-          </div>
-          <span class="text-link">Read →</span>
+      <div class="coverage-strip">
+        <a class="coverage-cell" href="research/index.html">
+          <div class="num">01</div>
+          <h3>Semiconductors</h3>
+          <p>HBM, advanced packaging, foundry transitions, qualification, and capacity signals.</p>
+          <div class="cov-status">Active coverage</div>
+          <div class="q">Where is technical readiness becoming commercial leverage?</div>
         </a>
-        <a class="report-row" href="reports/20260713-hbm4-vendor-confirmed.html">
-          <div class="date">13 Jul</div>
-          <div>
-            <h4>HBM4 Goes Commercial: All Three Vendors Confirm the Generation Transition</h4>
-            <div class="meta">Semiconductors · Evidence A · SR-2026-0006</div>
-          </div>
-          <span class="text-link">Read →</span>
+        <a class="coverage-cell" href="research/index.html">
+          <div class="num">02</div>
+          <h3>Biopharma</h3>
+          <p>CDO, CRO, CDMO, ADC manufacturing, capacity expansion, and capability signals.</p>
+          <div class="cov-status">Active · expanding</div>
+          <div class="q">Which capabilities shorten the path from molecule to scale?</div>
         </a>
-        <a class="report-row" href="reports/20260708-hbm-tech-tracking.html">
-          <div class="date">08 Jul</div>
-          <div>
-            <h4>Tracking the HBM Transition: Who Actually Leads the Race to HBM4E?</h4>
-            <div class="meta">Semiconductors · Evidence A · SR-2026-0005</div>
-          </div>
-          <span class="text-link">Read →</span>
+        <a class="coverage-cell" href="scope.html">
+          <div class="num">03</div>
+          <h3>Power &amp; Infrastructure</h3>
+          <p>Grid constraints, data-center demand, generation capacity, and equipment lead times.</p>
+          <div class="cov-status build">Coverage buildout</div>
+          <div class="q">Which physical constraints set the pace of AI infrastructure?</div>
         </a>
-      </div>
-
-      <div class="actions">
-        <a class="btn" href="research/index.html">Full library</a>
       </div>
     </div>
   </section>
 
-  <!-- EVIDENCE -->
-  <section class="section" id="evidence">
-    <div class="wrap reveal">
-      <div class="section-head">
+  <!-- PROOF BAND -->
+  <section class="hub-section" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="wrap">
+      <div class="proof-band" aria-label="Desk standards">
+        <div><strong>29 Jul 2026</strong><span>Latest Core publication</span></div>
+        <div><strong>Grade A–C</strong><span>Every report carries a verification grade</span></div>
+        <div><strong>Primary sources</strong><span>Captured and hashed where applied</span></div>
+        <div><strong>Human review</strong><span>No pipeline publishes alone</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE GRADE (compact) -->
+  <section class="hub-section hub-section-alt" id="evidence" style="padding-top: 48px; padding-bottom: 48px;">
+    <div class="wrap">
+      <div class="hub-head">
         <div>
           <div class="eyebrow">How to read our work</div>
-          <h2 class="section-title">One thesis. Three levels of truth.</h2>
+          <h2>One thesis. Three levels of truth.</h2>
         </div>
-        <p class="section-lede">Top-line conclusions are only useful when you can see what is verified, what is interpreted, and what remains open.</p>
+        <a class="see-all" href="research/methodology.html">Full methodology →</a>
       </div>
-      <div class="evidence-shell">
-        <div class="evidence-tabs" role="tablist" aria-label="Evidence layers">
-          <button class="evidence-tab" type="button" role="tab" aria-selected="true" data-evidence="fact"><i>A</i> Verified fact</button>
-          <button class="evidence-tab" type="button" role="tab" aria-selected="false" data-evidence="interpretation"><i>B</i> Interpretation</button>
-          <button class="evidence-tab" type="button" role="tab" aria-selected="false" data-evidence="gap"><i>C</i> Open gap</button>
+      <div class="grade-shell">
+        <div class="grade-tabs" role="tablist" aria-label="Evidence layers">
+          <button class="grade-tab" type="button" role="tab" aria-selected="true" data-evidence="fact"><i>A</i> Verified fact</button>
+          <button class="grade-tab" type="button" role="tab" aria-selected="false" data-evidence="interpretation"><i>B</i> Interpretation</button>
+          <button class="grade-tab" type="button" role="tab" aria-selected="false" data-evidence="gap"><i>C</i> Open gap</button>
         </div>
-        <div class="evidence-content" aria-live="polite">
-          <div class="evidence-label" id="evidence-label">HBM4 transition · Verified fact · Primary sources</div>
+        <div class="grade-panel" aria-live="polite">
+          <div class="label" id="evidence-label">HBM4 transition · Verified fact · Primary sources</div>
           <blockquote id="evidence-quote">All three major HBM vendors have live first-party disclosures establishing an HBM4 product, demonstration, production, or shipment position.</blockquote>
-          <p class="evidence-explain" id="evidence-explain">This supports the narrow conclusion that the generation transition is active. It does not establish which vendor leads on customer qualification, volume, yield, or economics.</p>
-          <div class="evidence-impact">
+          <p class="explain" id="evidence-explain">This supports the narrow conclusion that the generation transition is active. It does not establish which vendor leads on qualification, volume, yield, or economics.</p>
+          <div class="impact">
             <span>Decision implication</span>
             <p id="evidence-impact">Shift monitoring from roadmap existence toward qualification, volume, yield, packaging, and customer-specific deployment evidence.</p>
           </div>
         </div>
       </div>
-      <div class="actions">
-        <a class="btn-ghost" href="reports/20260713-hbm4-vendor-confirmed.html">Open the full HBM4 brief →</a>
-      </div>
     </div>
   </section>
 
-  <!-- COVERAGE -->
-  <section class="section section-alt" id="coverage">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Three decision arenas</div>
-          <h2 class="section-title">Local evidence matters most at the bottleneck.</h2>
+  <!-- COMMISSION -->
+  <section class="hub-section" id="commission">
+    <div class="wrap">
+      <div class="commission-grid">
+        <div class="commission-main">
+          <div class="eyebrow">Engage the desk</div>
+          <h2>Bring us the decision—not just the topic.</h2>
+          <p>Commission a Decision Memo, Source Map, or Signal Tracker built on the same capture, grade, and human-review standard as the public library.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="scope.html">Open scope form</a>
+            <a class="btn" href="product.html">View offers</a>
+          </div>
+          <p class="sla">Response within 2 business days · proceed / narrow / not a fit</p>
         </div>
-        <p class="section-lede">Each coverage area starts with a decision question—not a news category.</p>
-      </div>
-      <div class="coverage-grid">
-        <article class="coverage-card">
-          <div class="coverage-num">01</div>
-          <h3>Semiconductors</h3>
-          <p>HBM, advanced packaging, foundry transitions, qualification, capacity, and supplier dependencies.</p>
-          <span class="coverage-badge">Active coverage</span>
-          <div class="coverage-q"><span>Decision question</span>Where is technical readiness becoming commercial leverage?</div>
-        </article>
-        <article class="coverage-card">
-          <div class="coverage-num">02</div>
-          <h3>Biopharma</h3>
-          <p>CDO, CRO, CDMO, ADC manufacturing, capacity expansion, customer demand, and technology capability.</p>
-          <span class="coverage-badge">Active · expanding</span>
-          <div class="coverage-q"><span>Decision question</span>Which capabilities shorten the path from molecule to scalable production?</div>
-        </article>
-        <article class="coverage-card">
-          <div class="coverage-num">03</div>
-          <h3>Power &amp; Infrastructure</h3>
-          <p>Grid constraints, data-center demand, generation capacity, equipment lead times, and energy resilience.</p>
-          <span class="coverage-badge build">Coverage buildout</span>
-          <div class="coverage-q"><span>Decision question</span>Which physical constraints set the pace of AI infrastructure growth?</div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- MATRIX -->
-  <section class="section" id="matrix">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Signal matrix</div>
-          <h2 class="section-title">What we watch before a thesis changes.</h2>
+        <div class="commission-side">
+          <div>
+            <h3>Decision Memo</h3>
+            <p style="margin-top: 8px; font-size: 13px;">Most teams start here.</p>
+            <ul>
+              <li>One decision question</li>
+              <li>Evidence map with grades</li>
+              <li>Open gaps stated plainly</li>
+              <li>Watch conditions</li>
+              <li>7–10 business days</li>
+            </ul>
+          </div>
+          <a class="btn" href="scope.html">Request a memo</a>
         </div>
-        <p class="section-lede">Current public position, upgrade conditions, and honest buildout status—no synthetic coverage.</p>
-      </div>
-      <div class="matrix" role="table" aria-label="Coverage signal matrix">
-        <div class="head" role="columnheader">Coverage</div>
-        <div class="head" role="columnheader">Current position</div>
-        <div class="head" role="columnheader">Watch condition</div>
-        <div class="head" role="columnheader">Public status</div>
-
-        <div class="row" role="rowheader">Semiconductors</div>
-        <div class="active-cell"><strong>HBM4 transition active</strong><span>Vendor-confirmed generation signals</span></div>
-        <div><strong>Qualification &amp; volume</strong><span>Customer, yield, and ramp disclosure</span></div>
-        <div><strong>Published</strong><span>Core HBM briefs live</span></div>
-
-        <div class="row" role="rowheader">Biopharma</div>
-        <div><strong>Capability signals active</strong><span>CDMO / continuous process disclosures</span></div>
-        <div><strong>Capability-to-demand proof</strong><span>Contracts, timelines, scale evidence</span></div>
-        <div><strong>Published</strong><span>Multiple CDMO briefs</span></div>
-
-        <div class="row" role="rowheader">Power</div>
-        <div><strong>Coverage framework</strong><span>Grid, data center, equipment scope</span></div>
-        <div><strong>Constraint-to-project proof</strong><span>Lead times, capacity, approvals</span></div>
-        <div><strong>Buildout</strong><span>Commissioned scope available</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCT -->
-  <section class="section section-alt" id="product">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">What you can commission</div>
-          <h2 class="section-title">From public proof to scoped decision work.</h2>
-        </div>
-        <p class="section-lede">Most teams start with a free brief, then commission a Decision Memo when one question must be answered to a claim boundary.</p>
-      </div>
-      <div class="table-scroll">
-        <table class="pro-table">
-          <thead>
-            <tr>
-              <th>Offer</th>
-              <th>Outcome</th>
-              <th>Timing</th>
-              <th>Motion</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Public Brief</strong><span>Core library</span></td>
-              <td><strong>Challenge-ready public thesis</strong><span>Grade, sources, watch list, open gaps</span></td>
-              <td><span>Ongoing</span></td>
-              <td><span>Free</span></td>
-            </tr>
-            <tr>
-              <td><strong>Evidence Digest</strong><span>Email</span></td>
-              <td><strong>Watch conditions that moved</strong><span>Grade A highlights · no noise feed</span></td>
-              <td><span>~2× / month</span></td>
-              <td><span>Free · subscribe</span></td>
-            </tr>
-            <tr>
-              <td><strong>Decision Memo</strong><span>Most start here</span></td>
-              <td><strong>One decision question, to boundary</strong><span>Evidence map · implications · gaps · watch</span></td>
-              <td><span>7–10 business days</span></td>
-              <td><span>Paid · scope form</span></td>
-            </tr>
-            <tr>
-              <td><strong>Source Map</strong></td>
-              <td><strong>Primary-source landscape</strong><span>What exists, verified status, missing pieces</span></td>
-              <td><span>5–7 business days</span></td>
-              <td><span>Paid · scope form</span></td>
-            </tr>
-            <tr>
-              <td><strong>Signal Tracker</strong></td>
-              <td><strong>Cadenced monitoring</strong><span>Watch conditions on a fixed cycle</span></td>
-              <td><span>Monthly</span></td>
-              <td><span>Subscription</span></td>
-            </tr>
-            <tr>
-              <td><strong>Scoped Engagement</strong></td>
-              <td><strong>Custom desk on your question</strong><span>Brief + map + optional walkthrough</span></td>
-              <td><span>Custom</span></td>
-              <td><span>Sales · scope form</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="offer-note">We only accept scopes where primary sources can move the decision. Response within <strong style="color: var(--ink-2); font-weight: 500;">2 business days</strong>: proceed, narrow, or not a fit.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="scope.html">Open scope form</a>
-        <a class="btn" href="product.html">Full product detail</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- METHOD -->
-  <section class="section" id="method">
-    <div class="wrap reveal">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">Method in 60 seconds</div>
-          <h2 class="section-title">The discipline behind every grade.</h2>
-        </div>
-        <p class="section-lede">Process, not adjectives. Full methodology is public.</p>
-      </div>
-      <div class="method-grid">
-        <article class="method-card">
-          <div class="n">01</div>
-          <h3>Hashed capture</h3>
-          <p>Primary pages recorded with retrieval date, size, and SHA-256—so the record stays checkable.</p>
-        </article>
-        <article class="method-card">
-          <div class="n">02</div>
-          <h3>Evidence grades</h3>
-          <p>A primary-verified · B headline-corroborated · C hypothesis. We publish the grade we earned.</p>
-        </article>
-        <article class="method-card">
-          <div class="n">03</div>
-          <h3>Fact / hypothesis</h3>
-          <p>Model scores never masquerade as disclosed fact. Gaps stay labeled as gaps.</p>
-        </article>
-        <article class="method-card">
-          <div class="n">04</div>
-          <h3>Operator review</h3>
-          <p>A human reviews the trail before release. Grades go down when support is thin.</p>
-        </article>
-      </div>
-      <div class="actions">
-        <a class="btn" href="research/methodology.html">Full methodology</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRINCIPLES -->
-  <section class="section section-alt" id="principles">
-    <div class="wrap reveal">
-      <div class="section-head single">
-        <div>
-          <div class="eyebrow">Operating principles</div>
-          <h2 class="section-title">How this desk stays decision-grade.</h2>
-        </div>
-      </div>
-      <div class="principles">
-        <article class="principle">
-          <h3>Claim honesty</h3>
-          <p>No performance assertions, no revenue promises, no uncited figures. Counter-evidence stays on the card.</p>
-        </article>
-        <article class="principle">
-          <h3>Independence</h3>
-          <p>Public work is not paid placement. Commissioned scopes do not buy a higher evidence grade.</p>
-        </article>
-        <article class="principle">
-          <h3>Decline when needed</h3>
-          <p>If primary sources cannot move the decision, we say so—and we do not take the engagement.</p>
-        </article>
-      </div>
-      <div class="actions">
-        <a class="btn" href="about.html">About the desk</a>
       </div>
     </div>
   </section>
 
   <!-- DIGEST -->
-  <section class="section" id="digest">
-    <div class="wrap reveal">
-      <div class="digest-band">
+  <section class="hub-section hub-section-alt" id="digest" style="padding-top: 48px; padding-bottom: 56px;">
+    <div class="wrap">
+      <div class="digest-row">
         <div>
           <div class="eyebrow">Evidence Digest</div>
           <h2>Watch conditions, not a noise feed.</h2>
-          <p>Occasional email when Core coverage produces a Grade A signal or a material watch-condition change. No daily clutter.</p>
+          <p>Occasional email when Core coverage produces a Grade A signal or a material watch-condition change.</p>
         </div>
         <form class="digest-form" action="digest.html" method="get">
           <label class="visually-hidden" for="digest-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email</label>
           <input id="digest-email" name="email" type="email" required placeholder="work@company.com" autocomplete="email">
           <button class="btn btn-primary" type="submit">Request digest access</button>
-          <p class="form-note">You’ll complete a short confirmation on the next page.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- SCOPE -->
-  <section class="section section-tight" id="commission">
-    <div class="wrap reveal">
-      <div class="scope-cta">
-        <div class="eyebrow">Commissioned research</div>
-        <h2>Bring us the decision—not just the topic.</h2>
-        <p>Send the decision question and the date you must answer by. We’ll return a scope: sources we will capture, the grade we can target, and what will remain an open gap.</p>
-        <a class="btn btn-primary" href="scope.html">Open the scope form</a>
-        <p class="sla">Response SLA · 2 business days · proceed / narrow / not a fit</p>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="site-footer">
@@ -1308,7 +888,7 @@
         <a href="research/index.html">Research library</a>
         <a href="research/methodology.html">Methodology</a>
         <a href="#coverage">Coverage</a>
-        <a href="#evidence">Evidence levels</a>
+        <a href="#insights">Latest evidence</a>
       </div>
       <div class="footer-col">
         <h4>Engage</h4>
@@ -1326,7 +906,7 @@
     </div>
     <div class="footer-bottom">
       <span>© Sail Research · Evidence desk</span>
-      <span>Public-source intelligence · Human-reviewed grades</span>
+      <span>Public-source intelligence · Human-reviewed grades · Independent of any issuer or placement</span>
     </div>
   </div>
 </footer>
@@ -1336,7 +916,7 @@ const evidence = {
   fact: {
     label: "HBM4 transition · Verified fact · Primary sources",
     quote: "All three major HBM vendors have live first-party disclosures establishing an HBM4 product, demonstration, production, or shipment position.",
-    explain: "This supports the narrow conclusion that the generation transition is active. It does not establish which vendor leads on customer qualification, volume, yield, or economics.",
+    explain: "This supports the narrow conclusion that the generation transition is active. It does not establish which vendor leads on qualification, volume, yield, or economics.",
     impact: "Shift monitoring from roadmap existence toward qualification, volume, yield, packaging, and customer-specific deployment evidence."
   },
   interpretation: {
@@ -1382,22 +962,6 @@ document.querySelectorAll("[data-evidence]").forEach((button) => {
     })
   );
 })();
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) =>
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      }),
-    { threshold: 0.1 }
-  );
-  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-} else {
-  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
-}
 </script>
 </body>
 </html>
