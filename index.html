@@ -46,8 +46,8 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(105deg, rgba(10, 18, 28, 0.88) 0%, rgba(10, 18, 28, 0.72) 42%, rgba(10, 18, 28, 0.35) 68%, rgba(10, 18, 28, 0.2) 100%),
-      linear-gradient(to top, rgba(10, 18, 28, 0.55), transparent 45%);
+      linear-gradient(105deg, rgba(7, 17, 12, 0.9) 0%, rgba(12, 26, 20, 0.78) 42%, rgba(12, 26, 20, 0.4) 68%, rgba(12, 26, 20, 0.22) 100%),
+      linear-gradient(to top, rgba(7, 17, 12, 0.62), transparent 45%);
   }
   .hero .wrap {
     position: relative;
@@ -67,9 +67,9 @@
   .hero h1 span { color: rgba(255, 255, 255, 0.72); }
   .hero .lede { color: rgba(255, 255, 255, 0.78); }
   .hero .btn { border-color: #fff; color: #fff; }
-  .hero .btn:hover { background: #fff; color: var(--ink); }
-  .hero .btn-solid { background: #fff; color: var(--ink); border-color: #fff; }
-  .hero .btn-solid:hover { background: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.9); color: var(--ink); }
+  .hero .btn:hover { background: var(--bg-elevated); color: var(--bg-deep); }
+  .hero .btn-solid { background: var(--bg-elevated); color: var(--bg-deep); border-color: #fff; }
+  .hero .btn-solid:hover { background: var(--brass); border-color: var(--brass); color: var(--bg-deep); }
   .hero h1 {
     font-family: var(--serif);
     font-size: clamp(2.45rem, 5vw, 3.65rem);
@@ -92,12 +92,13 @@
     line-height: 1.7;
   }
   .hero-aside {
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(19, 38, 29, 0.92);
+    border: 1px solid rgba(245, 247, 246, 0.16);
     border-top: 2px solid var(--brass);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
     padding: 1.5rem 1.4rem 1.45rem;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    color: var(--ink);
   }
   .hero-aside .label {
     font-size: 0.625rem;
@@ -175,7 +176,7 @@
     right: 0;
     bottom: 0;
     height: 55%;
-    background: linear-gradient(to top, rgba(10, 18, 28, 0.92), transparent);
+    background: linear-gradient(to top, rgba(7, 17, 12, 0.94), transparent);
   }
   .feature-visual .badge {
     position: absolute;
@@ -316,7 +317,7 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #2d6a4f;
+    color: var(--focus);
   }
   .program .status.build { color: var(--ink-faint); }
 
@@ -366,18 +367,18 @@
     align-items: center;
     justify-content: center;
     border: 1px solid var(--line-strong);
-    background: #fff;
+    background: var(--bg-elevated);
     color: var(--ink);
   }
   .evidence-tab[aria-selected="true"],
   .evidence-tab:hover {
     color: var(--ink);
-    background: #fff;
+    background: var(--bg);
   }
   .evidence-tab[aria-selected="true"] i {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: #fff;
+    background: var(--bg-elevated);
+    border-color: #fff;
+    color: var(--bg-deep);
   }
   .evidence-panel {
     padding: 2rem 2.25rem;
@@ -524,7 +525,7 @@
     font-size: 0.95rem;
   }
   .digest input:focus {
-    outline: 2px solid rgba(42, 80, 128, 0.22);
+    outline: 2px solid rgba(95, 184, 146, 0.28);
     border-color: var(--focus);
   }
 
@@ -572,7 +573,6 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <img class="brand-mark" src="assets/mark.svg" width="32" height="32" alt="">
       <span class="brand-text">
         <span class="brand-name">Sail <em>Research</em></span>
         <span class="brand-tag">Evidence Institute</span>
@@ -800,7 +800,7 @@
       <h2>Bring the decision—not just the topic.</h2>
       <p>Commission a Decision Memo, Source Map, or Signal Tracker on the same capture, grading, and human-review standard as the public library.</p>
       <div class="actions">
-        <a class="btn btn-light btn-solid" href="scope.html" style="background:#fff;color:var(--ink);border-color:#fff">Start a commission</a>
+        <a class="btn btn-solid" href="scope.html">Start a commission</a>
         <a class="btn btn-light" href="product.html">View offerings</a>
       </div>
       <p class="sla">Response within two business days · proceed / narrow / not a fit</p>
@@ -831,7 +831,6 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand">
-          <img class="brand-mark" src="assets/mark-inverse.svg" width="30" height="30" alt="">
           <span class="brand-text">
             <span class="brand-name">Sail <em style="color:#d4b56a;font-style:normal">Research</em></span>
             <span class="brand-tag">Evidence Institute · Seoul</span>

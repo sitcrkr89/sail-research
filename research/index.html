@@ -59,8 +59,8 @@
     text-decoration:none;
     transition:background 0.15s var(--ease);
   }
-  .pub:hover { background:rgba(255,255,255,0.65); }
-  .pub:hover h3 { color:var(--navy-mid); }
+  .pub:hover { background:rgba(255,255,255,0.04); }
+  .pub:hover h3 { color:var(--brass); }
   .pub .date {
     font-family:var(--serif);
     font-size:0.92rem;
@@ -129,11 +129,11 @@
     color:var(--ink-faint);
     font-size:0.95rem;
   }
-  .grades { margin:2.5rem 0; padding:2rem; background:#fff; border:1px solid var(--line); }
+  .grades { margin:2.5rem 0; padding:2rem; background:var(--bg-elevated); border:1px solid var(--line); }
   .grades h2 { font-family:var(--serif); font-size:1.4rem; font-weight:500; color:var(--ink); margin-bottom:0.5rem; }
   .g-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:1.25rem; }
-  .g-badge { font-family:var(--serif); font-weight:600; width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; background:var(--ink); color:#fff; }
-  .g-badge.b { background:#6b7687; }
+  .g-badge { font-family:var(--serif); font-weight:600; width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; background:var(--bg-elevated); color:var(--bg-deep); }
+  .g-badge.b { background:#7a8f85; color:#fff; }
   .g-badge.c { background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft); }
   .g-item { display:flex; gap:0.75rem; }
   .g-item .t { font-weight:700; color:var(--ink); font-size:0.92rem; }
@@ -153,7 +153,6 @@
 <div class="utility"><div class="wrap"><span><span class="dot"></span>Institute active · Seoul</span><span>Latest <strong>29 July 2026</strong></span></div></div>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="../index.html">
-      <img class="brand-mark" src="../assets/mark.svg" width="32" height="32" alt="">
       <span class="brand-text">
         <span class="brand-name">Sail <em>Research</em></span>
         <span class="brand-tag">Evidence Institute</span>
@@ -336,7 +335,7 @@
       <p class="kicker" style="color:#d4b56a">Commission</p>
       <h2>Need a decision-specific brief?</h2>
       <p style="margin-bottom:1.25rem;opacity:.8">Same capture-and-verify trail as the public library.</p>
-      <a class="btn" href="../scope.html" style="background:#fff;color:var(--ink);border-color:#fff">Start a commission</a>
+      <a class="btn btn-solid" href="../scope.html">Start a commission</a>
     </div>
   </div>
 </main>
@@ -344,7 +343,6 @@
 <footer class="site-footer"><div class="wrap">
   <div class="footer-bottom" style="border:0;padding:0">
     <div class="brand">
-          <img class="brand-mark" src="../assets/mark-inverse.svg" width="30" height="30" alt="">
           <span class="brand-text">
             <span class="brand-name">Sail <em>Research</em></span>
             <span class="brand-tag">Evidence Institute</span>
