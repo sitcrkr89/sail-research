@@ -12,31 +12,123 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <style>
-  .filters { display:flex; flex-wrap:wrap; gap:0.5rem; margin:1.5rem 0 1.25rem; }
+  /* Journal table-of-contents typography */
+  .toc-mast {
+    display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between;
+    gap:0.75rem 1.5rem; padding-bottom:1.1rem; margin-bottom:0.25rem;
+    border-bottom:2px solid var(--ink);
+  }
+  .toc-mast .vol {
+    font-family:var(--serif); font-size:1.05rem; font-weight:500; color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  .toc-mast .vol em { font-style:italic; font-weight:400; color:var(--ink-soft); }
+  .toc-mast .iss {
+    font-size:0.68rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .filters { display:flex; flex-wrap:wrap; gap:0.45rem; margin:1.35rem 0 1.1rem; }
   .filter-btn {
-    border:1px solid var(--line-strong); background:#fff; color:var(--ink-2);
-    padding:0.5rem 0.85rem; font-size:0.72rem; font-weight:700; letter-spacing:0.08em;
-    text-transform:uppercase; cursor:pointer;
+    border:0; border-bottom:2px solid transparent; background:transparent; color:var(--ink-soft);
+    padding:0.35rem 0.15rem; margin-right:0.85rem; font-size:0.72rem; font-weight:700;
+    letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;
   }
   .filter-btn[aria-pressed="true"], .filter-btn:hover {
-    border-color:var(--ink); color:var(--ink); background:var(--bg-soft);
+    color:var(--ink); border-bottom-color:var(--brass);
   }
-  .search-bar { margin-bottom:1rem; }
+  .search-bar { margin-bottom:0.35rem; }
   .search-bar input {
-    width:min(28rem,100%); min-height:2.85rem; border:1px solid var(--line-strong);
-    padding:0 0.9rem; background:#fff; color:var(--ink);
+    width:min(26rem,100%); min-height:2.6rem; border:0; border-bottom:1px solid var(--line-strong);
+    padding:0 0.15rem; background:transparent; color:var(--ink); font-size:0.95rem;
+    border-radius:0;
   }
-  .pub-list { border-top:1px solid var(--line); }
+  .search-bar input::placeholder { color:var(--ink-faint); }
+  .search-bar input:focus { outline:none; border-bottom-color:var(--ink); }
+  .pub-list {
+    border-top:1px solid var(--ink);
+    counter-reset:toc;
+  }
   .pub {
-    display:grid; grid-template-columns:7rem 1fr auto; gap:1.25rem; align-items:start;
-    padding:1.35rem 0; border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns:5.5rem minmax(0,1fr) 4.5rem;
+    gap:1rem 1.5rem;
+    align-items:start;
+    padding:1.55rem 0 1.45rem;
+    border-bottom:1px solid var(--line);
+    color:inherit;
+    text-decoration:none;
+    transition:background 0.15s var(--ease);
   }
-  .pub:hover { background:rgba(255,255,255,0.55); }
-  .pub .date { font-family:var(--mono); font-size:0.8rem; color:var(--ink-faint); padding-top:0.2rem; }
-  .pub h3 { font-family:var(--serif); font-size:1.2rem; font-weight:500; letter-spacing:-0.02em; color:var(--ink); line-height:1.3; }
-  .pub .meta { margin-top:0.45rem; font-size:0.88rem; color:var(--ink-soft); }
-  .pub .go { font-weight:700; font-size:0.88rem; color:var(--ink); border-bottom:1px solid var(--brass); white-space:nowrap; margin-top:0.2rem; }
-  .count-note { margin:1rem 0 2rem; color:var(--ink-faint); font-size:0.92rem; }
+  .pub:hover { background:rgba(255,255,255,0.65); }
+  .pub:hover h3 { color:var(--navy-mid); }
+  .pub .date {
+    font-family:var(--serif);
+    font-size:0.92rem;
+    font-style:italic;
+    font-weight:400;
+    color:var(--ink-faint);
+    padding-top:0.28rem;
+    letter-spacing:0.01em;
+  }
+  .pub .body { min-width:0; }
+  .pub .running {
+    display:flex; flex-wrap:wrap; align-items:center; gap:0.35rem 0.65rem;
+    margin-bottom:0.4rem;
+  }
+  .pub .num {
+    font-family:var(--mono);
+    font-size:0.68rem;
+    font-weight:500;
+    letter-spacing:0.06em;
+    color:var(--brass);
+  }
+  .pub .domain {
+    font-size:0.65rem;
+    font-weight:700;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .pub .grade {
+    font-family:var(--serif);
+    font-size:0.72rem;
+    font-weight:600;
+    color:var(--ink-soft);
+  }
+  .pub h3 {
+    font-family:var(--serif);
+    font-size:clamp(1.15rem, 1.8vw, 1.4rem);
+    font-weight:500;
+    letter-spacing:-0.022em;
+    color:var(--ink);
+    line-height:1.28;
+    margin:0;
+  }
+  .pub .deck {
+    margin-top:0.45rem;
+    font-size:0.92rem;
+    line-height:1.5;
+    color:var(--ink-soft);
+    max-width:42rem;
+  }
+  .pub .go {
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:0.95rem;
+    font-weight:400;
+    color:var(--ink);
+    text-align:right;
+    padding-top:0.2rem;
+    white-space:nowrap;
+  }
+  .pub:hover .go { color:var(--brass); }
+  .count-note {
+    margin:1.35rem 0 2.25rem;
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--ink-faint);
+    font-size:0.95rem;
+  }
   .grades { margin:2.5rem 0; padding:2rem; background:#fff; border:1px solid var(--line); }
   .grades h2 { font-family:var(--serif); font-size:1.4rem; font-weight:500; color:var(--ink); margin-bottom:0.5rem; }
   .g-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:1.25rem; }
@@ -50,7 +142,8 @@
   .cta-band { text-align:center; padding:2.5rem; background:var(--bg-deep); color:rgba(255,255,255,0.75); }
   .cta-band h2 { font-family:var(--serif); font-size:1.65rem; font-weight:500; color:#fff; margin:0.5rem 0 0.75rem; }
   @media(max-width:720px){
-    .pub { grid-template-columns:1fr; gap:0.4rem; }
+    .pub { grid-template-columns:1fr; gap:0.35rem; padding:1.25rem 0; }
+    .pub .go { text-align:left; }
     .g-grid { grid-template-columns:1fr; }
   }
 </style>
@@ -59,7 +152,13 @@
 <a class="skip" href="#main">Skip to main content</a>
 <div class="utility"><div class="wrap"><span><span class="dot"></span>Institute active · Seoul</span><span>Latest <strong>29 July 2026</strong></span></div></div>
 <header class="site-header"><div class="wrap">
-  <a class="brand" href="../index.html"><span class="brand-name">Sail <em>Research</em></span><span class="brand-tag">Evidence Institute</span></a>
+  <a class="brand" href="../index.html">
+      <img class="brand-mark" src="../assets/mark.svg" width="32" height="32" alt="">
+      <span class="brand-text">
+        <span class="brand-name">Sail <em>Research</em></span>
+        <span class="brand-tag">Evidence Institute</span>
+      </span>
+    </a>
   <nav class="nav" aria-label="Primary">
     <a class="nav-keep" href="../index.html#programs">Programs</a>
     <a href="index.html" aria-current="page">Publications</a>
@@ -74,13 +173,18 @@
   <header class="page-hero">
     <div class="wrap">
       <p class="kicker">Publications</p>
-      <h1>Research library</h1>
-      <p class="lede">Evidence-graded briefs on Korean industry bottlenecks. Core programs first; archive work is labeled separately.</p>
+      <h1>Contents</h1>
+      <p class="lede">Evidence-graded briefs on Korean industry bottlenecks. Core programs first; earlier exploratory work is filed under Archive.</p>
     </div>
   </header>
 
-  <section class="section" id="reports" style="padding-top:2.5rem">
+  <section class="section" id="reports" style="padding-top:2.25rem">
     <div class="wrap">
+      <div class="toc-mast">
+        <div class="vol">Sail Research · <em>Vol. 2026</em></div>
+        <div class="iss">Table of contents · 9 entries</div>
+      </div>
+
       <div class="search-bar">
         <label class="sr-only" for="q">Search</label>
         <input id="q" type="search" placeholder="Search title, domain, keyword…">
@@ -95,79 +199,124 @@
 
       <div class="pub-list" id="list">
         <a class="pub" href="../reports/20260729-agc-yokohama-gmp-readiness.html" data-sector="biopharma" data-s="agc biologics yokohama gmp cdmo">
-          <div class="date">29 Jul 2026</div>
-          <div>
+          <div class="date">29 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0009</span>
+              <span class="domain">Biopharma</span>
+              <span class="grade">Evidence B</span>
+            </div>
             <h3>AGC Biologics Yokohama: What the Official Scope Discloses About GMP Readiness</h3>
-            <div class="meta">SR-2026-0009 · Biopharma · Evidence B · Free</div>
+            <p class="deck">Disclosure-bound reading of plant scope—what is stated, what is not, and where diligence still needs primary confirmation.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260727-wuxiui-patent-no-bleed-perfusion.html" data-sector="biopharma" data-s="wuxiui patent perfusion continuous">
-          <div class="date">27 Jul 2026</div>
-          <div>
+          <div class="date">27 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0008</span>
+              <span class="domain">Biopharma</span>
+              <span class="grade">Evidence B</span>
+            </div>
             <h3>No Bleed, Continuous Harvest: The Patent Behind WuXiUI</h3>
-            <div class="meta">SR-2026-0008 · Biopharma · Evidence B · Free</div>
+            <p class="deck">Family, claims architecture, and what a continuous / no-bleed patent actually settles for competitive analysis.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260727-wuxiup-continuous-biomanufacturing.html" data-sector="biopharma" data-s="wuxiup continuous biomanufacturing">
-          <div class="date">27 Jul 2026</div>
-          <div>
+          <div class="date">27 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0007</span>
+              <span class="domain">Biopharma</span>
+              <span class="grade">Evidence B</span>
+            </div>
             <h3>WuXiUP Continuous Biomanufacturing: Disclosure-Bound Claims</h3>
-            <div class="meta">SR-2026-0007 · Biopharma · Evidence B · Free</div>
+            <p class="deck">Platform claims reduced to verifiable statements—without marketing language treated as capacity fact.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260713-hbm4-vendor-confirmed.html" data-sector="semiconductors" data-s="hbm4 vendor commercial transition">
-          <div class="date">13 Jul 2026</div>
-          <div>
+          <div class="date">13 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0006</span>
+              <span class="domain">Semiconductors</span>
+              <span class="grade">Evidence A</span>
+            </div>
             <h3>HBM4 Goes Commercial: All Three Vendors Confirm the Generation Transition</h3>
-            <div class="meta">SR-2026-0006 · Semiconductors · Evidence A · Free</div>
+            <p class="deck">Primary vendor confirmations on the HBM4 commercial handoff—and the claim boundary that remains open.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260708-hbm-tech-tracking.html" data-sector="semiconductors" data-s="hbm hbm4e tracking">
-          <div class="date">08 Jul 2026</div>
-          <div>
+          <div class="date">08 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0005</span>
+              <span class="domain">Semiconductors</span>
+              <span class="grade">Evidence A</span>
+            </div>
             <h3>Tracking the HBM Transition Toward HBM4E</h3>
-            <div class="meta">SR-2026-0005 · Semiconductors · Evidence A · Free</div>
+            <p class="deck">Generation roadmap signals from primary sources, with freshness and counter-evidence kept explicit.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260706-shortform-automation.html" data-sector="archive" data-s="short form automation media">
-          <div class="date">06 Jul 2026</div>
-          <div>
+          <div class="date">06 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0004</span>
+              <span class="domain">Archive</span>
+              <span class="grade">Evidence B</span>
+            </div>
             <h3>Short-Form Content Automation: Where Solo Marketers Should Start</h3>
-            <div class="meta">SR-2026-0004 · Archive · Evidence B</div>
+            <p class="deck">Archived exploratory brief outside core Korea-bottleneck programs.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260705-notion-ai.html" data-sector="archive" data-s="notion ai korea">
-          <div class="date">06 Jul 2026</div>
-          <div>
+          <div class="date">06 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0003</span>
+              <span class="domain">Archive</span>
+              <span class="grade">Evidence B</span>
+            </div>
             <h3>Notion AI in Korea: From Personal Tool to Institutional Category</h3>
-            <div class="meta">SR-2026-0003 · Archive · Evidence B</div>
+            <p class="deck">Archived category note; not part of the live program set.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260705-hybrid-vs-ev.html" data-sector="archive" data-s="ev hybrid korea">
-          <div class="date">06 Jul 2026</div>
-          <div>
+          <div class="date">06 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0002</span>
+              <span class="domain">Archive</span>
+              <span class="grade">Evidence A</span>
+            </div>
             <h3>Korea’s EV Crossover: The Month Electric Overtake Hybrid</h3>
-            <div class="meta">SR-2026-0002 · Archive · Evidence A</div>
+            <p class="deck">Archived data brief on Korea’s EV–hybrid crossover month.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
         <a class="pub" href="../reports/20260705-macbook-local-ai.html" data-sector="archive" data-s="ollama mlx macbook">
-          <div class="date">06 Jul 2026</div>
-          <div>
+          <div class="date">06 Jul</div>
+          <div class="body">
+            <div class="running">
+              <span class="num">SR-2026-0001</span>
+              <span class="domain">Archive</span>
+              <span class="grade">Evidence A</span>
+            </div>
             <h3>Local AI on MacBooks: Ollama’s MLX Backend</h3>
-            <div class="meta">SR-2026-0001 · Archive · Evidence A</div>
+            <p class="deck">Archived technical note; retained for provenance continuity.</p>
           </div>
-          <span class="go">Read →</span>
+          <span class="go">Read</span>
         </a>
       </div>
-      <p class="count-note" id="count">Showing 9 reports</p>
+      <p class="count-note" id="count">Showing 9 entries</p>
 
       <div class="grades" id="coverage">
         <h2>Evidence grades</h2>
@@ -194,7 +343,13 @@
 
 <footer class="site-footer"><div class="wrap">
   <div class="footer-bottom" style="border:0;padding:0">
-    <span class="brand-name" style="color:#fff;font-size:1.1rem">Sail <em style="color:#d4b56a;font-style:normal">Research</em></span>
+    <div class="brand">
+          <img class="brand-mark" src="../assets/mark-inverse.svg" width="30" height="30" alt="">
+          <span class="brand-text">
+            <span class="brand-name">Sail <em>Research</em></span>
+            <span class="brand-tag">Evidence Institute</span>
+          </span>
+        </div>
     <span>Not investment advice · Primary sources only</span>
   </div>
 </div></footer>
@@ -213,7 +368,7 @@ function apply(){
     el.classList.toggle("hidden",!ok);
     if(ok) n++;
   });
-  document.getElementById("count").textContent="Showing "+n+" report"+(n===1?"":"s");
+  document.getElementById("count").textContent="Showing "+n+" entr"+(n===1?"y":"ies");
 }
 document.querySelectorAll(".filter-btn").forEach(btn=>{
   btn.addEventListener("click",()=>{

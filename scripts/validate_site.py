@@ -134,7 +134,7 @@ def main() -> int:
         card_count = len(re.findall(r'<tr data-sector=', library))
     if card_count == 0:
         card_count = len(re.findall(r'<a class="r-card"', library))
-    count_match = re.search(r'id="count"[^>]*>Showing (\d+) reports?', library)
+    count_match = re.search(r'id="count"[^>]*>Showing (\d+) (?:reports?|entr(?:y|ies))', library)
     declared_count = int(count_match.group(1)) if count_match else -1
     if card_count != declared_count:
         errors.append(f"research/index.html: {card_count} publications but declared count is {declared_count}")

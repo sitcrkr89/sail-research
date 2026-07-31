@@ -109,12 +109,25 @@ button, input, textarea, select { font: inherit; color: inherit; }
 }
 .brand {
   display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+}
+.brand-mark {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  display: block;
+}
+.brand-text {
+  display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.08rem;
+  min-width: 0;
 }
 .brand-name {
   font-family: var(--serif);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.025em;
   color: var(--ink);
@@ -131,6 +144,14 @@ button, input, textarea, select { font: inherit; color: inherit; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-faint);
+}
+.site-footer .brand {
+  align-items: flex-start;
+}
+.site-footer .brand-mark {
+  width: 1.85rem;
+  height: 1.85rem;
+  margin-top: 0.15rem;
 }
 .nav {
   display: flex;

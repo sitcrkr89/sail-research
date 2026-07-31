@@ -24,9 +24,37 @@
   /* Homepage — professional institute refinement */
   .hero {
     position: relative;
-    padding: clamp(4rem, 9vw, 6.75rem) 0 clamp(3.25rem, 6vw, 5rem);
+    min-height: min(78vh, 640px);
+    display: flex;
+    align-items: stretch;
     border-bottom: 1px solid var(--line);
-    background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    overflow: hidden;
+  }
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+  .hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(105deg, rgba(10, 18, 28, 0.88) 0%, rgba(10, 18, 28, 0.72) 42%, rgba(10, 18, 28, 0.35) 68%, rgba(10, 18, 28, 0.2) 100%),
+      linear-gradient(to top, rgba(10, 18, 28, 0.55), transparent 45%);
+  }
+  .hero .wrap {
+    position: relative;
+    z-index: 1;
+    width: min(var(--max), calc(100% - 3rem));
+    margin: auto;
+    padding: clamp(3.5rem, 8vw, 5.5rem) 0;
   }
   .hero-grid {
     display: grid;
@@ -34,13 +62,20 @@
     gap: clamp(2.5rem, 5vw, 4.5rem);
     align-items: end;
   }
+  .hero .kicker { color: #d4b56a; }
+  .hero h1 { color: #fff; }
+  .hero h1 span { color: rgba(255, 255, 255, 0.72); }
+  .hero .lede { color: rgba(255, 255, 255, 0.78); }
+  .hero .btn { border-color: #fff; color: #fff; }
+  .hero .btn:hover { background: #fff; color: var(--ink); }
+  .hero .btn-solid { background: #fff; color: var(--ink); border-color: #fff; }
+  .hero .btn-solid:hover { background: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.9); color: var(--ink); }
   .hero h1 {
     font-family: var(--serif);
     font-size: clamp(2.45rem, 5vw, 3.65rem);
     font-weight: 500;
     letter-spacing: -0.038em;
     line-height: 1.08;
-    color: var(--ink);
     max-width: 12ch;
     margin-top: 0.85rem;
   }
@@ -48,7 +83,6 @@
     display: block;
     font-style: italic;
     font-weight: 400;
-    color: var(--ink-soft);
     margin-top: 0.12em;
   }
   .hero .lede {
@@ -58,11 +92,12 @@
     line-height: 1.7;
   }
   .hero-aside {
-    background: var(--bg-elevated);
-    border: 1px solid var(--line);
-    border-top: 2px solid var(--ink);
-    box-shadow: var(--shadow-sm);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid var(--brass);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
     padding: 1.5rem 1.4rem 1.45rem;
+    backdrop-filter: blur(8px);
   }
   .hero-aside .label {
     font-size: 0.625rem;
@@ -537,8 +572,11 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <span class="brand-name">Sail <em>Research</em></span>
-      <span class="brand-tag">Evidence Institute</span>
+      <img class="brand-mark" src="assets/mark.svg" width="32" height="32" alt="">
+      <span class="brand-text">
+        <span class="brand-name">Sail <em>Research</em></span>
+        <span class="brand-tag">Evidence Institute</span>
+      </span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a class="nav-keep" href="#programs">Programs</a>
@@ -554,46 +592,51 @@
 <main id="main">
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="kicker">Independent research institute · Seoul</p>
-        <h1>Evidence at the claim boundary.<span>Nothing dressed up as more.</span></h1>
-        <p class="lede">
-          Decision-grade intelligence on Korean industry bottlenecks—semiconductors,
-          biopharma, and power infrastructure—for global strategy, competitive intelligence,
-          and diligence teams.
-        </p>
-        <div class="actions">
-          <a class="btn btn-solid" href="research/index.html">Browse publications</a>
-          <a class="btn" href="scope.html">Commission a brief</a>
+    <div class="hero-media" aria-hidden="true">
+      <img src="assets/hero-institute.jpg" width="1280" height="720" alt="" fetchpriority="high" decoding="async">
+    </div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Independent research institute · Seoul</p>
+          <h1>Evidence at the claim boundary.<span>Nothing dressed up as more.</span></h1>
+          <p class="lede">
+            Decision-grade intelligence on Korean industry bottlenecks—semiconductors,
+            biopharma, and power infrastructure—for global strategy, competitive intelligence,
+            and diligence teams.
+          </p>
+          <div class="actions">
+            <a class="btn btn-solid" href="research/index.html">Browse publications</a>
+            <a class="btn" href="scope.html">Commission a brief</a>
+          </div>
         </div>
+        <aside class="hero-aside" aria-label="Institute snapshot">
+          <div class="label">At a glance</div>
+          <dl class="stat-row">
+            <div>
+              <dt>Focus</dt>
+              <dd>Korea bottlenecks</dd>
+            </div>
+            <div>
+              <dt>Standard</dt>
+              <dd>Grade A–C</dd>
+            </div>
+            <div>
+              <dt>Programs</dt>
+              <dd>Three</dd>
+            </div>
+            <div>
+              <dt>Review</dt>
+              <dd>Human gate</dd>
+            </div>
+            <div class="full">
+              <dt>Latest</dt>
+              <dd>SR-2026-0009 · 29 Jul</dd>
+            </div>
+          </dl>
+          <p class="note">Not a news feed. Not a price target. Not investment advice. We publish only to the level sources support.</p>
+        </aside>
       </div>
-      <aside class="hero-aside" aria-label="Institute snapshot">
-        <div class="label">At a glance</div>
-        <dl class="stat-row">
-          <div>
-            <dt>Focus</dt>
-            <dd>Korea bottlenecks</dd>
-          </div>
-          <div>
-            <dt>Standard</dt>
-            <dd>Grade A–C</dd>
-          </div>
-          <div>
-            <dt>Programs</dt>
-            <dd>Three</dd>
-          </div>
-          <div>
-            <dt>Review</dt>
-            <dd>Human gate</dd>
-          </div>
-          <div class="full">
-            <dt>Latest</dt>
-            <dd>SR-2026-0009 · 29 Jul</dd>
-          </div>
-        </dl>
-        <p class="note">Not a news feed. Not a price target. Not investment advice. We publish only to the level sources support.</p>
-      </aside>
     </div>
   </section>
 
@@ -787,8 +830,13 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="brand-name">Sail <em style="color:#d4b56a;font-style:normal">Research</em></div>
-        <div class="brand-tag" style="margin-top:0.35rem">Evidence Institute · Seoul</div>
+        <div class="brand">
+          <img class="brand-mark" src="assets/mark-inverse.svg" width="30" height="30" alt="">
+          <span class="brand-text">
+            <span class="brand-name">Sail <em style="color:#d4b56a;font-style:normal">Research</em></span>
+            <span class="brand-tag">Evidence Institute · Seoul</span>
+          </span>
+        </div>
         <p>Independent research on Korean industry bottlenecks. Semiconductors · Biopharma · Power infrastructure. Not investment advice.</p>
       </div>
       <div class="footer-col">
