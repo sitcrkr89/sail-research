@@ -128,11 +128,14 @@ def main() -> int:
             errors.append(f"{rel}: missing valid report-library return link")
 
     library = (ROOT / "research/index.html").read_text(encoding="utf-8")
-    card_count = len(re.findall(r'<a class="r-card"', library))
+    # Board rows (table) or legacy cards
+    card_count = len(re.findall(r'<tr data-sector=', library))
+    if card_count == 0:
+        card_count = len(re.findall(r'<a class="r-card"', library))
     count_match = re.search(r'id="count"[^>]*>Showing (\d+) reports?', library)
     declared_count = int(count_match.group(1)) if count_match else -1
     if card_count != declared_count:
-        errors.append(f"research/index.html: {card_count} cards but declared count is {declared_count}")
+        errors.append(f"research/index.html: {card_count} report rows but declared count is {declared_count}")
 
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
     for arena in ("Semiconductors", "Biopharma", "Power"):

@@ -3,166 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Methodology — Sail Research</title>
-<meta name="description" content="How Sail Research verifies claims: hashed primary-source capture, evidence labels, the fact/hypothesis boundary, and operator review.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<title>Methodology &amp; Sources — Sail Research</title>
+<meta name="description" content="How Sail Research verifies claims: hashed capture, evidence grades, fact/hypothesis boundary, operator review, and citation practice.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/research/methodology.html">
+<meta property="og:title" content="Methodology &amp; Sources — Sail Research">
+<meta property="og:description" content="Source-labeled evidence discipline. Not a broker. Not investment advice.">
+<meta property="og:url" content="https://sitcrkr89.github.io/sail-research/research/methodology.html">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <style>
-  :root{
-    --navy-deep:#f7f5f0; --navy:#ffffff; --navy-panel:#f0ede6; --navy-line:#d4cfc4;
-    --gold:#8a7340; --gold-bright:#6f5c32; --gold-dim:#8a7340;
-    --white:#12151a; --muted:#5c6570; --muted2:#7a8490;
-    --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",Helvetica,Arial,sans-serif;
+  .prose { max-width: 720px; }
+  .prose > p { color: var(--muted); font-size: 15px; margin-bottom: 14px; line-height: 1.75; }
+  .step { display: flex; gap: 18px; padding: 28px 0; border-top: 1px solid var(--line); }
+  .step:last-of-type { border-bottom: 1px solid var(--line); }
+  .step .n {
+    font-family: var(--serif); font-weight: 700; color: #fff; background: var(--navy);
+    min-width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:#f7f5f0;color:#12151a;font-family:var(--sans);line-height:1.7;font-weight:400}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
-
-  header.hero{padding:64px 0 40px;background:#f7f5f0;border-bottom:1px solid #d4cfc4}
-  .kicker{font-size:11px;font-weight:600;letter-spacing:.14em;color:#8a7340;text-transform:uppercase;margin-bottom:14px}
-  h1{font-family:var(--serif);font-size:clamp(30px,4vw,42px);font-weight:600;line-height:1.18;max-width:720px;color:#12151a}
-  h1 .g{color:#1a2744;font-style:italic;font-weight:500}
-  .lede{margin-top:16px;font-size:16px;color:#5c6570;max-width:600px}
-
-  main{padding:40px 0 72px}
-  .step{display:flex;gap:22px;padding:32px 0;border-top:1px solid #d4cfc4}
-  .step:last-child{border-bottom:1px solid #d4cfc4}
-  .step .n{font-family:var(--serif);font-size:14px;font-weight:700;color:#f7f5f0;background:#1a2744;min-width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .step h2{font-family:var(--serif);font-size:20px;font-weight:600;margin-bottom:8px;color:#12151a}
-  .step h2 em{color:#1a2744;font-style:italic}
-  .step p{font-size:14.5px;color:#5c6570;max-width:600px}
-  .step .ex{margin-top:12px;padding:14px 16px;background:#fff;border:1px solid #d4cfc4;border-left:3px solid #1a2744;font-size:13px;color:#2a3038}
-  .step .ex b{color:#1a2744}
-  .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px}
-  .g-item{display:flex;gap:10px;align-items:flex-start}
-  .g-badge{font-family:var(--serif);font-size:16px;font-weight:700;color:#f7f5f0;background:#1a2744;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center}
-  .g-badge.b{background:#8a7340}
-  .g-badge.c{background:transparent;border:1px solid #b8b2a6;color:#5c6570}
-  .g-item .t{font-size:12.5px;font-weight:600;color:#12151a}
-  .g-item .d{font-size:12px;color:#5c6570;margin-top:2px}
-
-  .cta{margin:48px auto 40px;max-width:720px;text-align:center;padding:48px 24px;border:1px solid #d4cfc4;background:#fff}
-  .cta .kicker{margin-bottom:10px}
-  .cta h2{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:10px}
-  .cta p{color:#5c6570;font-size:14px;margin-bottom:24px}
-  .btn{display:inline-block;background:#1a2744;color:#f7f5f0;font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:14px 28px}
-  .btn:hover{background:#2c3d5c}
-  footer{padding:32px 0 48px;font-size:12px;color:#7a8490;text-align:center}
+  .step h2 { font-family: var(--serif); font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+  .step p { color: var(--muted); font-size: 14.5px; max-width: 600px; }
+  .step .ex { margin-top: 12px; padding: 12px 14px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid var(--navy); font-size: 13px; color: var(--ink-2); }
+  .g-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 14px; }
+  .g-item { display: flex; gap: 10px; }
+  .g-badge { font-family: var(--serif); font-weight: 700; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: var(--navy); color: #fff; flex-shrink: 0; }
+  .g-badge.b { background: var(--muted); }
+  .g-badge.c { background: transparent; border: 1px solid var(--line-strong); color: var(--muted); }
+  .g-item .t { font-weight: 700; color: var(--navy); font-size: 13px; }
+  .g-item .d { color: var(--muted); font-size: 12.5px; }
+  .source-list { margin: 20px 0; border: 1px solid var(--line); background: var(--white); }
+  .source-list div { padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  .source-list div:last-child { border-bottom: 0; }
+  .source-list strong { display: block; color: var(--navy); font-size: 14px; }
+  .source-list span { display: block; color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .cta-band { margin: 40px 0; padding: 32px; border: 1px solid var(--line); background: var(--white); text-align: center; }
+  .cta-band h2 { font-family: var(--serif); font-size: 22px; color: var(--navy); margin: 8px 0 10px; }
+  @media (max-width:700px){ .g-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="status"><div class="wrap-wide"><span class="live">Desk pulse</span><span>Methodology · public &amp; binding</span></div></div>
+<nav class="site-nav"><div class="wrap-wide">
+  <a class="logo" href="../index.html">SAIL <span>RESEARCH</span><span class="logo-sub">Bottleneck Evidence Desk</span></a>
+  <div class="nav-links">
+    <a href="../index.html#coverage">Coverage</a>
+    <a href="index.html">Library</a>
+    <a href="../product.html">Product</a>
+    <a href="methodology.html" aria-current="page">Method</a>
+    <a href="../about.html">About</a>
+    <a class="nav-cta" href="../scope.html">Scope a decision</a>
+  </div>
+</div></nav>
 
-<div class="status"><div class="wrap"><span class="live">Research desk active</span><span>Methodology · public &amp; binding</span></div></div>
-<nav class="site-nav" aria-label="Primary navigation">
-  <div class="wrap">
-    <a class="logo" href="../index.html">SAIL <span>RESEARCH</span><span class="logo-sub">Bottleneck Evidence Desk</span></a>
-    <div class="nav-links">
-      <a href="../index.html#coverage">Coverage</a>
-      <a href="index.html">Library</a>
-      <a href="../product.html">Product</a>
-      <a href="methodology.html" aria-current="page">Method</a>
-      <a class="nav-cta" href="../scope.html">Scope a decision</a>
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap prose">
+      <div class="eyebrow">Sources &amp; methodology</div>
+      <h1>How a claim earns the right to be called fact.</h1>
+      <p class="lede">Sail Research is built as source-labeled evidence infrastructure. It is not a broker, trading terminal, or investment adviser.</p>
     </div>
-  </div>
-</nav>
+  </header>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="kicker">Methodology</div>
-    <h1>How a claim earns the right to be called <span class="g">fact.</span></h1>
-    <p class="lede">
-      Every Sail Research report runs on the same four-step discipline: capture the primary source with a
-      verifiable hash, label each claim by how far it was verified, keep fact separate from model reasoning,
-      and never publish without a human reviewing the trail. This page documents that discipline directly —
-      not a marketing description of it.
-    </p>
-  </div>
-</header>
+  <section class="section">
+    <div class="wrap prose">
+      <p>Every public report runs the same discipline: capture the primary source with a checkable record, label each claim by how far it was verified, keep fact separate from interpretation, and never publish without human review of the trail.</p>
 
-<main class="wrap">
-
-  <div class="step">
-    <div class="n">1</div>
-    <div>
-      <h2>Hashed <em>Capture</em></h2>
-      <p>When a primary source is pulled — a company newsroom page, an investor release, an official filing — we
-      record the retrieval date, the byte size, and a SHA-256 hash of the captured content alongside the source
-      URL. The hash makes the capture checkable: if the source page changes later, the hash proves what it said
-      the day we read it.</p>
-      <div class="ex">Example, from the HBM tracking report (SR-2026-0005): each company's HBM4/HBM4E disclosure
-      was <b>captured 8 Jul 2026</b> and <b>stored with retrieval date + SHA-256 hash</b> before any claim was
-      written into the report.</div>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="n">2</div>
-    <div>
-      <h2>Evidence <em>Labels</em></h2>
-      <p>Inside a report, every claim carries one of three internal labels — <b>Direct Evidence</b> (verified
-      against the primary source itself), <b>Analytic Prior</b> (a transparent, rule-based scoring or inference
-      built on top of captured evidence, not a fact on its own), or <b>Requires Verification</b> (flagged as
-      unconfirmed in the source data itself, stated as a gap rather than guessed at). These roll up into the
-      public Evidence Grade shown on every report card:</p>
-      <div class="g-grid">
-        <div class="g-item">
-          <div class="g-badge">A</div>
-          <div><div class="t">Primary-Verified</div><div class="d">Full-text sources, primary data, or first-party datasets verified by the operator.</div></div>
-        </div>
-        <div class="g-item">
-          <div class="g-badge b">B</div>
-          <div><div class="t">Headline-Corroborated</div><div class="d">Claims verified to headline level across multiple outlets. Article bodies not independently confirmed.</div></div>
-        </div>
-        <div class="g-item">
-          <div class="g-badge c">C</div>
-          <div><div class="t">Hypothesis</div><div class="d">Interpretive signals and projections. Explicitly labeled; never stated as fact.</div></div>
+      <div class="step">
+        <div class="n">1</div>
+        <div>
+          <h2>Hashed capture</h2>
+          <p>When a primary source is pulled—a company newsroom page, investor release, patent, or official filing—we record retrieval date, byte size, and a SHA-256 hash of the captured content alongside the URL. If the page changes later, the hash proves what it said the day we read it.</p>
+          <div class="ex">Example (SR-2026-0005): each vendor’s HBM4/HBM4E disclosure was captured with retrieval date + SHA-256 before claims were written.</div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="step">
-    <div class="n">3</div>
-    <div>
-      <h2>The Fact / <em>Hypothesis</em> Boundary</h2>
-      <p>A model's scoring, ranking, or scenario projection is never presented as a confirmed fact, and a
-      confirmed fact is never dressed up with a confidence number it didn't earn. Every report that mixes the
-      two — captured evidence plus a scoring layer — carries an explicit "Fact vs. Model Prior" box so a reader
-      can see exactly where verification ends and interpretation begins.</p>
-      <div class="ex">What this boundary rules out: treating a zero score or a data gap as evidence of absence,
-      stating a model's ranking as if it were a disclosed fact, or letting a hedge ("likely," "expected to")
-      stand in for an actual source.</div>
-    </div>
-  </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div>
+          <h2>Evidence grades</h2>
+          <p>Internal labels (Direct Evidence · Analytic Prior · Requires Verification) roll up into the public grade on every report card:</p>
+          <div class="g-grid">
+            <div class="g-item"><div class="g-badge">A</div><div><div class="t">Primary-Verified</div><div class="d">Full-text / first-party sources verified by the operator.</div></div></div>
+            <div class="g-item"><div class="g-badge b">B</div><div><div class="t">Headline-Corroborated</div><div class="d">Headline-level multi-outlet check; bodies not fully confirmed.</div></div></div>
+            <div class="g-item"><div class="g-badge c">C</div><div><div class="t">Hypothesis</div><div class="d">Interpretation only—never stated as fact.</div></div></div>
+          </div>
+        </div>
+      </div>
 
-  <div class="step">
-    <div class="n">4</div>
-    <div>
-      <h2>Operator <em>Review</em></h2>
-      <p>No report publishes on a pipeline's say-so. A human operator reviews the evidence trail — sources,
-      hashes, labels, and the fact/hypothesis boundary — before a report goes live. If the trail doesn't support
-      the grade, the grade comes down; we would rather publish a B than dress it up as an A. Published reports
-      are then tracked for seven days, and what actually happened feeds the next topic selection.</p>
-    </div>
-  </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div>
+          <h2>Fact / hypothesis boundary</h2>
+          <p>Model scores, rankings, and scenarios are never presented as disclosed fact. Gaps are stated as gaps—not converted to zero or “evidence of absence.” Every mixed report carries an explicit boundary so readers see where verification ends.</p>
+          <div class="ex">Ruled out: treating a data gap as proof of absence; stating a model ranking as a disclosed fact; letting hedges stand in for sources.</div>
+        </div>
+      </div>
 
+      <div class="step">
+        <div class="n">4</div>
+        <div>
+          <h2>Operator review</h2>
+          <p>No report publishes on a pipeline’s say-so. A human reviews sources, hashes, labels, and the fact/hypothesis boundary before release. If the trail does not support the grade, the grade comes down. Published reports are tracked for seven days; outcomes feed the next topic selection.</p>
+        </div>
+      </div>
+
+      <h2 style="font-family:var(--serif);font-size:22px;color:var(--navy);margin:36px 0 12px">Source classes we prefer</h2>
+      <div class="source-list">
+        <div><strong>Issuer first-party disclosures</strong><span>Company newsrooms, IR releases, product pages—captured and hashed when used for Grade A claims.</span></div>
+        <div><strong>Patents and official registries</strong><span>Full-text reads with claim boundaries; marketing pages are secondary.</span></div>
+        <div><strong>Official statistics and filings</strong><span>When used, cited to the original publisher with retrieval context.</span></div>
+        <div><strong>Multi-outlet headline corroboration</strong><span>Supports Grade B only—not a substitute for primary verification.</span></div>
+      </div>
+
+      <h2 style="font-family:var(--serif);font-size:22px;color:var(--navy);margin:28px 0 12px">Missing values and corrections</h2>
+      <p>Unavailable figures are omitted or labeled as open gaps—not filled with zeros. Material corrections are noted on the report; if the thesis or grade changes, the revision status says so.</p>
+
+      <h2 style="font-family:var(--serif);font-size:22px;color:var(--navy);margin:28px 0 12px">How to cite Sail Research</h2>
+      <p>Include report ID, publication date, evidence grade, and the primary sources listed on the card. Original disclosures remain authoritative; Sail states what those sources establish within a claim boundary.</p>
+
+      <h2 style="font-family:var(--serif);font-size:22px;color:var(--navy);margin:28px 0 12px">Product boundaries</h2>
+      <p>No exchange quote product. No broker-report body hosting. No price targets, recommendations, or trading signals. Commissioned work uses the same grade rules as the public library.</p>
+
+      <div class="cta-band">
+        <div class="eyebrow">Commissioned research</div>
+        <h2>Need this discipline on your decision?</h2>
+        <p style="color:var(--muted);margin-bottom:16px">Custom memos, source maps, and trackers—same trail.</p>
+        <a class="btn btn-primary" href="../scope.html">Open scope form</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<div class="cta">
-  <div class="kicker">Commissioned Research</div>
-  <h2>Need this discipline applied to your own scope?</h2>
-  <p>Custom Korea industry briefs, source maps, and competitor signal trackers — built on the same capture-and-verify trail.</p>
-  <a class="btn" href="../scope.html">Open scope form</a>
-</div>
-
-<footer>
-  <div class="logo" style="font-family:var(--serif);font-size:16px;margin-bottom:10px">SAIL <em style="color:var(--gold);font-style:normal">RESEARCH</em></div>
-  Seoul, Korea · sail.research.info@gmail.com
-</footer>
-
+<footer class="site-footer"><div class="wrap-wide">
+  <div class="footer-bottom" style="border:0;padding:0">
+    <span><a href="../index.html" class="logo">SAIL <span>RESEARCH</span></a></span>
+    <span>Not investment advice · Public-source limits apply</span>
+  </div>
+</div></footer>
 </body>
 </html>

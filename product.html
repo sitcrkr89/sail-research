@@ -6,69 +6,45 @@
 <title>Product — Sail Research</title>
 <meta name="description" content="Sail Research offers: public briefs, Evidence Digest, Decision Memos, Source Maps, Signal Trackers, and scoped engagements.">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/product.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Sail Research">
 <meta property="og:title" content="Product — Sail Research">
-<meta property="og:description" content="From free public briefs to decision memos and signal trackers—priced and scoped for decision work.">
 <meta property="og:url" content="https://sitcrkr89.github.io/sail-research/product.html">
 <meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 <style>
-  .sku-grid { display: grid; gap: 20px; margin-top: 40px; }
-  .sku {
-    display: grid;
-    grid-template-columns: 200px 1fr 160px;
-    gap: 28px;
-    padding: 32px;
-    border: 1px solid var(--line);
-    background: var(--white);
-    align-items: start;
-  }
-  .sku.featured { border-color: var(--navy); border-width: 1px; background: var(--white); box-shadow: var(--shadow); }
-  .sku h2 { font-family: var(--serif); font-size: 22px; font-weight: 600; }
-  .sku .tier { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
-  .sku ul { margin: 14px 0 0 18px; color: var(--muted); font-size: 14px; }
-  .sku li { margin-bottom: 6px; }
-  .sku .side { text-align: right; }
-  .sku .timing { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 12px; }
-  .sku .price { font-size: 13px; color: var(--ink-2); }
-  .include-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 48px; }
-  .include-card { padding: 28px; border: 1px solid var(--line); background: var(--paper-2); }
-  .include-card h3 { font-family: var(--serif); font-size: 18px; margin-bottom: 10px; }
-  .include-card p, .include-card li { color: var(--muted); font-size: 14px; }
-  .include-card ul { margin: 10px 0 0 18px; }
-  @media (max-width: 800px) {
-    .sku { grid-template-columns: 1fr; }
-    .sku .side { text-align: left; }
-    .include-grid { grid-template-columns: 1fr; }
-  }
+  .sku { display: grid; grid-template-columns: 180px 1fr 140px; gap: 20px; padding: 24px; border: 1px solid var(--line); background: var(--white); margin-bottom: 12px; }
+  .sku.featured { border-color: var(--navy); }
+  .sku h2 { font-family: var(--serif); font-size: 20px; color: var(--navy); }
+  .sku .tier { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+  .sku ul { margin: 10px 0 0 18px; color: var(--muted); font-size: 13.5px; }
+  .sku li { margin-bottom: 4px; }
+  .sku .side { text-align: right; color: var(--ink-2); font-size: 13px; }
+  .sku .side .t { font-family: var(--mono); font-size: 12px; color: var(--muted-2); margin-bottom: 8px; }
+  .bounds { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; }
+  .bounds h3 { font-family: var(--serif); font-size: 18px; color: var(--navy); margin-bottom: 8px; }
+  @media (max-width:800px){ .sku { grid-template-columns: 1fr; } .sku .side { text-align: left; } .bounds { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="status"><div class="wrap"><span class="live">Research desk active</span><span>Offers · Public proof to scoped desk work</span></div></div>
-<nav class="site-nav" aria-label="Primary navigation">
-  <div class="wrap">
-    <a class="logo" href="index.html">SAIL <span>RESEARCH</span><span class="logo-sub">Bottleneck Evidence Desk</span></a>
-    <div class="nav-links">
-      <a href="index.html#coverage">Coverage</a>
-      <a href="research/index.html">Library</a>
-      <a href="product.html" aria-current="page">Product</a>
-      <a href="for.html">Who it's for</a>
-      <a href="research/methodology.html">Method</a>
-      <a class="nav-cta" href="scope.html">Scope a decision</a>
-    </div>
+<div class="status"><div class="wrap-wide"><span class="live">Desk pulse</span><span>Offers · same evidence standard as public board</span></div></div>
+<nav class="site-nav"><div class="wrap-wide">
+  <a class="logo" href="index.html">SAIL <span>RESEARCH</span><span class="logo-sub">Bottleneck Evidence Desk</span></a>
+  <div class="nav-links">
+    <a href="index.html#coverage">Coverage</a>
+    <a href="research/index.html">Library</a>
+    <a href="product.html" aria-current="page">Product</a>
+    <a href="research/methodology.html">Method</a>
+    <a href="about.html">About</a>
+    <a class="nav-cta" href="scope.html">Scope a decision</a>
   </div>
-</nav>
+</div></nav>
 
 <main id="main">
   <header class="page-hero">
     <div class="wrap">
       <div class="eyebrow">Product</div>
-      <h1>Clear offers. Honest boundaries. Same evidence standard.</h1>
+      <h1>Clear offers. Honest boundaries. Same grade standard.</h1>
       <p class="lede">Every paid engagement uses the same capture, grading, and human-review discipline as the public library. Grade is never for sale.</p>
       <div class="actions">
         <a class="btn btn-primary" href="scope.html">Scope a decision</a>
@@ -79,161 +55,96 @@
 
   <section class="section">
     <div class="wrap">
-      <div class="sku-grid">
-        <article class="sku">
-          <div>
-            <div class="tier">Free</div>
-            <h2>Public Brief</h2>
-          </div>
-          <div>
-            <p style="color: var(--muted); font-size: 14px;">Core coverage reports with Evidence Grade, primary sources, decision relevance, counter-evidence, and watch conditions.</p>
-            <ul>
-              <li>Published on the research library</li>
-              <li>Semiconductors · Biopharma · Power (as available)</li>
-              <li>Lab / archive topics labeled separately</li>
-            </ul>
-          </div>
-          <div class="side">
-            <div class="timing">Ongoing</div>
-            <div class="price">Free</div>
-          </div>
-        </article>
+      <article class="sku">
+        <div><div class="tier">Free</div><h2>Public Brief</h2></div>
+        <div>
+          <p style="color:var(--muted);font-size:14px">Core library reports with Evidence Grade, sources, decision relevance, counter-evidence, and watch conditions.</p>
+          <ul><li>Published on the research board</li><li>Semiconductors · Biopharma · Power</li></ul>
+        </div>
+        <div class="side"><div class="t">Ongoing</div>Free</div>
+      </article>
 
-        <article class="sku">
-          <div>
-            <div class="tier">Free · owned media</div>
-            <h2>Evidence Digest</h2>
-          </div>
-          <div>
-            <p style="color: var(--muted); font-size: 14px;">Occasional email when Core coverage produces a Grade A signal or a material watch-condition change.</p>
-            <ul>
-              <li>Not a daily news feed</li>
-              <li>Designed for strategy and CI inboxes</li>
-            </ul>
-          </div>
-          <div class="side">
-            <div class="timing">~2× / month</div>
-            <div class="price">Free</div>
-            <div style="margin-top: 16px;"><a class="btn" href="digest.html" style="min-height: 40px; font-size: 11px;">Subscribe</a></div>
-          </div>
-        </article>
+      <article class="sku">
+        <div><div class="tier">Free</div><h2>Evidence Digest</h2></div>
+        <div>
+          <p style="color:var(--muted);font-size:14px">Occasional email when Core coverage produces a Grade A signal or material watch-condition change.</p>
+          <ul><li>Not a daily noise feed</li></ul>
+        </div>
+        <div class="side"><div class="t">~2× / month</div><a class="btn" href="digest.html" style="min-height:40px;margin-top:8px;font-size:11px">Subscribe</a></div>
+      </article>
 
-        <article class="sku featured">
-          <div>
-            <div class="tier">Most start here</div>
-            <h2>Decision Memo</h2>
-          </div>
-          <div>
-            <p style="color: var(--muted); font-size: 14px;">One decision question, answered to the claim boundary. Built for internal challenge.</p>
-            <ul>
-              <li>Decision question restated</li>
-              <li>Evidence map with grades</li>
-              <li>Implications by role (strategy / CI / supply chain)</li>
-              <li>Explicit open gaps</li>
-              <li>Watch conditions for the next 30–90 days</li>
-            </ul>
-          </div>
-          <div class="side">
-            <div class="timing">7–10 business days</div>
-            <div class="price">Paid · scoped</div>
-            <div style="margin-top: 16px;"><a class="btn btn-primary" href="scope.html" style="min-height: 40px; font-size: 11px;">Request</a></div>
-          </div>
-        </article>
-
-        <article class="sku">
-          <div>
-            <div class="tier">Paid</div>
-            <h2>Source Map</h2>
-          </div>
-          <div>
-            <p style="color: var(--muted); font-size: 14px;">Primary-source landscape for a domain or competitor set—what exists, verification status, and structural gaps.</p>
-            <ul>
-              <li>Source inventory with capture policy</li>
-              <li>Verification status per source class</li>
-              <li>Recommended next captures</li>
-            </ul>
-          </div>
-          <div class="side">
-            <div class="timing">5–7 business days</div>
-            <div class="price">Paid · scoped</div>
-          </div>
-        </article>
-
-        <article class="sku">
-          <div>
-            <div class="tier">Subscription</div>
-            <h2>Signal Tracker</h2>
-          </div>
-          <div>
-            <p style="color: var(--muted); font-size: 14px;">Cadenced monitoring against agreed watch conditions. Updates when evidence moves—not when headlines peak.</p>
-            <ul>
-              <li>Fixed review cycle (typically monthly)</li>
-              <li>Delta notes vs prior period</li>
-              <li>Escalation when grade-worthy evidence appears</li>
-            </ul>
-          </div>
-          <div class="side">
-            <div class="timing">Monthly cycle</div>
-            <div class="price">Subscription</div>
-          </div>
-        </article>
-
-        <article class="sku">
-          <div>
-            <div class="tier">Custom</div>
-            <h2>Scoped Engagement</h2>
-          </div>
-          <div>
-            <p style="color: var(--muted); font-size: 14px;">Full desk on a multi-thread question: brief + map + optional walkthrough for your team.</p>
-            <ul>
-              <li>SOW with claim boundaries</li>
-              <li>Optional 60-minute readout</li>
-              <li>Same accept / decline standard</li>
-            </ul>
-          </div>
-          <div class="side">
-            <div class="timing">Custom</div>
-            <div class="price">Custom</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="include-grid">
-        <div class="include-card">
-          <h3>Always included</h3>
+      <article class="sku featured">
+        <div><div class="tier">Most start here</div><h2>Decision Memo</h2></div>
+        <div>
+          <p style="color:var(--muted);font-size:14px">One decision question, answered to the claim boundary.</p>
           <ul>
-            <li>Primary-source preference and disclosure of limits</li>
+            <li>Evidence map with grades</li>
+            <li>Implications by role</li>
+            <li>Explicit open gaps</li>
+            <li>Watch conditions (30–90 days)</li>
+          </ul>
+        </div>
+        <div class="side"><div class="t">7–10 BD</div>Paid · scoped<br><a class="btn btn-primary" href="scope.html" style="min-height:40px;margin-top:10px;font-size:11px">Request</a></div>
+      </article>
+
+      <article class="sku">
+        <div><div class="tier">Paid</div><h2>Source Map</h2></div>
+        <div>
+          <p style="color:var(--muted);font-size:14px">Primary-source landscape: what exists, verification status, structural gaps.</p>
+        </div>
+        <div class="side"><div class="t">5–7 BD</div>Paid · scoped</div>
+      </article>
+
+      <article class="sku">
+        <div><div class="tier">Subscription</div><h2>Signal Tracker</h2></div>
+        <div>
+          <p style="color:var(--muted);font-size:14px">Cadenced monitoring against agreed watch conditions.</p>
+        </div>
+        <div class="side"><div class="t">Monthly</div>Subscription</div>
+      </article>
+
+      <article class="sku">
+        <div><div class="tier">Custom</div><h2>Scoped Engagement</h2></div>
+        <div>
+          <p style="color:var(--muted);font-size:14px">Brief + map + optional walkthrough on a multi-thread question.</p>
+        </div>
+        <div class="side"><div class="t">Custom</div>Sales</div>
+      </article>
+
+      <div class="bounds">
+        <div class="card">
+          <h3>Always included</h3>
+          <ul class="check-list">
+            <li>Primary-source preference and limit disclosure</li>
             <li>Evidence grades on material claims</li>
             <li>Fact / hypothesis separation</li>
             <li>Human operator review</li>
           </ul>
         </div>
-        <div class="include-card">
+        <div class="card">
           <h3>Never included</h3>
-          <ul>
+          <ul class="check-list">
             <li>Invented market share or price targets</li>
             <li>Grade inflation for commercial reasons</li>
-            <li>Hidden conflicts as “analysis”</li>
-            <li>Guarantees that public sources cannot support</li>
+            <li>Hidden conflicts presented as analysis</li>
+            <li>Guarantees public sources cannot support</li>
           </ul>
         </div>
       </div>
 
-      <div class="actions" style="margin-top: 40px;">
+      <div class="actions">
         <a class="btn btn-primary" href="scope.html">Open scope form</a>
-        <a class="btn" href="research/methodology.html">Read methodology</a>
+        <a class="btn" href="research/methodology.html">Methodology</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-bottom" style="border: 0; padding: 0;">
-      <span><a href="index.html" class="logo">SAIL <span>RESEARCH</span></a></span>
-      <span>sail.research.info@gmail.com · <a href="scope.html" style="color: var(--accent);">Scope a decision</a></span>
-    </div>
+<footer class="site-footer"><div class="wrap-wide">
+  <div class="footer-bottom" style="border:0;padding:0">
+    <span><a href="index.html" class="logo">SAIL <span>RESEARCH</span></a></span>
+    <span>sail.research.info@gmail.com</span>
   </div>
-</footer>
+</div></footer>
 </body>
 </html>

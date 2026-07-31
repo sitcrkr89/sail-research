@@ -4,114 +4,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evidence Digest — Sail Research</title>
-<meta name="description" content="Subscribe to Sail Research Evidence Digest: Grade A signals and watch-condition changes. Not a daily noise feed.">
+<meta name="description" content="Subscribe to Sail Research Evidence Digest: Grade A signals and watch-condition changes.">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/digest.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Sail Research">
 <meta property="og:title" content="Evidence Digest — Sail Research">
-<meta property="og:description" content="Occasional email when Core coverage produces a Grade A signal or a material watch-condition change.">
 <meta property="og:url" content="https://sitcrkr89.github.io/sail-research/digest.html">
 <meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 <style>
-  .digest-box { max-width: 520px; padding: 36px; border: 1px solid var(--line); background: var(--white); margin-top: 32px; }
-  .success { display: none; padding: 20px; border: 1px solid var(--live); background: var(--live-wash); margin-bottom: 20px; font-size: 14px; color: var(--ink-2); }
+  .box { max-width: 480px; padding: 28px; border: 1px solid var(--line); background: var(--white); margin-top: 24px; }
+  .success { display: none; padding: 14px; border: 1px solid var(--live); background: var(--live-wash); margin-bottom: 14px; font-size: 14px; color: var(--ink-2); }
   .success.is-on { display: block; }
-  .bullets { margin: 28px 0 0; padding: 0; list-style: none; max-width: 520px; }
-  .bullets li { padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-  .bullets li strong { color: var(--ink-2); font-weight: 500; }
+  .bullets { margin: 24px 0 0; list-style: none; max-width: 520px; }
+  .bullets li { padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  .bullets strong { color: var(--navy); }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="status"><div class="wrap"><span class="live">Research desk active</span><span>Evidence Digest · ~2× / month</span></div></div>
-<nav class="site-nav" aria-label="Primary navigation">
-  <div class="wrap">
-    <a class="logo" href="index.html">SAIL <span>RESEARCH</span><span class="logo-sub">Bottleneck Evidence Desk</span></a>
-    <div class="nav-links">
-      <a href="index.html#coverage">Coverage</a>
-      <a href="research/index.html">Library</a>
-      <a href="product.html">Product</a>
-      <a href="for.html">Who it's for</a>
-      <a href="research/methodology.html">Method</a>
-      <a class="nav-cta" href="scope.html">Scope a decision</a>
-    </div>
+<div class="status"><div class="wrap-wide"><span class="live">Desk pulse</span><span>Evidence Digest · ~2× / month</span></div></div>
+<nav class="site-nav"><div class="wrap-wide">
+  <a class="logo" href="index.html">SAIL <span>RESEARCH</span><span class="logo-sub">Bottleneck Evidence Desk</span></a>
+  <div class="nav-links">
+    <a href="research/index.html">Library</a>
+    <a href="product.html">Product</a>
+    <a href="research/methodology.html">Method</a>
+    <a class="nav-cta" href="scope.html">Scope a decision</a>
   </div>
-</nav>
+</div></nav>
 
 <main id="main">
   <header class="page-hero">
     <div class="wrap">
       <div class="eyebrow">Evidence Digest</div>
       <h1>Watch conditions, not a noise feed.</h1>
-      <p class="lede">Occasional email when Core coverage produces a Grade A signal or a material change in what we are watching. Built for strategy and CI inboxes.</p>
-
-      <div class="digest-box">
-        <div class="success" id="success" role="status">Your mail client should open with a digest request. If not, email <strong>sail.research.info@gmail.com</strong> with subject [Sail Research] Digest request.</div>
+      <p class="lede">Occasional email when Core coverage produces a Grade A signal or a material watch-condition change.</p>
+      <div class="box">
+        <div class="success" id="success">Mail client should open with a digest request. If not, email sail.research.info@gmail.com with subject [Sail Research] Digest request.</div>
         <form id="digest-form">
           <div class="field">
             <label for="email">Work email</label>
             <input id="email" name="email" type="email" required placeholder="work@company.com" autocomplete="email">
           </div>
-          <div class="field" style="margin-top: 16px;">
+          <div class="field" style="margin-top:14px">
             <label for="focus">Primary interest (optional)</label>
             <select id="focus" name="focus">
               <option value="">All Core coverage</option>
-              <option value="Semiconductors">Semiconductors</option>
-              <option value="Biopharma">Biopharma</option>
-              <option value="Power">Power &amp; Infrastructure</option>
+              <option>Semiconductors</option>
+              <option>Biopharma</option>
+              <option>Power &amp; Infrastructure</option>
             </select>
           </div>
-          <button class="btn btn-primary" type="submit" style="margin-top: 20px; width: 100%;">Request digest access</button>
-          <p class="form-note">We use this address only for the digest and for replies you initiate. You can unsubscribe on request.</p>
+          <button class="btn btn-primary" type="submit" style="margin-top:18px;width:100%">Request digest access</button>
+          <p class="form-note">Used only for the digest and replies you initiate.</p>
         </form>
       </div>
-
       <ul class="bullets">
-        <li><strong>What you get:</strong> short notes tied to graded public work—not recycled headlines.</li>
-        <li><strong>What you don’t:</strong> daily volume, price targets, or ungraded speculation.</li>
+        <li><strong>What you get:</strong> short notes tied to graded public work.</li>
+        <li><strong>What you don’t:</strong> daily volume, price targets, ungraded speculation.</li>
         <li><strong>Cadence:</strong> roughly twice a month when Core signals warrant it.</li>
       </ul>
     </div>
   </header>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-bottom" style="border: 0; padding: 0;">
-      <span><a href="index.html" class="logo">SAIL <span>RESEARCH</span></a></span>
-      <span><a href="research/index.html" style="color: var(--muted);">Browse library without subscribing</a></span>
-    </div>
+<footer class="site-footer"><div class="wrap-wide">
+  <div class="footer-bottom" style="border:0;padding:0">
+    <span><a href="index.html" class="logo">SAIL <span>RESEARCH</span></a></span>
+    <span><a href="research/index.html" style="color:rgba(255,255,255,.85)">Library without subscribing</a></span>
   </div>
-</footer>
-
+</div></footer>
 <script>
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  const prefill = params.get("email");
-  if (prefill) document.getElementById("email").value = prefill;
-
-  document.getElementById("digest-form").addEventListener("submit", function (event) {
-    event.preventDefault();
+(function(){
+  const p = new URLSearchParams(location.search);
+  if (p.get("email")) document.getElementById("email").value = p.get("email");
+  document.getElementById("digest-form").addEventListener("submit", function(e){
+    e.preventDefault();
     const email = document.getElementById("email").value.trim();
     const focus = document.getElementById("focus").value || "All Core coverage";
     if (!email) return;
-    const body = [
-      "Please add me to the Sail Research Evidence Digest.",
-      "",
-      "Email: " + email,
-      "Focus: " + focus,
-      "",
-      "I understand this is an occasional, Core-coverage digest—not a daily news feed."
-    ].join("\n");
+    const body = ["Please add me to the Sail Research Evidence Digest.","","Email: "+email,"Focus: "+focus,"","I understand this is an occasional Core-coverage digest."].join("\n");
     document.getElementById("success").classList.add("is-on");
-    window.location.href =
-      "mailto:sail.research.info@gmail.com" +
-      "?subject=" + encodeURIComponent("[Sail Research] Digest request") +
-      "&body=" + encodeURIComponent(body);
+    location.href = "mailto:sail.research.info@gmail.com?subject="+encodeURIComponent("[Sail Research] Digest request")+"&body="+encodeURIComponent(body);
   });
 })();
 </script>
