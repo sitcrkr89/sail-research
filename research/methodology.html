@@ -4,26 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research Standards — Sail Research</title>
-<meta name="description" content="How Sail Research verifies claims: hashed capture, evidence grades, fact/hypothesis boundary, and human review.">
+<meta name="description" content="Sail Research Standards v2.0: evidence strength, claim state, publication status, source capture, release controls, and corrections.">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/research/methodology.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sail Research">
 <meta property="og:title" content="Research Standards — Sail Research">
+<meta property="og:description" content="The public v2.0 standard for evidence strength, claim state, publication status, release controls, and corrections.">
 <meta property="og:url" content="https://sitcrkr89.github.io/sail-research/research/methodology.html">
-<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <style>
   .step { display:grid; grid-template-columns:3rem 1fr; gap:1.25rem; padding:2rem 0; border-top:1px solid var(--line); }
   .step:last-of-type { border-bottom:1px solid var(--line); }
   .step .n {
-    font-family:var(--serif); font-size:1.1rem; font-weight:600; color:#fff; background:var(--ink);
+    font-family:var(--serif); font-size:1.1rem; font-weight:600; color:#fff; background:#315c48;
     width:2.5rem; height:2.5rem; display:flex; align-items:center; justify-content:center;
   }
   .step h2 { font-family:var(--serif); font-size:1.35rem; font-weight:500; color:var(--ink); margin-bottom:0.5rem; }
   .step p { color:var(--ink-soft); max-width:36rem; }
   .step .ex { margin-top:0.85rem; padding:0.9rem 1rem; background:var(--bg-elevated); border:1px solid var(--line); border-left:3px solid var(--brass); font-size:0.92rem; color:var(--ink-2); }
-  .g-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1rem; }
-  .g-badge { font-family:var(--serif); font-weight:600; width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; background:var(--ink); color:#fff; }
-  .g-badge.b { background:#6b7687; } .g-badge.c { background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft); }
+  .g-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1rem; }
+  .g-badge { font-family:var(--serif); font-weight:600; width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; background:#f5f7f6; color:#07110c; }
+  .g-badge.bp { background:var(--brass); color:#07110c; }
+  .g-badge.b { background:#446c59; color:#fff; } .g-badge.c { background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft); }
   .g-item { display:flex; gap:0.65rem; }
   .g-item .t { font-weight:700; color:var(--ink); font-size:0.9rem; }
   .g-item .d { color:var(--ink-soft); font-size:0.85rem; margin-top:0.15rem; }
@@ -35,9 +47,9 @@
   @media(max-width:700px){ .g-grid { grid-template-columns:1fr; } }
 </style>
 </head>
-<body>
+<body data-taxonomy-version="2.0">
 <a class="skip" href="#main">Skip to main content</a>
-<div class="utility"><div class="wrap"><span><span class="dot"></span>Institute active</span><span>Standards · public &amp; binding</span></div></div>
+<div class="utility"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>Institute active</span><span>Standards v2.0 · Effective 2 August 2026</span></div></div>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="../index.html">
       <span class="brand-text">
@@ -66,44 +78,53 @@
 
   <section class="section">
     <div class="wrap prose">
-      <p>Every publication follows the same discipline: capture the primary source with a checkable record, grade each claim by how far it was verified, keep fact separate from interpretation, and never release without human review.</p>
+      <p>Every current publication follows one public model: preserve the source record, grade the support for the load-bearing conclusion, label each claim’s state, record the publication’s lifecycle status, and apply the release route defined in governance.</p>
 
       <div class="step"><div class="n">1</div><div>
         <h2>Hashed capture</h2>
-        <p>Primary pages—issuer newsrooms, IR releases, patents, filings—are recorded with retrieval date, size, and SHA-256 hash alongside the URL. If the page changes later, the hash proves what it said the day we read it.</p>
+        <p>Primary pages—issuer newsrooms, IR releases, patents, and filings—are recorded with retrieval date, size, URL, and a SHA-256 digest. The digest can show whether later bytes differ from the captured copy; it does not by itself prove authorship, truth, or what an unarchived page once said.</p>
         <div class="ex">Example (SR-2026-0005): each vendor HBM4/HBM4E disclosure was captured with date + hash before claims were written.</div>
       </div></div>
 
       <div class="step"><div class="n">2</div><div>
         <h2>Evidence grades</h2>
-        <p>Internal labels roll up into the public grade on every report:</p>
+        <p>The publication grade assesses support for its load-bearing conclusion. It is not a score for prose quality, importance, or investment merit.</p>
         <div class="g-grid">
-          <div class="g-item"><div class="g-badge">A</div><div><div class="t">Primary-Verified</div><div class="d">First-party sources verified by the operator.</div></div></div>
-          <div class="g-item"><div class="g-badge b">B</div><div><div class="t">Headline-Corroborated</div><div class="d">Multi-outlet headline check; bodies not fully confirmed.</div></div></div>
-          <div class="g-item"><div class="g-badge c">C</div><div><div class="t">Hypothesis</div><div class="d">Interpretation only—never stated as fact.</div></div></div>
+<!-- EVIDENCE-GRADE-DEFINITIONS:START -->
+          <div class="g-item" data-evidence-strength="A" data-definition="Every load-bearing conclusion is supported by at least two independent primary-source chains."><div class="g-badge">A</div><div><div class="t">Independent primary chains</div><div class="d">Every load-bearing conclusion is supported by at least two independent primary-source chains.</div></div></div>
+          <div class="g-item" data-evidence-strength="B+" data-definition="A multi-source primary record supports the central conclusion, but at least one material independence or verification limit remains explicit."><div class="g-badge bp">B+</div><div><div class="t">Strong, bounded record</div><div class="d">A multi-source primary record supports the central conclusion, but at least one material independence or verification limit remains explicit.</div></div></div>
+          <div class="g-item" data-evidence-strength="B" data-definition="The conclusion is attributable to primary material, but relies on a single party, limited corroboration, or a material open verification gap."><div class="g-badge b">B</div><div><div class="t">Attributable, limited</div><div class="d">The conclusion is attributable to primary material, but relies on a single party, limited corroboration, or a material open verification gap.</div></div></div>
+          <div class="g-item" data-evidence-strength="C" data-definition="The work is exploratory synthesis or hypothesis and must not be presented as established fact."><div class="g-badge c">C</div><div><div class="t">Exploratory</div><div class="d">The work is exploratory synthesis or hypothesis and must not be presented as established fact.</div></div></div>
+<!-- EVIDENCE-GRADE-DEFINITIONS:END -->
         </div>
+        <div class="ex">Archive entries keep the grade shown at original release and are marked “not regraded” when they predate Standards v2.0.</div>
       </div></div>
 
       <div class="step"><div class="n">3</div><div>
-        <h2>Fact / hypothesis boundary</h2>
-        <p>Model scores and scenarios never masquerade as disclosed fact. Gaps stay labeled as gaps—not converted to zero or “evidence of absence.”</p>
+        <h2>Claim state</h2>
+        <p>Every material statement is one of four states: <strong>Verified</strong> means directly supported at the cited scope; <strong>Attributed</strong> means a named party says it; <strong>Inference</strong> is Sail analysis derived from disclosed evidence; and <strong>Open Gap</strong> means evidence is absent, inaccessible, conflicting, or still required. A report can contain all four states regardless of its overall grade.</p>
       </div></div>
 
       <div class="step"><div class="n">4</div><div>
-        <h2>Operator review</h2>
-        <p>A human reviews the trail before release. If support is thin, the grade comes down. Published work is observed for seven days; outcomes inform the next topic.</p>
+        <h2>Publication status and release control</h2>
+        <p>Status is recorded separately as <strong>Active</strong>, <strong>Corrected</strong>, <strong>Archived</strong>, or <strong>Superseded</strong>. Routine briefs may pass a delegated deterministic preflight; Full Reports require explicit owner review under the current authorization. Automated gates are publication controls, not peer review.</p>
+        <div class="ex">A material correction preserves the original URL, marks it non-current, links both directions, and records the change in the public corrections ledger.</div>
       </div></div>
 
       <h2 style="font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--ink);margin:2.5rem 0 1rem">Preferred source classes</h2>
       <div class="source-list">
-        <div><strong>Issuer first-party disclosures</strong><span>Newsrooms, IR, product pages—hashed for Grade A claims.</span></div>
+        <div><strong>Issuer first-party disclosures</strong><span>Newsrooms, IR, and product pages—valuable for attributable company claims, but not independent of the issuer.</span></div>
         <div><strong>Patents &amp; registries</strong><span>Full-text reads with claim boundaries.</span></div>
         <div><strong>Official statistics &amp; filings</strong><span>Cited to the original publisher with retrieval context.</span></div>
-        <div><strong>Multi-outlet corroboration</strong><span>Supports Grade B only—not a substitute for primary verification.</span></div>
+        <div><strong>Independent primary records</strong><span>Customer disclosures, regulator records, counterpart filings, and reproducible datasets can create a genuinely independent evidence chain.</span></div>
+        <div><strong>Secondary reporting</strong><span>Useful for discovery and context; it does not become primary evidence through repetition.</span></div>
       </div>
 
       <h2 style="font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--ink);margin:2rem 0 0.75rem">Product boundaries</h2>
       <p>No quote product. No broker-report body hosting. No price targets or trading signals. Commissioned work uses the same grade rules as the public library.</p>
+
+      <h2 style="font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--ink);margin:2rem 0 0.75rem">Governance and corrections</h2>
+      <p>The <a class="link-more" href="../governance.html">Editorial Governance</a> page discloses release routes, automation, and independence rules. Material changes are recorded in the <a class="link-more" href="../corrections.html">Corrections Ledger</a>.</p>
 
       <div class="actions">
         <a class="btn btn-solid" href="../scope.html">Commission research</a>
@@ -121,7 +142,7 @@
             <span class="brand-tag">Evidence Institute</span>
           </span>
         </div>
-    <span>Not investment advice</span>
+    <span><a href="../governance.html">Governance</a> · <a href="../corrections.html">Corrections</a> · Not investment advice</span>
   </div>
 </div></footer>
 </body>

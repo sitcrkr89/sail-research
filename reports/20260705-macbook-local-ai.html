@@ -3,23 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Local AI on MacBooks — Ollama's MLX Backend Changes the Math — Sail Research SR-2026-0001</title>
+<title>Local AI on MacBooks: Ollama&#x27;s MLX Backend Changes the Math — Sail Research SR-2026-0001</title>
 <meta name="description" content="Ollama is now powered by Apple's MLX framework on Apple Silicon. What the official numbers say, what the unified-memory advantage actually means, and three conditions to check before setting up. Evidence Grade A.">
+
+
+
+
+
+
+
+
+<!-- PUBLICATION-METADATA:START -->
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/reports/20260705-macbook-local-ai.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Sail Research">
-<meta property="og:title" content="Local AI on MacBooks — Ollama's MLX Backend Changes the Math — Sail Research SR-2026-0001">
-<meta property="og:description" content="Ollama is now powered by Apple's MLX framework on Apple Silicon. What the official numbers say, what the unified-memory advantage actually means, and three conditions to check before setting up. Evidence Grade A.">
+<meta property="og:title" content="Local AI on MacBooks: Ollama&#x27;s MLX Backend Changes the Math — Sail Research SR-2026-0001">
+<meta property="og:description" content="Archived technical note on Ollama&#x27;s MLX backend; retained for provenance continuity.">
 <meta property="og:url" content="https://sitcrkr89.github.io/sail-research/reports/20260705-macbook-local-ai.html">
-<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta property="article:published_time" content="2026-07-06">
+<meta property="article:modified_time" content="2026-08-02">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Local AI on MacBooks: Ollama's MLX Backend Changes the Math","datePublished":"2026-07-06","dateModified":"2026-08-02","author":{"@type":"Organization","name":"Sail Research"},"publisher":{"@type":"Organization","name":"Sail Research"},"mainEntityOfPage":"https://sitcrkr89.github.io/sail-research/reports/20260705-macbook-local-ai.html"}
+</script>
+<!-- PUBLICATION-METADATA:END -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/report.css">
 
 </head>
-<body>
+<body data-publication-status="archived" data-methodology-version="legacy-2026-07">
 
 <nav>
   <div class="wrap">
@@ -28,10 +50,17 @@
   </div>
 </nav>
 
+<!-- PUBLICATION-STATUS-NOTICE:START -->
+<aside class="archive-notice wrap" data-archive-notice="legacy-2026-07" aria-label="Archive status">
+  <p class="notice-label">Archived · legacy grade · not regraded</p>
+  <p>This report is retained for provenance. Its displayed grade is historical and has not been regraded under Standards v2.0.</p>
+</aside>
+<!-- PUBLICATION-STATUS-NOTICE:END -->
+
 <header>
   <div class="wrap">
-    <div class="r-id">SR-2026-0001</div>
-    <div class="chips"><span class="chip">AI · Hardware</span><span class="chip grade">Evidence A — Primary-Verified</span><span class="chip free">Free Sample</span></div>
+    <div class="r-id" data-publication-id="SR-2026-0001">SR-2026-0001</div>
+    <div class="chips"><span class="chip">AI · Hardware</span><span class="chip grade" data-evidence-strength="A">Legacy A — not regraded</span><span class="chip free">Free Sample</span></div>
     <h1>Local AI on MacBooks: Ollama's MLX Backend Changes the Math</h1>
     <div class="meta">
       <span><b>Jul 06, 2026</b></span><span>Sail Research</span><span>Ollama official blog verified · multi-outlet corroborated</span><span>Fact / hypothesis separated</span>
@@ -48,14 +77,14 @@
 
   <p>Ollama's own blog confirms the MLX integration on Apple Silicon (initially in preview), with a follow-up post reporting its highest Apple Silicon performance to date. The officially reported gains: prompt processing (prefill) around 1.6× faster, and response generation (decode) nearly 2× faster versus the previous backend. Subsequent engine optimizations — fusing operations into single Metal kernels and reworked GPU-backed sampling — added up to a further ~20%.</p>
 
-  <table class="dtable">
+  <div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table class="dtable">
     <tr><th>Claim</th><th>Status</th></tr>
     <tr><td>Ollama powered by MLX on Apple Silicon</td><td>Confirmed — official Ollama blog</td></tr>
     <tr><td>~1.6× prefill, ~2× decode speedup</td><td>Confirmed — official Ollama figures</td></tr>
     <tr><td>MLX 20–40% higher throughput vs. llama.cpp Metal</td><td>Corroborated — independent coverage; varies by model/quantization</td></tr>
     <tr><td>M5-series GPU Neural Accelerators improve TTFT &amp; tok/s</td><td>Confirmed — official Ollama statement</td></tr>
     <tr><td>MLX backend requiring 32GB+ unified memory (v0.19)</td><td>Reported — verify against current official docs</td></tr>
-  </table>
+  </table></div>
 
   <h2>Why MacBooks Are Structurally Suited to This</h2>
 

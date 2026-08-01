@@ -6,9 +6,20 @@
 <title>Publications — Sail Research</title>
 <meta name="description" content="Publications from Sail Research: evidence-graded briefs on Korean semiconductors, biopharma, and power infrastructure.">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/research/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sail Research">
 <meta property="og:title" content="Publications — Sail Research">
+<meta property="og:description" content="Evidence-graded briefs and full reports on Korean semiconductors, biopharma, and power infrastructure.">
 <meta property="og:url" content="https://sitcrkr89.github.io/sail-research/research/">
-<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <style>
@@ -95,7 +106,7 @@
     font-weight:600;
     color:var(--ink-soft);
   }
-  .pub .full {
+  .pub .full, .pub .status {
     font-size:0.62rem;
     font-weight:700;
     letter-spacing:0.14em;
@@ -104,6 +115,7 @@
     border:1px solid var(--brass);
     padding:0.12rem 0.4rem;
   }
+  .pub .status.corrected { color:#07110c; background:var(--brass); border-color:var(--brass); }
   .pub h3 {
     font-family:var(--serif);
     font-size:clamp(1.15rem, 1.8vw, 1.4rem);
@@ -140,9 +152,10 @@
   }
   .grades { margin:2.5rem 0; padding:2rem; background:var(--bg-elevated); border:1px solid var(--line); }
   .grades h2 { font-family:var(--serif); font-size:1.4rem; font-weight:500; color:var(--ink); margin-bottom:0.5rem; }
-  .g-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:1.25rem; }
-  .g-badge { font-family:var(--serif); font-weight:600; width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; background:var(--bg-elevated); color:var(--bg-deep); }
-  .g-badge.b { background:#7a8f85; color:#fff; }
+  .g-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; margin-top:1.25rem; }
+  .g-badge { font-family:var(--serif); font-weight:600; width:2rem; height:2rem; display:flex; align-items:center; justify-content:center; background:#f5f7f6; color:#07110c; }
+  .g-badge.bp { background:var(--brass); color:#07110c; }
+  .g-badge.b { background:#446c59; color:#fff; }
   .g-badge.c { background:transparent; border:1px solid var(--line-strong); color:var(--ink-soft); }
   .g-item { display:flex; gap:0.75rem; }
   .g-item .t { font-weight:700; color:var(--ink); font-size:0.92rem; }
@@ -190,7 +203,9 @@
     <div class="wrap">
       <div class="toc-mast">
         <div class="vol">Sail Research · <em>Vol. 2026</em></div>
+<!-- PUBLICATION-COUNT:START -->
         <div class="iss">Table of contents · 10 entries</div>
+<!-- PUBLICATION-COUNT:END -->
       </div>
 
       <div class="search-bar">
@@ -205,149 +220,157 @@
         <button class="filter-btn" type="button" data-sector="archive" aria-pressed="false">Archive</button>
       </div>
 
+      <h2 class="sr-only">Publication list</h2>
+<!-- PUBLICATION-LIST:START -->
       <div class="pub-list" id="list">
-        <a class="pub" href="../reports/full/20260731-hbm4e-16h-qualification-race-full.html" data-sector="semiconductors" data-s="hbm4e 16-high qualification race bonding teardown">
-          <div class="date">31 Jul</div>
+        <a class="pub" href="../reports/full/20260731-hbm4e-16h-qualification-race-full.html" data-publication-id="SR-2026-0010-F" data-publication-status="active" data-sector="semiconductors" data-s="sr-2026-0010-f the 16-high hbm4e “qualification race” is demand-side only: qualification timeline &amp; bonding-method teardown no source establishes 16-high hbm4e qualification, yield, or ramp timing; the public record supports a demand signal and a completed 12-high race. semiconductors">
+          <div class="date"><time datetime="2026-07-31">31 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0010-F</span>
               <span class="domain">Semiconductors</span>
-              <span class="full">Full Report</span>
-              <span class="grade">Evidence B+</span>
+              <span class="full">Full Report</span> <span class="grade" data-evidence-strength="B+">Evidence B+</span>
             </div>
-            <h3>HBM4E 16-High Qualification Race — Full Teardown</h3>
-            <p class="deck">Correction-style teardown: no source carries a 16-high HBM4E qualification, yield, or ramp date—what exists is a completed 12-high HBM4 race and a demand-side 16-high request with no contracts signed.</p>
+            <h3>The 16-High HBM4E “Qualification Race” Is Demand-Side Only: Qualification Timeline &amp; Bonding-Method Teardown</h3>
+            <p class="deck">No source establishes 16-high HBM4E qualification, yield, or ramp timing; the public record supports a demand signal and a completed 12-high race.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260729-agc-yokohama-gmp-readiness.html" data-sector="biopharma" data-s="agc biologics yokohama gmp cdmo">
-          <div class="date">29 Jul</div>
+        <a class="pub" href="../reports/20260729-agc-yokohama-gmp-readiness.html" data-publication-id="SR-2026-0009" data-publication-status="active" data-sector="biopharma" data-s="sr-2026-0009 agc biologics yokohama agreement: what the official scope discloses about new facility gmp readiness disclosure-bound reading of plant scope, contract terms, and the gmp-readiness claims still requiring primary confirmation. biopharma">
+          <div class="date"><time datetime="2026-07-29">29 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0009</span>
               <span class="domain">Biopharma</span>
-              <span class="grade">Evidence B</span>
+              <span class="grade" data-evidence-strength="B">Evidence B</span>
             </div>
-            <h3>AGC Biologics Yokohama: What the Official Scope Discloses About GMP Readiness</h3>
-            <p class="deck">Disclosure-bound reading of plant scope—what is stated, what is not, and where diligence still needs primary confirmation.</p>
+            <h3>AGC Biologics Yokohama Agreement: What the Official Scope Discloses About New Facility GMP Readiness</h3>
+            <p class="deck">Disclosure-bound reading of plant scope, contract terms, and the GMP-readiness claims still requiring primary confirmation.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260727-wuxiui-patent-no-bleed-perfusion.html" data-sector="biopharma" data-s="wuxiui patent perfusion continuous">
-          <div class="date">27 Jul</div>
+        <a class="pub" href="../reports/full/20260727-wuxiui-no-bleed-perfusion-full.html" data-publication-id="SR-2026-0008-F" data-publication-status="corrected" data-sector="biopharma" data-s="sr-2026-0008-f wrong platform, right patent: wo2020088180a1 maps to wuxiup, not wuxiui corrected teardown mapping wo2020088180a1 to wuxiup rather than wuxiui, with company-stated figures and sail analysis separated. biopharma">
+          <div class="date"><time datetime="2026-07-29">29 Jul</time></div>
           <div class="body">
             <div class="running">
-              <span class="num">SR-2026-0008</span>
+              <span class="num">SR-2026-0008-F</span>
               <span class="domain">Biopharma</span>
-              <span class="grade">Evidence B</span>
+              <span class="full">Full Report</span> <span class="status corrected">Corrected</span> <span class="grade" data-evidence-strength="B+">Evidence B+</span>
             </div>
-            <h3>No Bleed, Continuous Harvest: The Patent Behind WuXiUI</h3>
-            <p class="deck">Family, claims architecture, and what a continuous / no-bleed patent actually settles for competitive analysis.</p>
+            <h3>Wrong Platform, Right Patent: WO2020088180A1 Maps to WuXiUP, Not WuXiUI</h3>
+            <p class="deck">Corrected teardown mapping WO2020088180A1 to WuXiUP rather than WuXiUI, with company-stated figures and Sail analysis separated.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260727-wuxiup-continuous-biomanufacturing.html" data-sector="biopharma" data-s="wuxiup continuous biomanufacturing">
-          <div class="date">27 Jul</div>
+        <a class="pub" href="../reports/20260727-wuxiup-continuous-biomanufacturing.html" data-publication-id="SR-2026-0007" data-publication-status="active" data-sector="biopharma" data-s="sr-2026-0007 wuxiup and the continuous biomanufacturing claim: what wuxi biologics&#x27; own disclosures establish wuxiup platform claims reduced to attributable, checkable statements without treating marketing language as capacity fact. biopharma">
+          <div class="date"><time datetime="2026-07-27">27 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0007</span>
               <span class="domain">Biopharma</span>
-              <span class="grade">Evidence B</span>
+              <span class="grade" data-evidence-strength="B">Evidence B</span>
             </div>
-            <h3>WuXiUP Continuous Biomanufacturing: Disclosure-Bound Claims</h3>
-            <p class="deck">Platform claims reduced to verifiable statements—without marketing language treated as capacity fact.</p>
+            <h3>WuXiUP and the Continuous Biomanufacturing Claim: What WuXi Biologics&#x27; Own Disclosures Establish</h3>
+            <p class="deck">WuXiUP platform claims reduced to attributable, checkable statements without treating marketing language as capacity fact.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260713-hbm4-vendor-confirmed.html" data-sector="semiconductors" data-s="hbm4 vendor commercial transition">
-          <div class="date">13 Jul</div>
+        <a class="pub" href="../reports/20260713-hbm4-vendor-confirmed.html" data-publication-id="SR-2026-0006" data-publication-status="active" data-sector="semiconductors" data-s="sr-2026-0006 hbm4 goes commercial: all three vendors now confirm the generation transition primary vendor confirmations on the hbm4 handoff and the qualification, volume, yield, and economics still left open. semiconductors">
+          <div class="date"><time datetime="2026-07-13">13 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0006</span>
               <span class="domain">Semiconductors</span>
-              <span class="grade">Evidence A</span>
+              <span class="grade" data-evidence-strength="A">Evidence A</span>
             </div>
-            <h3>HBM4 Goes Commercial: All Three Vendors Confirm the Generation Transition</h3>
-            <p class="deck">Primary vendor confirmations on the HBM4 commercial handoff—and the claim boundary that remains open.</p>
+            <h3>HBM4 Goes Commercial: All Three Vendors Now Confirm the Generation Transition</h3>
+            <p class="deck">Primary vendor confirmations on the HBM4 handoff and the qualification, volume, yield, and economics still left open.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260708-hbm-tech-tracking.html" data-sector="semiconductors" data-s="hbm hbm4e tracking">
-          <div class="date">08 Jul</div>
+        <a class="pub" href="../reports/20260708-hbm-tech-tracking.html" data-publication-id="SR-2026-0005" data-publication-status="active" data-sector="semiconductors" data-s="sr-2026-0005 tracking the hbm transition: who actually leads the race to hbm4e? generation-roadmap signals from primary sources, with model assumptions, freshness, and counter-evidence explicit. semiconductors">
+          <div class="date"><time datetime="2026-07-08">08 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0005</span>
               <span class="domain">Semiconductors</span>
-              <span class="grade">Evidence A</span>
+              <span class="grade" data-evidence-strength="A">Evidence A</span>
             </div>
-            <h3>Tracking the HBM Transition Toward HBM4E</h3>
-            <p class="deck">Generation roadmap signals from primary sources, with freshness and counter-evidence kept explicit.</p>
+            <h3>Tracking the HBM Transition: Who Actually Leads the Race to HBM4E?</h3>
+            <p class="deck">Generation-roadmap signals from primary sources, with model assumptions, freshness, and counter-evidence explicit.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260706-shortform-automation.html" data-sector="archive" data-s="short form automation media">
-          <div class="date">06 Jul</div>
+        <a class="pub" href="../reports/20260706-shortform-automation.html" data-publication-id="SR-2026-0004" data-publication-status="archived" data-sector="archive" data-s="sr-2026-0004 short-form content automation: broadcasters explore adoption — where solo marketers should start archived exploratory brief outside the current korea-bottleneck programs. archive">
+          <div class="date"><time datetime="2026-07-06">06 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0004</span>
               <span class="domain">Archive</span>
-              <span class="grade">Evidence B</span>
+              <span class="grade" data-evidence-strength="B">Legacy B · not regraded</span>
             </div>
-            <h3>Short-Form Content Automation: Where Solo Marketers Should Start</h3>
-            <p class="deck">Archived exploratory brief outside core Korea-bottleneck programs.</p>
+            <h3>Short-Form Content Automation: Broadcasters Explore Adoption — Where Solo Marketers Should Start</h3>
+            <p class="deck">Archived exploratory brief outside the current Korea-bottleneck programs.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260705-notion-ai.html" data-sector="archive" data-s="notion ai korea">
-          <div class="date">06 Jul</div>
+        <a class="pub" href="../reports/20260705-notion-ai.html" data-publication-id="SR-2026-0003" data-publication-status="archived" data-sector="archive" data-s="sr-2026-0003 notion ai in korea: from personal tool to institutional training category archived category note; not part of the current korea-bottleneck program set. archive">
+          <div class="date"><time datetime="2026-07-06">06 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0003</span>
               <span class="domain">Archive</span>
-              <span class="grade">Evidence B</span>
+              <span class="grade" data-evidence-strength="B">Legacy B · not regraded</span>
             </div>
-            <h3>Notion AI in Korea: From Personal Tool to Institutional Category</h3>
-            <p class="deck">Archived category note; not part of the live program set.</p>
+            <h3>Notion AI in Korea: From Personal Tool to Institutional Training Category</h3>
+            <p class="deck">Archived category note; not part of the current Korea-bottleneck program set.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260705-hybrid-vs-ev.html" data-sector="archive" data-s="ev hybrid korea">
-          <div class="date">06 Jul</div>
+        <a class="pub" href="../reports/20260705-hybrid-vs-ev.html" data-publication-id="SR-2026-0002" data-publication-status="archived" data-sector="archive" data-s="sr-2026-0002 korea&#x27;s ev crossover: the month electric overtook hybrid — and what still decides the choice archived data brief on korea&#x27;s ev-hybrid crossover month. archive">
+          <div class="date"><time datetime="2026-07-06">06 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0002</span>
               <span class="domain">Archive</span>
-              <span class="grade">Evidence A</span>
+              <span class="grade" data-evidence-strength="A">Legacy A · not regraded</span>
             </div>
-            <h3>Korea’s EV Crossover: The Month Electric Overtake Hybrid</h3>
-            <p class="deck">Archived data brief on Korea’s EV–hybrid crossover month.</p>
+            <h3>Korea&#x27;s EV Crossover: The Month Electric Overtook Hybrid — and What Still Decides the Choice</h3>
+            <p class="deck">Archived data brief on Korea&#x27;s EV-hybrid crossover month.</p>
           </div>
           <span class="go">Read</span>
         </a>
-        <a class="pub" href="../reports/20260705-macbook-local-ai.html" data-sector="archive" data-s="ollama mlx macbook">
-          <div class="date">06 Jul</div>
+        <a class="pub" href="../reports/20260705-macbook-local-ai.html" data-publication-id="SR-2026-0001" data-publication-status="archived" data-sector="archive" data-s="sr-2026-0001 local ai on macbooks: ollama&#x27;s mlx backend changes the math archived technical note on ollama&#x27;s mlx backend; retained for provenance continuity. archive">
+          <div class="date"><time datetime="2026-07-06">06 Jul</time></div>
           <div class="body">
             <div class="running">
               <span class="num">SR-2026-0001</span>
               <span class="domain">Archive</span>
-              <span class="grade">Evidence A</span>
+              <span class="grade" data-evidence-strength="A">Legacy A · not regraded</span>
             </div>
-            <h3>Local AI on MacBooks: Ollama’s MLX Backend</h3>
-            <p class="deck">Archived technical note; retained for provenance continuity.</p>
+            <h3>Local AI on MacBooks: Ollama&#x27;s MLX Backend Changes the Math</h3>
+            <p class="deck">Archived technical note on Ollama&#x27;s MLX backend; retained for provenance continuity.</p>
           </div>
           <span class="go">Read</span>
         </a>
       </div>
+<!-- PUBLICATION-LIST:END -->
+<!-- PUBLICATION-COUNT-NOTE:START -->
       <p class="count-note" id="count">Showing 10 entries</p>
+<!-- PUBLICATION-COUNT-NOTE:END -->
 
       <div class="grades" id="coverage">
         <h2>Evidence grades</h2>
-        <p style="color:var(--ink-soft)">We would rather publish a B than dress it up as an A.</p>
+        <p style="color:var(--ink-soft)">Grades assess the support for a publication’s load-bearing conclusion. Claim state and publication status are separate.</p>
         <div class="g-grid">
-          <div class="g-item"><div class="g-badge">A</div><div><div class="t">Primary-Verified</div><div class="d">Official disclosures checked against the original publisher.</div></div></div>
-          <div class="g-item"><div class="g-badge b">B</div><div><div class="t">Headline-Corroborated</div><div class="d">Multi-outlet headline check; bodies not fully confirmed.</div></div></div>
-          <div class="g-item"><div class="g-badge c">C</div><div><div class="t">Hypothesis</div><div class="d">Interpretation only—never stated as fact.</div></div></div>
+<!-- EVIDENCE-GRADE-DEFINITIONS:START -->
+        <div class="g-item" data-evidence-strength="A" data-definition="Every load-bearing conclusion is supported by at least two independent primary-source chains."><div class="g-badge">A</div><div><div class="t">Independent primary chains</div><div class="d">Every load-bearing conclusion is supported by at least two independent primary-source chains.</div></div></div>
+        <div class="g-item" data-evidence-strength="B+" data-definition="A multi-source primary record supports the central conclusion, but at least one material independence or verification limit remains explicit."><div class="g-badge bp">B+</div><div><div class="t">Strong, bounded record</div><div class="d">A multi-source primary record supports the central conclusion, but at least one material independence or verification limit remains explicit.</div></div></div>
+        <div class="g-item" data-evidence-strength="B" data-definition="The conclusion is attributable to primary material, but relies on a single party, limited corroboration, or a material open verification gap."><div class="g-badge b">B</div><div><div class="t">Attributable, limited</div><div class="d">The conclusion is attributable to primary material, but relies on a single party, limited corroboration, or a material open verification gap.</div></div></div>
+        <div class="g-item" data-evidence-strength="C" data-definition="The work is exploratory synthesis or hypothesis and must not be presented as established fact."><div class="g-badge c">C</div><div><div class="t">Exploratory</div><div class="d">The work is exploratory synthesis or hypothesis and must not be presented as established fact.</div></div></div>
+<!-- EVIDENCE-GRADE-DEFINITIONS:END -->
         </div>
+        <p class="form-note">Archive labels preserve their original legacy grade but have not been regraded under Standards v2.0.</p>
         <div class="actions"><a class="btn" href="methodology.html">Research standards</a></div>
       </div>
     </div>
@@ -371,7 +394,7 @@
             <span class="brand-tag">Evidence Institute</span>
           </span>
         </div>
-    <span>Not investment advice · Primary sources only</span>
+    <span><a href="../governance.html">Governance</a> · <a href="../corrections.html">Corrections</a> · Not investment advice</span>
   </div>
 </div></footer>
 <script>

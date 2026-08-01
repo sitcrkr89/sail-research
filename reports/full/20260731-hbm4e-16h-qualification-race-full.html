@@ -3,17 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The 16-High HBM4E &ldquo;Qualification Race&rdquo; Is Demand-Side Only — Sail Research SR-2026-0010-F</title>
+<title>The 16-High HBM4E “Qualification Race” Is Demand-Side Only: Qualification Timeline &amp; Bonding-Method Teardown — Sail Research SR-2026-0010-F</title>
 <meta name="description" content="Correction-style teardown: no source — vendor primary, customer official, or independent — contains a 16-high HBM4E (or 16-high HBM4) qualification, yield, or ramp date for any vendor. What exists is a completed 12-high HBM4 qualification race (Samsung, Micron, SK hynix all qualified by 2026-06-05, per press-carried NVIDIA CEO remarks) and a demand-side 16-high request with no contracts signed. Company claims are attributed as such; orderings and ramp windows are our anchored analysis. Evidence Grade B+.">
+
+
+<!-- PUBLICATION-METADATA:START -->
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/reports/full/20260731-hbm4e-16h-qualification-race-full.html">
-<meta property="og:title" content="The 16-High HBM4E &ldquo;Qualification Race&rdquo; Is Demand-Side Only — Sail Research SR-2026-0010-F">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sail Research">
+<meta property="og:title" content="The 16-High HBM4E “Qualification Race” Is Demand-Side Only: Qualification Timeline &amp; Bonding-Method Teardown — Sail Research SR-2026-0010-F">
+<meta property="og:description" content="No source establishes 16-high HBM4E qualification, yield, or ramp timing; the public record supports a demand signal and a completed 12-high race.">
+<meta property="og:url" content="https://sitcrkr89.github.io/sail-research/reports/full/20260731-hbm4e-16h-qualification-race-full.html">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta property="article:published_time" content="2026-07-31">
+<meta property="article:modified_time" content="2026-07-31">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="../../assets/mark.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"The 16-High HBM4E “Qualification Race” Is Demand-Side Only: Qualification Timeline & Bonding-Method Teardown","datePublished":"2026-07-31","dateModified":"2026-07-31","author":{"@type":"Organization","name":"Sail Research"},"publisher":{"@type":"Organization","name":"Sail Research"},"mainEntityOfPage":"https://sitcrkr89.github.io/sail-research/reports/full/20260731-hbm4e-16h-qualification-race-full.html"}
+</script>
+<!-- PUBLICATION-METADATA:END -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/report.css">
 
 </head>
-<body>
+<body data-publication-status="active" data-methodology-version="2.0">
 
 <nav>
   <div class="wrap">
@@ -24,8 +46,8 @@
 
 <header>
   <div class="wrap">
-    <div class="r-id">SR-2026-0010-F · FULL REPORT</div>
-    <div class="chips"><span class="chip">Semiconductors &middot; HBM</span><span class="chip grade">Evidence B+ &mdash; vendor primaries are single-party by nature; NVIDIA publishes no memory-qualification statement</span></div>
+    <div class="r-id" data-publication-id="SR-2026-0010-F">SR-2026-0010-F · FULL REPORT</div>
+    <div class="chips"><span class="chip">Semiconductors &middot; HBM</span><span class="chip grade" data-evidence-strength="B+">Evidence B+ &mdash; vendor primaries are single-party by nature; NVIDIA publishes no memory-qualification statement</span></div>
     <h1>The 16-High HBM4E &ldquo;Qualification Race&rdquo; Is Demand-Side Only: Qualification Timeline &amp; Bonding-Method Teardown</h1>
     <div class="meta">
       <span><b>Jul 31, 2026</b></span><span>Sail Research</span><span>Lead source: Micron GTC 2026 press release (HBM4 48GB 16-high sample shipment, March 2026), retrieved 2026-07-31</span><span>Free-sample companion: <a href="../20260713-hbm4-vendor-confirmed.html">SR-2026-0006</a></span>
@@ -48,7 +70,7 @@
   <p>Vendor and rumor framing of a &ldquo;16-high HBM4E qualification race&rdquo; is not supported by the evidence: as of 2026-07-31, no source &mdash; vendor primary, customer official, or independent &mdash; contains a 16-high HBM4E (or 16-high HBM4) qualification, yield, or ramp date for Samsung, SK hynix, or Micron. What the evidence does show is a <b>completed 12-high HBM4 qualification race</b> &mdash; NVIDIA CEO Jensen Huang stated on 2026-06-05 (press-carried remarks, not an NVIDIA publication) that all three vendors &ldquo;have been qualified&rdquo; and are in production &mdash; that is being misread as its 16-high counterpart, plus a real but uncommitted demand-side signal: NVIDIA requested 16-high supply for Q4 2026 delivery in December 2025, with no contracts signed and customer&ndash;maker 16-high talks that &ldquo;remain limited&rdquo; as of July 2026. The only 16-high hardware artifact backed by a vendor primary is Micron&rsquo;s HBM4 48GB 16-high <b>sample shipment</b> (March 2026); Samsung&rsquo;s 64GB 16-layer HBM4E is planned-lineup language only, and SK hynix has no announced 16-high HBM4E SKU at all. On bonding, every evidenced production process through HBM4 16-high is thermo-compression-class (SK hynix Advanced MR-MUF; Samsung and Micron reported on TC-NCF), with hybrid bonding&rsquo;s earliest likely adoption now forecast at 16-high HBM4E. Yield figures circulating for 16-high-class work (~10% for Samsung hybrid-bonded HBM4 <i>prototypes</i>) are single-outlet, unattributed, and unverified; this report does not treat them as verified yields.</p>
 
   <h2>Claim Inventory &amp; Evidence Matrix</h2>
-  <table class="dtable" id="evidence-matrix">
+  <div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table class="dtable" id="evidence-matrix">
     <tr><th>Claim</th><th>Evidence Class</th><th>Primary Source(s)</th><th>Independent?</th><th>Status</th></tr>
     <tr><td><b>No 16-high HBM4E/HBM4 qualification, yield, or ramp date exists for any vendor</b> (negative result across vendor primaries, NVIDIA official channels, and independent press) [V-S3][V-H6][V-M4][C-N3][I-5]</td><td>Negative result</td><td>Full source corpus s01&ndash;s19 searched</td><td>N/A &mdash; absence verified across all source classes</td><td>Negative result, verified 2026-07-31 (searched, not found)</td></tr>
     <tr><td>Jensen Huang (Seoul, 2026-06-05): all three vendors &ldquo;have been qualified,&rdquo; in production, racing to support Vera Rubin; Q3 2026 system shipments &mdash; <b>scope: 12-high HBM4</b> [C-N2]</td><td>B (customer statement, verbal, press-carried; reported by Reuters, confirmed by Bloomberg)</td><td>Tech Times 2026-06-05 (s10)</td><td>Y &mdash; customer statement via independent press; not an NVIDIA publication (caps at B)</td><td>Verified 2026-07-31 as press-carried customer statement</td></tr>
@@ -64,7 +86,7 @@
     <tr><td>Bonding through HBM4 16-high is thermo-compression-class at both Korean vendors (SK hynix Advanced MR-MUF per vendor primary for HBM4 and DealSite-reported investor briefings for 16-high retention; Samsung/Micron reported on TC-NCF); hybrid bonding&rsquo;s earliest likely adoption is 16-high HBM4E [V-H1][V-H4][V-M3][I-4]</td><td>B (HBM4 generally) / C (16-high-specific retention and forecast)</td><td>SK hynix Newsroom (s04); Micron product page (s07); TrendForce s13, s15; TweakTown s18</td><td>Mixed &mdash; vendor primaries + independent secondary chains that agree</td><td>Verified 2026-07-31 at the stated classes</td></tr>
     <tr><td>SK hynix completed 12-high hybrid-bonding HBM validation (named technical leader, The Elec); yields undisclosed; first MP-intent hybrid-bonding equipment ordered (~KRW 20B) [V-H5]</td><td>C (aggregator chain with named engineer on record)</td><td>TrendForce 2026-04-29 (s14)</td><td>Y &mdash; press chain, no vendor-published confirmation</td><td>Partially verified 2026-07-31</td></tr>
     <tr><td>Circulating 16-high-class yield figures (~10% for Samsung hybrid-bonded HBM4 <i>prototypes</i>; 1c DRAM &ldquo;nearing 80% MP target&rdquo;) are single-outlet, unattributed secondary [V-S4][I-5]</td><td>C &mdash; unverified, single-outlet unattributed</td><td>Sisa Journal via TrendForce (s12)</td><td>Y &mdash; press, but one outlet, no named source</td><td>Unverified 2026-07-31; not usable as verified yield</td></tr>
-  </table>
+  </table></div>
 
   <h2>Mechanism &amp; Teardown Analysis</h2>
   <p><b>Framing teardown: where the &ldquo;16-high qualification race&rdquo; claim breaks.</b> The phrase conflates three different evidenced events. First, a qualification event that <i>did</i> happen &mdash; at 12-high HBM4, closing for all three vendors by 2026-06-05 [C-N2]. Second, a demand event &mdash; NVIDIA&rsquo;s December 2025 request for 16-high supply with Q4 2026 delivery, with evaluation only &ldquo;possibly&rdquo; starting before Q3 2026 and no contracts signed [V-H8]; as of July 2026, customer&ndash;maker 16-high discussions &ldquo;remain limited&rdquo; [I-4]. Third, an artifact event &mdash; Micron&rsquo;s 16-high HBM4 sample shipment [V-M2] and SK hynix&rsquo;s CES 2026 16-high display [I-2], neither of which is a qualification. The same press piece that carries Huang&rsquo;s qualification statement explicitly frames 16-high as &ldquo;racing to qualify for Vera Rubin Ultra,&rdquo; a late-2027 platform [C-N3]. Even the product name is unresolved: an industry official quoted in December 2025 said the 16-high product may be named HBM4E, and that the name could change with performance and mass-production timing [V-H9].</p>
@@ -75,35 +97,35 @@
   <p>The three artifacts below exist in no single source. Every number carries an evidence-matrix anchor [row-id] (matrix and snapshots archived under ops/research/SR-2026-0010-F/) or a labeled assumption [A#]; the derivation is shown so it can be reproduced. Assumption register: <b>A1</b> shipment implies prior qualification (used for the Samsung/Micron 12-high ordering); <b>A2</b> NVIDIA&rsquo;s Q4 2026 16-high request is a target, not a commitment (no contracts, talks &ldquo;remain limited&rdquo; [V-H8][I-4]); <b>A3</b> 16-high volume no earlier than 2027 (synthesis, not evidence); <b>A4</b> samples are not qualification; <b>A5</b> aggregator articles are credited to their underlying outlets with no independent weight given to the aggregation layer; <b>A6</b> the &ldquo;16-high race&rdquo; is analyzed across both the &ldquo;16-Hi HBM4&rdquo; and &ldquo;16-high HBM4E&rdquo; names [V-H9].</p>
 
   <h3>A1 &mdash; 12-high HBM4 qualification order (the only tier with qualification evidence)</h3>
-  <table class="dtable">
+  <div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table class="dtable">
     <tr><th>Position</th><th>Vendor</th><th>Anchors</th><th>Caveat</th></tr>
     <tr><td>1</td><td>Samsung</td><td>Final quality tests passed per January 2026 press [V-S8, C]; commercial shipment 2026-02-12 [V-S6, B]</td><td rowspan="2">Ordering between Samsung and Micron is soft [A1]: Samsung&rsquo;s anchor is a press claim of passed tests; Micron&rsquo;s is a Q1 CY2026 volume-shipment claim with no dated qualification-completion evidence.</td></tr>
     <tr><td>2</td><td>Micron</td><td>Volume shipment Q1 CY2026 [V-M1, B]</td></tr>
     <tr><td>3</td><td>SK hynix</td><td>Not qualified mid-March 2026 [I-3, C]; qualified by 2026-06-05 [C-N2, B]. Window: mid-March &rarr; early June 2026.</td><td>The March &ldquo;not qualified&rdquo; report and the June &ldquo;qualified&rdquo; statement define the window; they do not contradict each other.</td></tr>
-  </table>
+  </table></div>
   <p>All three qualified by 2026-06-05, 12-high only [C-N2]. SK hynix closing last is consistent with, not contradicted by, its estimated ~60&ndash;70% HBM4 allocation share [C-N4, C &mdash; unattributed industry sources plus a Counterpoint estimate; NVIDIA has published no allocation percentages].</p>
 
   <h3>A2 &mdash; 16-high artifact-maturity ordering (explicitly not a qualification ranking)</h3>
   <p>No 16-high qualification order is derivable: no vendor has a 16-high HBM4E qualification event in evidence [V-S3][V-H6][V-M4][C-N3, all negative]. What the evidence supports is an ordering of artifact maturity, which is a different thing and mixes evidence classes and artifact types:</p>
-  <table class="dtable">
+  <div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table class="dtable">
     <tr><th>Position</th><th>Vendor</th><th>Artifact</th><th>Class</th></tr>
     <tr><td>1</td><td>Micron</td><td>HBM4 48GB 16-high samples in customer hands, March 2026 [V-M2]</td><td>B (vendor primary)</td></tr>
     <tr><td>2</td><td>SK hynix</td><td>16-high HBM4 stack publicly demonstrated, CES 2026; process claimed ready to 16-high [I-2][V-H4]</td><td>C (secondary)</td></tr>
     <tr><td>3</td><td>Samsung</td><td>No 16-high artifact evidenced; 64GB 16-layer HBM4E is planned-lineup language only [V-S2]</td><td>B (planned-only)</td></tr>
-  </table>
+  </table></div>
   <p>This ordering must not be reported as a qualification ranking: it mixes classes (one B, two C) and artifact types (customer sample shipment vs trade-show display vs roadmap language), and sample shipment carries no qualification inference [A4].</p>
 
   <h3>A3 &mdash; Derived 16-high ramp window: volume no earlier than 2027</h3>
   <p><b>Inputs.</b> (i) 16-high is framed as qualifying for Vera Rubin Ultra, a late-2027 platform [C-N3]; (ii) Micron&rsquo;s HBM4E mass-production ramp is targeted at 2027 [V-M4/s11, C]; (iii) hybrid bonding&rsquo;s earliest likely adoption is 16-high HBM4E while 12-high HBM4E stays mainstream [I-4, C]; (iv) the demand-side pull is NVIDIA&rsquo;s Q4 2026 delivery request with no contracts signed [V-H8, C]. <b>Derivation.</b> Under [A2], input (iv) is an aspiration, not a committed ramp. Inputs (i)&ndash;(iii) each independently point at 2027 or later. The earliest bound across all four inputs is therefore 2027, and the Q4 2026 request is treated as unmet or partially met [A2]. <b>Output [A3]:</b> 16-high volume (under either the HBM4 or HBM4E name [A6]) no earlier than 2027. This is a forecast synthesized from class-C and class-B inputs, not an evidenced ramp date &mdash; no vendor has published one [V-S3][V-H6][V-M4]. 12-high ramp context, by contrast, is evidenced: Samsung HBM4E 12-high samples shipping since 2026-05-29 with MP &ldquo;aligned with customer schedules&rdquo; (undated) [V-S1]; SK hynix HBM4E samples planned 2H 2026 in a 12-high context, possibly pulled forward [V-H6/s11, C]; first Vera Rubin systems Q3 2026 [C-N2].</p>
 
   <h2 id="benchmark">Benchmark Comparison</h2>
-  <table class="dtable">
+  <div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table class="dtable">
     <tr><th>Dimension</th><th>Subject</th><th>Benchmark</th><th>Source</th></tr>
     <tr><td>Package height</td><td>16-high HBM4 demonstrated inside the 775&micro;m JEDEC HBM4 cap using ~30&micro;m wafers (SK hynix, CES 2026) [I-2][V-H4]</td><td>JEDEC HBM4 cap 775&micro;m vs 720/725&micro;m for HBM3E; HBM5 height relaxation to ~900&ndash;1000&micro;m under discussion [B-2][I-4]</td><td>Korea Herald / ETNews chains via TrendForce and TweakTown [B-2]; ZDNet/Newsis via TrendForce [I-4]</td></tr>
     <tr><td>Bond pitch / mechanism</td><td>Shipping and sampled HBM4 uses thermo-compression-class bonding (MR-MUF / TC-NCF) [V-H1][V-M3]</td><td>Hybrid bonding removes bumps/underfill, enables sub-10&micro;m pitch, requires sub-50nm alignment; W2W most mature, D2W roughens with die thinning [B-1]</td><td>IEEE EPS summary of ECTC 2025 special session (speakers from Adeia, KLA, imec) [B-1]</td></tr>
     <tr><td>Capacity per stack</td><td>Micron HBM4: 36GB 12-high in volume; 48GB 16-high sampled, +33% per placement (vendor-self-reported) [V-M1][V-M2]</td><td>Samsung HBM4E roadmap: 48GB 12-high sampling now; 64GB 16-layer planned only [V-S1][V-S2]</td><td>Vendor primaries (s08, s01), attributed as vendor claims</td></tr>
     <tr><td>Per-pin speed</td><td>Samsung HBM4E 12-high: 14Gbps stable / 16Gbps scalable, up to 3.6TB/s [V-S1]; Micron HBM4: &gt;11Gbps [V-M1]</td><td>NVIDIA pushed HBM4 per-pin speed above 11Gbps; all three vendors resubmitted samples; HBM4 MP no earlier than end of 1Q 2026 (January 2026 secondary consensus, retrospectively consistent with February shipments) [I-1]</td><td>Etnews/Korea Herald/TechNews/Chosun Biz consensus via TrendForce [I-1]</td></tr>
-  </table>
+  </table></div>
 
   <h2 id="what-breaks">What Would Break This Thesis</h2>
   <ul>

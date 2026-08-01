@@ -1,0 +1,40 @@
+rules:
+  - id: sail-python-subprocess-shell-true
+    message: Avoid shell=True in publication tooling; pass an argument vector instead.
+    severity: ERROR
+    languages: [python]
+    pattern-either:
+      - pattern: subprocess.run(..., shell=True, ...)
+      - pattern: subprocess.Popen(..., shell=True, ...)
+
+  - id: sail-python-dynamic-code
+    message: Dynamic code execution is not allowed in publication tooling.
+    severity: ERROR
+    languages: [python]
+    pattern-either:
+      - pattern: eval(...)
+      - pattern: exec(...)
+
+  - id: sail-html-dom-injection-sink
+    message: Review DOM-writing sinks for untrusted HTML injection.
+    severity: ERROR
+    languages: [generic]
+    paths:
+      include: ["*.html"]
+    pattern-regex: '(?i)(?:innerHTML|outerHTML)\s*=|document\.write\s*\('
+
+  - id: sail-html-dynamic-code
+    message: Dynamic JavaScript execution is not allowed on the static site.
+    severity: ERROR
+    languages: [generic]
+    paths:
+      include: ["*.html"]
+    pattern-regex: '(?i)\beval\s*\(|new\s+Function\s*\('
+
+  - id: sail-html-unencoded-form-navigation
+    message: Form-derived values must be encoded before being placed in a navigation URI.
+    severity: ERROR
+    languages: [generic]
+    paths:
+      include: ["*.html"]
+    pattern-regex: 'location\.href\s*=\s*[^;]*(?:\.value|FormData\s*\()'

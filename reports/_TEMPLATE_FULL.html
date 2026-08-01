@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+  Copy to reports/full/YYYYMMDD-<slug>-full.html, register it in
+  ops/publications.json, render public surfaces and metadata, then run
+  scripts/preflight_full.py. Full Reports require owner review before release.
+-->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,14 +11,27 @@
 <title><!-- FILL: title --> — Sail Research SR-2026-NNNN-F</title>
 <meta name="description" content="<!-- FILL: 1-2 sentence description; state what is company-stated vs verified; end with Evidence Grade -->">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/reports/full/<!-- FILL: YYYYMMDD-<slug>-full.html -->">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sail Research">
 <meta property="og:title" content="<!-- FILL: title --> — Sail Research SR-2026-NNNN-F">
+<meta property="og:description" content="<!-- FILL: concise social description -->">
+<meta property="og:url" content="https://sitcrkr89.github.io/sail-research/reports/full/<!-- FILL: filename -->">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="../../assets/mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/report.css">
+<link rel="stylesheet" href="../../assets/report.css">
 
 </head>
-<body>
+<body data-publication-status="active" data-methodology-version="2.0">
 
 <nav>
   <div class="wrap">
@@ -24,11 +42,11 @@
 
 <header>
   <div class="wrap">
-    <div class="r-id">SR-2026-NNNN-F · FULL REPORT</div>
-    <div class="chips"><span class="chip"><!-- FILL: sector --></span><span class="chip grade"><!-- FILL: Evidence A|B+ + one-line basis --></span></div>
+    <div class="r-id" data-publication-id="SR-2026-NNNN-F">SR-2026-NNNN-F · FULL REPORT</div>
+    <div class="chips"><span class="chip"><!-- FILL: sector --></span><span class="chip grade" data-evidence-strength=""><!-- FILL: Evidence A/B+/B/C + matching data attribute + one-line basis --></span></div>
     <h1><!-- FILL: title --></h1>
     <div class="meta">
-      <span><b><!-- FILL: Mon DD, YYYY --></b></span><span>Sail Research</span><span><!-- FILL: lead source + date --></span><span>Free-sample companion: <a href="../<!-- FILL: free sample filename -->"><!-- FILL: SR-2026-NNNN --></a></span>
+      <span><b><time datetime=""><!-- FILL: Mon DD, YYYY and YYYY-MM-DD datetime --></time></b></span><span>Sail Research</span><span><!-- FILL: lead source + date --></span><span>Free-sample companion: <a href="../<!-- FILL: free sample filename -->"><!-- FILL: SR-2026-NNNN --></a></span>
     </div>
   </div>
 </header>
@@ -39,10 +57,10 @@
   <p><!-- FILL: 3-5 sentences, decision-relevant conclusion first --></p>
 
   <h2>Claim Inventory &amp; Evidence Matrix</h2>
-  <table class="dtable" id="evidence-matrix">
+  <div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table class="dtable" id="evidence-matrix">
     <tr><th>Claim</th><th>Evidence Class</th><th>Primary Source(s)</th><th>Independent?</th><th>Status</th></tr>
     <!-- FILL: one <tr> per load-bearing claim; >=2 rows required -->
-  </table>
+  </table></div>
 
   <h2>Mechanism &amp; Teardown Analysis</h2>
   <p><!-- FILL: what the patent/filing technically claims; claim-scope teardown --></p>
@@ -51,10 +69,10 @@
   <p><!-- FILL: >=1 model/synthesis existing in no single source; show derivation so it is reproducible --></p>
 
   <h2 id="benchmark">Benchmark Comparison</h2>
-  <table class="dtable">
+  <div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table class="dtable">
     <tr><th>Dimension</th><th>Subject</th><th>Benchmark</th><th>Source</th></tr>
     <!-- FILL -->
-  </table>
+  </table></div>
 
   <h2 id="what-breaks">What Would Break This Thesis</h2>
   <ul><!-- FILL: falsification conditions --></ul>
@@ -67,13 +85,14 @@
 
   <div class="box caveat">
     <h2>Evidence Caveat — Fact vs. Hypothesis</h2>
-    <ul><!-- FILL: fact / hypothesis / requires-verification / what this report does not do --></ul>
+    <ul><!-- FILL: verified / attributed / inference / open gap / what this report does not do --></ul>
   </div>
 
   <div class="box">
     <h2>Sources (primary — real URLs, not just outlet names)</h2>
-    <ul><!-- FILL: each <li> ends with "Retrieved YYYY-MM-DD." --></ul>
+    <ul><!-- FILL: each <li data-source-class="primary" data-source-chain="publisher-id"> ends with "Retrieved YYYY-MM-DD." Evidence A needs at least two distinct chains. --></ul>
   </div>
+  <!-- FILL for Evidence A only: add a visible <p data-independence-statement="cross-publisher"> explaining exactly which load-bearing conclusion the independent chains support. -->
 
   <h2 id="update-history">Update History</h2>
   <ul><li>v1.0 — <!-- FILL: YYYY-MM-DD --> — initial publication.</li></ul>

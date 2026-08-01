@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0",
+  "effective_date": "2026-08-02",
+  "evidence_strength": {
+    "A": "Every load-bearing conclusion is supported by at least two independent primary-source chains.",
+    "B+": "A multi-source primary record supports the central conclusion, but at least one material independence or verification limit remains explicit.",
+    "B": "The conclusion is attributable to primary material, but relies on a single party, limited corroboration, or a material open verification gap.",
+    "C": "The work is exploratory synthesis or hypothesis and must not be presented as established fact."
+  },
+  "claim_state": {
+    "verified": "Directly supported by the cited source at the stated scope.",
+    "attributed": "A named party states the claim; Sail has not independently established the underlying fact.",
+    "inference": "Sail analysis derived from disclosed evidence and labeled as analysis.",
+    "open_gap": "Material evidence is absent, inaccessible, conflicting, or still requires verification."
+  },
+  "publication_status": {
+    "active": "Current publication with no known material correction.",
+    "corrected": "Current publication that corrects a named earlier publication.",
+    "archived": "Retained for provenance but outside the current program or methodology version.",
+    "superseded": "Not current and not for citation; a named replacement carries the corrected conclusion."
+  }
+}

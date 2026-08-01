@@ -110,6 +110,11 @@ header {
   color: var(--brass);
   background: var(--brass-soft);
 }
+.chip.status-superseded {
+  border-color: var(--danger);
+  color: #fff;
+  background: #7a2f2f;
+}
 h1 {
   font-family: var(--serif);
   font-size: clamp(1.65rem, 3.2vw, 2.35rem);
@@ -200,6 +205,65 @@ li b { color: var(--ink); font-weight: 600; }
 .dtable td:first-child { color: var(--ink); font-weight: 600; }
 .dtable .up { color: var(--focus); }
 .dtable .down { color: var(--danger); }
+
+.table-scroll {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  border: 1px solid var(--line);
+  background: var(--bg-elevated);
+}
+.table-scroll:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.table-scroll table,
+.table-scroll .dtable {
+  min-width: 42rem;
+  margin: 0;
+  border: 0;
+}
+.table-scroll #evidence-matrix { min-width: 64rem; }
+
+.withdrawal-notice,
+.correction-notice,
+.archive-notice {
+  margin-top: 1.5rem;
+  padding: 1.35rem 1.45rem;
+  border: 1px solid var(--line-strong);
+  border-left: 4px solid var(--brass);
+  background: var(--bg-elevated);
+}
+.withdrawal-notice { border-left-color: var(--danger); }
+.withdrawal-notice .notice-label,
+.correction-notice .notice-label,
+.archive-notice .notice-label {
+  color: var(--brass);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.withdrawal-notice .notice-label { color: #ffb0b0; }
+.withdrawal-notice h2,
+.correction-notice h2 {
+  margin: 0.35rem 0 0.65rem;
+  font-size: 1.25rem;
+}
+.withdrawal-notice p,
+.correction-notice p,
+.archive-notice p { color: var(--ink-soft); margin-top: 0.55rem; }
+.withdrawal-notice a,
+.correction-notice a {
+  color: var(--brass);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.withdrawal-notice .btn { color: var(--bg-deep); text-decoration: none; margin-right: 0.75rem; }
+.notice-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 0.9rem; }
+.historical-record { opacity: 0.82; }
+.historical-record > h2:first-child { color: #ffb0b0; }
 
 .ev {
   display: inline-block;
@@ -362,6 +426,17 @@ blockquote {
   color: var(--ink-soft);
   font-family: var(--serif);
   font-style: italic;
+}
+
+@media (max-width: 720px) {
+  nav .wrap { gap: 1rem; }
+  .back { font-size: 0.68rem; text-align: right; }
+  header { padding-top: 2.25rem; }
+  .withdrawal-notice,
+  .correction-notice,
+  .archive-notice { margin-inline: 1rem; }
+  .notice-actions { align-items: flex-start; flex-direction: column; }
+  .withdrawal-notice .btn { margin-right: 0; width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

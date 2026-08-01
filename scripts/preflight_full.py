@@ -11,10 +11,13 @@ NOT be pushed.
 
 from __future__ import annotations
 
+import html
+import json
 import re
 import subprocess
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -36,7 +39,7 @@ FORBIDDEN_LANGUAGE = [
 ]
 
 REPORT_NAME = re.compile(r"^20\d{6}-[a-z0-9]+(?:-[a-z0-9]+)*-full\.html$")
-SR_ID = re.compile(r"SR-2026-\d{4}-F")
+PRIMARY_ID = re.compile(r'data-publication-id="(SR-2026-\d{4}-F)"')
 RETRIEVED = re.compile(r"Retrieved 20\d{2}-\d{2}-\d{2}")
 
 REQUIRED_MARKERS = {
@@ -52,6 +55,26 @@ REQUIRED_MARKERS = {
 }
 
 
+def source_chain_hosts(sources_html: str) -> set[str]:
+    hosts: set[str] = set()
+    for href in re.findall(r'href="(https?://[^"]+)"', sources_html):
+        hostname = urlparse(html.unescape(href)).hostname
+        if hostname:
+            hosts.add(hostname.lower().removeprefix("www."))
+    return hosts
+
+
+def primary_source_chains(sources_html: str) -> set[str]:
+    chains: set[str] = set()
+    for attributes in re.findall(r"<li([^>]*)>", sources_html):
+        if not re.search(r'data-source-class="primary"', attributes):
+            continue
+        match = re.search(r'data-source-chain="([^"]+)"', attributes)
+        if match:
+            chains.add(match.group(1))
+    return chains
+
+
 def check_report(path: Path) -> list[str]:
     errors: list[str] = []
     rel = path.relative_to(ROOT) if path.is_absolute() else path
@@ -64,14 +87,18 @@ def check_report(path: Path) -> list[str]:
     if "FILL:" in source or "<!-- FILL" in source:
         errors.append(f"{rel}: unfilled template marker remains")
 
-    ids = set(SR_ID.findall(source))
+    registry = json.loads((ROOT / "ops" / "publications.json").read_text(encoding="utf-8"))
+    entry = next(
+        (item for item in registry["publications"] if item["path"] == str(path.relative_to(ROOT))),
+        None,
+    )
+    ids = PRIMARY_ID.findall(source)
+    if entry is None:
+        errors.append(f"{rel}: report is not registered in ops/publications.json")
     if len(ids) != 1:
-        errors.append(f"{rel}: expected exactly one distinct SR-2026-NNNN-F id, found {sorted(ids) or 'none'}")
-    else:
-        sr_id = next(iter(ids))
-        for other in sorted((ROOT / "reports" / "full").glob("2026*.html")):
-            if other != path and sr_id in other.read_text(encoding="utf-8"):
-                errors.append(f"{rel}: {sr_id} already used by {other.name}")
+        errors.append(f"{rel}: expected exactly one primary data-publication-id, found {ids or 'none'}")
+    elif entry is not None and ids[0] != entry["id"]:
+        errors.append(f"{rel}: primary id {ids[0]} does not match registry id {entry['id']}")
 
     for marker, label in REQUIRED_MARKERS.items():
         if marker not in source:
@@ -87,8 +114,12 @@ def check_report(path: Path) -> list[str]:
     if not sources_match:
         errors.append(f"{rel}: missing Sources box")
         source_items: list[str] = []
+        source_hosts: set[str] = set()
+        source_chains: set[str] = set()
     else:
-        source_items = re.findall(r"<li>", sources_match.group(1))
+        source_items = re.findall(r"<li(?:\s[^>]*)?>", sources_match.group(1))
+        source_hosts = source_chain_hosts(sources_match.group(1))
+        source_chains = primary_source_chains(sources_match.group(1))
         if not source_items:
             errors.append(f"{rel}: Sources box lists no sources")
     if not RETRIEVED.search(source):
@@ -99,13 +130,25 @@ def check_report(path: Path) -> list[str]:
         if phrase in body_lower:
             errors.append(f"{rel}: forbidden language: {phrase!r}")
 
-    grade_match = re.search(r'class="chip grade"[^>]*>([^<]*)<', source)
-    grade_text = grade_match.group(1) if grade_match else ""
-    if re.search(r"\bA\b", grade_text):
+    grade_attr = re.search(r'class="chip grade"[^>]*data-evidence-strength="([^"]+)"', source)
+    if entry is not None and (not grade_attr or grade_attr.group(1) != entry["evidence_strength"]):
+        errors.append(f"{rel}: evidence-strength metadata does not match registry")
+    if entry is not None and entry["evidence_strength"] == "A":
         if len(source_items) < 2:
             errors.append(f"{rel}: Evidence A requires at least 2 sources, found {len(source_items)}")
-        if "independent" not in body_lower:
-            errors.append(f"{rel}: Evidence A requires an explicit independent-source statement")
+        if len(source_hosts) < 2:
+            errors.append(f"{rel}: Evidence A requires at least two distinct primary-source hosts")
+        if len(source_chains) < 2:
+            errors.append(f"{rel}: Evidence A requires at least two structured primary-source chains")
+        statement = re.search(
+            r'<p[^>]*data-independence-statement="[^"]+"[^>]*>(.*?)</p>', source, re.S
+        )
+        statement_text = (
+            html.unescape(re.sub(r"<[^>]+>", "", statement.group(1))).lower()
+            if statement else ""
+        )
+        if "independent" not in statement_text:
+            errors.append(f"{rel}: Evidence A requires a marked independence statement")
     return errors
 
 
@@ -125,6 +168,18 @@ def main() -> int:
         errors.extend(check_report(path))
 
     if run_site:
+        for script, flag in (
+            ("render_publication_surfaces.py", "--check"),
+            ("sync_report_metadata.py", "--check"),
+        ):
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / script), flag],
+                capture_output=True,
+                text=True,
+            )
+            sys.stdout.write(result.stdout)
+            if result.returncode != 0:
+                errors.append(f"{script} failed (see output above)")
         result = subprocess.run(
             [sys.executable, str(ROOT / "scripts" / "validate_site.py")],
             capture_output=True,

@@ -6,9 +6,20 @@
 <title>Commission Research — Sail Research</title>
 <meta name="description" content="Submit a decision question. Response within two business days.">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/scope.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sail Research">
 <meta property="og:title" content="Commission Research — Sail Research">
+<meta property="og:description" content="Create an email inquiry for a decision memo, source map, signal tracker, or scoped engagement.">
 <meta property="og:url" content="https://sitcrkr89.github.io/sail-research/scope.html">
-<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +27,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="utility"><div class="wrap"><span><span class="dot"></span>Institute active · Seoul</span><span>Primary sources · Human-reviewed grades</span></div></div>
+<div class="utility"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>Institute active · Seoul</span><span>Primary sources · Quality-gated release</span></div></div>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="index.html">
       <span class="brand-text">
@@ -41,11 +52,12 @@
   <p class="lede">We accept scopes only where primary sources can move the decision.</p>
 </div></header>
 <section class="section"><div class="wrap" style="max-width:40rem">
-  <div id="success" style="display:none;padding:1rem;border:1px solid #2d6a4f;background:rgba(45,106,79,.1);margin-bottom:1rem">
-    <strong>Draft email ready.</strong> If your mail client did not open, send to sail.research.info@gmail.com.
+  <div id="success" aria-live="polite" style="display:none;padding:1rem;border:1px solid #2d6a4f;background:rgba(45,106,79,.1);margin-bottom:1rem">
+    <strong>Email draft created—not submitted.</strong> Review and send it from your mail application. If no application opened, email sail.research.info@gmail.com.
     <pre id="summary" style="margin-top:0.75rem;white-space:pre-wrap;font-family:var(--mono);font-size:0.8rem;color:var(--ink-2)"></pre>
   </div>
-  <form id="scope-form" class="card" style="padding:1.75rem" novalidate>
+  <p class="form-note" style="margin-bottom:1rem">This static site does not store these fields. Submitting creates an email draft on your device; nothing reaches Sail until you send it. Do not include confidential or market-sensitive information.</p>
+  <form id="scope-form" class="card" action="mailto:sail.research.info@gmail.com" method="post" enctype="text/plain" style="padding:1.75rem" novalidate>
     <div class="field"><label for="question">Decision question *</label>
       <textarea id="question" name="question" required placeholder="What must be true for your team to act?"></textarea></div>
     <div class="form-row">
@@ -81,8 +93,8 @@
     </div>
     <div class="field"><label for="constraints">Must-not claims</label>
       <textarea id="constraints" name="constraints" placeholder="e.g. No price target."></textarea></div>
-    <button class="btn btn-solid" type="submit">Submit (opens email)</button>
-    <p class="form-note">Response within two business days · proceed / narrow / not a fit</p>
+    <button class="btn btn-solid" type="submit">Create inquiry email</button>
+    <p class="form-note">Creating a draft is not submission. Response target after you send: two business days · proceed / narrow / not a fit.</p>
   </form>
 </div></section>
 
@@ -95,7 +107,7 @@
             <span class="brand-tag">Evidence Institute</span>
           </span>
         </div>
-    <span>Not investment advice · Public-source limits apply</span>
+    <span><a href="governance.html">Governance</a> · <a href="corrections.html">Corrections</a> · Not investment advice</span>
   </div>
 </div></footer>
 <script>

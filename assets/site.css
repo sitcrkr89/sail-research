@@ -411,6 +411,7 @@ a.card:hover {
   color: rgba(255, 255, 255, 0.55);
   font-size: 0.875rem;
 }
+.footer-col h3,
 .footer-col h4 {
   font-size: 0.625rem;
   font-weight: 700;
@@ -478,7 +479,32 @@ a.card:hover {
 }
 @media (max-width: 720px) {
   .wrap { width: min(100% - 1.5rem, var(--max)); }
-  .nav a:not(.nav-cta):not(.nav-keep) { display: none; }
+  .site-header .wrap {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.55rem;
+    padding-block: 0.65rem;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.3rem;
+    width: 100%;
+  }
+  .nav a,
+  .nav .nav-cta {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.2rem;
+    padding: 0.35rem 0.25rem !important;
+    margin: 0;
+    border: 1px solid var(--line);
+    text-align: center;
+    font-size: 0.7rem !important;
+    line-height: 1.2;
+  }
+  .nav a[aria-current="page"] { border-color: var(--brass); }
   .footer-grid { grid-template-columns: 1fr; }
   body { font-size: 16px; }
 }

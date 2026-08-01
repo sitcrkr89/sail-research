@@ -1,0 +1,227 @@
+from __future__ import annotations
+
+import json
+import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class SiteContractTests(unittest.TestCase):
+    def run_validator(self, root: Path) -> subprocess.CompletedProcess[str]:
+        return subprocess.run(
+            [sys.executable, str(root / "scripts" / "validate_site.py")],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+
+    def fixture(self) -> tuple[tempfile.TemporaryDirectory[str], Path]:
+        temp = tempfile.TemporaryDirectory()
+        root = Path(temp.name)
+        for name in (
+            "index.html", "product.html", "for.html", "about.html", "governance.html",
+            "corrections.html", "scope.html", "digest.html", "sitemap.xml",
+        ):
+            shutil.copy2(ROOT / name, root / name)
+        for directory in ("assets", "reports", "research", "scripts"):
+            shutil.copytree(ROOT / directory, root / directory)
+        (root / "ops").mkdir()
+        shutil.copy2(ROOT / "ops" / "publications.json", root / "ops" / "publications.json")
+        shutil.copy2(ROOT / "ops" / "editorial_taxonomy.json", root / "ops" / "editorial_taxonomy.json")
+        return temp, root
+
+    def mutate_and_fail(self, relative: str, old: str, new: str, expected: str) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / relative
+        source = path.read_text(encoding="utf-8")
+        self.assertIn(old, source, f"test mutation anchor missing in {relative}")
+        path.write_text(source.replace(old, new, 1), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn(expected, result.stdout)
+
+    def test_current_site_passes(self) -> None:
+        result = self.run_validator(ROOT)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_missing_supersession_notice_fails(self) -> None:
+        self.mutate_and_fail(
+            "reports/20260727-wuxiui-patent-no-bleed-perfusion.html",
+            ' data-superseded-by="SR-2026-0008-F"',
+            "",
+            "missing visible superseded-by notice",
+        )
+
+    def test_missing_reciprocal_edge_fails(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        replacement = next(item for item in registry["publications"] if item["id"] == "SR-2026-0008-F")
+        replacement.pop("corrects")
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("lacks reciprocal corrects edge", result.stdout)
+
+    def test_invalid_grade_fails(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        registry["publications"][4]["evidence_strength"] = "A+"
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("invalid evidence_strength", result.stdout)
+
+    def test_registry_path_escape_fails_closed(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        registry["publications"][0]["path"] = "../outside.html"
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("unsafe report path", result.stdout)
+
+    def test_stale_homepage_latest_fails(self) -> None:
+        self.mutate_and_fail(
+            "index.html",
+            'data-latest-id="SR-2026-0010-F"',
+            'data-latest-id="SR-2026-0009"',
+            "latest publication markers do not match registry",
+        )
+
+    def test_missing_full_report_in_sitemap_fails(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "sitemap.xml"
+        source = path.read_text(encoding="utf-8")
+        line = next(line for line in source.splitlines() if "20260731-hbm4e-16h-qualification-race-full" in line)
+        path.write_text(source.replace(line + "\n", "", 1), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("URL set does not match", result.stdout)
+
+    def test_wrong_canonical_fails(self) -> None:
+        self.mutate_and_fail(
+            "reports/20260729-agc-yokohama-gmp-readiness.html",
+            "https://sitcrkr89.github.io/sail-research/reports/20260729-agc-yokohama-gmp-readiness.html",
+            "https://sitcrkr89.github.io/sail-research/reports/wrong.html",
+            "canonical must equal",
+        )
+
+    def test_malformed_jsonld_fails(self) -> None:
+        self.mutate_and_fail(
+            "reports/full/20260731-hbm4e-16h-qualification-race-full.html",
+            '{"@context":"https://schema.org"',
+            '{BROKEN',
+            "malformed Article JSON-LD",
+        )
+
+    def test_unwrapped_table_fails(self) -> None:
+        self.mutate_and_fail(
+            "reports/full/20260731-hbm4e-16h-qualification-race-full.html",
+            '<div class="table-scroll" role="region" aria-label="Scrollable report data table" tabindex="0"><table',
+            "<table",
+            "lack accessible scroll wrappers",
+        )
+
+    def test_mobile_hidden_navigation_regression_fails(self) -> None:
+        self.mutate_and_fail(
+            "assets/site.css",
+            "@media (max-width: 720px) {",
+            "@media (max-width: 720px) {\n  .nav a:not(.nav-cta):not(.nav-keep) { display: none; }",
+            "mobile navigation still hides",
+        )
+
+    def test_low_contrast_hero_regression_fails(self) -> None:
+        self.mutate_and_fail(
+            "index.html",
+            ".hero .btn-solid { background: #fff;",
+            ".hero .btn-solid { background: var(--bg-elevated);",
+            "low-contrast hero primary button regression",
+        )
+
+    def test_claim_state_enum_drift_fails(self) -> None:
+        self.mutate_and_fail(
+            "index.html",
+            'data-claim-state="open_gap"',
+            'data-claim-state="gap"',
+            "claim-state demo does not exactly match canonical taxonomy",
+        )
+
+    def test_visible_grade_definition_drift_fails(self) -> None:
+        self.mutate_and_fail(
+            "research/methodology.html",
+            '<div class="d">Every load-bearing conclusion is supported by at least two independent primary-source chains.</div>',
+            '<div class="d">Any two sources are sufficient.</div>',
+            "evidence-grade definitions do not exactly match taxonomy",
+        )
+
+    def test_archived_report_without_visible_notice_fails(self) -> None:
+        self.mutate_and_fail(
+            "reports/20260705-macbook-local-ai.html",
+            ' data-archive-notice="legacy-2026-07"',
+            "",
+            "archived report lacks a visible legacy/not-regraded notice",
+        )
+
+    def test_evidence_a_without_marked_independence_statement_fails(self) -> None:
+        self.mutate_and_fail(
+            "reports/20260708-hbm-tech-tracking.html",
+            ' data-independence-statement="cross-publisher"',
+            "",
+            "Evidence A requires a marked independence statement",
+        )
+
+    def test_svg_social_preview_regression_fails(self) -> None:
+        self.mutate_and_fail(
+            "about.html",
+            "https://sitcrkr89.github.io/sail-research/assets/social-card.png",
+            "https://sitcrkr89.github.io/sail-research/assets/social-card.svg",
+            "og:image must use the canonical PNG social card",
+        )
+
+    def test_archived_registry_entry_requires_archive_date(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        registry["publications"][0].pop("archived_at")
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("archived publication missing archived_at", result.stdout)
+
+    def test_unverified_human_approval_claim_fails(self) -> None:
+        self.mutate_and_fail(
+            "reports/20260713-hbm4-vendor-confirmed.html",
+            "before release.",
+            "before human approval.",
+            "stale review claim 'before human approval'",
+        )
+
+    def test_evidence_a_requires_distinct_structured_source_chains(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "reports" / "20260713-hbm4-vendor-confirmed.html"
+        source = path.read_text(encoding="utf-8")
+        source = source.replace('data-source-chain="sk-hynix"', 'data-source-chain="samsung"')
+        source = source.replace('data-source-chain="micron"', 'data-source-chain="samsung"')
+        path.write_text(source, encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("at least two structured primary-source chains", result.stdout)
+
+
+if __name__ == "__main__":
+    unittest.main()

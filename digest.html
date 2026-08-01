@@ -6,9 +6,20 @@
 <title>Evidence Digest — Sail Research</title>
 <meta name="description" content="Occasional Grade A signals and watch-condition updates.">
 <link rel="canonical" href="https://sitcrkr89.github.io/sail-research/digest.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sail Research">
 <meta property="og:title" content="Evidence Digest — Sail Research">
+<meta property="og:description" content="Create an email request for occasional Sail Research evidence updates.">
 <meta property="og:url" content="https://sitcrkr89.github.io/sail-research/digest.html">
-<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.svg">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +27,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<div class="utility"><div class="wrap"><span><span class="dot"></span>Institute active · Seoul</span><span>Primary sources · Human-reviewed grades</span></div></div>
+<div class="utility"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>Institute active · Seoul</span><span>Primary sources · Quality-gated release</span></div></div>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="index.html">
       <span class="brand-text">
@@ -41,14 +52,15 @@
   <p class="lede">Occasional notes when Core coverage produces a Grade A signal or material watch-condition change.</p>
 </div></header>
 <section class="section"><div class="wrap" style="max-width:28rem">
-  <form id="digest-form" class="card" style="padding:1.75rem">
+  <p class="form-note" style="margin-bottom:1rem">This static site does not store form contents. The button creates an email draft on your device; no request is sent until you review and send it.</p>
+  <form id="digest-form" class="card" action="mailto:sail.research.info@gmail.com" method="post" enctype="text/plain" style="padding:1.75rem">
     <div class="field"><label for="email">Work email</label>
       <input id="email" name="email" type="email" required placeholder="work@organization.com" autocomplete="email"></div>
     <div class="field"><label for="focus">Interest (optional)</label>
-      <select id="focus"><option value="">All Core programs</option>
+      <select id="focus" name="focus"><option value="">All Core programs</option>
         <option>Semiconductors</option><option>Biopharma</option><option>Power &amp; Infrastructure</option></select></div>
-    <button class="btn btn-solid" type="submit" style="width:100%">Request access</button>
-    <p class="form-note">Not a daily noise feed.</p>
+    <button class="btn btn-solid" type="submit" style="width:100%">Create request email</button>
+    <p class="form-note">Creating a draft is not submission. Not a daily noise feed.</p>
   </form>
 </div></section>
 
@@ -61,13 +73,11 @@
             <span class="brand-tag">Evidence Institute</span>
           </span>
         </div>
-    <span>Not investment advice · Public-source limits apply</span>
+    <span><a href="governance.html">Governance</a> · <a href="corrections.html">Corrections</a> · Not investment advice</span>
   </div>
 </div></footer>
 <script>
 (function(){
-  const p=new URLSearchParams(location.search);
-  if(p.get("email")) document.getElementById("email").value=p.get("email");
   document.getElementById("digest-form").addEventListener("submit",function(e){
     e.preventDefault();
     const email=document.getElementById("email").value.trim();
