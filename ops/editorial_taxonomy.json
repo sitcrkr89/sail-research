@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "effective_date": "2026-08-02",
+  "effective_date": "2026-08-07",
   "evidence_strength": {
     "A": "Every load-bearing conclusion is supported by at least two independent primary-source chains.",
     "B+": "A multi-source primary record supports the central conclusion, but at least one material independence or verification limit remains explicit.",
@@ -16,7 +16,37 @@
   "publication_status": {
     "active": "Current publication with no known material correction.",
     "corrected": "Current publication that corrects a named earlier publication.",
+    "review_hold": "Current draft held from public surfaces until required owner review is approved.",
     "archived": "Retained for provenance but outside the current program or methodology version.",
     "superseded": "Not current and not for citation; a named replacement carries the corrected conclusion."
+  },
+  "analysis_tier": {
+    "legacy_brief": "Historical brief retained under its original analytical contract.",
+    "signal_note": "Event, baseline delta, immediate implication, open gap, and next verification trigger.",
+    "analyst_brief": "Decision-bound analysis with a variant thesis, mechanism, reproducible exhibits, scenarios, and falsifiers.",
+    "full_report": "Owner-reviewed deep analysis with source archive, model, counter-thesis, and extended diligence record."
+  },
+  "decision_stance": {
+    "MONITOR": "Track named verification events without changing resource allocation.",
+    "VALIDATE": "Commit bounded diligence resources before changing supplier or program allocation.",
+    "PILOT": "Run a limited technical or operational trial against explicit acceptance criteria.",
+    "QUALIFY": "Enter a formal vendor, platform, or process qualification path.",
+    "ALLOCATE": "Change budget, capacity, supplier share, or program resources after stated gates are met.",
+    "HEDGE": "Preserve an alternate supplier, technology, or schedule path while uncertainty remains material.",
+    "AVOID": "Do not commit resources under the current evidence and risk conditions."
+  },
+  "artifact_type": {
+    "brief": "Short-form publication.",
+    "full_report": "Long-form diligence publication."
+  },
+  "tier_compatibility": {
+    "brief": [
+      "legacy_brief",
+      "signal_note",
+      "analyst_brief"
+    ],
+    "full_report": [
+      "full_report"
+    ]
   }
 }

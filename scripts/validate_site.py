@@ -8,7 +8,7 @@ import json
 import re
 import struct
 import sys
-import xml.etree.ElementTree as ET
+
 from collections import Counter
 from datetime import date
 from html.parser import HTMLParser
@@ -60,7 +60,7 @@ class PageParser(HTMLParser):
         self.evidence_definitions: list[tuple[str, str]] = []
         self.claim_state_definitions: list[tuple[str, str]] = []
         self.archive_notices: list[str] = []
-        self.publication_cards: list[tuple[str, str]] = []
+        self.publication_cards: list[tuple[str, str, str]] = []
         self.featured_ids: list[str] = []
         self.latest_ids: list[str] = []
         self.correction_edges: list[tuple[str, str]] = []
@@ -86,7 +86,11 @@ class PageParser(HTMLParser):
             if data.get("class") and "pub" in (data.get("class") or "").split():
                 if data.get("data-publication-id"):
                     self.publication_cards.append(
-                        (data["data-publication-id"] or "", data.get("data-publication-status") or "")
+                        (
+                            data["data-publication-id"] or "",
+                            data.get("data-publication-status") or "",
+                            data.get("data-analysis-tier") or "",
+                        )
                     )
             if data.get("data-featured-id"):
                 self.featured_ids.append(data["data-featured-id"] or "")
@@ -217,7 +221,7 @@ def validate_registry(registry: dict, taxonomy: dict, errors: list[str]) -> dict
     required = {
         "id", "path", "canonical_url", "title", "description", "published_at",
         "modified_at", "sector", "artifact_type", "evidence_strength",
-        "methodology_version", "publication_status", "library_visible", "indexable",
+        "methodology_version", "publication_status", "analysis_tier", "library_visible", "indexable",
     }
     if registry.get("schema_version") != "2.0":
         errors.append("ops/publications.json: schema_version must be 2.0")
@@ -233,6 +237,9 @@ def validate_registry(registry: dict, taxonomy: dict, errors: list[str]) -> dict
     registered_paths: set[Path] = set()
     allowed_strengths = set(taxonomy.get("evidence_strength", {}))
     allowed_statuses = set(taxonomy.get("publication_status", {}))
+    allowed_artifacts = set(taxonomy.get("artifact_type", {}))
+    allowed_tiers = set(taxonomy.get("analysis_tier", {}))
+    compatibility = taxonomy.get("tier_compatibility", {})
     for index, item in enumerate(items):
         missing = required - set(item)
         if missing:
@@ -272,6 +279,27 @@ def validate_registry(registry: dict, taxonomy: dict, errors: list[str]) -> dict
             errors.append(f"{item_id}: invalid ISO publication date")
         if item["publication_status"] not in allowed_statuses:
             errors.append(f"{item_id}: invalid publication_status {item['publication_status']!r}")
+        if item["artifact_type"] not in allowed_artifacts:
+            errors.append(f"{item_id}: invalid artifact_type {item['artifact_type']!r}")
+        if item["analysis_tier"] not in allowed_tiers:
+            errors.append(f"{item_id}: invalid analysis_tier {item['analysis_tier']!r}")
+        elif item["analysis_tier"] not in compatibility.get(item["artifact_type"], []):
+            errors.append(f"{item_id}: incompatible artifact_type and analysis_tier")
+        if item["analysis_tier"] == "analyst_brief" and item.get("decision_stance") not in taxonomy.get("decision_stance", {}):
+            errors.append(f"{item_id}: analyst brief requires a valid decision_stance")
+        quality = item.get("analytical_quality")
+        if quality and quality.get("review_status") not in {"owner_review_required", "approved"}:
+            errors.append(f"{item_id}: invalid analytical review status")
+        if quality and quality.get("review_status") != "approved" and (
+            item["library_visible"] or item["indexable"]
+        ):
+            errors.append(f"{item_id}: owner review hold cannot be library-visible or indexable")
+        if quality and quality.get("review_status") == "owner_review_required" and item["publication_status"] != "review_hold":
+            errors.append(f"{item_id}: owner_review_required requires review_hold")
+        if item["publication_status"] == "review_hold" and (
+            not quality or quality.get("review_status") != "owner_review_required"
+        ):
+            errors.append(f"{item_id}: review_hold requires owner_review_required")
         strength = item["evidence_strength"]
         if strength is not None and strength not in allowed_strengths:
             errors.append(f"{item_id}: invalid evidence_strength {strength!r}")
@@ -403,6 +431,10 @@ def validate_report(path: Path, item: dict, source: str, parser: PageParser, err
         errors.append(f"{rel}: body publication status does not match registry")
     if parser.body_attrs.get("data-methodology-version") != item["methodology_version"]:
         errors.append(f"{rel}: body methodology version does not match registry")
+    if parser.body_attrs.get("data-analysis-tier") != item["analysis_tier"]:
+        errors.append(f"{rel}: body analysis tier does not match registry")
+    if parser.body_attrs.get("data-decision-stance", "") != item.get("decision_stance", ""):
+        errors.append(f"{rel}: body decision stance does not match registry")
     if parser.publication_ids != [item["id"]]:
         errors.append(f"{rel}: expected one primary data-publication-id {item['id']}")
     strength = item["evidence_strength"]
@@ -501,7 +533,7 @@ def validate_surfaces(
         key=lambda item: (item["published_at"], item["id"]),
         reverse=True,
     )
-    expected_cards = [(item["id"], item["publication_status"]) for item in visible]
+    expected_cards = [(item["id"], item["publication_status"], item["analysis_tier"]) for item in visible]
     library_source, library_parser = parse_page(ROOT / "research" / "index.html")
     if library_parser.publication_cards != expected_cards:
         errors.append("research/index.html: publication order/status does not match registry projection")
@@ -511,11 +543,9 @@ def validate_surfaces(
     if re.search(r"SR-2026-0008(?!-F)", " ".join(item[0] for item in library_parser.publication_cards)):
         errors.append("research/index.html: superseded SR-2026-0008 remains listed")
 
-    current = [
-        item for item in registry["publications"]
-        if item["publication_status"] in {"active", "corrected"}
-    ]
-    latest = max(current, key=lambda item: (item["published_at"], item["id"]))
+    latest = max(visible, key=lambda item: (item["published_at"], item["id"]))
+    if library_parser.latest_ids != [latest["id"]]:
+        errors.append("research/index.html: latest publication marker does not match visible registry projection")
     homepage_source, homepage_parser = parse_page(ROOT / "index.html")
     if homepage_parser.latest_ids != [latest["id"], latest["id"]]:
         errors.append("index.html: latest publication markers do not match registry")
@@ -539,17 +569,23 @@ def validate_surfaces(
     if set(corrections_parser.correction_edges) != expected_edges:
         errors.append("corrections.html: ledger edges do not match registry")
 
-    try:
-        sitemap = ET.parse(ROOT / "sitemap.xml")
-    except ET.ParseError as exc:
-        errors.append(f"sitemap.xml: invalid XML: {exc}")
+    sitemap_source = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    if len(sitemap_source) > 1_000_000:
+        errors.append("sitemap.xml: exceeds bounded parser limit")
         return
-    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-    records: list[tuple[str, str]] = []
-    for node in sitemap.findall("sm:url", ns):
-        loc = node.findtext("sm:loc", default="", namespaces=ns)
-        lastmod = node.findtext("sm:lastmod", default="", namespaces=ns)
-        records.append((loc, lastmod))
+    if (
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' not in sitemap_source
+        or not sitemap_source.rstrip().endswith("</urlset>")
+    ):
+        errors.append("sitemap.xml: invalid sitemap envelope")
+        return
+    records = re.findall(
+        r"<url><loc>([^<]+)</loc><lastmod>([^<]+)</lastmod><priority>[^<]+</priority></url>",
+        sitemap_source,
+    )
+    if sitemap_source.count("<url>") != len(records) or sitemap_source.count("</url>") != len(records):
+        errors.append("sitemap.xml: invalid URL record structure")
+        return
     locations = [loc for loc, _ in records]
     expected_locations = set(CORE_URLS.values()) | {
         item["canonical_url"] for item in registry["publications"] if item["indexable"]

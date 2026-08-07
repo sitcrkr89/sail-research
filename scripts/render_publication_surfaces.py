@@ -62,8 +62,18 @@ def load_taxonomy() -> dict:
     return taxonomy
 
 
+def review_approved(item: dict) -> bool:
+    if item.get("publication_status") == "review_hold":
+        return False
+    quality = item.get("analytical_quality")
+    return not quality or quality.get("review_status") == "approved"
+
+
 def visible_publications(registry: dict) -> list[dict]:
-    rows = [item for item in registry["publications"] if item["library_visible"]]
+    rows = [
+        item for item in registry["publications"]
+        if item["library_visible"] and review_approved(item)
+    ]
     return sorted(rows, key=lambda item: (item["published_at"], item["id"]), reverse=True)
 
 
@@ -97,6 +107,8 @@ def render_library(registry: dict) -> str:
         badges: list[str] = []
         if item["artifact_type"] == "full_report":
             badges.append('<span class="full">Full Report</span>')
+        elif item["analysis_tier"] == "analyst_brief":
+            badges.append('<span class="full">Analyst Brief</span>')
         if item["publication_status"] == "corrected":
             badges.append('<span class="status corrected">Corrected</span>')
         if item["publication_status"] == "archived":
@@ -110,7 +122,7 @@ def render_library(registry: dict) -> str:
             [item["id"], item["title"], item["description"], item["sector"]]
         ).lower()
         blocks.append(
-            f'''        <a class="pub" href="{html.escape(report_href(item, from_research=True))}" data-publication-id="{html.escape(item['id'])}" data-publication-status="{html.escape(item['publication_status'])}" data-sector="{html.escape(item['sector'])}" data-s="{html.escape(search)}">
+            f'''        <a class="pub" href="{html.escape(report_href(item, from_research=True))}" data-publication-id="{html.escape(item['id'])}" data-publication-status="{html.escape(item['publication_status'])}" data-analysis-tier="{html.escape(item['analysis_tier'])}" data-sector="{html.escape(item['sector'])}" data-s="{html.escape(search)}">
           <div class="date"><time datetime="{item['published_at']}">{short_date(item['published_at'])}</time></div>
           <div class="body">
             <div class="running">
@@ -148,7 +160,10 @@ def render_grade_definitions(taxonomy: dict, *, indent: str = "        ") -> str
 
 def render_featured(registry: dict) -> str:
     items = sorted(
-        (item for item in registry["publications"] if item.get("featured_rank")),
+        (
+            item for item in registry["publications"]
+            if item.get("featured_rank") and review_approved(item)
+        ),
         key=lambda item: item["featured_rank"],
     )
     if len(items) != 3:
@@ -221,7 +236,7 @@ def render_corrections(registry: dict) -> str:
 def render_sitemap_publications(registry: dict) -> str:
     rows = []
     for item in registry["publications"]:
-        if not item["indexable"]:
+        if not item["indexable"] or not review_approved(item):
             continue
         priority = "0.9" if item["publication_status"] in {"active", "corrected"} else "0.5"
         rows.append(
@@ -241,8 +256,9 @@ def replace_block(source: str, marker: str, rendered: str) -> str:
 
 
 def expected_surfaces(registry: dict, taxonomy: dict) -> dict[Path, str]:
+    visible = visible_publications(registry)
     latest = max(
-        (item for item in registry["publications"] if item["publication_status"] in {"active", "corrected"}),
+        visible,
         key=lambda item: (item["published_at"], item["id"]),
     )
     homepage_path = ROOT / "index.html"
@@ -261,7 +277,11 @@ def expected_surfaces(registry: dict, taxonomy: dict) -> dict[Path, str]:
 
     library_path = ROOT / "research" / "index.html"
     library = library_path.read_text(encoding="utf-8")
-    visible = visible_publications(registry)
+    library = replace_block(
+        library,
+        "LIBRARY-LATEST",
+        f'<span data-latest-id="{latest["id"]}">Latest <strong><time datetime="{latest["published_at"]}">{long_date(latest["published_at"])}</time></strong></span>',
+    )
     library = replace_block(library, "PUBLICATION-COUNT", f'        <div class="iss">Table of contents · {len(visible)} entries</div>')
     library = replace_block(library, "PUBLICATION-LIST", render_library(registry))
     library = replace_block(library, "PUBLICATION-COUNT-NOTE", f'      <p class="count-note" id="count">Showing {len(visible)} entries</p>')

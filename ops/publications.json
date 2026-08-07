@@ -18,7 +18,8 @@
    "publication_status": "archived",
    "archived_at": "2026-08-02",
    "library_visible": true,
-   "indexable": true
+   "indexable": true,
+   "analysis_tier": "legacy_brief"
   },
   {
    "id": "SR-2026-0002",
@@ -35,7 +36,8 @@
    "publication_status": "archived",
    "archived_at": "2026-08-02",
    "library_visible": true,
-   "indexable": true
+   "indexable": true,
+   "analysis_tier": "legacy_brief"
   },
   {
    "id": "SR-2026-0003",
@@ -52,7 +54,8 @@
    "publication_status": "archived",
    "archived_at": "2026-08-02",
    "library_visible": true,
-   "indexable": true
+   "indexable": true,
+   "analysis_tier": "legacy_brief"
   },
   {
    "id": "SR-2026-0004",
@@ -69,7 +72,8 @@
    "publication_status": "archived",
    "archived_at": "2026-08-02",
    "library_visible": true,
-   "indexable": true
+   "indexable": true,
+   "analysis_tier": "legacy_brief"
   },
   {
    "id": "SR-2026-0005",
@@ -85,7 +89,8 @@
    "methodology_version": "2.0",
    "publication_status": "active",
    "library_visible": true,
-   "indexable": true
+   "indexable": true,
+   "analysis_tier": "signal_note"
   },
   {
    "id": "SR-2026-0006",
@@ -101,7 +106,8 @@
    "methodology_version": "2.0",
    "publication_status": "active",
    "library_visible": true,
-   "indexable": true
+   "indexable": true,
+   "analysis_tier": "signal_note"
   },
   {
    "id": "SR-2026-0007",
@@ -117,7 +123,8 @@
    "methodology_version": "2.0",
    "publication_status": "active",
    "library_visible": true,
-   "indexable": true
+   "indexable": true,
+   "analysis_tier": "signal_note"
   },
   {
    "id": "SR-2026-0008",
@@ -137,7 +144,8 @@
    "superseded_by": "SR-2026-0008-F",
    "correction_date": "2026-08-02",
    "correction_reason": "The patent's continuous-harvest, no-bleed architecture maps to WuXiUP, not the WuXiUI intermittent-perfusion fed-batch platform.",
-   "conclusion_impact": "Material: the original platform attribution and central thesis are withdrawn."
+   "conclusion_impact": "Material: the original platform attribution and central thesis are withdrawn.",
+   "analysis_tier": "legacy_brief"
   },
   {
    "id": "SR-2026-0008-F",
@@ -155,7 +163,8 @@
    "library_visible": true,
    "indexable": true,
    "corrects": "SR-2026-0008",
-   "featured_rank": 2
+   "featured_rank": 2,
+   "analysis_tier": "full_report"
   },
   {
    "id": "SR-2026-0009",
@@ -172,7 +181,8 @@
    "publication_status": "active",
    "library_visible": true,
    "indexable": true,
-   "featured_rank": 3
+   "featured_rank": 3,
+   "analysis_tier": "signal_note"
   },
   {
    "id": "SR-2026-0010-F",
@@ -190,23 +200,38 @@
    "library_visible": true,
    "indexable": true,
    "companion_to": "SR-2026-0006",
-   "featured_rank": 1
+   "featured_rank": 1,
+   "analysis_tier": "full_report"
   },
   {
    "id": "SR-2026-0011",
    "path": "reports/20260805-sk-hynix-hbm4e-sample-shipment.html",
    "canonical_url": "https://sitcrkr89.github.io/sail-research/reports/20260805-sk-hynix-hbm4e-sample-shipment.html",
-   "title": "SK hynix Ships 12-High HBM4E Samples: What the Official Record Establishes",
-   "description": "SK hynix's own newsroom confirms 12-high HBM4E sample shipments to major customers (2026-06-18) with disclosed specs. Customer qualification, ramp dates, and the Vera Rubin supplier set remain open. Evidence Grade B.",
+   "title": "SK hynix Reports HBM4E Sample Shipments; Qualification Evidence Is Still Missing",
+   "description": "A decision brief on whether SK hynix's reported 12-high HBM4E sample shipments justify supplier-allocation changes. The evidence supports validation, not allocation, until independently attributable customer qualification evidence appears. Evidence Grade B.",
    "published_at": "2026-08-05",
-   "modified_at": "2026-08-05",
+   "modified_at": "2026-08-07",
    "sector": "semiconductors",
    "artifact_type": "brief",
    "evidence_strength": "B",
    "methodology_version": "2.0",
-   "publication_status": "active",
-   "library_visible": true,
-   "indexable": true
+   "publication_status": "review_hold",
+   "library_visible": false,
+   "indexable": false,
+   "analysis_tier": "analyst_brief",
+   "decision_stance": "VALIDATE",
+   "analytical_quality": {
+    "gate_basis": "binary_contract",
+    "review_status": "owner_review_required",
+    "dimensions": [
+     "decision_object",
+     "variant_thesis",
+     "mechanism",
+     "scenario",
+     "falsifier",
+     "action_threshold"
+    ]
+   }
   }
  ]
 }

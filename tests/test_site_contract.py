@@ -81,6 +81,28 @@ class SiteContractTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("invalid evidence_strength", result.stdout)
 
+    def test_unknown_artifact_type_fails_closed(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        registry["publications"][-1]["artifact_type"] = "other"
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("invalid artifact_type", result.stdout)
+
+    def test_unknown_analysis_tier_fails_closed(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        registry["publications"][-1]["analysis_tier"] = "other"
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("invalid analysis_tier", result.stdout)
+
     def test_registry_path_escape_fails_closed(self) -> None:
         temp, root = self.fixture()
         self.addCleanup(temp.cleanup)
@@ -92,10 +114,58 @@ class SiteContractTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("unsafe report path", result.stdout)
 
+    def test_owner_review_hold_public_flags_fail_site_validation(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        entry = next(item for item in registry["publications"] if item["id"] == "SR-2026-0011")
+        entry["library_visible"] = True
+        entry["indexable"] = True
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("owner review hold cannot be library-visible or indexable", result.stdout)
+
+    def test_renderer_does_not_expose_unapproved_review_hold(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        entry = next(item for item in registry["publications"] if item["id"] == "SR-2026-0011")
+        entry["library_visible"] = True
+        entry["indexable"] = True
+        entry["featured_rank"] = 4
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = subprocess.run(
+            [sys.executable, str(root / "scripts" / "render_publication_surfaces.py"), "--check"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertNotIn("SR-2026-0011", (root / "research" / "index.html").read_text(encoding="utf-8"))
+        self.assertNotIn("20260805-sk-hynix", (root / "sitemap.xml").read_text(encoding="utf-8"))
+
+    def test_review_hold_requires_exact_owner_review_status(self) -> None:
+        temp, root = self.fixture()
+        self.addCleanup(temp.cleanup)
+        path = root / "ops" / "publications.json"
+        registry = json.loads(path.read_text(encoding="utf-8"))
+        entry = next(item for item in registry["publications"] if item["id"] == "SR-2026-0011")
+        entry["analytical_quality"]["review_status"] = "approved"
+        path.write_text(json.dumps(registry), encoding="utf-8")
+        result = self.run_validator(root)
+        self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("review_hold requires owner_review_required", result.stdout)
+
     def test_stale_homepage_latest_fails(self) -> None:
+        registry = json.loads((ROOT / "ops" / "publications.json").read_text(encoding="utf-8"))
+        visible = [item for item in registry["publications"] if item["library_visible"]]
+        latest = max(visible, key=lambda item: (item["published_at"], item["id"]))
         self.mutate_and_fail(
             "index.html",
-            'data-latest-id="SR-2026-0010-F"',
+            f'data-latest-id="{latest["id"]}"',
             'data-latest-id="SR-2026-0009"',
             "latest publication markers do not match registry",
         )

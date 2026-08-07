@@ -145,9 +145,11 @@ def check_report(path: Path) -> list[str]:
 
 
 def main() -> int:
-    args = [Path(a) for a in sys.argv[1:]]
+    argv = sys.argv[1:]
+    run_site = "--no-site" not in argv
+    args = [Path(a) for a in argv if a != "--no-site"]
     if not args:
-        print("usage: preflight_publish.py <report.html> [more reports...]", file=sys.stderr)
+        print("usage: preflight_publish.py [--no-site] <report.html> [more reports...]", file=sys.stderr)
         return 2
     errors: list[str] = []
     for arg in args:
@@ -157,26 +159,44 @@ def main() -> int:
             continue
         errors.extend(check_report(path))
 
-    for script, flag in (
-        ("render_publication_surfaces.py", "--check"),
-        ("sync_report_metadata.py", "--check"),
-    ):
+    analytical = []
+    for arg in args:
+        path = arg if arg.is_absolute() else ROOT / arg
+        if path.exists():
+            entry = registry_entry(path)
+            if entry and entry.get("analysis_tier") == "analyst_brief":
+                analytical.append(str(path.relative_to(ROOT)))
+    if analytical:
         result = subprocess.run(
-            [sys.executable, str(ROOT / "scripts" / script), flag],
+            [sys.executable, str(ROOT / "scripts" / "preflight_analysis.py"), *analytical],
             capture_output=True,
             text=True,
         )
         sys.stdout.write(result.stdout)
         if result.returncode != 0:
-            errors.append(f"{script} failed (see output above)")
-    result = subprocess.run(
-        [sys.executable, str(ROOT / "scripts" / "validate_site.py")],
-        capture_output=True,
-        text=True,
-    )
-    sys.stdout.write(result.stdout)
-    if result.returncode != 0:
-        errors.append("validate_site.py failed (see output above)")
+            errors.append("preflight_analysis.py failed (see output above)")
+
+    if run_site:
+        for script, flag in (
+            ("render_publication_surfaces.py", "--check"),
+            ("sync_report_metadata.py", "--check"),
+        ):
+            result = subprocess.run(
+                [sys.executable, str(ROOT / "scripts" / script), flag],
+                capture_output=True,
+                text=True,
+            )
+            sys.stdout.write(result.stdout)
+            if result.returncode != 0:
+                errors.append(f"{script} failed (see output above)")
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "validate_site.py")],
+            capture_output=True,
+            text=True,
+        )
+        sys.stdout.write(result.stdout)
+        if result.returncode != 0:
+            errors.append("validate_site.py failed (see output above)")
 
     if errors:
         print("PREFLIGHT: FAIL")

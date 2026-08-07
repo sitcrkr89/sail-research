@@ -101,8 +101,8 @@ def strip_legacy_metadata(source: str) -> str:
     )
     source = re.sub(r'^<link rel="canonical"[^>]*>\s*$', "", source, flags=re.M)
     source = re.sub(r'<meta property="(?:og:|article:)[^"]+"[^>]*>\s*', "", source)
-    source = re.sub(r'^<meta name="twitter:(?:card|image|image:alt)"[^>]*>\s*$', "", source, flags=re.M)
-    source = re.sub(r'^<link rel="icon"[^>]*>\s*$', "", source, flags=re.M)
+    source = re.sub(r'<meta name="twitter:(?:card|image|image:alt)"[^>]*>\s*', "", source)
+    source = re.sub(r'<link rel="icon"[^>]*>\s*', "", source)
     source = re.sub(
         r'<script type="application/ld\+json">\s*\{.*?\}\s*</script>\s*',
         "",
@@ -130,6 +130,14 @@ def expected_source(item: dict, source: str) -> str:
     )
     if title_count != 1:
         raise ValueError(f"{item['path']}: expected one title element")
+    source, description_count = re.subn(
+        r'<meta name="description" content="[^"]*">',
+        f'<meta name="description" content="{html.escape(item["description"], quote=True)}">',
+        source,
+        count=1,
+    )
+    if description_count != 1:
+        raise ValueError(f"{item['path']}: expected one description meta tag")
     source, count = re.subn(
         r'(<meta name="description"[^>]*>\s*)',
         lambda match: match.group(1) + metadata_block(item),
@@ -139,13 +147,28 @@ def expected_source(item: dict, source: str) -> str:
     if count != 1:
         raise ValueError(f"{item['path']}: expected one description meta tag")
     source, count = re.subn(
-        r'<body(?:\s+data-publication-status="[^"]+")?(?:\s+data-methodology-version="[^"]+")?>',
-        f'<body data-publication-status="{item["publication_status"]}" data-methodology-version="{item["methodology_version"]}">',
+        r'<body[^>]*>',
+        (
+            f'<body data-publication-status="{item["publication_status"]}" '
+            f'data-methodology-version="{item["methodology_version"]}" '
+            f'data-analysis-tier="{item["analysis_tier"]}"'
+            + (f' data-decision-stance="{item["decision_stance"]}"' if item.get("decision_stance") else "")
+            + '>'
+        ),
         source,
         count=1,
     )
     if count != 1:
         raise ValueError(f"{item['path']}: expected a simple body start tag")
+    source, count = re.subn(
+        r"<h1[^>]*>.*?</h1>",
+        f"<h1>{html.escape(item['title'])}</h1>",
+        source,
+        count=1,
+        flags=re.S,
+    )
+    if count != 1:
+        raise ValueError(f"{item['path']}: expected one visible h1")
     if item["publication_status"] == "archived":
         source, count = re.subn(
             r"(</nav>\s*)",
