@@ -232,6 +232,40 @@
      "action_threshold"
     ]
    }
+  },
+  {
+   "id": "SR-2026-0012",
+   "path": "reports/20260807-samsung-biologics-cld-timeline.html",
+   "canonical_url": "https://sitcrkr89.github.io/sail-research/reports/20260807-samsung-biologics-cld-timeline.html",
+   "title": "Samsung Biologics’ Two-Month CLD Route: A Platform Claim, Not Yet a Program Outcome",
+   "description": "Samsung Biologics discloses a two-month semi-targeted cell-line-development route versus three months for random integration; the mechanism is identifiable, but customer-level reproducibility and IND impact remain unverified. Evidence Grade B.",
+   "published_at": "2026-08-07",
+   "modified_at": "2026-08-07",
+   "sector": "biopharma",
+   "artifact_type": "brief",
+   "evidence_strength": "B",
+   "methodology_version": "2.0",
+   "publication_status": "active",
+   "library_visible": true,
+   "indexable": true,
+   "analysis_tier": "signal_note"
+  },
+  {
+   "id": "SR-2026-0013",
+   "path": "reports/20260807-probio-cld-package-boundaries.html",
+   "canonical_url": "https://sitcrkr89.github.io/sail-research/reports/20260807-probio-cld-package-boundaries.html",
+   "title": "ProBio’s 10-Week CLD Claim: The Package Boundary Matters More Than the Headline",
+   "description": "ProBio states seven-, ten- and fourteen-week cell-line-development packages, but the deliverables differ and the source does not independently establish IND-level schedule compression. Evidence Grade B.",
+   "published_at": "2026-08-07",
+   "modified_at": "2026-08-07",
+   "sector": "biopharma",
+   "artifact_type": "brief",
+   "evidence_strength": "B",
+   "methodology_version": "2.0",
+   "publication_status": "active",
+   "library_visible": true,
+   "indexable": true,
+   "analysis_tier": "signal_note"
   }
  ]
 }

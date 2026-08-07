@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "access_run": "2026-08-07T03:19:22.183361+00:00",
+  "scope": "SR-2026-0012 and SR-2026-0013 publication source-access gate",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "canonical_url": "https://samsungbiologics.com/services/cdo/cell-line-development",
+      "accessed_at": "2026-08-07T03:19:21.262321+00:00",
+      "http_status": 200,
+      "retrieved_bytes": 172880,
+      "body_sha256": "d63a6cf8cdcf7c78d778f171d7cabe73a7e2e90d8f3c92c1d40e1f5f3c6b2f3c",
+      "parsed_title": "Cell Line Development Services | Samsung Biologics",
+      "source_role": "supplier-authored primary page",
+      "evidence_limit": "Binds the reviewed supplier body; does not independently validate performance or customer outcomes."
+    },
+    {
+      "source_id": "SRC-002",
+      "canonical_url": "https://www.probiocdmo.com/add-procld-cell-line-development-services.html",
+      "accessed_at": "2026-08-07T03:19:22.183361+00:00",
+      "http_status": 200,
+      "retrieved_bytes": 144131,
+      "body_sha256": "a568d1516daf66f11887e9016c5e37dc492b96ce822b84bdd30b6a508e87562b",
+      "parsed_title": "Rapid Cell Line Development Services for High-Yield Clones - ProBio CDMO",
+      "source_role": "supplier-authored primary page",
+      "evidence_limit": "Binds the reviewed supplier body; does not independently validate performance, titer, or customer outcomes."
+    }
+  ]
+}
