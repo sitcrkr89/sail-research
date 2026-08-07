@@ -111,6 +111,14 @@
   </div>
 </div></footer>
 <script>
+(function(){
+  var m=new URLSearchParams(location.search).get("sampler");
+  if(m){try{var s=JSON.parse(decodeURIComponent(m));
+    var gates=(s.a||[]).map(function(v,i){return "G"+i+"="+v;}).join(", ");
+    document.getElementById("question").value="HBM qualification gate sampler assessment — preliminary stance: "+s.s+"; gate answers: "+gates+". Please assess the vendor and evidence behind this preliminary stance.";
+    document.getElementById("sku").value="Decision Memo";
+  }catch(e){}}
+})();
 document.getElementById("scope-form").addEventListener("submit",function(e){
   e.preventDefault();
   if(!this.checkValidity()){this.reportValidity();return;}

@@ -20,6 +20,18 @@ REGISTRY_PATH = ROOT / "ops" / "publications.json"
 TAXONOMY_PATH = ROOT / "ops" / "editorial_taxonomy.json"
 BASE_URL = "https://sitcrkr89.github.io/sail-research/"
 SOCIAL_IMAGE_URL = BASE_URL + "assets/social-card.png"
+CANONICAL_SAMPLER_ALGORITHM = (
+    "        var passed = 0;\n"
+    "        var answers = [];\n"
+    "        for (var i = 0; i < data.gates.length; i += 1) {\n"
+    "          answers.push(document.getElementById('gate-answer-' + i).value);\n"
+    "        }\n"
+    "        for (var j = 0; j < answers.length; j += 1) {\n"
+    "          if (answers[j] !== 'yes') break;\n"
+    "          passed += 1;\n"
+    "        }\n"
+    "        var stance = passed > 0 ? data.gates[passed - 1].stance_if_passed : 'MONITOR';\n"
+)
 
 CORE_URLS = {
     Path("index.html"): BASE_URL,
@@ -32,6 +44,7 @@ CORE_URLS = {
     Path("digest.html"): BASE_URL + "digest.html",
     Path("research/index.html"): BASE_URL + "research/",
     Path("research/methodology.html"): BASE_URL + "research/methodology.html",
+    Path("research/qualification-sampler.html"): BASE_URL + "research/qualification-sampler.html",
 }
 
 
@@ -613,6 +626,72 @@ def validate_surfaces(
         errors.append("research/index.html: evidence-grade definitions do not exactly match taxonomy")
     if 'data-taxonomy-version="2.0"' not in methodology_source:
         errors.append("research/methodology.html: missing taxonomy version marker")
+
+    sampler_source = (ROOT / "research" / "qualification-sampler.html").read_text(encoding="utf-8")
+    methodology_path = ROOT / "ops" / "methodology_hbm_qualification.json"
+    data_matches = re.findall(
+        r'<script id="methodology-data" type="application/json">(.*?)</script>',
+        sampler_source,
+        re.DOTALL,
+    )
+    if len(data_matches) != 1:
+        errors.append("research/qualification-sampler.html: expected exactly one methodology data block")
+    else:
+        try:
+            canonical = json.loads(methodology_path.read_text(encoding="utf-8"))
+            embedded = json.loads(data_matches[0])
+            if embedded.get("gates") != canonical["gates"]:
+                errors.append("research/qualification-sampler.html: embedded gates do not match canonical methodology")
+            if embedded.get("transfer_rules") != canonical["transfer_rules"]:
+                errors.append("research/qualification-sampler.html: embedded transfer rules do not match canonical methodology")
+            if embedded.get("questions") != canonical["questions"]:
+                errors.append("research/qualification-sampler.html: embedded questions do not match canonical methodology")
+        except (KeyError, json.JSONDecodeError) as exc:
+            errors.append(f"research/qualification-sampler.html: methodology data block unreadable: {exc}")
+    algorithm_matches = re.findall(
+        r"// SAMPLER-ALGORITHM:BEGIN\n(.*?)// SAMPLER-ALGORITHM:END",
+        sampler_source,
+        re.DOTALL,
+    )
+    if len(algorithm_matches) != 1 or algorithm_matches[0] != CANONICAL_SAMPLER_ALGORITHM:
+        errors.append("research/qualification-sampler.html: pinned sampler algorithm was modified or duplicated")
+
+    assessments_path = ROOT / "ops" / "methodology_assessments.json"
+    methodology_path2 = ROOT / "ops" / "methodology_hbm_qualification.json"
+    try:
+        assessments = json.loads(assessments_path.read_text(encoding="utf-8"))
+        methodology = json.loads(methodology_path2.read_text(encoding="utf-8"))
+        items = assessments.get("assessments", [])
+        if len(items) < 2:
+            errors.append("ops/methodology_assessments.json: reproducibility requires at least two vendor assessments")
+        if len({item.get("vendor") for item in items}) < 2:
+            errors.append("ops/methodology_assessments.json: assessments must cover at least two distinct vendors")
+        for item in items:
+            item_id = item.get("assessment_id", "<unknown>")
+            if item.get("methodology_id") != methodology["methodology_id"] or item.get("methodology_version") != methodology["version"]:
+                errors.append(f"{item_id}: methodology reference does not match canonical ladder")
+            if item.get("method_modified"):
+                errors.append(f"{item_id}: method modification breaks the replication claim")
+            gate_answers = item.get("gate_answers", [])
+            expected_gates = [gate["id"] for gate in methodology["gates"]]
+            if [entry.get("gate") for entry in gate_answers] != expected_gates:
+                errors.append(f"{item_id}: gate answers do not cover the full ladder in order")
+                continue
+            for entry in gate_answers:
+                if entry.get("answer") not in {"yes", "no", "unknown"}:
+                    errors.append(f"{item_id} {entry.get('gate')}: invalid gate answer")
+                if entry.get("answer") == "yes" and not entry.get("source_ref"):
+                    errors.append(f"{item_id} {entry.get('gate')}: yes answer requires a source reference")
+            passed = 0
+            for entry in gate_answers:
+                if entry.get("answer") != "yes":
+                    break
+                passed += 1
+            expected_stance = methodology["gates"][passed - 1]["stance_if_passed"] if passed else "MONITOR"
+            if item.get("stance") != expected_stance:
+                errors.append(f"{item_id}: declared stance is not recomputable from gate answers")
+    except (OSError, KeyError, json.JSONDecodeError) as exc:
+        errors.append(f"ops/methodology_assessments.json: unreadable replication record: {exc}")
 
 
 def main() -> int:

@@ -1,0 +1,50 @@
+{
+ "schema_version": "1.0",
+ "assessed_at": "2026-08-07",
+ "purpose": "Replication record: the HBM qualification ladder applied to two vendors without modifying the method. Stances are recomputable from gate answers by the deterministic rule: count consecutive yes answers from G0; the stance is the stance_if_passed of the last consecutively passed gate, or MONITOR if none.",
+ "assessments": [
+  {
+   "assessment_id": "MA-2026-001",
+   "vendor": "SK hynix",
+   "product": "12-high HBM4E",
+   "corpus": "SR-2026-0011 bounded three-source set",
+   "methodology_id": "sail-meth-hbm-qualification",
+   "methodology_version": "1.0",
+   "method_modified": false,
+   "stance": "VALIDATE",
+   "gate_answers": [
+    {"gate": "G0", "answer": "yes", "basis": "named HBM4E product and development intent in a dated vendor disclosure", "source_ref": "SRC-SKH-20260618"},
+    {"gate": "G1", "answer": "yes", "basis": "dated sample-shipment disclosure at announcement scope", "source_ref": "SRC-SKH-20260618"},
+    {"gate": "G2", "answer": "no", "basis": "no customer-named evaluation evidence in the reviewed corpus", "source_ref": ""},
+    {"gate": "G3", "answer": "no", "basis": "no named-customer qualification disclosure in the reviewed corpus", "source_ref": ""},
+    {"gate": "G4", "answer": "no", "basis": "no independently attributable qualification evidence in the reviewed corpus", "source_ref": ""},
+    {"gate": "G5", "answer": "no", "basis": "no dated HBM4E production or volume-shipment evidence in the reviewed corpus", "source_ref": ""}
+   ],
+   "transfer_rule_applications": [
+    "Bloomberg-carried HBM4 certification remarks (SRC-BBG-20260605) were not transferred to HBM4E qualification."
+   ]
+  },
+  {
+   "assessment_id": "MA-2026-002",
+   "vendor": "Samsung Electronics",
+   "product": "12-layer HBM4E",
+   "corpus": "SR-2026-0010-F bounded source set (s01, s03, s11)",
+   "methodology_id": "sail-meth-hbm-qualification",
+   "methodology_version": "1.0",
+   "method_modified": false,
+   "stance": "VALIDATE",
+   "gate_answers": [
+    {"gate": "G0", "answer": "yes", "basis": "named HBM4E product and mass-production intent in a dated vendor disclosure", "source_ref": "SRC-SEC-HBM4E"},
+    {"gate": "G1", "answer": "yes", "basis": "dated sample-shipment disclosure at announcement scope", "source_ref": "SRC-SEC-HBM4E"},
+    {"gate": "G2", "answer": "no", "basis": "samples went to unnamed major global customers; no customer-named evaluation evidence", "source_ref": ""},
+    {"gate": "G3", "answer": "no", "basis": "no named-customer qualification disclosure in the reviewed corpus", "source_ref": ""},
+    {"gate": "G4", "answer": "no", "basis": "no independently attributable qualification evidence in the reviewed corpus", "source_ref": ""},
+    {"gate": "G5", "answer": "no", "basis": "HBM4E mass production is stated as an intent aligned with customer schedules, not dated production evidence", "source_ref": ""}
+   ],
+   "transfer_rule_applications": [
+    "Samsung HBM4 mass-production and commercial-shipment evidence (SRC-SEC-HBM4-COMMERCIAL) applies to the prior generation and was not transferred to HBM4E.",
+    "TrendForce secondary corroboration (SRC-TF-SEC-HBM4E) supports the disclosure event only and did not move any claim to verified state."
+   ]
+  }
+ ]
+}

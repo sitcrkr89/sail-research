@@ -33,6 +33,8 @@ class SiteContractTests(unittest.TestCase):
         (root / "ops").mkdir()
         shutil.copy2(ROOT / "ops" / "publications.json", root / "ops" / "publications.json")
         shutil.copy2(ROOT / "ops" / "editorial_taxonomy.json", root / "ops" / "editorial_taxonomy.json")
+        shutil.copy2(ROOT / "ops" / "methodology_hbm_qualification.json", root / "ops" / "methodology_hbm_qualification.json")
+        shutil.copy2(ROOT / "ops" / "methodology_assessments.json", root / "ops" / "methodology_assessments.json")
         return temp, root
 
     def mutate_and_fail(self, relative: str, old: str, new: str, expected: str) -> None:
@@ -260,6 +262,73 @@ class SiteContractTests(unittest.TestCase):
             "https://sitcrkr89.github.io/sail-research/assets/social-card.svg",
             "og:image must use the canonical PNG social card",
         )
+
+    def test_sampler_gate_contract_drift_fails(self) -> None:
+        self.mutate_and_fail(
+            "research/qualification-sampler.html",
+            '"name": "Production execution"',
+            '"name": "Production executions"',
+            "embedded gates do not match",
+        )
+
+    def test_sampler_algorithm_modification_fails(self) -> None:
+        self.mutate_and_fail(
+            "research/qualification-sampler.html",
+            "if (answers[j] !== 'yes') break;",
+            "if (answers[j] !== 'no') break;",
+            "pinned sampler algorithm was modified or duplicated",
+        )
+
+    def test_methodology_assessment_stance_is_recomputable(self) -> None:
+        assessments = json.loads((ROOT / "ops" / "methodology_assessments.json").read_text(encoding="utf-8"))
+        methodology = json.loads((ROOT / "ops" / "methodology_hbm_qualification.json").read_text(encoding="utf-8"))
+        self.assertGreaterEqual(len(assessments["assessments"]), 2, "reproducibility requires at least two vendors")
+        vendors = set()
+        for item in assessments["assessments"]:
+            self.assertEqual(item["methodology_id"], methodology["methodology_id"])
+            self.assertEqual(item["methodology_version"], methodology["version"])
+            self.assertFalse(item["method_modified"], "method modification breaks the replication claim")
+            answers = [entry["answer"] for entry in item["gate_answers"]]
+            self.assertEqual(len(answers), len(methodology["gates"]))
+            self.assertEqual([entry["gate"] for entry in item["gate_answers"]], [gate["id"] for gate in methodology["gates"]])
+            for entry, gate in zip(item["gate_answers"], methodology["gates"]):
+                self.assertIn(entry["answer"], {"yes", "no", "unknown"})
+                if entry["answer"] == "yes":
+                    self.assertTrue(entry.get("source_ref"), f"{item['assessment_id']} {gate['id']}: yes answer requires a source reference")
+            passed = 0
+            for answer in answers:
+                if answer != "yes":
+                    break
+                passed += 1
+            expected = methodology["gates"][passed - 1]["stance_if_passed"] if passed else "MONITOR"
+            self.assertEqual(item["stance"], expected, f"{item['assessment_id']}: declared stance not recomputable from gate answers")
+            vendors.add(item["vendor"])
+        self.assertGreaterEqual(len(vendors), 2)
+
+    def test_methodology_assessment_stance_tampering_fails(self) -> None:
+        self.mutate_and_fail(
+            "ops/methodology_assessments.json",
+            '"stance": "VALIDATE"',
+            '"stance": "ALLOCATE"',
+            "declared stance is not recomputable",
+        )
+
+    def test_methodology_assessment_unsourced_yes_fails(self) -> None:
+        self.mutate_and_fail(
+            "ops/methodology_assessments.json",
+            '"gate": "G1", "answer": "yes", "basis": "dated sample-shipment disclosure at announcement scope", "source_ref": "SRC-SEC-HBM4E"',
+            '"gate": "G1", "answer": "yes", "basis": "dated sample-shipment disclosure at announcement scope", "source_ref": ""',
+            "yes answer requires a source reference",
+        )
+
+    def test_sampler_contract_and_paid_boundary(self) -> None:
+        source = (ROOT / "research" / "qualification-sampler.html").read_text(encoding="utf-8")
+        canonical = json.loads((ROOT / "ops" / "methodology_hbm_qualification.json").read_text(encoding="utf-8"))
+        embedded = json.loads(source.split('id="methodology-data" type="application/json">')[1].split("</script>")[0])
+        self.assertEqual(embedded["gates"], canonical["gates"])
+        self.assertEqual(embedded["transfer_rules"], canonical["transfer_rules"])
+        self.assertIn("preliminary stance", source.lower())
+        self.assertNotIn("evidence audit trail", source.split('id="sampler-result"')[1].split('id="sampler-paid-cta"')[0])
 
     def test_archived_registry_entry_requires_archive_date(self) -> None:
         temp, root = self.fixture()

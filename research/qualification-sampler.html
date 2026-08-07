@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HBM Qualification Gate Sampler — Sail Research</title>
+<meta name="description" content="Apply Sail's six-gate HBM qualification ladder to your own evidence and get a preliminary stance plus a named evidence gap list. Free decision aid; full assessments are subscription content.">
+<link rel="canonical" href="https://sitcrkr89.github.io/sail-research/research/qualification-sampler.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sail Research">
+<meta property="og:title" content="HBM Qualification Gate Sampler — Sail Research">
+<meta property="og:description" content="Six gates between a vendor sample announcement and allocation-grade evidence. Check which gates your evidence passes.">
+<meta property="og:url" content="https://sitcrkr89.github.io/sail-research/research/qualification-sampler.html">
+<meta property="og:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sail Research — Evidence at the claim boundary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitcrkr89.github.io/sail-research/assets/social-card.png">
+<meta name="twitter:image:alt" content="Sail Research — Evidence at the claim boundary">
+<link rel="icon" href="../assets/mark.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .gate-q { display:grid; grid-template-columns:1fr auto; gap:0.75rem; padding:1rem 0; border-top:1px solid var(--line); align-items:start; }
+  .gate-q .gq-id { font-family:var(--mono); font-size:0.8rem; color:var(--brass); display:block; margin-bottom:0.2rem; }
+  .gate-q .gq-q { color:var(--ink); font-size:0.98rem; }
+  .gate-q .gq-req { color:var(--ink-soft); font-size:0.85rem; margin-top:0.25rem; }
+  .gate-q select { padding:0.4rem 0.5rem; }
+  .sampler-btn { margin:1.25rem 0; padding:0.75rem 1.5rem; background:#315c48; color:#fff; border:0; font-weight:600; cursor:pointer; }
+  #sampler-result { margin-top:1.5rem; padding:1.25rem; background:var(--bg-elevated); border:1px solid var(--line); border-left:3px solid var(--brass); }
+  #sampler-result .stance { font-family:var(--serif); font-size:1.4rem; font-weight:600; color:var(--ink); }
+  #sampler-result ul { margin:0.75rem 0 0 1.2rem; color:var(--ink-soft); }
+  #sampler-paid-cta { margin-top:1.5rem; padding:1.25rem; border:1px dashed var(--line-strong); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="utility"><div class="wrap"><span><span class="dot" aria-hidden="true"></span>Institute active</span><span>Standards v2.0 · Effective 2 August 2026</span></div></div>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="../index.html">
+      <span class="brand-text">
+        <span class="brand-name">Sail <em>Research</em></span>
+        <span class="brand-tag">Evidence Institute</span>
+      </span>
+    </a>
+  <nav class="nav" aria-label="Primary">
+    <a class="nav-keep" href="../index.html#programs">Programs</a>
+    <a href="index.html">Publications</a>
+    <a href="methodology.html">Standards</a>
+    <a href="../about.html">About</a>
+    <a href="../product.html">Engage</a>
+    <a class="nav-cta" href="../scope.html">Commission research</a>
+  </nav>
+</div></header>
+
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap prose">
+      <p class="kicker">Methodology sampler</p>
+      <h1>Six gates stand between a sample announcement and allocation-grade evidence.</h1>
+      <p class="lede">Answer six evidence questions about any HBM vendor claim and get a preliminary stance plus the evidence you are still missing. This is a decision aid, not investment advice.</p>
+    </div>
+  </header>
+
+  <section class="wrap prose" id="how-it-works">
+    <p>The Sail HBM qualification ladder separates a vendor-reported sample announcement from qualification evidence that can change supplier allocation. A stance may never advance on evidence from a lower gate, and certification evidence for one generation does not transfer to the next. The full gate definitions, edge cases, and worked assessments are subscription content; this sampler lets you test your own evidence against the ladder.</p>
+    <div class="table-scroll" role="region" aria-label="Gate ladder overview" tabindex="0">
+      <table class="dtable" id="gate-ladder-table">
+        <tr><th>Gate</th><th>Evidence required</th><th>Stance if passed</th></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap prose" id="sampler-form">
+    <h2>Apply the ladder to your evidence</h2>
+    <form id="sampler-question-form" onsubmit="return false;">
+      <div id="sampler-questions"></div>
+      <button type="button" class="sampler-btn" id="sampler-compute">Compute preliminary stance</button>
+    </form>
+    <div id="sampler-result" hidden></div>
+    <div id="sampler-paid-cta" hidden>
+      <p><b>Want the complete assessment?</b> The subscription tier adds the full gate definitions and edge cases, the reusable assessment template, Sail's current worked assessments with the complete evidence audit trail, and stance updates as evidence events land. <a href="../scope.html">Commission research</a> or <a href="../product.html">see engagement options</a>.</p>
+      <p><a class="btn btn-solid" id="sampler-inquiry-link" href="../scope.html">Send this assessment into a commissioned inquiry</a></p>
+    </div>
+  </section>
+
+  <script id="methodology-data" type="application/json">{"methodology_id": "sail-meth-hbm-qualification", "version": "1.0", "domain": "HBM vendor qualification readiness", "gates": [{"id": "G0", "name": "Roadmap", "evidence_required": "Named product and development intent in a dated vendor disclosure", "stance_if_passed": "MONITOR"}, {"id": "G1", "name": "Reported sample", "evidence_required": "Dated company sample-shipment disclosure at announcement scope only", "stance_if_passed": "VALIDATE"}, {"id": "G2", "name": "Customer evaluation", "evidence_required": "Customer-named evaluation evidence attributable to the evaluated generation", "stance_if_passed": "VALIDATE"}, {"id": "G3", "name": "Company-reported qualification", "evidence_required": "Named-customer qualification disclosure by the vendor", "stance_if_passed": "VALIDATE"}, {"id": "G4", "name": "Independently attributable qualification", "evidence_required": "Customer-side or independently attributable qualification evidence", "stance_if_passed": "ALLOCATE"}, {"id": "G5", "name": "Production execution", "evidence_required": "Dated production or volume-shipment evidence", "stance_if_passed": "ALLOCATE"}], "transfer_rules": ["A vendor disclosure proves the disclosure, not the underlying physical event.", "Secondary press reporting cannot move a claim to verified state for an underlying event.", "Certification evidence for a prior generation does not transfer to the next generation.", "A dated production statement is corroborating evidence, never a substitute for qualification evidence."], "questions": [{"gate": "G0", "question": "Is there a dated vendor disclosure naming the product and its development intent?"}, {"gate": "G1", "question": "Is there a dated company disclosure of a sample shipment at announcement scope?"}, {"gate": "G2", "question": "Is there customer-named evaluation evidence attributable to this exact product generation?"}, {"gate": "G3", "question": "Is there a named-customer qualification disclosure from the vendor?"}, {"gate": "G4", "question": "Is there customer-side or independently attributable qualification evidence?"}, {"gate": "G5", "question": "Is there dated production or volume-shipment evidence?"}]}</script>
+  <script>
+    (function () {
+      var data = JSON.parse(document.getElementById('methodology-data').textContent);
+      var ladder = document.getElementById('gate-ladder-table');
+      data.gates.forEach(function (gate) {
+        var row = document.createElement('tr');
+        row.innerHTML = '<td>' + gate.id + ' ' + gate.name + '</td><td>' + gate.evidence_required + '</td><td>' + gate.stance_if_passed + '</td>';
+        ladder.appendChild(row);
+      });
+      var box = document.getElementById('sampler-questions');
+      data.questions.forEach(function (item, index) {
+        var gate = data.gates[index];
+        var row = document.createElement('div');
+        row.className = 'gate-q';
+        row.innerHTML = '<div><span class="gq-id">' + gate.id + ' ' + gate.name + '</span><span class="gq-q">' + item.question + '</span><div class="gq-req">Required: ' + gate.evidence_required + '</div></div>' +
+          '<select id="gate-answer-' + index + '" aria-label="' + gate.id + ' answer"><option value="unknown">Select</option><option value="yes">Yes</option><option value="no">No</option></select>';
+        box.appendChild(row);
+      });
+      document.getElementById('sampler-compute').addEventListener('click', function () {
+// SAMPLER-ALGORITHM:BEGIN
+        var passed = 0;
+        var answers = [];
+        for (var i = 0; i < data.gates.length; i += 1) {
+          answers.push(document.getElementById('gate-answer-' + i).value);
+        }
+        for (var j = 0; j < answers.length; j += 1) {
+          if (answers[j] !== 'yes') break;
+          passed += 1;
+        }
+        var stance = passed > 0 ? data.gates[passed - 1].stance_if_passed : 'MONITOR';
+// SAMPLER-ALGORITHM:END
+        var gaps = data.gates.slice(passed).map(function (gate) {
+          return gate.id + ' ' + gate.name + ': ' + gate.evidence_required;
+        });
+        var result = document.getElementById('sampler-result');
+        var html = '<div class="stance">Preliminary stance: ' + stance + '</div>';
+        html += '<p>Gates passed consecutively: ' + passed + ' of ' + data.gates.length + '. This preliminary stance is a decision aid based on your answers; it is not investment advice and it does not verify any underlying event.</p>';
+        if (gaps.length > 0) {
+          html += '<p><b>Evidence gap list — what must appear before the stance can advance:</b></p><ul>' + gaps.map(function (g) { return '<li>' + g + '</li>'; }).join('') + '</ul>';
+        } else {
+          html += '<p>All six gates answered affirmatively. Review the transfer rules before acting on this result.</p>';
+        }
+        html += '<p><b>Transfer rules:</b></p><ul>' + data.transfer_rules.map(function (r) { return '<li>' + r + '</li>'; }).join('') + '</ul>';
+        result.innerHTML = html;
+        result.hidden = false;
+        document.getElementById('sampler-paid-cta').hidden = false;
+        document.getElementById('sampler-inquiry-link').href = '../scope.html?sampler=' + encodeURIComponent(JSON.stringify({s: stance, a: answers}));
+      });
+    })();
+  </script>
+</main>
+
+<footer class="site-footer"><div class="wrap">
+  <p>Sail Research is source-labeled evidence infrastructure—not a broker, newsroom, or investment adviser.</p>
+  <p>© 2026 Sail Research. <a href="../governance.html">Governance</a> · <a href="../corrections.html">Corrections</a></p>
+</div></footer>
+</body>
+</html>

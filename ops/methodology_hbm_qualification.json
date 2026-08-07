@@ -1,0 +1,30 @@
+{
+ "methodology_id": "sail-meth-hbm-qualification",
+ "version": "1.0",
+ "effective_date": "2026-08-07",
+ "domain": "HBM vendor qualification readiness",
+ "summary": "A six-gate ladder that separates a vendor-reported sample announcement from allocation-grade qualification evidence. Each gate names the exact evidence required; a stance may never advance on evidence from a lower gate.",
+ "gates": [
+  {"id": "G0", "name": "Roadmap", "evidence_required": "Named product and development intent in a dated vendor disclosure", "stance_if_passed": "MONITOR"},
+  {"id": "G1", "name": "Reported sample", "evidence_required": "Dated company sample-shipment disclosure at announcement scope only", "stance_if_passed": "VALIDATE"},
+  {"id": "G2", "name": "Customer evaluation", "evidence_required": "Customer-named evaluation evidence attributable to the evaluated generation", "stance_if_passed": "VALIDATE"},
+  {"id": "G3", "name": "Company-reported qualification", "evidence_required": "Named-customer qualification disclosure by the vendor", "stance_if_passed": "VALIDATE"},
+  {"id": "G4", "name": "Independently attributable qualification", "evidence_required": "Customer-side or independently attributable qualification evidence", "stance_if_passed": "ALLOCATE"},
+  {"id": "G5", "name": "Production execution", "evidence_required": "Dated production or volume-shipment evidence", "stance_if_passed": "ALLOCATE"}
+ ],
+ "stance_vocabulary": ["MONITOR", "VALIDATE", "PILOT", "QUALIFY", "ALLOCATE", "HEDGE", "AVOID"],
+ "transfer_rules": [
+  "A vendor disclosure proves the disclosure, not the underlying physical event.",
+  "Secondary press reporting cannot move a claim to verified state for an underlying event.",
+  "Certification evidence for a prior generation does not transfer to the next generation.",
+  "A dated production statement is corroborating evidence, never a substitute for qualification evidence."
+ ],
+ "questions": [
+  {"gate": "G0", "question": "Is there a dated vendor disclosure naming the product and its development intent?"},
+  {"gate": "G1", "question": "Is there a dated company disclosure of a sample shipment at announcement scope?"},
+  {"gate": "G2", "question": "Is there customer-named evaluation evidence attributable to this exact product generation?"},
+  {"gate": "G3", "question": "Is there a named-customer qualification disclosure from the vendor?"},
+  {"gate": "G4", "question": "Is there customer-side or independently attributable qualification evidence?"},
+  {"gate": "G5", "question": "Is there dated production or volume-shipment evidence?"}
+ ]
+}
