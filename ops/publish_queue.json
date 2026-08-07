@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "purpose": "Backlog queue for the delegated daily publish pipeline (Hermes jobs sail-research-publish-morning/evening). The agent picks pending items, drafts reports, and marks them published/rejected here. Owner authorization: Sail-Holdings docs/AUTHORIZATIONS.md AUTH-2026-07-27-03.",
-  "updated_at": "2026-08-02T00:00:00+09:00",
+  "updated_at": "2026-08-07T12:22:05+09:00",
   "items": [
     {
       "id": "PQ-0001",
@@ -142,6 +142,22 @@
       "published_report_id": "SR-2026-0006",
       "full_report_id": "SR-2026-0010-F",
       "notes": "HBM4E 16-high qualification race teardown; full companion to the SR-2026-0006 HBM4 vendor-confirmed free sample"
+    },
+    {
+      "id": "PQ-0018",
+      "source_locator": "/home/cshin1822/SignalOS/10_Exports/website_ready/analyst_source_review/Publishable_Signal_Drafts_20260807.md#Samsung-Biologics",
+      "industry": "CDMO",
+      "status": "published",
+      "published_report_id": "SR-2026-0012",
+      "notes": "Analyst-reviewed Samsung Biologics CLD signal; supplier-stated two-month semi-targeted route bounded from customer and IND outcomes"
+    },
+    {
+      "id": "PQ-0019",
+      "source_locator": "/home/cshin1822/SignalOS/10_Exports/website_ready/analyst_source_review/Publishable_Signal_Drafts_20260807.md#GenScript-ProBio",
+      "industry": "CDMO",
+      "status": "published",
+      "published_report_id": "SR-2026-0013",
+      "notes": "Analyst-reviewed ProBio CLD signal; 7/10/14-week supplier package claims normalized by deliverable boundary"
     }
   ]
 }
